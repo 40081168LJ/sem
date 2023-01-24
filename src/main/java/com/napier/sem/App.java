@@ -1,9 +1,10 @@
 
 package com.napier.sem;
 
-public class App {
-    public static void main (String [] args){
+public class App
+{
+    public static void main(String [] args){
 
-        System.out.println("Boo Ya!");
+        System.out.println("Boo yah!");
     }
 }
