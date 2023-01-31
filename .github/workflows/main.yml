@@ -21,3 +21,8 @@ jobs:
         run: docker run --name semcontainer -d semimage
       - name: view logs
         run: docker logs semcontainer
+
+https://img.shields.io/github/actions/workflow/status/username/repository/main.yml?branch=develop
+
+# Software Engineering Methods
+![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/<username>/<repository>/<action name taken from main.yml>/<branch>?style=flat-square)
