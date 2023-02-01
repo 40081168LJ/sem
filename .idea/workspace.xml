@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="761ade98-9d1a-4c83-8873-0499084e7a7c" name="Changes" comment="LJ - Dockerfile upload.">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" afterDir="false" />
+    <list default="true" id="761ade98-9d1a-4c83-8873-0499084e7a7c" name="Changes" comment="AG - Updating App.Java">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675245137473</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="AG - Updating App.Java">
+      <created>1675245354511</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675245354511</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,7 +173,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="LJ - First Commit, project creation and gitignore file." />
     <MESSAGE value="LJ - Dockerfile upload." />
-    <option name="LAST_COMMIT_MESSAGE" value="LJ - Dockerfile upload." />
+    <MESSAGE value="AG - Updating App.Java" />
+    <option name="LAST_COMMIT_MESSAGE" value="AG - Updating App.Java" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
