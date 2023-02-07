@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="761ade98-9d1a-4c83-8873-0499084e7a7c" name="Changes" comment="LJ - Added a Readme.md file.">
-      <change afterPath="$PROJECT_DIR$/CodeOfConduct.md" afterDir="false" />
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="SL - updating github actions">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +13,28 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/develop" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -34,7 +55,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;Docker&quot;
@@ -45,7 +66,7 @@
       <recent name="C:\Users\liamm\IdeaProjects\seMethods" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.Dockerfile">
+  <component name="RunManager" selected="Docker.Docker Image">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.napier.sem.App" />
       <module name="seMethods" />
@@ -59,34 +80,80 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Docker Image (1)" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
+      <deployment type="docker-image">
+        <settings>
+          <option name="imageTag" value="mongo:latest" />
+          <option name="containerName" value="mongo-dbserver" />
+          <option name="commandLineOptions" value="--network se-methods" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="Docker Image (1)" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
+      <deployment type="docker-image">
+        <settings>
+          <option name="imageTag" value="nginx:latest" />
+          <option name="containerName" value="" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="Docker Image" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
+      <deployment type="docker-image">
+        <settings>
+          <option name="imageTag" value="sha256:a186f53b7d226bc9d0fc4e2e99aa2f66c0b5d75b689e2dd2e80b9983b393636b" />
+          <option name="containerName" value="" />
+          <option name="commandLineOptions" value="--network se-methods" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
+          <option name="buildOnly" value="true" />
           <option name="sourceFilePath" value="Dockerfile" />
         </settings>
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name=".idea/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+    <configuration default="true" type="docker-deploy" factoryName="docker-image" temporary="true">
+      <deployment type="docker-image">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
       <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="mongo-dbserver" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
+      <deployment type="docker-image">
         <settings>
-          <option name="sourceFilePath" value=".idea/Dockerfile" />
+          <option name="imageTag" value="5d5c8d91b8c5948f4d2fb8923690147665756d5eb6183ee65b289ee802134165" />
+          <option name="containerName" value="" />
+          <option name="commandLineOptions" value="--network se-methods" />
         </settings>
       </deployment>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.Docker Image" />
         <item itemvalue="Docker.Dockerfile" />
+        <item itemvalue="Docker.Docker Image (1)" />
         <item itemvalue="Application.App" />
-        <item itemvalue="Docker..idea/Dockerfile" />
+        <item itemvalue="Docker.mongo-dbserver" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="761ade98-9d1a-4c83-8873-0499084e7a7c" name="Changes" comment="" />
+      <changelist id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="SL - Added MongoDB support" />
       <created>1674576082092</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -94,7 +161,7 @@
       <workItem from="1674576083347" duration="2628000" />
       <workItem from="1674595089046" duration="795000" />
       <workItem from="1675175655036" duration="2470000" />
-      <workItem from="1675180857391" duration="4083000" />
+      <workItem from="1675180857391" duration="3618000" />
     </task>
     <task id="LOCAL-00001" summary="LJ - First Commit, project creation and gitignore file.">
       <created>1674576784290</created>
@@ -110,21 +177,35 @@
       <option name="project" value="LOCAL" />
       <updated>1675182820466</updated>
     </task>
-    <task id="LOCAL-00003" summary="LJ - File Changes.">
-      <created>1675184647328</created>
+    <task id="LOCAL-00003" summary="SL - Added MongoDB support">
+      <created>1675451724610</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1675184647328</updated>
+      <updated>1675451724610</updated>
     </task>
-    <task id="LOCAL-00004" summary="LJ - Added a Readme.md file.">
-      <created>1675184977679</created>
+    <task id="LOCAL-00004" summary="SL - fixed issues with mongodb support">
+      <created>1675774733594</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1675184977679</updated>
+      <updated>1675774733594</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="SL - got mongodb working">
+      <created>1675775881613</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675775881613</updated>
+    </task>
+    <task id="LOCAL-00006" summary="SL - updating github actions">
+      <created>1675776021350</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675776021350</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,9 +225,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="LJ - First Commit, project creation and gitignore file." />
     <MESSAGE value="LJ - Dockerfile upload." />
-    <MESSAGE value="LJ - File Changes." />
-    <MESSAGE value="LJ - Added a Readme.md file." />
-    <option name="LAST_COMMIT_MESSAGE" value="LJ - Added a Readme.md file." />
+    <MESSAGE value="SL - Added MongoDB support" />
+    <MESSAGE value="SL - fixed issues with mongodb support" />
+    <MESSAGE value="SL - got mongodb working" />
+    <MESSAGE value="SL - updating github actions" />
+    <option name="LAST_COMMIT_MESSAGE" value="SL - updating github actions" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
