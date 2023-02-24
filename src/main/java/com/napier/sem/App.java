@@ -12,6 +12,10 @@ public class App
      */
     public Connection con = null;
 
+    /**
+     * connects to the datab base and gets a employee and displays the employee
+     * @param args
+     */
     public static void main(String[] args)
     {
         // Create new Application
@@ -30,6 +34,11 @@ public class App
         System.out.println("test");
     }
 
+    /**
+     * gets an employee when given an employee id
+     * @param ID
+     * @return Employee
+     */
     public Employee getEmployee(int ID)
     {
         try
