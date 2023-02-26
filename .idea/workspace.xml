@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/use-cases/use-case_1.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +34,11 @@
         </map>
       </branch-storage>
     </favorite-branches>
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="40544502 &lt;40544502@live.napier.ac.uk&gt;" />
+      </list>
+    </option>
     <option name="PUSH_TAGS">
       <GitPushTagMode>
         <option name="argument" value="--tags" />
@@ -271,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677418545203</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="AOB - add use cases feature branch">
+      <created>1677444559449</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1677444559449</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,7 +314,8 @@
     <MESSAGE value="SL - added disconnect and connect methods" />
     <MESSAGE value="SL - added employee class with related employee methods" />
     <MESSAGE value="AG - Added Get all Salaries method" />
-    <option name="LAST_COMMIT_MESSAGE" value="AG - Added Get all Salaries method" />
+    <MESSAGE value="AOB - add use cases feature branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="AOB - add use cases feature branch" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
