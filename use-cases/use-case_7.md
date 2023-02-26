@@ -1,4 +1,4 @@
-# Use Case 7 - product a report of the total population, population living in cities and population not living in cities in an area
+# Use Case 7 - Product a report of the total population, population living in cities and population not living in cities in an area
 
 ## Goal in Context
 I want to product a report of the total population, population living in cities and population not living in cities 
