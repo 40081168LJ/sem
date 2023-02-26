@@ -10,7 +10,7 @@ Organisation
 Primary Task
 
 ## Preconditions
-We know the area required for the report i.e. the world/a continent. <br>
+We know the area required for the report i.e. the world/a continent/a region. <br>
 The database contains the current country data i.e. code, name, continent, region, population, capital.
 
 ## Success End Condition
