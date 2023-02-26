@@ -1,4 +1,4 @@
-# Use Case 2 - produce a report of the top (N) populated countries in an area - (N) provided by user
+# Use Case 2 - Produce a report of the top (N) populated countries in an area - (N) provided by user
 
 ## Goal in Context
 I want to produce a report of the top (N) populated countries in an area - (N) provided by user.
