@@ -30,8 +30,8 @@ A request from the organisation for the above report.
 1. Organisation requests a report of the top (N) countries in an area. <br>
 2. Employee captures the number of countries required for the report.
 3. Employee captures the area the report is required for i.e. the world/a certain continent/a certain region. <br>
-3. Employee extracts the current country information as required for the given area, arranged as requested <br>
-4. Employee provides report to the organisation.
+4. Employee extracts the current country information as required for the given area, arranged as requested <br>
+5. Employee provides report to the organisation.
 
 ## Extensions
 2. Number of countries not provided.
