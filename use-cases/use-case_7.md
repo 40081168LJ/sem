@@ -12,7 +12,7 @@ Primary Task
 
 ## Preconditions
 We know the area required for the report i.e. the world/a continent/a region. <br>
-The database contains the current country and city data i.e. code, name, continent, region, population, capital.
+The database contains the current country and city data i.e. name, population.
 
 ## Success End Condition
 A report is available for the organisation.
