@@ -1,3 +1,10 @@
+import com.napier.sem.App;
+import com.napier.sem.Employee;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -128,7 +135,18 @@ public class Main {
             case 31:
                 System.out.println("Report Additional Info 6 Selected"); break;
             case 32:
-                System.out.println("Report Languages 1 Selected"); break;
+                System.out.println("Report Languages 1 (Chinese) Selected");
+                // Create new Application
+                App a = new App();
+                // Connect to database
+                a.connect();
+                // Extract employee salary information
+                ArrayList<Employee> employees = a.getEmployeeByRole("Engineer");
+                // Test the size of the returned data - should be 240124
+                System.out.println(employees);
+                // Disconnect from database
+                a.disconnect();
+                break;
             case 33:
                 System.out.println("Report Languages 2 Selected"); break;
             case 34:
@@ -226,4 +244,57 @@ class Keyin {
         }
     }
 
+}
+/**
+ * Report Class for Report Language1 - Chinese
+ */
+class Language1 {
+    /**
+     * Connection to MySQL database.
+     */
+    public Connection con = null;
+
+    /**
+     * gets an a list of languages
+     * @param role
+     * @return Employee
+     */
+    public ArrayList<Employee> getEmployeeByRole(String role)
+    {
+        try
+        {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect = "SELECT employees.emp_no, employees.first_name, employees.last_name, salaries.salary "
+                    + "FROM employees, salaries, dept_emp, departments "
+                    +"WHERE employees.emp_no = salaries.emp_no "
+                    +"AND employees.emp_no = dept_emp.emp_no "
+                    +"AND dept_emp.dept_no = departments.dept_no "
+                    +"AND salaries.to_date = '9999-01-01' "
+                    +"AND departments.dept_no = '<dept_no>' "
+                    +"ORDER BY employees.emp_no ASC";
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+            // Return new employee if valid.
+            // Check one is returned
+            ArrayList<Employee> employees = new ArrayList<Employee>();
+            while (rset.next())
+            {
+                Employee emp = new Employee();
+                emp.emp_no = rset.getInt("employees.emp_no");
+                emp.first_name = rset.getString("employees.first_name");
+                emp.last_name = rset.getString("employees.last_name");
+                emp.salary = rset.getInt("salaries.salary");
+                employees.add(emp);
+            }
+            return employees;
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get languages for: Report Languages 1");
+            return null;
+        }
+    }
 }

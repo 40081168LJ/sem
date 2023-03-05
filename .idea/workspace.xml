@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - Basic Menu implementation in &quot;Main&quot;">
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - Updated/Finished Menu implementation in &quot;Main&quot;&#10;&gt; Full Menu&#10;&gt; Validation&#10;&gt; Comments&#10;&gt; TODO notes added, to be discussed with team">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" afterDir="false" />
     </list>
@@ -48,7 +48,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/salary-by-department" />
+        <entry key="$PROJECT_DIR$" value="feature/JavaMenu" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -330,7 +330,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678028522701</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="LJ - Updated/Finished Menu implementation in &quot;Main&quot;&#10;&gt; Full Menu&#10;&gt; Validation&#10;&gt; Comments&#10;&gt; TODO notes added, to be discussed with team">
+      <created>1678031102440</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1678031102440</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,7 +377,8 @@
     <MESSAGE value="AOB - use case 7 added" />
     <MESSAGE value="AOB - use case 7 amended, use case 8 added" />
     <MESSAGE value="LJ - Basic Menu implementation in &quot;Main&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="LJ - Basic Menu implementation in &quot;Main&quot;" />
+    <MESSAGE value="LJ - Updated/Finished Menu implementation in &quot;Main&quot;&#10;&gt; Full Menu&#10;&gt; Validation&#10;&gt; Comments&#10;&gt; TODO notes added, to be discussed with team" />
+    <option name="LAST_COMMIT_MESSAGE" value="LJ - Updated/Finished Menu implementation in &quot;Main&quot;&#10;&gt; Full Menu&#10;&gt; Validation&#10;&gt; Comments&#10;&gt; TODO notes added, to be discussed with team" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
