@@ -176,7 +176,7 @@ class Keyin {
     }
 
     /**
-     *
+     * Used in "inInt"
      * @return
      */
     public static String inString() {
