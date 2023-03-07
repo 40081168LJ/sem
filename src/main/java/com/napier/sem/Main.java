@@ -1,3 +1,5 @@
+import com.napier.sem.App;
+
 import java.util.Scanner;
 
 /**
@@ -9,6 +11,11 @@ public class Main {
     Created a little Menu selection for each of the 36 types of reports and an exit option.
      */
     public static void main(String[] args) {
+        App a = new App();
+
+        a.connect();
+
+        a.disconnect();
         int swValue;
         System.out.println("<|************************************************************************************|>");
         System.out.println("<|                                                                                    |>");
