@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+/**
+ * THIS IS ALL FOR LABS
+ */
 public class Main {
 
     /**

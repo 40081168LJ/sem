@@ -1,5 +1,9 @@
 package com.napier.sem;
 
+/**
+ * THIS IS ALL FOR LABS
+ */
+
 import java.sql.*;
 import java.util.ArrayList;
 
