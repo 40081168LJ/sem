@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+/**
+ * The main class, used for menu and report selection
+ */
 public class Main {
 
     /**
