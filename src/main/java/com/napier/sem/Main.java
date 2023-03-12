@@ -1,11 +1,20 @@
+import com.napier.sem.App;
+
 import java.util.Scanner;
 
+/**
+ * The main class, used for menu and report selection
+ */
 public class Main {
 
     /**
     Created a little Menu selection for each of the 36 types of reports and an exit option.
      */
     public static void main(String[] args) {
+        App a = new App();
+
+        a.connect();
+
         int swValue;
         System.out.println("<|************************************************************************************|>");
         System.out.println("<|                                                                                    |>");
@@ -17,42 +26,25 @@ public class Main {
         System.out.println("<|                                                                                    |>");
         System.out.println("<|                     Report List:                                                   |>");
         System.out.println("<|                                                                                    |>");
-        System.out.println("<|            1.  Report 1                                                            |>");
-        System.out.println("<|            2.  Report 2                                                            |>");
-        System.out.println("<|            3.  Report 3                                                            |>");
-        System.out.println("<|            4.  Report 4                                                            |>");
-        System.out.println("<|            5.  Report 5                                                            |>");
-        System.out.println("<|            6.  Report 6                                                            |>");
-        System.out.println("<|            7.  Report 7                                                            |>");
-        System.out.println("<|            8.  Report 8                                                            |>");
-        System.out.println("<|            9.  Report 9                                                            |>");
-        System.out.println("<|            10. Report 10                                                           |>");
-        System.out.println("<|            11. Report 11                                                           |>");
-        System.out.println("<|            12. Report 12                                                           |>");
-        System.out.println("<|            13. Report 13                                                           |>");
-        System.out.println("<|            14. Report 14                                                           |>");
-        System.out.println("<|            15. Report 15                                                           |>");
-        System.out.println("<|            16. Report 16                                                           |>");
-        System.out.println("<|            17. Report 17                                                           |>");
-        System.out.println("<|            18. Report 18                                                           |>");
-        System.out.println("<|            19. Report 19                                                           |>");
-        System.out.println("<|            20. Report 20                                                           |>");
-        System.out.println("<|            21. Report 21                                                           |>");
-        System.out.println("<|            22. Report 22                                                           |>");
-        System.out.println("<|            23. Report 23                                                           |>");
-        System.out.println("<|            24. Report 24                                                           |>");
-        System.out.println("<|            25. Report 25                                                           |>");
-        System.out.println("<|            26. Additional Info 1                                                   |>");
-        System.out.println("<|            27. Additional Info 2                                                   |>");
-        System.out.println("<|            28. Additional Info 3                                                   |>");
-        System.out.println("<|            29. Additional Info 4                                                   |>");
-        System.out.println("<|            30. Additional Info 5                                                   |>");
-        System.out.println("<|            31. Additional Info 6                                                   |>");
-        System.out.println("<|            32. Languages 1                                                         |>");
-        System.out.println("<|            33. Languages 2                                                         |>");
-        System.out.println("<|            34. Languages 3                                                         |>");
-        System.out.println("<|            35. Languages 4                                                         |>");
-        System.out.println("<|            36. Languages 5                                                         |>");
+        System.out.println("<|            1.  Report 1                          19. Report 19                     |>");
+        System.out.println("<|            2.  Report 2                          20. Report 20                     |>");
+        System.out.println("<|            3.  Report 3                          21. Report 21                     |>");
+        System.out.println("<|            4.  Report 4                          22. Report 22                     |>");
+        System.out.println("<|            5.  Report 5                          23. Report 23                     |>");
+        System.out.println("<|            6.  Report 6                          24. Report 24                     |>");
+        System.out.println("<|            7.  Report 7                          25. Report 25                     |>");
+        System.out.println("<|            8.  Report 8                          26. Additional Info 1             |>");
+        System.out.println("<|            9.  Report 9                          27. Additional Info 2             |>");
+        System.out.println("<|            10. Report 10                         28. Additional Info 3             |>");
+        System.out.println("<|            11. Report 11                         29. Additional Info 4             |>");
+        System.out.println("<|            12. Report 12                         30. Additional Info 5             |>");
+        System.out.println("<|            13. Report 13                         31. Additional Info 6             |>");
+        System.out.println("<|            14. Report 14                         32. Languages 1                   |>");
+        System.out.println("<|            15. Report 15                         33. Languages 2                   |>");
+        System.out.println("<|            16. Report 16                         34. Languages 3                   |>");
+        System.out.println("<|            17. Report 17                         35. Languages 4                   |>");
+        System.out.println("<|            18. Report 18                         36. Languages 5                   |>");
+        System.out.println("<|                                                                                    |>");
         System.out.println("<|            37. Exit Report Program                                                 |>");
         System.out.println("<|                                                                                    |>");
         System.out.println("<|************************************************************************************|>");
@@ -138,7 +130,8 @@ public class Main {
             case 36:
                 System.out.println("Report Languages 5 Selected"); break;
             case 37:
-                System.out.println("Exit Report Program Selected, Have a nice day!"); break;
+                System.out.println("Exit Report Program Selected, Have a nice day!");
+                a.disconnect(); break;
             default:
                 System.out.println("Invalid Input, try again...");
                 break;
