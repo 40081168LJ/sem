@@ -15,7 +15,6 @@ public class Main {
 
         a.connect();
 
-        a.disconnect();
         int swValue;
         System.out.println("<|************************************************************************************|>");
         System.out.println("<|                                                                                    |>");
@@ -131,7 +130,8 @@ public class Main {
             case 36:
                 System.out.println("Report Languages 5 Selected"); break;
             case 37:
-                System.out.println("Exit Report Program Selected, Have a nice day!"); break;
+                System.out.println("Exit Report Program Selected, Have a nice day!");
+                a.disconnect(); break;
             default:
                 System.out.println("Invalid Input, try again...");
                 break;
