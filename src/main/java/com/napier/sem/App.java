@@ -84,7 +84,6 @@ public class App {
 
     }
 
-
     public City getCity(int ID) {
         try {
             // Create an SQL statement
