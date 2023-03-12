@@ -118,14 +118,12 @@ public class App {
     {
         if (city != null)
         {
-            System.out.println(
-                    city.iD + " "
-                            + city.name + " "
-                            + city.countryCode + "\n"
-                            + city.district + "\n"
-                            + city.population + "\n"
-                            + city.country + "\n");
-
+            System.out.println("ID: " + city.iD + " "
+                            + "City Name: " + city.name + " "
+                            + "City Country Code: " + city.countryCode + "\n"
+                            + "City District: " + city.district + "\n"
+                            + "City Population: " + city.population + "\n"
+                            + "City Country: " + city.country + "\n");
         }
     }
 }

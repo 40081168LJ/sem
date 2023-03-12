@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="SL -added getemployeeByRole method">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/City.java" afterDir="false" />
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - JavaMenu abandoned. SAmple SQL in place instead.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -380,7 +376,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678196109115</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="LJ - JavaMenu abandoned. SAmple SQL in place instead.">
+      <created>1678659473325</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1678659473325</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,7 +424,8 @@
     <MESSAGE value="AOB - use case 7 amended, use case 8 added" />
     <MESSAGE value="LJ - Basic Menu implementation in &quot;Main&quot;" />
     <MESSAGE value="LJ - Updates to Java Menu, condensed view." />
-    <option name="LAST_COMMIT_MESSAGE" value="LJ - Updates to Java Menu, condensed view." />
+    <MESSAGE value="LJ - JavaMenu abandoned. SAmple SQL in place instead." />
+    <option name="LAST_COMMIT_MESSAGE" value="LJ - JavaMenu abandoned. SAmple SQL in place instead." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
