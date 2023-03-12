@@ -1,39 +1,184 @@
+package com.napier.sem;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.util.Scanner;
+import java.sql.*;
+import java.util.ArrayList;
 
 /**
- * The main class, used for menu and report selection
+ *used to interact with the MySQL database
  */
-public class App {
-
+public class App
+{
     /**
      * Connection to MySQL database.
      */
     public Connection con = null;
 
     /**
-     * Disconnect from the MySQL database.
+     * connects to the datab base and gets a employee and displays the employee
+     * @param args
      */
-    public void disconnect()
+    public static void main(String[] args)
     {
-        if (con != null)
+            // Create new Application
+            App a = new App();
+
+            // Connect to database
+            a.connect();
+
+            // Extract employee salary information
+            //ArrayList<Employee> employees = a.getEmployeeByRole("Engineer");
+
+            // Test the size of the returned data - should be 240124
+
+            // Disconnect from database
+            a.disconnect();
+
+    }
+
+    /**
+     * gets an a list of employees and their salary when given a role
+     * @param role
+     * @return Employee
+     */
+    public ArrayList<Employee> getEmployeeByRole(String role)
+    {
+        try
         {
-            try
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect = "SELECT employees.emp_no, employees.first_name, employees.last_name, salaries.salary "
+                + "FROM employees, salaries, dept_emp, departments "
+                +"WHERE employees.emp_no = salaries.emp_no "
+                +"AND employees.emp_no = dept_emp.emp_no "
+                +"AND dept_emp.dept_no = departments.dept_no "
+                +"AND salaries.to_date = '9999-01-01' "
+                +"AND departments.dept_no = '<dept_no>' "
+                +"ORDER BY employees.emp_no ASC";
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+            // Return new employee if valid.
+            // Check one is returned
+            ArrayList<Employee> employees = new ArrayList<Employee>();
+            while (rset.next())
             {
-                // Close connection
-                con.close();
+                Employee emp = new Employee();
+                emp.emp_no = rset.getInt("employees.emp_no");
+                emp.first_name = rset.getString("employees.first_name");
+                emp.last_name = rset.getString("employees.last_name");
+                emp.salary = rset.getInt("salaries.salary");
+                employees.add(emp);
             }
-            catch (Exception e)
+            return employees;
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get employee details");
+            return null;
+        }
+    }
+    /**
+     * Gets all the current employees and salaries.
+     * @return A list of all employees and salaries, or null if there is an error.
+     */
+    public ArrayList<Employee> getAllSalaries()
+    {
+        try
+        {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT employees.emp_no, employees.first_name, employees.last_name, salaries.salary "
+                            + "FROM employees, salaries "
+                            + "WHERE employees.emp_no = salaries.emp_no AND salaries.to_date = '9999-01-01' "
+                            + "ORDER BY employees.emp_no ASC";
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+            // Extract employee information
+            ArrayList<Employee> employees = new ArrayList<Employee>();
+            while (rset.next())
             {
-                System.out.println("Error closing connection to database");
+                Employee emp = new Employee();
+                emp.emp_no = rset.getInt("employees.emp_no");
+                emp.first_name = rset.getString("employees.first_name");
+                emp.last_name = rset.getString("employees.last_name");
+                emp.salary = rset.getInt("salaries.salary");
+                employees.add(emp);
             }
+            return employees;
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get salary details");
+            return null;
+        }
+    }
+    /**
+     * gets an employee when given an employee id
+     * @param ID
+     * @return Employee
+     */
+    public Employee getEmployee(int ID)
+    {
+        try
+        {
+            App a = new App();
+            a.connect();
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT emp_no, first_name, last_name "
+                            + "FROM employees "
+                            + "WHERE emp_no = " + ID;
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+            // Return new employee if valid.
+            // Check one is returned
+            if (rset.next())
+            {
+                Employee emp = new Employee();
+                emp.emp_no = rset.getInt("emp_no");
+                emp.first_name = rset.getString("first_name");
+                emp.last_name = rset.getString("last_name");
+                return emp;
+            }
+            else
+                return null;
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get employee details");
+            return null;
         }
     }
 
+    /**
+     * displays an employee object
+     * @param emp
+     */
+    public void displayEmployee(Employee emp)
+    {
+        if (emp != null)
+        {
+            System.out.println(
+                    emp.emp_no + " "
+                            + emp.first_name + " "
+                            + emp.last_name + "\n"
+                            + emp.title + "\n"
+                            + "Salary:" + emp.salary + "\n"
+                            + emp.dept_name + "\n"
+                            + "Manager: " + emp.manager + "\n");
+        }
+    }
 
+    /**
+     * Connect to the MySQL database.
+     */
     public void connect()
     {
         try
@@ -73,214 +218,39 @@ public class App {
     }
 
     /**
-     Created a little Menu selection for each of the 36 types of reports and an exit option.
+     * Disconnect from the MySQL database.
      */
-    public static void main(String[] args) {
-        App a = new App();
-
-        a.connect();
-
-        a.disconnect();
-        int swValue;
-        System.out.println("<|************************************************************************************|>");
-        System.out.println("<|                                                                                    |>");
-        System.out.println("<|                                  REPORT SELECTION                                  |>");
-        System.out.println("<|                                                                                    |>");
-        System.out.println("<|       The below is a list of avaiable Reports, that can be viewed. To view a       |>");
-        System.out.println("<|       Report simply input the report number (to the left of the Report Name)       |>");
-        System.out.println("<|       which will select the report and display its contents.                       |>");
-        System.out.println("<|                                                                                    |>");
-        System.out.println("<|                     Report List:                                                   |>");
-        System.out.println("<|                                                                                    |>");
-        System.out.println("<|            1.  Report 1                          19. Report 19                     |>");
-        System.out.println("<|            2.  Report 2                          20. Report 20                     |>");
-        System.out.println("<|            3.  Report 3                          21. Report 21                     |>");
-        System.out.println("<|            4.  Report 4                          22. Report 22                     |>");
-        System.out.println("<|            5.  Report 5                          23. Report 23                     |>");
-        System.out.println("<|            6.  Report 6                          24. Report 24                     |>");
-        System.out.println("<|            7.  Report 7                          25. Report 25                     |>");
-        System.out.println("<|            8.  Report 8                          26. Additional Info 1             |>");
-        System.out.println("<|            9.  Report 9                          27. Additional Info 2             |>");
-        System.out.println("<|            10. Report 10                         28. Additional Info 3             |>");
-        System.out.println("<|            11. Report 11                         29. Additional Info 4             |>");
-        System.out.println("<|            12. Report 12                         30. Additional Info 5             |>");
-        System.out.println("<|            13. Report 13                         31. Additional Info 6             |>");
-        System.out.println("<|            14. Report 14                         32. Languages 1                   |>");
-        System.out.println("<|            15. Report 15                         33. Languages 2                   |>");
-        System.out.println("<|            16. Report 16                         34. Languages 3                   |>");
-        System.out.println("<|            17. Report 17                         35. Languages 4                   |>");
-        System.out.println("<|            18. Report 18                         36. Languages 5                   |>");
-        System.out.println("<|                                                                                    |>");
-        System.out.println("<|            37. Exit Report Program                                                 |>");
-        System.out.println("<|                                                                                    |>");
-        System.out.println("<|************************************************************************************|>");
-        System.out.println("<|                                                                                    |>");
-        swValue = Keyin.inInt("<| Please, Select Report to view : ");
-
-        /**
-         Switch construct, Each case represents a Report.
-         TODO: Could be used to them call each report method as needed ?
-         TODO: Would also need to loop back to the menu after a report is selected or at least an option to exit/menu
-         */
-        switch (swValue) {
-            case 1:
-                System.out.println("Report 1 Selected"); break;
-            case 2:
-                System.out.println("Report 2 Selected"); break;
-            case 3:
-                System.out.println("Report 3 Selected"); break;
-            case 4:
-                System.out.println("Report 4 Selected"); break;
-            case 5:
-                System.out.println("Report 5 Selected"); break;
-            case 6:
-                System.out.println("Report 6 Selected"); break;
-            case 7:
-                System.out.println("Report 7 Selected"); break;
-            case 8:
-                System.out.println("Report 8 Selected"); break;
-            case 9:
-                System.out.println("Report 9 Selected"); break;
-            case 10:
-                System.out.println("Report 10 Selected"); break;
-            case 11:
-                System.out.println("Report 11 Selected"); break;
-            case 12:
-                System.out.println("Report 12 Selected"); break;
-            case 13:
-                System.out.println("Report 13 Selected"); break;
-            case 14:
-                System.out.println("Report 14 Selected"); break;
-            case 15:
-                System.out.println("Report 15 Selected"); break;
-            case 16:
-                System.out.println("Report 16 Selected"); break;
-            case 17:
-                System.out.println("Report 17 Selected"); break;
-            case 18:
-                System.out.println("Report 18 Selected"); break;
-            case 19:
-                System.out.println("Report 19 Selected"); break;
-            case 20:
-                System.out.println("Report 20 Selected"); break;
-            case 21:
-                System.out.println("Report 21 Selected"); break;
-            case 22:
-                System.out.println("Report 22 Selected"); break;
-            case 23:
-                System.out.println("Report 23 Selected"); break;
-            case 24:
-                System.out.println("Report 24 Selected"); break;
-            case 25:
-                System.out.println("Report 25 Selected"); break;
-            case 26:
-                System.out.println("Report Additional Info 1 Selected"); break;
-            case 27:
-                System.out.println("Report Additional Info 2 Selected"); break;
-            case 28:
-                System.out.println("Report Additional Info 3 Selected"); break;
-            case 29:
-                System.out.println("Report Additional Info 4 Selected"); break;
-            case 30:
-                System.out.println("Report Additional Info 5 Selected"); break;
-            case 31:
-                System.out.println("Report Additional Info 6 Selected"); break;
-            case 32:
-                System.out.println("Report Languages 1 Selected"); break;
-            case 33:
-                System.out.println("Report Languages 2 Selected"); break;
-            case 34:
-                System.out.println("Report Languages 3 Selected"); break;
-            case 35:
-                System.out.println("Report Languages 4 Selected"); break;
-            case 36:
-                System.out.println("Report Languages 5 Selected"); break;
-            case 37:
-                System.out.println("Exit Report Program Selected, Have a nice day!"); break;
-            default:
-                System.out.println("Invalid Input, try again...");
-                break;
-            /**   /\
-             * This break is not really necessary but good practice, TODO: look at removing if needed?
-             */
-        }
-    }
-}
-
-class Keyin {
-    /**
-     * Support Methods
-     * Method to display the user's prompt string
-     * @param prompt
-     */
-    public static void printPrompt(String prompt) {
-        System.out.print(prompt + " ");
-        System.out.flush();
-    }
-
-    /**
-     * Method to make sure no data is available in the input stream
-     */
-    public static void inputFlush() {
-        int dummy;
-        int bAvail;
-
-        try {
-            while ((System.in.available()) != 0)
-                dummy = System.in.read();
-        } catch (java.io.IOException e) {
-            System.out.println("Input error");
-        }
-    }
-
-    /**
-     *
-     * @return
-     */
-    public static String inString() {
-        int aChar;
-        String s = "";
-        boolean finished = false;
-
-        while (!finished) {
-            try {
-                aChar = System.in.read();
-                if (aChar < 0 || (char) aChar == '\n')
-                    finished = true;
-                else if ((char) aChar != '\r')
-                    s = s + (char) aChar; // Enter into string
+    public void disconnect()
+    {
+        if (con != null)
+        {
+            try
+            {
+                // Close connection
+                con.close();
             }
-
-            catch (java.io.IOException e) {
-                System.out.println("Input error");
-                finished = true;
+            catch (Exception e)
+            {
+                System.out.println("Error closing connection to database");
             }
         }
-        return s;
     }
 
     /**
-     * For checking the input from the user is a integer and can be used to call a report
-     * @param prompt
-     * @return
+     * Prints a list of employees.
+     * @param employees The list of employees to print.
      */
-    public static int inInt(String prompt) {
-        while (true) {
-            inputFlush();
-            printPrompt(prompt);
-            try {
-                return Integer.valueOf(inString().trim()).intValue();
-            }
-            /**
-             Catch for invalid input, i.e if anthing but one of the cases above is used.
-             */
-            catch (NumberFormatException e) {
-                System.out.println("Invalid Input. Please use an integer");
-                /**
-                 Uses "\033[3m" to put the text into italics.
-                 */
-                System.out.println("\033[3mPlease use a Report number to view the Report\033[0m");
-            }
+    public void printSalaries(ArrayList<Employee> employees)
+    {
+        // Print header
+        System.out.println(String.format("%-10s %-15s %-20s %-8s", "Emp No", "First Name", "Last Name", "Salary"));
+        // Loop over all employees in the list
+        for (Employee emp : employees)
+        {
+            String emp_string =
+                    String.format("%-10s %-15s %-20s %-8s",
+                            emp.emp_no, emp.first_name, emp.last_name, emp.salary);
+            System.out.println(emp_string);
         }
     }
 
