@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - Added additional unit testing functions.">
-      <change beforePath="$PROJECT_DIR$/src/test/java/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyTest.java" afterDir="false" />
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - Added additional unit testing.">
+      <change afterPath="$PROJECT_DIR$/src/test/com/napier/sem/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="editable-svg" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -94,7 +95,7 @@
       <recent name="C:\Users\liamm\IdeaProjects\seMethods" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MyTest">
+  <component name="RunManager" selected="JUnit.AppTest">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.napier.sem.App" />
       <module name="seMethods" />
@@ -121,16 +122,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sem" />
       <selectedOptions>
-        <option name="module.classpath" />
         <option name="classpath.modifications" />
       </selectedOptions>
+      <extension name="coverage" track_test_folders="true">
+        <pattern>
+          <option name="PATTERN" value="com.napier.sem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-19" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MyTest" />
+      <option name="PACKAGE_NAME" value="com.napier.sem" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
@@ -140,13 +146,18 @@
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <module name="sem" />
       <selectedOptions>
-        <option name="module.classpath" />
         <option name="classpath.modifications" />
       </selectedOptions>
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.napier.sem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MyTest" />
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-19" />
+      <option name="PACKAGE_NAME" value="com.napier.sem" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
@@ -193,11 +204,11 @@
       <item itemvalue="Application.Main" />
       <item itemvalue="Docker.db/Dockerfile" />
       <item itemvalue="Docker.Dockerfile" />
-      <item itemvalue="JUnit.MyTest" />
+      <item itemvalue="JUnit.AppTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MyTest" />
+        <item itemvalue="JUnit.AppTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Docker.db/Dockerfile" />
         <item itemvalue="Application.App" />
@@ -387,7 +398,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678803314493</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="LJ - Added additional unit testing.">
+      <created>1678803445865</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1678803445865</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,7 +423,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LJ - Dockerfile upload." />
     <MESSAGE value="SL - Added MongoDB support" />
     <MESSAGE value="SL - fixed issues with mongodb support" />
     <MESSAGE value="SL - got mongodb working" />
@@ -430,7 +447,8 @@
     <MESSAGE value="LJ - Added Test to Mavin. Needs tested." />
     <MESSAGE value="LJ - Added Test to Maven. Needs tested." />
     <MESSAGE value="LJ - Added additional unit testing functions." />
-    <option name="LAST_COMMIT_MESSAGE" value="LJ - Added additional unit testing functions." />
+    <MESSAGE value="LJ - Added additional unit testing." />
+    <option name="LAST_COMMIT_MESSAGE" value="LJ - Added additional unit testing." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
