@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - Added working engine.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - Added additional unit testing functions.">
       <change beforePath="$PROJECT_DIR$/src/test/java/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -381,7 +380,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678206058734</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="LJ - Added additional unit testing functions.">
+      <created>1678803314493</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1678803314493</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,7 +405,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LJ - First Commit, project creation and gitignore file." />
     <MESSAGE value="LJ - Dockerfile upload." />
     <MESSAGE value="SL - Added MongoDB support" />
     <MESSAGE value="SL - fixed issues with mongodb support" />
@@ -424,7 +429,8 @@
     <MESSAGE value="LJ - Created Labs Branch, add comments to make it obvious." />
     <MESSAGE value="LJ - Added Test to Mavin. Needs tested." />
     <MESSAGE value="LJ - Added Test to Maven. Needs tested." />
-    <option name="LAST_COMMIT_MESSAGE" value="LJ - Added Test to Maven. Needs tested." />
+    <MESSAGE value="LJ - Added additional unit testing functions." />
+    <option name="LAST_COMMIT_MESSAGE" value="LJ - Added additional unit testing functions." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
