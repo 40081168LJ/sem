@@ -4,7 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.sql.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *used to interact with the MySQL database
@@ -18,7 +19,7 @@ public class App {
     /**
      * Connect to the MySQL database.
      */
-    public void connect(String location, int delay) {
+    public void connect() {
         try {
             // Load Database driver
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -32,15 +33,13 @@ public class App {
             System.out.println("Connecting to database...");
             try {
                 // Wait a bit for db to start
-                Thread.sleep(delay);
+                Thread.sleep(30000);
                 // Connect to database
-                con = DriverManager.getConnection("jdbc:mysql://" + location
-                                + "/world?allowPublicKeyRetrieval=true&useSSL=false",
-                        "root", "example");
-                System.out.println("Successfully connected");
+                con = DriverManager.getConnection("jdbc:mysql://db:3306/world", "root", "example");
+                System.out.println("Successfully connected to database");
                 break;
             } catch (SQLException sqle) {
-                System.out.println("Failed to connect to database attempt " +                                  Integer.toString(i));
+                System.out.println("Failed to connect to database attempt " + Integer.toString(i));
                 System.out.println(sqle.getMessage());
             } catch (InterruptedException ie) {
                 System.out.println("Thread interrupted? Should not happen.");
@@ -73,16 +72,18 @@ public class App {
         App a = new App();
 
         // Connect to database
-        if(args.length < 1){
-            a.connect("localhost:33060", 30000);
-        }else{
-            a.connect(args[0], Integer.parseInt(args[1]));
-        }
+        a.connect();
 
         // Get city
         City city = a.getCity(1);
         // Display results
         a.displayCity(city);
+
+        //Extract country information
+        ArrayList<Country> countries = a.getAllCountries();
+
+        //Test Test Test
+        System.out.println(countries.size());
 
         // Disconnect from database
         a.disconnect();
@@ -130,36 +131,40 @@ public class App {
                             + "City Country: " + city.country + "\n");
         }
     }
-    /**
-     * Create an SQL Statement to get world population
-     *  Used in additional_info 1 report
-     */
-    public Population getPopulation(){
 
-        try{
-            Statement stmt = con.createStatement();
-            String strSelect = "SELECT SUM(population) as `popTotal` FROM country";
-
-            // Execute SQL Statement and return population
-            ResultSet rset = stmt.executeQuery(strSelect);
-            Population pop = new Population();
-            rset.next();
-            pop.population = rset.getLong("popTotal");
-            return pop;
-        }
-        catch (Exception e)
-        {
-            System.out.println(e.getMessage());
-            System.out.println("Failed to get world population for: Report additional info 1 ");
-            return null;
-        }
-
-    }
-    public void displayPopulation(Population population)
+    public ArrayList<Country> getAllCountries()
     {
-        if (population != null)
-        {
-            System.out.println("world population : "+ population.population);
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT Code, Name, Continent, Region, Population, Capital "
+                            + "FROM country "
+                            + "ORDER BY population DESC";
+
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // Extract Country information
+            ArrayList<Country> countries = new ArrayList<Country>();
+
+            while (rset.next()) {
+                Country country = new Country();
+                country.code = rset.getString("code");
+                country.name = rset.getString("name");
+                country.continent = rset.getString("continent");
+                country.region = rset.getString("region");
+                country.population = rset.getInt("population");
+                country.capital = rset.getString("capital");
+                countries.add(country);
+            }
+            return countries;
+        }
+            catch (Exception e) {
+                System.out.println(e.getMessage());
+                System.out.println("Failed to get country details");
+                return null;
+            }
         }
     }
-}
