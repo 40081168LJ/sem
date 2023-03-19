@@ -74,66 +74,23 @@ public class App {
         // Connect to database
         a.connect();
 
-        // Get city
-        City city = a.getCity(1);
-        // Display results
-        a.displayCity(city);
+
 
         //Extract country information
         ArrayList<Country> countries = a.getAllCountries();
 
         //Test Test Test
-        System.out.println(countries.size());
+        a.printCountries(countries);
 
         // Disconnect from database
         a.disconnect();
 
     }
 
-    public City getCity(int ID) {
-        try {
-            // Create an SQL statement
-            Statement stmt = con.createStatement();
-            // Create string for SQL statement
-            String strSelect =
-                    "SELECT ID, Name, CountryCode, District, Population "
-                            + "FROM city ";
 
-            // Execute SQL statement
-            ResultSet rset = stmt.executeQuery(strSelect);
 
-            // Check one is returned
-            if (rset.next()) {
-                City city = new City();
-                city.iD = rset.getInt("id");
-                city.name = rset.getString("name");
-                city.countryCode = rset.getString("countrycode");
-                city.district = rset.getString("district");
-                city.population = rset.getInt("population");
-                return city;
-            } else
-                return null;
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            System.out.println("Failed to get city details");
-            return null;
-        }
-    }
-    public void displayCity(City city)
-    {
-        if (city != null)
-        {
-            System.out.println("ID: " + city.iD + " "
-                            + "City Name: " + city.name + " "
-                            + "City Country Code: " + city.countryCode + "\n"
-                            + "City District: " + city.district + "\n"
-                            + "City Population: " + city.population + "\n"
-                            + "City Country: " + city.country + "\n");
-        }
-    }
 
-    public ArrayList<Country> getAllCountries()
-    {
+    public ArrayList<Country> getAllCountries() {
         try {
             // Create an SQL statement
             Statement stmt = con.createStatement();
@@ -160,11 +117,26 @@ public class App {
                 countries.add(country);
             }
             return countries;
-        }
-            catch (Exception e) {
-                System.out.println(e.getMessage());
-                System.out.println("Failed to get country details");
-                return null;
-            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get country details");
+            return null;
         }
     }
+
+    //Print list of countries in the world
+    public void printCountries(ArrayList<Country> countries)
+    {   //Print header
+        System.out.println(String.format("%s %s %s %s %s %s", "Code", "Name", "Continent",
+                "Region", "Population", "Capital"));
+
+        for (Country country : countries)
+        {
+            String country_string =
+                    String.format("%s %s %s %s %s %s", country.code, country.name, country.continent,
+                    country.region, country.population, country.capital);
+            System.out.println(country_string);
+        }
+    }
+
+}
