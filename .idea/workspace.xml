@@ -356,7 +356,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679255437385</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="AOB - report 1 countries - country table to be combined with cities + table needs formatting">
+      <created>1679257861862</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1679257861862</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,7 +403,8 @@
     <MESSAGE value="AOB - use case 7 added" />
     <MESSAGE value="AOB - use case 7 amended, use case 8 added" />
     <MESSAGE value="AOB - report 1 countries test" />
-    <option name="LAST_COMMIT_MESSAGE" value="AOB - report 1 countries test" />
+    <MESSAGE value="AOB - report 1 countries - country table to be combined with cities + table needs formatting" />
+    <option name="LAST_COMMIT_MESSAGE" value="AOB - report 1 countries - country table to be combined with cities + table needs formatting" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
