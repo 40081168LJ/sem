@@ -79,6 +79,12 @@ public class App {
         // Display results
         a.displayCity(city);
 
+        //Extract country information
+        ArrayList<Country> countries = a.getAllCountries();
+
+        //Test Test Test
+        System.out.println(countries.size());
+
         // Disconnect from database
         a.disconnect();
 
@@ -125,4 +131,40 @@ public class App {
                             + "City Country: " + city.country + "\n");
         }
     }
-}
+
+    public ArrayList<Country> getAllCountries()
+    {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT Code, Name, Continent, Region, Population, Capital "
+                            + "FROM country "
+                            + "ORDER BY population DESC";
+
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // Extract Country information
+            ArrayList<Country> countries = new ArrayList<Country>();
+
+            while (rset.next()) {
+                Country country = new Country();
+                country.code = rset.getString("code");
+                country.name = rset.getString("name");
+                country.continent = rset.getString("continent");
+                country.region = rset.getString("region");
+                country.population = rset.getInt("population");
+                country.capital = rset.getString("capital");
+                countries.add(country);
+            }
+            return countries;
+        }
+            catch (Exception e) {
+                System.out.println(e.getMessage());
+                System.out.println("Failed to get country details");
+                return null;
+            }
+        }
+    }
