@@ -75,19 +75,29 @@ public class App {
         a.connect();
 
 
-
         //Extract country information
         ArrayList<Country> countries = a.getAllCountries();
 
-        //Test Test Test
+        //Print table of countries in the world
         a.printCountries(countries);
+
+        //Extract country by continent information
+        ArrayList<Country> countries1 = a.getContinentCountries();
+
+        //Print table of countries in a continent e.g. Asia
+        a.printCountries(countries1);
+
+        //Extract country by region information
+        ArrayList<Country> countries2 = a.getRegionCountries();
+
+        //Print table of countries in a region e.g. Western Europe
+        a.printCountries(countries2);
+
 
         // Disconnect from database
         a.disconnect();
 
     }
-
-
 
 
     public ArrayList<Country> getAllCountries() {
@@ -126,10 +136,83 @@ public class App {
         }
     }
 
+    public ArrayList<Country> getContinentCountries() {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT country.Code, country.Name, country.Continent, country.Region, " +
+                            "country.Population, city.Name "
+                            + "FROM country, city "
+                            + "WHERE country.Capital = city.ID AND country.Continent = 'Asia' "
+                            + "ORDER BY country.Population DESC";
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // Extract Country information
+            ArrayList<Country> countries = new ArrayList<Country>();
+
+            while (rset.next()) {
+                Country country = new Country();
+                country.code = rset.getString("country.Code");
+                country.name = rset.getString("country.Name");
+                country.continent = rset.getString("country.Continent");
+                country.region = rset.getString("country.Region");
+                country.population = rset.getInt("country.Population");
+                country.capital = rset.getString("city.Name");
+                countries.add(country);
+            }
+            return countries;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get country details");
+            return null;
+        }
+    }
+
+    public ArrayList<Country> getRegionCountries() {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT country.Code, country.Name, country.Continent, country.Region, " +
+                            "country.Population, city.Name "
+                            + "FROM country, city "
+                            + "WHERE country.Capital = city.ID AND country.Region = 'Western Europe' "
+                            + "ORDER BY country.Population DESC";
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // Extract Country information
+            ArrayList<Country> countries = new ArrayList<Country>();
+
+            while (rset.next()) {
+                Country country = new Country();
+                country.code = rset.getString("country.Code");
+                country.name = rset.getString("country.Name");
+                country.continent = rset.getString("country.Continent");
+                country.region = rset.getString("country.Region");
+                country.population = rset.getInt("country.Population");
+                country.capital = rset.getString("city.Name");
+                countries.add(country);
+            }
+            return countries;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get country details");
+            return null;
+        }
+    }
+
+
+
+
     //Print list of countries in the world
     public void printCountries(ArrayList<Country> countries)
     {   //Print header
-        System.out.println(String.format("%s %s %s %s %s %s", "Code", "Name", "Continent",
+        System.out.println(String.format("\n %s %s %s %s %s %s", "Code", "Name", "Continent",
                 "Region", "Population", "Capital"));
 
         for (Country country : countries)
