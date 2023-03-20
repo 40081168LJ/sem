@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - JavaMenu abandoned. SAmple SQL in place instead.">
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="AG - Population1 report and unit test">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Population.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Population_Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/test_db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,9 +104,9 @@
       <recent name="C:\Users\liamm\IdeaProjects\seMethods" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.seMethods [package]">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+  <component name="RunManager" selected="Docker.db/Dockerfile">
+    <configuration name="Population1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Population1" />
       <module name="seMethods" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -176,7 +183,6 @@
     <configuration name="db/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
-          <option name="buildOnly" value="true" />
           <option name="sourceFilePath" value="db/Dockerfile" />
         </settings>
       </deployment>
@@ -191,7 +197,7 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Population1" />
       <item itemvalue="Docker.db/docker" />
       <item itemvalue="Docker.db/Dockerfile" />
       <item itemvalue="Maven.seMethods [compile]" />
@@ -200,10 +206,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Docker.db/Dockerfile" />
+        <item itemvalue="Application.Population1" />
         <item itemvalue="Maven.seMethods [package]" />
         <item itemvalue="Maven.seMethods [compile]" />
         <item itemvalue="Docker.db/docker" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -425,10 +431,16 @@
     <MESSAGE value="LJ - Basic Menu implementation in &quot;Main&quot;" />
     <MESSAGE value="LJ - Updates to Java Menu, condensed view." />
     <MESSAGE value="LJ - JavaMenu abandoned. SAmple SQL in place instead." />
-    <option name="LAST_COMMIT_MESSAGE" value="LJ - JavaMenu abandoned. SAmple SQL in place instead." />
+    <MESSAGE value="AG - Population1 report and unit test" />
+    <option name="LAST_COMMIT_MESSAGE" value="AG - Population1 report and unit test" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/sem$AppTest.ic" NAME="AppTest Coverage Results" MODIFIED="1678804654839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.napier.sem.*</FILTER>
+    </SUITE>
   </component>
 </project>

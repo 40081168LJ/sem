@@ -4,8 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  *used to interact with the MySQL database
@@ -124,5 +123,41 @@ public class App {
                             + "City Population: " + city.population + "\n"
                             + "City Country: " + city.country + "\n");
         }
+    }
+
+    public int getPopulation(){
+
+        try{
+            /**
+             * Create an SQL Statement to get world population
+             * Create string for SQL Statement
+             */
+            Statement stmt = con.createStatement();
+            String strSelect = "SELECT SUM(population) AS world_population "+
+                    "FROM country";
+
+            /**
+             * Execute SQL Statement
+             */
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            /**
+             * Return world population
+             */
+            if (rset != null){
+
+                String worldPopulation = String.valueOf(rset);
+                return Integer.parseInt(worldPopulation);
+
+            }
+            return 0;
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get world population for: Report additional info 1 ");
+            return -1;
+        }
+
     }
 }
