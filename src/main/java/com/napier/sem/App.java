@@ -211,12 +211,20 @@ public class App {
 
     //Print list of countries in the world
     public void printCountries(ArrayList<Country> countries)
-    {   //Print header
+    {
+        if (countries == null)
+        {
+            System.out.println("No countries");
+            return;
+        }
+        //Print header
         System.out.println(String.format("\n %s %s %s %s %s %s", "Code", "Name", "Continent",
                 "Region", "Population", "Capital"));
 
         for (Country country : countries)
         {
+            if (country == null)
+                continue;
             String country_string =
                     String.format("%s %s %s %s %s %s", country.code, country.name, country.continent,
                     country.region, country.population, country.capital);
