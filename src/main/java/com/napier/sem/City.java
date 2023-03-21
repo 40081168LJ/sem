@@ -1,5 +1,7 @@
 package com.napier.sem;
-/** city object */
+/**
+ * city object
+ **/
 public class City {
         /** ID column */
         public int iD;

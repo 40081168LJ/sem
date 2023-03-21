@@ -5,6 +5,9 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
+/** Unit tests for reports
+ * Author - AOB
+ */
 public class AppTest
 {
     static App app;
@@ -35,12 +38,18 @@ public class AppTest
 //        app.displayPopulation(population);
 //    }
 
+    /** Unit test for print extracted list of countries if null
+     * Author - AOB
+     */
     @Test
     void printCountriesTestNull()
     {
         app.printCountries(null);
     }
 
+    /** Unit test for print extracted list of countries if empty
+     * Author - AOB
+     */
     @Test
     void printCountriesTestEmpty()
     {
@@ -48,7 +57,9 @@ public class AppTest
         app.printCountries(countries);
     }
 
-
+    /** Unit test for print extracted list of countries if array item is null
+     * Author - AOB
+     */
     @Test
     void printCountriesTestContainsNull()
     {
@@ -57,6 +68,9 @@ public class AppTest
         app.printCountries(countries);
     }
 
+    /** Unit test for extract list of countries with country object variables present
+     * Author - AOB
+     */
     @Test
     void printCountries()
     {
