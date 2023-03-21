@@ -63,7 +63,7 @@ public class App {
     }
 
     /**
-     * connects to the datab base and gets a employee and displays the employee
+     * connects to the database and gets a employee and displays the employee
      *
      * @param args
      */
@@ -124,6 +124,55 @@ public class App {
                             + "City District: " + city.district + "\n"
                             + "City Population: " + city.population + "\n"
                             + "City Country: " + city.country + "\n");
+        }
+    }
+
+    /** Languages SQL
+     * Author - LJ
+     */
+    public Language getLanguage(String Code)
+    {
+        try
+        {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT CountryCode, Language, IsOfficial, Percentage "
+                            + "FROM countrylanguage "
+                            + "WHERE CountryCode = " + "CountryCode";
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+            // Return new city if valid.
+            // Check one is returned
+            if (rset.next())
+            {
+                Language countryLanguage2 = new Language();
+                countryLanguage2.countryCode = rset.getString("CountryCode");
+                countryLanguage2.language = rset.getString("Language");
+                countryLanguage2.isOfficial = rset.getString("IsOfficial");
+                countryLanguage2.percentage = rset.getInt("Percentage");
+                return countryLanguage2;
+            }
+            else
+                return null;
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get language details");
+            return null;
+        }
+    }
+    public void displayCountryLanguage(Language countryLanguage2)
+    {
+        if (countryLanguage2 != null)
+        {
+            System.out.println(
+                    countryLanguage2.countryCode + "\n"
+                            + countryLanguage2.language + "\n"
+                            + countryLanguage2.isOfficial + "\n"
+                            + countryLanguage2.percentage + "\n");
         }
     }
 }

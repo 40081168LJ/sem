@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - Updated folders, added testing area. Provided Example for languages.">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - Updated pom.xml">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LanguageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LanguageTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +49,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/salary-by-department" />
+        <entry key="$PROJECT_DIR$" value="feature/JavaMenu" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -66,25 +68,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/annie/Downloads/diagrams.net-intellij-plugin-0.2.0.zip&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Git.Branch.Popup.ShowAllRemotes": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/annie/Downloads/diagrams.net-intellij-plugin-0.2.0.zip",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ShaunL\IdeaProjects\sem\db" />
@@ -95,10 +97,20 @@
       <recent name="C:\Users\liamm\IdeaProjects\seMethods" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.seMethods [package]">
+  <component name="RunManager" selected="JUnit.LanguageTests">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="seMethods" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LanguageTests" type="JUnit" factoryName="JUnit">
+      <module name="sem" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LanguageTests" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -192,6 +204,7 @@
       <item itemvalue="Application.Main" />
       <item itemvalue="Docker.db/docker" />
       <item itemvalue="Docker.db/Dockerfile" />
+      <item itemvalue="JUnit.LanguageTests" />
       <item itemvalue="Maven.seMethods [compile]" />
       <item itemvalue="Maven.seMethods [package]" />
     </list>
@@ -219,6 +232,7 @@
       <workItem from="1675180857391" duration="3618000" />
       <workItem from="1676360482399" duration="1826000" />
       <workItem from="1676382680779" duration="521000" />
+      <workItem from="1679383290035" duration="1058000" />
     </task>
     <task id="LOCAL-00001" summary="LJ - First Commit, project creation and gitignore file.">
       <created>1674576784290</created>
@@ -388,7 +402,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678810933714</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="LJ - Updated pom.xml">
+      <created>1678811096349</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1678811096349</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,7 +427,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LJ - First Commit, project creation and gitignore file." />
     <MESSAGE value="LJ - Dockerfile upload." />
     <MESSAGE value="SL - Added MongoDB support" />
     <MESSAGE value="SL - fixed issues with mongodb support" />
@@ -431,7 +451,8 @@
     <MESSAGE value="LJ - Updates to Java Menu, condensed view." />
     <MESSAGE value="LJ - JavaMenu abandoned. SAmple SQL in place instead." />
     <MESSAGE value="LJ - Updated folders, added testing area. Provided Example for languages." />
-    <option name="LAST_COMMIT_MESSAGE" value="LJ - Updated folders, added testing area. Provided Example for languages." />
+    <MESSAGE value="LJ - Updated pom.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="LJ - Updated pom.xml" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
