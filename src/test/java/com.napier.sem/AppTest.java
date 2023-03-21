@@ -1,13 +1,11 @@
-import com.napier.sem.App;
-import com.napier.sem.Country;
-import com.napier.sem.Population;
+package com.napier.sem;
+
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.*;
-public class UnitTests
+public class AppTest
 {
     static App app;
 
