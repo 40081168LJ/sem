@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="SL - fixed typo in main.yml">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="SL - fixed issue causing docker-compose to fail" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,7 +102,7 @@
       <recent name="C:\Users\liamm\IdeaProjects\seMethods" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.db/Dockerfile">
+  <component name="RunManager" selected="JUnit.UnitTests">
     <configuration name="IntegrationTests.GetWorldPopulation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seMethods" />
       <option name="PACKAGE_NAME" value="" />
@@ -414,7 +411,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679373330648</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="SL - fixed issue causing docker-compose to fail">
+      <created>1679374001963</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1679374001963</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,7 +436,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LJ - Dockerfile upload." />
     <MESSAGE value="SL - Added MongoDB support" />
     <MESSAGE value="SL - fixed issues with mongodb support" />
     <MESSAGE value="SL - got mongodb working" />
@@ -457,7 +460,8 @@
     <MESSAGE value="AOB - report 1 countries - table needs formatting + ?countries with no capital?" />
     <MESSAGE value="AOB - report 1,2,3 - tables needs formatting + ?countries with no capital?" />
     <MESSAGE value="SL - fixed typo in main.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="SL - fixed typo in main.yml" />
+    <MESSAGE value="SL - fixed issue causing docker-compose to fail" />
+    <option name="LAST_COMMIT_MESSAGE" value="SL - fixed issue causing docker-compose to fail" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
