@@ -19,33 +19,9 @@ public class App {
     /**
      * Connect to the MySQL database.
      */
-    public void connect() {
-        try {
-            // Load Database driver
-            Class.forName("com.mysql.cj.jdbc.Driver");
-        } catch (ClassNotFoundException e) {
-            System.out.println("Could not load SQL driver");
-            System.exit(-1);
-        }
+   // public void connect() {
 
-        int retries = 10;
-        for (int i = 0; i < retries; ++i) {
-            System.out.println("Connecting to database...");
-            try {
-                // Wait a bit for db to start
-                Thread.sleep(30000);
-                // Connect to database
-                con = DriverManager.getConnection("jdbc:mysql://db:3306/world", "root", "example");
-                System.out.println("Successfully connected to database");
-                break;
-            } catch (SQLException sqle) {
-                System.out.println("Failed to connect to database attempt " + Integer.toString(i));
-                System.out.println(sqle.getMessage());
-            } catch (InterruptedException ie) {
-                System.out.println("Thread interrupted? Should not happen.");
-            }
-        }
-    }
+  //  }
 
     /**
      * Disconnect from the MySQL database.
@@ -72,7 +48,7 @@ public class App {
         App a = new App();
 
         // Connect to database
-        a.connect();
+        //a.connect();
 
 
         //Extract country information
@@ -232,4 +208,31 @@ public class App {
         }
     }
 
+    public void connect(String s, int i) {
+        try {
+            // Load Database driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            System.out.println("Could not load SQL driver");
+            System.exit(-1);
+        }
+
+        int retries = 10;
+        for (int j = 0; i < retries; ++i) {
+            System.out.println("Connecting to database...");
+            try {
+                // Wait a bit for db to start
+                Thread.sleep(30000);
+                // Connect to database
+                con = DriverManager.getConnection("jdbc:mysql://db:3306/world", "root", "example");
+                System.out.println("Successfully connected to database");
+                break;
+            } catch (SQLException sqle) {
+                System.out.println("Failed to connect to database attempt " + Integer.toString(i));
+                System.out.println(sqle.getMessage());
+            } catch (InterruptedException ie) {
+                System.out.println("Thread interrupted? Should not happen.");
+            }
+        }
+    }
 }
