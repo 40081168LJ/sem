@@ -14,7 +14,7 @@ public class Population {
      * stores population
      */
 
-    public int population;
+    public long population;
 
 
 }

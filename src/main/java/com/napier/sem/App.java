@@ -18,7 +18,7 @@ public class App {
     /**
      * Connect to the MySQL database.
      */
-    public void connect() {
+    public void connect(String location, int delay) {
         try {
             // Load Database driver
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -32,13 +32,15 @@ public class App {
             System.out.println("Connecting to database...");
             try {
                 // Wait a bit for db to start
-                Thread.sleep(30000);
+                Thread.sleep(delay);
                 // Connect to database
-                con = DriverManager.getConnection("jdbc:mysql://db:3306/world", "root", "example");
-                System.out.println("Successfully connected to database");
+                con = DriverManager.getConnection("jdbc:mysql://" + location
+                                + "/world?allowPublicKeyRetrieval=true&useSSL=false",
+                        "root", "example");
+                System.out.println("Successfully connected");
                 break;
             } catch (SQLException sqle) {
-                System.out.println("Failed to connect to database attempt " + Integer.toString(i));
+                System.out.println("Failed to connect to database attempt " +                                  Integer.toString(i));
                 System.out.println(sqle.getMessage());
             } catch (InterruptedException ie) {
                 System.out.println("Thread interrupted? Should not happen.");
@@ -71,7 +73,11 @@ public class App {
         App a = new App();
 
         // Connect to database
-        a.connect();
+        if(args.length < 1){
+            a.connect("localhost:33060", 30000);
+        }else{
+            a.connect(args[0], Integer.parseInt(args[1]));
+        }
 
         // Get city
         City city = a.getCity(1);
@@ -124,40 +130,36 @@ public class App {
                             + "City Country: " + city.country + "\n");
         }
     }
-
-    public int getPopulation(){
+    /**
+     * Create an SQL Statement to get world population
+     *  Used in additional_info 1 report
+     */
+    public Population getPopulation(){
 
         try{
-            /**
-             * Create an SQL Statement to get world population
-             * Create string for SQL Statement
-             */
             Statement stmt = con.createStatement();
-            String strSelect = "SELECT SUM(population) AS world_population "+
-                    "FROM country";
+            String strSelect = "SELECT SUM(population) as `popTotal` FROM country";
 
-            /**
-             * Execute SQL Statement
-             */
+            // Execute SQL Statement and return population
             ResultSet rset = stmt.executeQuery(strSelect);
-
-            /**
-             * Return world population
-             */
-            if (rset != null){
-
-                String worldPopulation = String.valueOf(rset);
-                return Integer.parseInt(worldPopulation);
-
-            }
-            return 0;
+            Population pop = new Population();
+            rset.next();
+            pop.population = rset.getLong("popTotal");
+            return pop;
         }
         catch (Exception e)
         {
             System.out.println(e.getMessage());
             System.out.println("Failed to get world population for: Report additional info 1 ");
-            return -1;
+            return null;
         }
 
+    }
+    public void displayPopulation(Population population)
+    {
+        if (population != null)
+        {
+            System.out.println("world population : "+ population.population);
+        }
     }
 }
