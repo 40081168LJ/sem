@@ -17,11 +17,7 @@ public class Main {
     public static void main(String[] args) {
         App a = new App();
 
-        if (args.length < 1) {
-            a.connect("localhost:33060", 30000);
-        } else {
-            a.connect("db:3306", 30000);
-        }
+
 
     }
 }

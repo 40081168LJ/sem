@@ -14,7 +14,7 @@ public class App {
     /**
      * Connection to MySQL database.
      */
-    public Connection con = null;
+    public Connection con;
 
     /**
      * Connect to the MySQL database.
@@ -45,37 +45,44 @@ public class App {
      */
     public static void main(String[] args) throws IOException {
         // Create new Application
-        App a = new App();
+        App con = new App();
 
         // Connect to database
         //a.connect();
-
+        if (args.length < 1) {
+            con.connect("localhost:33060", 30000);
+        } else {
+            con.connect("db:3306", 30000);
+        }
 
         //Extract country information
-        ArrayList<Country> countries = a.getAllCountries();
+        ArrayList<Country> countries = con.getAllCountries();
 
         //Print table of countries in the world
-        a.printCountries(countries);
+        con.printCountries(countries);
 
         //Extract country by continent information
-        ArrayList<Country> countries1 = a.getContinentCountries();
+        ArrayList<Country> countries1 = con.getContinentCountries();
 
         //Print table of countries in a continent e.g. Asia
-        a.printCountries(countries1);
+        con.printCountries(countries1);
 
         //Extract country by region information
-        ArrayList<Country> countries2 = a.getRegionCountries();
+        ArrayList<Country> countries2 = con.getRegionCountries();
 
         //Print table of countries in a region e.g. Western Europe
-        a.printCountries(countries2);
+        con.printCountries(countries2);
 
 
         // Disconnect from database
-        a.disconnect();
+        con.disconnect();
 
     }
 
-
+    /** Extract all countries in the world, order by population descending
+     * Author - AOB
+     * @return
+     */
     public ArrayList<Country> getAllCountries() {
         try {
             // Create an SQL statement
@@ -112,6 +119,10 @@ public class App {
         }
     }
 
+    /** Extract all countries in specified continent, ordered by population
+     * Author - AOB
+     * @return
+     */
     public ArrayList<Country> getContinentCountries() {
         try {
             // Create an SQL statement
@@ -147,6 +158,10 @@ public class App {
         }
     }
 
+    /** Extract countries in specified region, order by population descending
+     * Author - AOB
+     * @return
+     */
     public ArrayList<Country> getRegionCountries() {
         try {
             // Create an SQL statement
@@ -183,7 +198,10 @@ public class App {
     }
 
 
-
+    /** Print table of countries extracted
+     * Author - AOB
+     * @param countries
+     */
 
     //Print list of countries in the world
     public void printCountries(ArrayList<Country> countries)
@@ -208,7 +226,7 @@ public class App {
         }
     }
 
-    public void connect(String s, int i) {
+    public void connect(String location, int delay) {
         try {
             // Load Database driver
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -218,17 +236,19 @@ public class App {
         }
 
         int retries = 10;
-        for (int j = 0; i < retries; ++i) {
+        for (int i = 0; i < retries; ++i) {
             System.out.println("Connecting to database...");
             try {
                 // Wait a bit for db to start
-                Thread.sleep(30000);
+                Thread.sleep(delay);
                 // Connect to database
-                con = DriverManager.getConnection("jdbc:mysql://db:3306/world", "root", "example");
-                System.out.println("Successfully connected to database");
+                con = DriverManager.getConnection("jdbc:mysql://" + location
+                                + "/world?allowPublicKeyRetrieval=true&useSSL=false",
+                        "root", "example");
+                System.out.println("Successfully connected");
                 break;
             } catch (SQLException sqle) {
-                System.out.println("Failed to connect to database attempt " + Integer.toString(i));
+                System.out.println("Failed to connect to database attempt " +                                  Integer.toString(i));
                 System.out.println(sqle.getMessage());
             } catch (InterruptedException ie) {
                 System.out.println("Thread interrupted? Should not happen.");
@@ -236,3 +256,4 @@ public class App {
         }
     }
 }
+

@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="SL - fixed test file structure&#10;fixed getWorldPopulation methods and added testing">
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="AOB - report 1,2,3 tests">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/IntegrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/IntegrationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/UnitTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UnitTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com.napier.sem/Report123Test.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +114,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Report123Tests">
+  <component name="RunManager" selected="JUnit.UnitTests">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.napier.sem.App" />
       <module name="seMethods" />
@@ -305,10 +305,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.db/Dockerfile" />
-        <item itemvalue="JUnit.IntegrationTests.GetWorldPopulation" />
         <item itemvalue="Application.App" />
         <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
+        <item itemvalue="Docker.db/Dockerfile" />
+        <item itemvalue="JUnit.IntegrationTests.GetWorldPopulation" />
         <item itemvalue="Maven.seMethods [package]" />
       </list>
     </recent_temporary>
@@ -489,7 +489,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678659473325</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="AOB - report 1,2,3 tests">
+      <created>1679404238081</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1679404238081</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,7 +514,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LJ - First Commit, project creation and gitignore file." />
     <MESSAGE value="LJ - Dockerfile upload." />
     <MESSAGE value="SL - Added MongoDB support" />
     <MESSAGE value="SL - fixed issues with mongodb support" />
@@ -532,7 +538,8 @@
     <MESSAGE value="LJ - Updates to Java Menu, condensed view." />
     <MESSAGE value="LJ - JavaMenu abandoned. SAmple SQL in place instead." />
     <MESSAGE value="SL - fixed test file structure&#10;fixed getWorldPopulation methods and added testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="SL - fixed test file structure&#10;fixed getWorldPopulation methods and added testing" />
+    <MESSAGE value="AOB - report 1,2,3 tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="AOB - report 1,2,3 tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
