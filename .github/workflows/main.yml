@@ -16,7 +16,7 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       - name: Unit Tests
-        run: mvn -test=com.napier.sem.AppTest test
+        run: mvn -D test=com.napier.sem.AppTest test
 
   build:
     name: Build and Start Using docker-compose
@@ -33,5 +33,5 @@ jobs:
           distribution: 'adopt'
       - name: Package and Run docker compose
         run: |
-          mvn package -skipTests
+          mvn package -D skipTests
           docker-compose up --abort-on-container-exit
