@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="SL - fixed test file structure&#10;fixed getWorldPopulation methods and added testing">
-      <change afterPath="$PROJECT_DIR$/src/test/java/IntegrationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/UnitTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Population.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Population.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Population_Test.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,8 +62,12 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="2KmO256pZRXN5u5tAHVsrV1GrMW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -79,43 +75,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Git.Branch.Popup.ShowAllRemotes": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/annie/Downloads/diagrams.net-intellij-plugin-0.2.0.zip",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
-  },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JAVA"
-    ]
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-19&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/annie/Downloads/diagrams.net-intellij-plugin-0.2.0.zip&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ShaunL\IdeaProjects\sem\db" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ShaunL\IdeaProjects\sem\src" />
-      <recent name="C:\Users\ShaunL\IdeaProjects\sem\src\main\java\com\napier\sem" />
-      <recent name="C:\Users\ShaunL\IdeaProjects\sem\src\main\IntegrationTests\java" />
-      <recent name="C:\Users\ShaunL\IdeaProjects\sem\src\main\IntegrationTests" />
-      <recent name="C:\Users\ShaunL\IdeaProjects\sem\db" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
+      <recent name="C:\Users\annie\IdeaProjects\semResport1\src" />
+      <recent name="C:\Users\ShaunL\IdeaProjects\sem" />
+      <recent name="C:\Users\liamm\IdeaProjects\seMethods" />
     </key>
   </component>
   <component name="RunManager" selected="Application.App">
@@ -132,17 +119,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IntegrationTests" type="JUnit" factoryName="JUnit">
-      <module name="seMethods" />
-      <shortenClasspath name="NONE" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="IntegrationTests" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="IntegrationTests.GetWorldPopulation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seMethods" />
       <option name="PACKAGE_NAME" value="" />
@@ -153,73 +129,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UnitTests" type="JUnit" factoryName="JUnit">
+    <configuration name="com.napier.sem in seMethods" type="JUnit" factoryName="JUnit">
       <module name="seMethods" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UnitTests" />
+      <option name="PACKAGE_NAME" value="com.napier.sem" />
+      <option name="MAIN_CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="seMethods [install]" type="MavenRunConfiguration" factoryName="Maven">
-      <MavenSettings>
-        <option name="myGeneralSettings">
-          <MavenGeneralSettings>
-            <option name="alwaysUpdateSnapshots" value="false" />
-            <option name="checksumPolicy" value="NOT_SET" />
-            <option name="failureBehavior" value="NOT_SET" />
-            <option name="localRepository" value="" />
-            <option name="mavenHome" value="Bundled (Maven 3)" />
-            <option name="nonRecursive" value="false" />
-            <option name="outputLevel" value="INFO" />
-            <option name="pluginUpdatePolicy" value="DEFAULT" />
-            <option name="printErrorStackTraces" value="false" />
-            <option name="showDialogWithAdvancedSettings" value="false" />
-            <option name="threads" />
-            <option name="useMavenConfig" value="false" />
-            <option name="usePluginRegistry" value="false" />
-            <option name="userSettingsFile" value="" />
-            <option name="workOffline" value="false" />
-          </MavenGeneralSettings>
-        </option>
-        <option name="myRunnerSettings">
-          <MavenRunnerSettings>
-            <option name="delegateBuildToMaven" value="false" />
-            <option name="environmentProperties">
-              <map />
-            </option>
-            <option name="jreName" value="#USE_PROJECT_JDK" />
-            <option name="mavenProperties">
-              <map />
-            </option>
-            <option name="passParentEnv" value="true" />
-            <option name="runMavenInBackground" value="true" />
-            <option name="skipTests" value="false" />
-            <option name="vmOptions" value="" />
-          </MavenRunnerSettings>
-        </option>
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="install" />
-              </list>
-            </option>
-            <option name="pomFileName" value="pom.xml" />
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method v="2" />
     </configuration>
     <configuration name="seMethods [package]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
       <MavenSettings>
@@ -290,19 +208,17 @@
       <item itemvalue="Application.App" />
       <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
       <item itemvalue="Docker.db/Dockerfile" />
-      <item itemvalue="JUnit.UnitTests" />
-      <item itemvalue="JUnit.IntegrationTests" />
+      <item itemvalue="JUnit.com.napier.sem in seMethods" />
       <item itemvalue="JUnit.IntegrationTests.GetWorldPopulation" />
-      <item itemvalue="Maven.seMethods [install]" />
       <item itemvalue="Maven.seMethods [package]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.IntegrationTests.GetWorldPopulation" />
-        <item itemvalue="Application.App" />
-        <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
         <item itemvalue="Maven.seMethods [package]" />
-        <item itemvalue="JUnit.PopulationIntegrationTests" />
+        <item itemvalue="JUnit.IntegrationTests.GetWorldPopulation" />
+        <item itemvalue="Docker.db/Dockerfile" />
+        <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
+        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
@@ -461,28 +377,35 @@
       <option name="project" value="LOCAL" />
       <updated>1677449541338</updated>
     </task>
-    <task id="LOCAL-00021" summary="LJ - Basic Menu implementation in &quot;Main&quot;">
-      <created>1678028522701</created>
+    <task id="LOCAL-00021" summary="AOB - report 1 countries test">
+      <created>1679255437385</created>
       <option name="number" value="00021" />
       <option name="presentableId" value="LOCAL-00021" />
       <option name="project" value="LOCAL" />
-      <updated>1678028522701</updated>
+      <updated>1679255437385</updated>
     </task>
-    <task id="LOCAL-00022" summary="LJ - Updates to Java Menu, condensed view.">
-      <created>1678196109115</created>
+    <task id="LOCAL-00022" summary="AOB - report 1 countries - country table to be combined with cities + table needs formatting">
+      <created>1679257861862</created>
       <option name="number" value="00022" />
       <option name="presentableId" value="LOCAL-00022" />
       <option name="project" value="LOCAL" />
-      <updated>1678196109115</updated>
+      <updated>1679257861862</updated>
     </task>
-    <task id="LOCAL-00023" summary="LJ - JavaMenu abandoned. SAmple SQL in place instead.">
-      <created>1678659473325</created>
+    <task id="LOCAL-00023" summary="AOB - report 1 countries - table needs formatting + ?countries with no capital?">
+      <created>1679262572740</created>
       <option name="number" value="00023" />
       <option name="presentableId" value="LOCAL-00023" />
       <option name="project" value="LOCAL" />
-      <updated>1678659473325</updated>
+      <updated>1679262572740</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="AOB - report 1,2,3 - tables needs formatting + ?countries with no capital?">
+      <created>1679264508003</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1679264508003</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,11 +444,11 @@
     <MESSAGE value="AOB - use case 6 added" />
     <MESSAGE value="AOB - use case 7 added" />
     <MESSAGE value="AOB - use case 7 amended, use case 8 added" />
-    <MESSAGE value="LJ - Basic Menu implementation in &quot;Main&quot;" />
-    <MESSAGE value="LJ - Updates to Java Menu, condensed view." />
-    <MESSAGE value="LJ - JavaMenu abandoned. SAmple SQL in place instead." />
-    <MESSAGE value="SL - fixed test file structure&#10;fixed getWorldPopulation methods and added testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="SL - fixed test file structure&#10;fixed getWorldPopulation methods and added testing" />
+    <MESSAGE value="AOB - report 1 countries test" />
+    <MESSAGE value="AOB - report 1 countries - country table to be combined with cities + table needs formatting" />
+    <MESSAGE value="AOB - report 1 countries - table needs formatting + ?countries with no capital?" />
+    <MESSAGE value="AOB - report 1,2,3 - tables needs formatting + ?countries with no capital?" />
+    <option name="LAST_COMMIT_MESSAGE" value="AOB - report 1,2,3 - tables needs formatting + ?countries with no capital?" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
