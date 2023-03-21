@@ -1,5 +1,7 @@
 package com.napier.sem;
 
+/**********************************************************************************************************************/
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -7,6 +9,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**********************************************************************************************************************/
 /**
  *used to interact with the MySQL database
  */
@@ -62,6 +65,7 @@ public class App {
         }
     }
 
+/**********************************************************************************************************************/
     /**
      * connects to the database and gets a employee and displays the employee
      *
@@ -84,6 +88,7 @@ public class App {
 
     }
 
+/**********************************************************************************************************************/
 
     public City getCity(int ID) {
         try {
@@ -127,7 +132,8 @@ public class App {
         }
     }
 
-    /** Languages SQL
+/**********************************************************************************************************************/
+    /** Languages SQL, return language if valid
      * Author - LJ
      */
     public Language getLanguage(String Code)
@@ -136,14 +142,17 @@ public class App {
         {
             // Create an SQL statement
             Statement stmt = con.createStatement();
+
             // Create string for SQL statement
             String strSelect =
                     "SELECT CountryCode, Language, IsOfficial, Percentage "
                             + "FROM countrylanguage "
                             + "WHERE CountryCode = " + "CountryCode";
+
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
-            // Return new city if valid.
+
+            // Return new language if valid.
             // Check one is returned
             if (rset.next())
             {
@@ -157,13 +166,21 @@ public class App {
             else
                 return null;
         }
+        /**
+         * Try/Catch for exception
+         */
         catch (Exception e)
         {
             System.out.println(e.getMessage());
-            System.out.println("Failed to get language details");
+            System.out.println("Failed to get Language Informatoion");
             return null;
         }
     }
+
+    /**
+     * Display Country Language
+     * @param countryLanguage2
+     */
     public void displayCountryLanguage(Language countryLanguage2)
     {
         if (countryLanguage2 != null)
@@ -175,4 +192,6 @@ public class App {
                             + countryLanguage2.percentage + "\n");
         }
     }
+
+/**********************************************************************************************************************/
 }

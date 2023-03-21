@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - Updated pom.xml">
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - Added Languages SQL, and set up for testing.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LanguageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LanguageTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,7 +231,7 @@
       <workItem from="1675180857391" duration="3618000" />
       <workItem from="1676360482399" duration="1826000" />
       <workItem from="1676382680779" duration="521000" />
-      <workItem from="1679383290035" duration="1058000" />
+      <workItem from="1679383290035" duration="1619000" />
     </task>
     <task id="LOCAL-00001" summary="LJ - First Commit, project creation and gitignore file.">
       <created>1674576784290</created>
@@ -409,7 +408,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678811096349</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="LJ - Added Languages SQL, and set up for testing.">
+      <created>1679384658725</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1679384658725</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -427,7 +433,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LJ - Dockerfile upload." />
     <MESSAGE value="SL - Added MongoDB support" />
     <MESSAGE value="SL - fixed issues with mongodb support" />
     <MESSAGE value="SL - got mongodb working" />
@@ -452,7 +457,8 @@
     <MESSAGE value="LJ - JavaMenu abandoned. SAmple SQL in place instead." />
     <MESSAGE value="LJ - Updated folders, added testing area. Provided Example for languages." />
     <MESSAGE value="LJ - Updated pom.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="LJ - Updated pom.xml" />
+    <MESSAGE value="LJ - Added Languages SQL, and set up for testing." />
+    <option name="LAST_COMMIT_MESSAGE" value="LJ - Added Languages SQL, and set up for testing." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
