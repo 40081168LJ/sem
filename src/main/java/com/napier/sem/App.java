@@ -1,11 +1,8 @@
 package com.napier.sem;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 /**
  *used to interact with the MySQL database
@@ -15,13 +12,6 @@ public class App {
      * Connection to MySQL database.
      */
     public Connection con;
-
-    /**
-     * Connect to the MySQL database.
-     */
-   // public void connect() {
-
-  //  }
 
     /**
      * Disconnect from the MySQL database.
@@ -55,21 +45,21 @@ public class App {
 
         //Extract country information
         ArrayList<Country> countries = con.getAllCountries();
-
         //Print table of countries in the world
         con.printCountries(countries);
 
         //Extract country by continent information
         ArrayList<Country> countries1 = con.getContinentCountries();
-
         //Print table of countries in a continent e.g. Asia
         con.printCountries(countries1);
 
         //Extract country by region information
         ArrayList<Country> countries2 = con.getRegionCountries();
-
         //Print table of countries in a region e.g. Western Europe
         con.printCountries(countries2);
+
+        //Extract country information
+        ArrayList<Languages> languages1 = con.getLanguages1();
 
 
         // Disconnect from database
@@ -222,6 +212,45 @@ public class App {
                     country.region, country.population, country.capital);
             System.out.println(country_string);
         }
+    }
+
+    /**
+     * @param Code
+     * @return
+     */
+    public Language getLanguages1(String Code) {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+
+            //CreatestringforSQLstatement
+            String strSelect =
+                    "SELECT CountryCode, Language, IsOfficial, Percentage"
+                            + "FROM countrylanguage"
+                            + "WHERE CountryCode = " + "CountryCode";
+
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // Extract Country information
+            ArrayList<Country> countries = new ArrayList<Country>();
+
+            //Return new language if valid.
+            //Check one is returned
+            if (rset.next()) {
+                Language countryLanguage2 = new Language();
+                countryLanguage2.countryCode = rset.getString("CountryCode");
+                countryLanguage2.language = rset.getString("Language");
+                countryLanguage2.isOfficial = rset.getString("IsOfficial");
+                countryLanguage2.percentage = rset.getInt("Percentage");
+                return countryLanguage2;
+            } else
+                return null;
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+            System.out.println("FailedtogetLanguageInformatoion");
+        }
+        return null;
     }
 
     public void connect(String location, int delay) {
