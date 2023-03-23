@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="AOB - jacoco plugin removed">
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - Updated, with new connection settings. Works locally and menu report 1 also working.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -317,9 +316,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
         <item itemvalue="Docker.db/Dockerfile" />
-        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.IntegrationTests.GetWorldPopulation" />
         <item itemvalue="Maven.seMethods [package]" />
       </list>
@@ -578,7 +577,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679412653218</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="LJ - Updated, with new connection settings. Works locally and menu report 1 also working.">
+      <created>1679532143469</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1679532143469</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -596,7 +602,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="SL - added docker-compose file" />
     <MESSAGE value="SL - added disconnect and connect methods" />
     <MESSAGE value="SL - added employee class with related employee methods" />
     <MESSAGE value="AG - Added Get all Salaries method" />
@@ -621,7 +626,8 @@
     <MESSAGE value="AOB - integration tests update" />
     <MESSAGE value="AOB - codecov token uncomment" />
     <MESSAGE value="AOB - main.yml branches added" />
-    <option name="LAST_COMMIT_MESSAGE" value="AOB - main.yml branches added" />
+    <MESSAGE value="LJ - Updated, with new connection settings. Works locally and menu report 1 also working." />
+    <option name="LAST_COMMIT_MESSAGE" value="LJ - Updated, with new connection settings. Works locally and menu report 1 also working." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
