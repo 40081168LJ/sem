@@ -1,12 +1,12 @@
 package com.napier.sem;
-
+/**********************************************************************************************************************/
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/**********************************************************************************************************************/
 /**
  *used to interact with the MySQL database
  */
@@ -15,13 +15,6 @@ public class App {
      * Connection to MySQL database.
      */
     public Connection con;
-
-    /**
-     * Connect to the MySQL database.
-     */
-   // public void connect() {
-
-  //  }
 
     /**
      * Disconnect from the MySQL database.
@@ -43,6 +36,7 @@ public class App {
      *
      * @param args
      */
+/**********************************************************************************************************************/
     public static void main(String[] args) throws IOException {
         // Create new Application
         App con = new App();
@@ -57,28 +51,23 @@ public class App {
 
         //Extract country information
         ArrayList<Country> countries = con.getAllCountries();
-
         //Print table of countries in the world
         con.printCountries(countries);
 
         //Extract country by continent information
         ArrayList<Country> countries1 = con.getContinentCountries();
-
         //Print table of countries in a continent e.g. Asia
         con.printCountries(countries1);
 
         //Extract country by region information
         ArrayList<Country> countries2 = con.getRegionCountries();
-
         //Print table of countries in a region e.g. Western Europe
         con.printCountries(countries2);
 
-
         // Disconnect from database
         con.disconnect();
-
     }
-
+/**********************************************************************************************************************/
     /** Extract all countries in the world, order by population descending
      * Author - AOB
      * @return
@@ -118,7 +107,7 @@ public class App {
             return null;
         }
     }
-
+/**********************************************************************************************************************/
     /** Extract all countries in specified continent, ordered by population
      * Author - AOB
      * @return
@@ -157,7 +146,7 @@ public class App {
             return null;
         }
     }
-
+/**********************************************************************************************************************/
     /** Extract countries in specified region, order by population descending
      * Author - AOB
      * @return
@@ -196,8 +185,7 @@ public class App {
             return null;
         }
     }
-
-
+/**********************************************************************************************************************/
     /** Print table of countries extracted
      * Author - AOB
      * @param countries
@@ -225,7 +213,12 @@ public class App {
             System.out.println(country_string);
         }
     }
-
+/**********************************************************************************************************************/
+    /**
+     * Connection to database
+     * @param location
+     * @param delay
+     */
     public void connect(String location, int delay) {
         try {
             // Load Database driver
@@ -248,12 +241,72 @@ public class App {
                 System.out.println("Successfully connected");
                 break;
             } catch (SQLException sqle) {
-                System.out.println("Failed to connect to database attempt " +                                  Integer.toString(i));
+                System.out.println("Failed to connect to database attempt " + Integer.toString(i));
                 System.out.println(sqle.getMessage());
             } catch (InterruptedException ie) {
                 System.out.println("Thread interrupted? Should not happen.");
             }
         }
     }
-}
+/**********************************************************************************************************************/
+    /** Languages SQL, return language if valid
+     * Author - LJ
+     */
+    public Language getLanguage(String Code)
+    {
+        try
+        {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
 
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT CountryCode, Language, IsOfficial, Percentage "
+                            + "FROM countrylanguage "
+                            + "WHERE CountryCode = " + "CountryCode";
+
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // Return new language if valid.
+            // Check one is returned
+            if (rset.next())
+            {
+                Language countryLanguage2 = new Language();
+                countryLanguage2.countryCode = rset.getString("CountryCode");
+                countryLanguage2.language = rset.getString("Language");
+                countryLanguage2.isOfficial = rset.getString("IsOfficial");
+                countryLanguage2.percentage = rset.getInt("Percentage");
+                return countryLanguage2;
+            }
+            else
+                return null;
+        }
+        /**
+         * Try/Catch for exception
+         */
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get Language Informatoion");
+            return null;
+        }
+    }
+
+    /**
+     * Display Country Language
+     * @param countryLanguage2
+     */
+    public void displayCountryLanguage(Language countryLanguage2)
+    {
+        if (countryLanguage2 != null)
+        {
+            System.out.println(
+                    countryLanguage2.countryCode + "\n"
+                            + countryLanguage2.language + "\n"
+                            + countryLanguage2.isOfficial + "\n"
+                            + countryLanguage2.percentage + "\n");
+        }
+    }
+}
+/**********************************************************************************************************************/

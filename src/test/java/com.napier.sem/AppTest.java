@@ -1,17 +1,20 @@
 package com.napier.sem;
-
+/**********************************************************************************************************************/
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-
+/**********************************************************************************************************************/
 /** Unit tests for reports
- * Author - AOB
+ * Author - AOB / LJ
  */
 public class AppTest
 {
     static App app;
 
+    /**
+     * Before all the testing starts, start new app
+     */
     @BeforeAll
     static void init()
     {
@@ -37,7 +40,7 @@ public class AppTest
 //        population.population = 23123122;
 //        app.displayPopulation(population);
 //    }
-
+/**********************************************************************************************************************/
     /** Unit test for print extracted list of countries if null
      * Author - AOB
      */
@@ -56,7 +59,7 @@ public class AppTest
         ArrayList<Country> countries = new ArrayList<Country>();
         app.printCountries(countries);
     }
-
+/**********************************************************************************************************************/
     /** Unit test for print extracted list of countries if array item is null
      * Author - AOB
      */
@@ -84,5 +87,17 @@ public class AppTest
         country.capital = "Paris";
         countries.add(country);
         app.printCountries(countries);
+    }
+/**********************************************************************************************************************/
+    /**UNIT TEST FOR POPULATION OF "China/Chinese"
+     *Finally, the organisation has asked if it is possible to provide the number of people who speak the following:
+     *The following languages from the largest number to smallest, including the percentage of the world population:
+     */
+
+    @Test
+    void displayCountryLanguage()
+    {
+        Language countryLanguageTest1 = new Language();
+        app.displayCountryLanguage(countryLanguageTest1);
     }
 }
