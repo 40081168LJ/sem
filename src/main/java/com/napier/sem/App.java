@@ -40,7 +40,6 @@ public class App {
 
     /**
      * connects to the datab base and gets a employee and displays the employee
-     *
      * @param args
      */
     public static void main(String[] args) throws IOException {
@@ -48,7 +47,6 @@ public class App {
         App con = new App();
 
         // Connect to database
-        //a.connect();
         if (args.length < 1) {
             con.connect("localhost:33060", 30000);
         } else {
@@ -248,7 +246,7 @@ public class App {
                 System.out.println("Successfully connected");
                 break;
             } catch (SQLException sqle) {
-                System.out.println("Failed to connect to database attempt " +                                  Integer.toString(i));
+                System.out.println("Failed to connect to database attempt " + Integer.toString(i));
                 System.out.println(sqle.getMessage());
             } catch (InterruptedException ie) {
                 System.out.println("Thread interrupted? Should not happen.");
