@@ -33,43 +33,44 @@ public class App {
      * @param args
      */
     public static void main(String[] args) throws IOException {
+        /*****************************************************************/
         // Create new Application
         App con = new App();
-
+        /*****************************************************************/
         // Connect to database
         if (args.length < 1) {
             con.connect("localhost:33060", 30000);
         } else {
             con.connect("db:3306", 30000);
         }
-
+        /*****************************************************************/
         // REPORT 1
         // Extract country information
         ArrayList<Country> countries = con.getAllCountries();
         // Print table of countries in the world
         con.printCountries(countries);
-
+        /*****************************************************************/
         // REPORT 2
         // Extract country by continent information
         ArrayList<Country> countries1 = con.getContinentCountries();
         // Print table of countries in a continent e.g. Asia
         con.printCountries(countries1);
-
+        /*****************************************************************/
         // REPORT 3
         // Extract country by region information
         ArrayList<Country> countries2 = con.getRegionCountries();
         // Print table of countries in a region e.g. Western Europe
         con.printCountries(countries2);
-
+        /*****************************************************************/
         // LANGUAGE REPORT 1
         // Show all conuntry where language = Chinese
 
+        /*****************************************************************/
 
-
-
+        /*****************************************************************/
         // Disconnect from database
         con.disconnect();
-
+        /*****************************************************************/
     }
 /**********************************************************************************************************************/
     /** Extract all countries in the world, order by population descending
