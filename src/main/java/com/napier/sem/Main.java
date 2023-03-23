@@ -14,6 +14,7 @@ import java.sql.*;
  */
 public class Main {
 
+    // setting quit for menu loop below
     static boolean quit = false;
 
     /**
@@ -30,6 +31,7 @@ public class Main {
             con.connect("db:3306", 30000);
         }
 
+        // Beginning of loop for menu return
         do {
             int swValue;
             System.out.println("<|************************************************************************************|>");
@@ -70,9 +72,9 @@ public class Main {
                 case 1:
                     System.out.println("Report 1 Selected, Displaying all Countries and population detials...");
                     System.out.println("<|************************************************************************************|>");
-                    //Extract country information
+                    // Extract country information
                     ArrayList<Country> countries = con.getAllCountries();
-                    //Print table of countries in the world
+                    // Print table of countries in the world
                     con.printCountries(countries);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 1 Finished, Returning to Main Menu...");
@@ -80,9 +82,9 @@ public class Main {
                 case 2:
                     System.out.println("Report 2 Selected, Displaying Countries by Continent = Asia...");
                     System.out.println("<|************************************************************************************|>");
-                    //Extract country by continent information
+                    // Extract country by continent information
                     ArrayList<Country> countries1 = con.getContinentCountries();
-                    //Print table of countries in a continent e.g. Asia
+                    // Print table of countries in a continent e.g. Asia
                     con.printCountries(countries1);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 2 Finished, Returning to Main Menu...");
@@ -196,9 +198,7 @@ public class Main {
                 default:
                     System.out.println("Invalid Input, try again...");
                     break;
-                /**
-                 *This break is not really necessary but good practice, TODO:look at removing if needed?
-                 */
+                 // This break is not really necessary but good practice, TODO:look at removing if needed?
             }
         } while (!quit);
         con.disconnect();
@@ -245,7 +245,7 @@ public class Main {
                     if (aChar < 0 || (char) aChar == '\n')
                         finished = true;
                     else if((char) aChar != '\r')
-                    s = s + (char) aChar;//Enter into string
+                    s = s + (char) aChar;// Enter into string
                 } catch (java.io.IOException e) {
                     System.out.println("Input error");
                     finished = true;
