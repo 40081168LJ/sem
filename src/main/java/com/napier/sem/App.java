@@ -1,9 +1,9 @@
 package com.napier.sem;
-
+/**********************************************************************************************************************/
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
-
+/**********************************************************************************************************************/
 /**
  *used to interact with the MySQL database
  */
@@ -27,7 +27,7 @@ public class App {
             }
         }
     }
-
+/**********************************************************************************************************************/
     /**
      * connects to the datab base and gets a employee and displays the employee
      * @param args
@@ -43,30 +43,35 @@ public class App {
             con.connect("db:3306", 30000);
         }
 
-        //Extract country information
+        // REPORT 1
+        // Extract country information
         ArrayList<Country> countries = con.getAllCountries();
-        //Print table of countries in the world
+        // Print table of countries in the world
         con.printCountries(countries);
 
-        //Extract country by continent information
+        // REPORT 2
+        // Extract country by continent information
         ArrayList<Country> countries1 = con.getContinentCountries();
-        //Print table of countries in a continent e.g. Asia
+        // Print table of countries in a continent e.g. Asia
         con.printCountries(countries1);
 
-        //Extract country by region information
+        // REPORT 3
+        // Extract country by region information
         ArrayList<Country> countries2 = con.getRegionCountries();
-        //Print table of countries in a region e.g. Western Europe
+        // Print table of countries in a region e.g. Western Europe
         con.printCountries(countries2);
 
-        //Extract country information
-        ArrayList<Languages> languages1 = con.getLanguages1();
+        // LANGUAGE REPORT 1
+        // Show all conuntry where language = Chinese
+
+
 
 
         // Disconnect from database
         con.disconnect();
 
     }
-
+/**********************************************************************************************************************/
     /** Extract all countries in the world, order by population descending
      * Author - AOB
      * @return
@@ -106,7 +111,7 @@ public class App {
             return null;
         }
     }
-
+/**********************************************************************************************************************/
     /** Extract all countries in specified continent, ordered by population
      * Author - AOB
      * @return
@@ -145,7 +150,7 @@ public class App {
             return null;
         }
     }
-
+/**********************************************************************************************************************/
     /** Extract countries in specified region, order by population descending
      * Author - AOB
      * @return
@@ -184,13 +189,11 @@ public class App {
             return null;
         }
     }
-
-
+/**********************************************************************************************************************/
     /** Print table of countries extracted
      * Author - AOB
      * @param countries
      */
-
     //Print list of countries in the world
     public void printCountries(ArrayList<Country> countries)
     {
@@ -213,7 +216,7 @@ public class App {
             System.out.println(country_string);
         }
     }
-
+/**********************************************************************************************************************/
     /**
      * @param Code
      * @return
@@ -227,23 +230,20 @@ public class App {
             String strSelect =
                     "SELECT CountryCode, Language, IsOfficial, Percentage"
                             + "FROM countrylanguage"
-                            + "WHERE CountryCode = " + "CountryCode";
+                            + "WHERE Language = " + "'Chinese'";
 
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
 
-            // Extract Country information
-            ArrayList<Country> countries = new ArrayList<Country>();
-
             //Return new language if valid.
             //Check one is returned
             if (rset.next()) {
-                Language countryLanguage2 = new Language();
-                countryLanguage2.countryCode = rset.getString("CountryCode");
-                countryLanguage2.language = rset.getString("Language");
-                countryLanguage2.isOfficial = rset.getString("IsOfficial");
-                countryLanguage2.percentage = rset.getInt("Percentage");
-                return countryLanguage2;
+                Language countryLanguage1 = new Language();
+                countryLanguage1.countryCode = rset.getString("CountryCode");
+                countryLanguage1.language = rset.getString("Language");
+                countryLanguage1.isOfficial = rset.getString("IsOfficial");
+                countryLanguage1.percentage = rset.getInt("Percentage");
+                return countryLanguage1;
             } else
                 return null;
         } catch (SQLException ex) {
@@ -252,7 +252,21 @@ public class App {
         }
         return null;
     }
-
+/**********************************************************************************************************************/
+    /**
+     *Display Country Language where Language = Chinese
+     *@paramcountryLanguage1
+     */
+    public void displayCountryLanguage1(Language countryLanguage1) {
+        if (countryLanguage1 != null) {
+            System.out.println(
+                    countryLanguage1.countryCode + "\n"
+                            + countryLanguage1.language + "\n"
+                            + countryLanguage1.isOfficial + "\n"
+                            + countryLanguage1.percentage + "\n");
+        }
+    }
+/**********************************************************************************************************************/
     public void connect(String location, int delay) {
         try {
             // Load Database driver
@@ -282,5 +296,6 @@ public class App {
             }
         }
     }
+/**********************************************************************************************************************/
 }
 

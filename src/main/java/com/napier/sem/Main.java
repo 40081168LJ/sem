@@ -1,6 +1,6 @@
 import com.napier.sem.App;
 import com.napier.sem.Country;
-
+/**********************************************************************************************************************/
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -8,7 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.sql.*;
-
+/**********************************************************************************************************************/
 /**
  * The main class, used for menu and report selection
  */
@@ -16,7 +16,7 @@ public class Main {
 
     // setting quit for menu loop below
     static boolean quit = false;
-
+/**********************************************************************************************************************/
     /**
      * Created a little Menu selection for each of the 36 types of reports and an exit option.
      */
@@ -63,6 +63,7 @@ public class Main {
             System.out.println("<|                                                                                    |>");
             swValue = Keyin.inInt("<| Please, Select a Report to view:");
 
+/**********************************************************************************************************************/
             /**
              Switch construct, Each case represents a Report.
              TODO:Could be used to them call each report method as needed?
@@ -204,7 +205,7 @@ public class Main {
         con.disconnect();
         System.out.println("Goodbye...");
     }
-
+/**********************************************************************************************************************/
     static class Keyin {
         /**
          *SupportMethods
@@ -230,7 +231,7 @@ public class Main {
                 System.out.println("Input error");
             }
         }
-
+/**********************************************************************************************************************/
         /**
          *@return
          */
@@ -253,7 +254,7 @@ public class Main {
             }
             return s;
         }
-
+/**********************************************************************************************************************/
         /**
          *For checking the input from the user is a integer and can be used to call a report
          *@paramprompt
@@ -278,9 +279,9 @@ public class Main {
                 }
             }
         }
-
+/**********************************************************************************************************************/
     }
-
+/**********************************************************************************************************************/
 }
 
 
