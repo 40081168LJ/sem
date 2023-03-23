@@ -64,7 +64,9 @@ public class App {
         /*****************************************************************/
         // LANGUAGE REPORT 1
         // Show all conuntry where language = Chinese
-
+        ArrayList<Language> LanguageReport1 = con.getLanguages1();
+        // Print out countries where language = Chinese
+        con.displayCountryLanguage1(LanguageReport1);
         /*****************************************************************/
 
         /*****************************************************************/
@@ -222,7 +224,7 @@ public class App {
      * @param Code
      * @return
      */
-    public Language getLanguages1(String Code) {
+    public ArrayList<Language> getLanguages1() {
         try {
             // Create an SQL statement
             Statement stmt = con.createStatement();
@@ -230,11 +232,14 @@ public class App {
             //CreatestringforSQLstatement
             String strSelect =
                     "SELECT CountryCode, Language, IsOfficial, Percentage"
-                            + "FROM countrylanguage"
-                            + "WHERE Language = " + "'Chinese'";
+                            + " FROM countrylanguage"
+                            + " WHERE Language LIKE 'Chinese'";
 
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
+
+            // Extract Language information
+            ArrayList<Language> Languages1 = new ArrayList<Language>();
 
             //Return new language if valid.
             //Check one is returned
@@ -244,27 +249,38 @@ public class App {
                 countryLanguage1.language = rset.getString("Language");
                 countryLanguage1.isOfficial = rset.getString("IsOfficial");
                 countryLanguage1.percentage = rset.getInt("Percentage");
-                return countryLanguage1;
+                Languages1.add(countryLanguage1);
+                return Languages1;
             } else
                 return null;
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
-            System.out.println("FailedtogetLanguageInformatoion");
+            System.out.println("Failed to get Language Information");
+            return null;
         }
-        return null;
     }
 /**********************************************************************************************************************/
     /**
      *Display Country Language where Language = Chinese
-     *@paramcountryLanguage1
+     *@param countryLanguage1
      */
-    public void displayCountryLanguage1(Language countryLanguage1) {
-        if (countryLanguage1 != null) {
-            System.out.println(
-                    countryLanguage1.countryCode + "\n"
-                            + countryLanguage1.language + "\n"
-                            + countryLanguage1.isOfficial + "\n"
-                            + countryLanguage1.percentage + "\n");
+    public void displayCountryLanguage1(ArrayList<Language> Languages1) {
+        if (Languages1 == null)
+        {
+            System.out.println("No Countries with the Language = Chinese");
+            return;
+        }
+        //Print header
+        System.out.println(String.format("\n %s %s %s %s", "Country Code", "Language", "Is Official", "Percentage"));
+
+        for (Language countryLanguage1 : Languages1)
+        {
+            if (countryLanguage1 == null)
+                continue;
+            String language1_string =
+                    String.format("%s %s %s %s", countryLanguage1.countryCode, countryLanguage1.language,
+                            countryLanguage1.isOfficial, countryLanguage1.percentage);
+            System.out.println(language1_string);
         }
     }
 /**********************************************************************************************************************/

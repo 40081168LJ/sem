@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - added language 1 report, java class and comments.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +115,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.napier.sem.App" />
       <module name="seMethods" />

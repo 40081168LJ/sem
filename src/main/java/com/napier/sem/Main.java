@@ -1,5 +1,6 @@
 import com.napier.sem.App;
 import com.napier.sem.Country;
+import com.napier.sem.Language;
 /**********************************************************************************************************************/
 import java.io.IOException;
 import java.sql.Connection;
@@ -178,7 +179,14 @@ public class Main {
                     System.out.println("Report Additional Info 6 Selected");
                     break;
                 case 32:
-                    System.out.println("Report Languages 1 Selected");
+                    System.out.println("Report Languages 1 Selected, Displaying Countries with Language = Chinese... ");
+                    System.out.println("<|************************************************************************************|>");
+                    // Show all conuntry where language = Chinese
+                    ArrayList<Language> LanguageReport1 = con.getLanguages1();
+                    // Print out countries where language = Chinese
+                    con.displayCountryLanguage1(LanguageReport1);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report Languages 1 Finished, Returning to Main Menu...");
                     break;
                 case 33:
                     System.out.println("Report Languages 2 Selected");
