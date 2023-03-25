@@ -60,5 +60,14 @@ public class AppIntegrationTest {
 
         assertNotNull(country);
     }
+    /** integration test for getting countries descending order - report 7
+     * Author - SL
+     */
+    @Test
+    public void testGetCityPopulationDescending() {
+        ArrayList<City> cities = City.getCityPopulationDescending(app.con);
+        //validates
+        assertNotNull(cities);
+    }
 }
 
