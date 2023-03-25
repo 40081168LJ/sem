@@ -88,4 +88,16 @@ public class AppIntegrationTest {
         assertNotNull(cities.get(0).district);
     }
 //--------------------------------------------------------------------------------------------------------------------//
+    /** integration test for getting countries by district in descending order - report 11
+     */
+    @Test
+    public void getCityByDistrict() {
+        ArrayList<City> cities = City.getCityPopulationByDistrict("Noord-Holland",app.con);
+        //validates
+        assertNotNull(cities);
+        assertNotNull(cities.get(0).name);
+        assertNotNull(cities.get(0).country);
+        assertNotNull(cities.get(0).district);
+    }
+//--------------------------------------------------------------------------------------------------------------------//
 }
