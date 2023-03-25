@@ -1,5 +1,10 @@
 package com.napier.sem;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+
 /**
  * country object
  * */
@@ -24,4 +29,150 @@ public class Country {
 
     /** Capital string column */
     public String capital;
+
+/**********************************************************************************************************************/
+    /** Extract all countries in the world, order by population descending
+     * Author - AOB
+     * @return
+     */
+    public static ArrayList<Country> getAllCountries(Connection con) {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT country.Code, country.Name, country.Continent, country.Region, " +
+                            "country.Population, city.Name "
+                            + "FROM country, city "
+                            + "WHERE country.Capital = city.ID "
+                            + "ORDER BY country.Population DESC";
+
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // Extract Country information
+            ArrayList<Country> countries = new ArrayList<Country>();
+
+            while (rset.next()) {
+                Country country = new Country();
+                country.code = rset.getString("country.Code");
+                country.name = rset.getString("country.Name");
+                country.continent = rset.getString("country.Continent");
+                country.region = rset.getString("country.Region");
+                country.population = rset.getInt("country.Population");
+                country.capital = rset.getString("city.Name");
+                countries.add(country);
+            }
+            return countries;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get country details");
+            return null;
+        }
+    }
+/**********************************************************************************************************************/
+    /** Extract all countries in specified continent, ordered by population
+     * Author - AOB
+     * @return
+     */
+    public static ArrayList<Country> getContinentCountries(Connection con) {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT country.Code, country.Name, country.Continent, country.Region, " +
+                            "country.Population, city.Name "
+                            + "FROM country, city "
+                            + "WHERE country.Capital = city.ID AND country.Continent = 'Asia' "
+                            + "ORDER BY country.Population DESC";
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // Extract Country information
+            ArrayList<Country> countries = new ArrayList<Country>();
+
+            while (rset.next()) {
+                Country country = new Country();
+                country.code = rset.getString("country.Code");
+                country.name = rset.getString("country.Name");
+                country.continent = rset.getString("country.Continent");
+                country.region = rset.getString("country.Region");
+                country.population = rset.getInt("country.Population");
+                country.capital = rset.getString("city.Name");
+                countries.add(country);
+            }
+            return countries;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get country details");
+            return null;
+        }
+    }
+/**********************************************************************************************************************/
+    /** Extract countries in specified region, order by population descending
+     * Author - AOB
+     * @return
+     */
+    public ArrayList<Country> getRegionCountries(Connection con) {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT country.Code, country.Name, country.Continent, country.Region, " +
+                            "country.Population, city.Name "
+                            + "FROM country, city "
+                            + "WHERE country.Capital = city.ID AND country.Region = 'Western Europe' "
+                            + "ORDER BY country.Population DESC";
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // Extract Country information
+            ArrayList<Country> countries = new ArrayList<Country>();
+
+            while (rset.next()) {
+                Country country = new Country();
+                country.code = rset.getString("country.Code");
+                country.name = rset.getString("country.Name");
+                country.continent = rset.getString("country.Continent");
+                country.region = rset.getString("country.Region");
+                country.population = rset.getInt("country.Population");
+                country.capital = rset.getString("city.Name");
+                countries.add(country);
+            }
+            return countries;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get country details");
+            return null;
+        }
+    }
+/**********************************************************************************************************************/
+    /** Print table of countries extracted
+     * Author - AOB
+     * @param countries
+     */
+    //Print list of countries in the world
+    public static void printCountries(ArrayList<Country> countries)
+    {
+        if (countries == null)
+        {
+            System.out.println("No countries");
+            return;
+        }
+        //Print header
+        System.out.println(String.format("\n %s %s %s %s %s %s", "Code", "Name", "Continent",
+                "Region", "Population", "Capital"));
+
+        for (Country country : countries)
+        {
+            if (country == null)
+                continue;
+            String country_string =
+                    String.format("%s %s %s %s %s %s", country.code, country.name, country.continent,
+                            country.region, country.population, country.capital);
+            System.out.println(country_string);
+        }
+    }
 }

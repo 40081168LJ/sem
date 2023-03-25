@@ -1,6 +1,7 @@
 import com.napier.sem.App;
 import com.napier.sem.Country;
 import com.napier.sem.Language;
+
 /**********************************************************************************************************************/
 import java.io.IOException;
 import java.sql.Connection;
@@ -9,6 +10,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.sql.*;
+
 /**********************************************************************************************************************/
 /**
  * The main class, used for menu and report selection
@@ -17,6 +19,7 @@ public class Main {
 
     // setting quit for menu loop below
     static boolean quit = false;
+
 /**********************************************************************************************************************/
     /**
      * Created a little Menu selection for each of the 36 types of reports and an exit option.
@@ -74,9 +77,9 @@ public class Main {
                     System.out.println("Report 1 Selected, Displaying all Countries and population detials...");
                     System.out.println("<|************************************************************************************|>");
                     // Extract country information
-                    ArrayList<Country> countries = con.getAllCountries();
+                    ArrayList<Country> countries = Country.getAllCountries(con.con);
                     // Print table of countries in the world
-                    con.printCountries(countries);
+                    Country.printCountries(countries);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 1 Finished, Returning to Main Menu...");
                     break;
@@ -84,9 +87,9 @@ public class Main {
                     System.out.println("Report 2 Selected, Displaying Countries by Continent = Asia...");
                     System.out.println("<|************************************************************************************|>");
                     // Extract country by continent information
-                    ArrayList<Country> countries1 = con.getContinentCountries();
+                    ArrayList<Country> countries1 = Country.getContinentCountries(con.con);
                     // Print table of countries in a continent e.g. Asia
-                    con.printCountries(countries1);
+                    Country.printCountries(countries1);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 2 Finished, Returning to Main Menu...");
                     break;
@@ -178,12 +181,12 @@ public class Main {
                     System.out.println("Report Additional Info 6 Selected");
                     break;
                 case 32:
-                    System.out.println("Report Languages 1 Selected, Displaying Countries with Language = Chinese... ");
+                    System.out.println("Report Languages 1 Selected, Displaying Countries with Languages... ");
                     System.out.println("<|************************************************************************************|>");
                     // Show all conuntry by language, greatest to smallest who speak it (Percentage)
-                    ArrayList<Language> LanguageReport1 = con.getLanguages1();
+                    ArrayList<Language> LanguageReport1 = Language.getLanguages1(con.con);
                     // Print out countries languages
-                    con.displayCountryLanguage1(LanguageReport1);
+                    Language.displayCountryLanguage1(LanguageReport1);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report Languages 1 Finished, Returning to Main Menu...");
                     break;
@@ -200,6 +203,7 @@ public class Main {
         con.disconnect();
         System.out.println("Goodbye...");
     }
+
 /**********************************************************************************************************************/
     static class Keyin {
         /**
@@ -226,6 +230,7 @@ public class Main {
                 System.out.println("Input error");
             }
         }
+
 /**********************************************************************************************************************/
         /**
          *@return
@@ -249,6 +254,7 @@ public class Main {
             }
             return s;
         }
+
 /**********************************************************************************************************************/
         /**
          *For checking the input from the user is a integer and can be used to call a report
@@ -274,9 +280,9 @@ public class Main {
                 }
             }
         }
+
 /**********************************************************************************************************************/
     }
+
 /**********************************************************************************************************************/
 }
-
-
