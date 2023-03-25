@@ -1,10 +1,12 @@
 package com.napier.sem;
 
+//--------------------------------------------------------------------------------------------------------------------//
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+//--------------------------------------------------------------------------------------------------------------------//
 /**
  * country object
  * */
@@ -30,10 +32,10 @@ public class Country {
     /** Capital string column */
     public String capital;
 
-/**********************************************************************************************************************/
+//--------------------------------------------------------------------------------------------------------------------//
     /** Extract all countries in the world, order by population descending
      * Author - AOB
-     * @return
+     * @return All Countries
      */
     public static ArrayList<Country> getAllCountries(Connection con) {
         try {
@@ -51,7 +53,7 @@ public class Country {
             ResultSet rset = stmt.executeQuery(strSelect);
 
             // Extract Country information
-            ArrayList<Country> countries = new ArrayList<Country>();
+            ArrayList<Country> countries = new ArrayList<>();
 
             while (rset.next()) {
                 Country country = new Country();
@@ -70,10 +72,10 @@ public class Country {
             return null;
         }
     }
-/**********************************************************************************************************************/
+//--------------------------------------------------------------------------------------------------------------------//
     /** Extract all countries in specified continent, ordered by population
      * Author - AOB
-     * @return
+     * @return Get all Countries from Continent "Asia"
      */
     public static ArrayList<Country> getContinentCountries(Connection con) {
         try {
@@ -90,7 +92,7 @@ public class Country {
             ResultSet rset = stmt.executeQuery(strSelect);
 
             // Extract Country information
-            ArrayList<Country> countries = new ArrayList<Country>();
+            ArrayList<Country> countries = new ArrayList<>();
 
             while (rset.next()) {
                 Country country = new Country();
@@ -109,12 +111,12 @@ public class Country {
             return null;
         }
     }
-/**********************************************************************************************************************/
+//--------------------------------------------------------------------------------------------------------------------//
     /** Extract countries in specified region, order by population descending
      * Author - AOB
-     * @return
+     * @return Get all Countries within Region "Western Europe"
      */
-    public ArrayList<Country> getRegionCountries(Connection con) {
+    public static ArrayList<Country> getRegionCountries(Connection con) {
         try {
             // Create an SQL statement
             Statement stmt = con.createStatement();
@@ -129,7 +131,7 @@ public class Country {
             ResultSet rset = stmt.executeQuery(strSelect);
 
             // Extract Country information
-            ArrayList<Country> countries = new ArrayList<Country>();
+            ArrayList<Country> countries = new ArrayList<>();
 
             while (rset.next()) {
                 Country country = new Country();
@@ -148,7 +150,7 @@ public class Country {
             return null;
         }
     }
-/**********************************************************************************************************************/
+//--------------------------------------------------------------------------------------------------------------------//
     /** Print table of countries extracted
      * Author - AOB
      * @param countries
@@ -162,8 +164,8 @@ public class Country {
             return;
         }
         //Print header
-        System.out.println(String.format("\n %s %s %s %s %s %s", "Code", "Name", "Continent",
-                "Region", "Population", "Capital"));
+        System.out.printf("\n %s %s %s %s %s %s%n", "Code", "Name", "Continent",
+                "Region", "Population", "Capital");
 
         for (Country country : countries)
         {
@@ -176,3 +178,4 @@ public class Country {
         }
     }
 }
+//--------------------------------------------------------------------------------------------------------------------//

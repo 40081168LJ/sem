@@ -1,13 +1,13 @@
 package com.napier.sem;
 
-/**********************************************************************************************************************/
+//--------------------------------------------------------------------------------------------------------------------//
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-/**********************************************************************************************************************/
+//--------------------------------------------------------------------------------------------------------------------//
 public class Language {
     /** Code of the Country */
     public String countryCode;
@@ -21,12 +21,12 @@ public class Language {
     /** Percentage of speakers of a language in the country */
     public double percentage;
 
-/**********************************************************************************************************************/
+//--------------------------------------------------------------------------------------------------------------------//
     /** This is for Report Languages 1, Finally, the organisation has asked if it is possible to provide the number
      * of people who speak the following languages from the greatest number to smallest,
      * including the percentage of the world population for: 'Chinese','English','Hindi','Spanish','Arabic'
      * @param con
-     * @return
+     * @return Returns the above
      */
     public static ArrayList<Language> getLanguages1(Connection con) {
 
@@ -66,7 +66,7 @@ public class Language {
             ResultSet rset = stmt.executeQuery(strSelect);
 
             // Extract Language information
-            ArrayList<Language> Languages1 = new ArrayList<Language>();
+            ArrayList<Language> Languages1 = new ArrayList<>();
 
             //Return new language if valid.
             //Check one is returned
@@ -85,9 +85,8 @@ public class Language {
             return null;
         }
     }
-/**********************************************************************************************************************/
-    /**
-     *Display Country Language where Language = Chinese
+//--------------------------------------------------------------------------------------------------------------------//
+    /**Display Country Language where Language = 'Chinese','English','Hindi','Spanish','Arabic'
      *@param Languages1
      */
     public static void displayCountryLanguage1(ArrayList<Language> Languages1) {
@@ -98,7 +97,7 @@ public class Language {
             return;
         }
         //Print header
-        System.out.println(String.format("\n %s %s %s %s", "Country Code", "Language", "Is Official", "Percentage"));
+        System.out.printf("\n %s %s %s %s%n", "Country Code", "Language", "Is Official", "Percentage");
 
         for (Language countryLanguage1 : Languages1)
         {
@@ -111,4 +110,4 @@ public class Language {
         }
     }
 }
-/**********************************************************************************************************************/
+//--------------------------------------------------------------------------------------------------------------------//
