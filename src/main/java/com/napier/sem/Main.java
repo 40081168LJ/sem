@@ -26,6 +26,8 @@ public class Main {
         // Create new Application
         App con = new App();
 
+        // Create a Scanner object to read console input
+        Scanner scanner = new Scanner(System.in);
         // Connect to database
         if (args.length < 1) {
             con.connect("localhost:33060", 30000);
@@ -104,10 +106,10 @@ public class Main {
                 case 7:
                     System.out.println("Report 7 Selected");
                     break;
-                case 8:
+                case 8: {
                     System.out.println("Report 8 Selected");
                     System.out.println("please select a continent");
-                    Scanner scanner = new Scanner(System.in);  // Create a Scanner object
+
                     String continent = scanner.nextLine();
                     System.out.println("<|************************************************************************************|>");
                     // Getting city population by continent
@@ -117,12 +119,13 @@ public class Main {
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 8 Finished, Returning to Main Menu...");
                     break;
-                case 9:
+                }
+                case 9: {
                     System.out.println("Report 9 Selected");
-                    break;
-                case 10:
+                    break;}
+                case 10:{
                     System.out.println("Report 10 Selected");
-                    break;
+                    break;}
                 case 11:
                     System.out.println("Report 11 Selected");
                     break;
