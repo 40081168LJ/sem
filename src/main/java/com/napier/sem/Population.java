@@ -35,7 +35,7 @@ public class Population {
             return null;    }
     }
 
-    //--------------------------------------------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
     public static void displayPopulation(Population population){
         if (population != null)    {
             System.out.println("world population : "+ population.population);
