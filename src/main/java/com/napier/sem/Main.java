@@ -207,7 +207,7 @@ public class Main {
         /**
          *SupportMethods
          *Method to display th euser's prompt string
-         *@paramprompt
+         *@param prompt
          */
         public static void printPrompt(String prompt) {
             System.out.print(prompt + "");
@@ -215,7 +215,7 @@ public class Main {
         }
 
         /**
-         *Method to make sure no data is available in the input stream
+         * Method to make sure no data is available in the input stream
          */
         public static void inputFlush() throws IOException {
             int dummy;
@@ -257,7 +257,7 @@ public class Main {
 //--------------------------------------------------------------------------------------------------------------------//
         /**
          * For checking the input from the user is a integer and can be used to call a report
-         *@paramprompt
+         *@param prompt
          *@return
          */
         public static int inInt(String prompt) throws IOException {
