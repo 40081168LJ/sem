@@ -88,4 +88,17 @@ public class AppIntegrationTest {
         assertNotNull(cities.get(0).district);
     }
 //--------------------------------------------------------------------------------------------------------------------//
+
+    /** integration test to get cities by continent when given continent and number of rows to select - report 13
+     */
+    @Test
+    public void getTopCitiesByContinent() {
+        ArrayList<City> cities = City.getTopCitiesByContinent(5,"europe", app.con);
+        //validates
+        assertNotNull(cities);
+        assertNotNull(cities.get(4).name);
+        assertNotNull(cities.get(4).country);
+        assertNotNull(cities.get(4).district);
+    }
+//--------------------------------------------------------------------------------------------------------------------//
 }
