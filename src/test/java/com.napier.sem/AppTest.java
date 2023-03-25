@@ -44,7 +44,7 @@ public class AppTest
     @Test
     void printCountriesTestNull()
     {
-        app.printCountries(null);
+        Country.printCountries(null);
     }
 
     /** Unit test for print extracted list of countries if empty
@@ -54,7 +54,7 @@ public class AppTest
     void printCountriesTestEmpty()
     {
         ArrayList<Country> countries = new ArrayList<Country>();
-        app.printCountries(countries);
+        Country.printCountries(countries);
     }
 
     /** Unit test for print extracted list of countries if array item is null
@@ -65,7 +65,7 @@ public class AppTest
     {
         ArrayList<Country> countries = new ArrayList<Country>();
         countries.add(null);
-        app.printCountries(countries);
+        Country.printCountries(countries);
     }
 
     /** Unit test for extract list of countries with country object variables present
@@ -83,6 +83,6 @@ public class AppTest
         country.population = 55000;
         country.capital = "Paris";
         countries.add(country);
-        app.printCountries(countries);
+        Country.printCountries(countries);
     }
 }
