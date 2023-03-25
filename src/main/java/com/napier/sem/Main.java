@@ -57,7 +57,7 @@ public class Main {
             System.out.println("<|       28.Additional Info 3      29.Additional Info 4      30.Additional Info 5     |>");
             System.out.println("<|       31.Additional Info 6      32.Languages 1                                     |>");
             System.out.println("<|                                                                                    |>");
-            System.out.println("<|                               37.Exit Report Program                               |>");
+            System.out.println("<|                               33.Exit Report Program                               |>");
             System.out.println("<|                                                                                    |>");
             System.out.println("<|************************************************************************************|>");
             System.out.println("<|                                                                                    |>");
@@ -187,7 +187,7 @@ public class Main {
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report Languages 1 Finished, Returning to Main Menu...");
                     break;
-                case 37:
+                case 33:
                     System.out.println("Exit Report Program Selected, Have a nice day!");
                     quit = true;
                     break;

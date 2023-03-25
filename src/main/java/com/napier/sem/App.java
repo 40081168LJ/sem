@@ -220,7 +220,9 @@ public class App {
         }
     }
 /**********************************************************************************************************************/
-    /**
+    /** This is for Report Languages 1, Finally, the organisation has asked if it is possible to provide the number
+     * of people who speak the following the following languages from greatest number to smallest,
+     * including the percentage of the world population for: 'Chinese','English','Hindi','Spanish','Arabic'
      * @param Code
      * @return
      */
@@ -230,7 +232,7 @@ public class App {
             Statement stmt = con.createStatement();
 
             // Create string for SQL statement
-            // Group By doesn't work with this SQL table without making changes to the DB, Union used instead
+            // Group By doesn't work with this MySQL table without making changes to the DB, Union used instead
             String strSelect =
                     "(SELECT CountryCode, Language, IsOfficial, Percentage"
                             + " FROM countrylanguage"
@@ -239,14 +241,19 @@ public class App {
                             + " UNION"
                             + " (SELECT CountryCode, Language, IsOfficial, Percentage"
                             + " FROM countrylanguage"
-                            + " WHERE Language IN ('Hindi')"
+                            + " WHERE Language IN ('English')"
                             + " ORDER BY Percentage DESC)"
                             + " UNION"
+                            + " (SELECT CountryCode, Language, IsOfficial, Percentage"
+                            + " FROM countrylanguage"
+                            + " WHERE Language IN ('Hindi')"
+                            + " ORDER BY Percentage DESC)"
                             + " UNION"
                             + " (SELECT CountryCode, Language, IsOfficial, Percentage"
                             + " FROM countrylanguage"
                             + " WHERE Language IN ('Spanish')"
                             + " ORDER BY Percentage DESC)"
+                            + " UNION"
                             + " (SELECT CountryCode, Language, IsOfficial, Percentage"
                             + " FROM countrylanguage"
                             + " WHERE Language IN ('Arabic')"
