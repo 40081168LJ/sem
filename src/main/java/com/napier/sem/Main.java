@@ -233,6 +233,7 @@ public class Main {
 
 /**********************************************************************************************************************/
         /**
+         * For input turnin into string
          *@return
          */
         public static String inString() {
@@ -257,7 +258,7 @@ public class Main {
 
 /**********************************************************************************************************************/
         /**
-         *For checking the input from the user is a integer and can be used to call a report
+         * For checking the input from the user is a integer and can be used to call a report
          *@paramprompt
          *@return
          */
