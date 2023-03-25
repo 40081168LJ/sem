@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
-import com.napier.sem.*;
 /**
  * city object
  **/
@@ -28,6 +27,13 @@ public class City {
         /**  Country string column */
         public String country;
 
+
+        /**
+         * gets the cities of a single continent when given a continent. - report 8
+         * @param continent The continent used to select cities from
+         * @param con connection to database
+         * @return returns null if fail or a list of cities
+         */
         public static ArrayList<City> getCityPopulationByContinent(String continent, Connection con) {
                 try {
                         Statement stmt = con.createStatement();
@@ -62,8 +68,9 @@ public class City {
                 }
 
         }
+
         /**Display cities when given a list of cities
-         *@param cities
+         *@param cities a list of cities to display to console
          */
         public static void displayCites (ArrayList <City> cities) {
                 if (cities == null) {

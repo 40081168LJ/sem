@@ -52,6 +52,12 @@ public class App {
     }
 
     //--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * method used to connect to database
+     * @param location location of database
+     * @param delay delay to wait for db to startup before trying again
+     */
     public void connect(String location, int delay) {
         try {
             // Load Database driver
