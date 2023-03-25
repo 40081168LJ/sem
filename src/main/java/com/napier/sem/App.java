@@ -53,40 +53,6 @@ public class App {
 
     //--------------------------------------------------------------------------------------------------------------------//
 
-    /**
-     * method used to connect to database
-     * @param location location of database
-     * @param delay delay to wait for db to startup before trying again
-     */
-
-    /** Print table of countries extracted
-     * Author - AOB
-     * @param countries
-     */
-
-    //Print list of countries in the world
-    public void printCountries(ArrayList<Country> countries)
-    {
-        if (countries == null)
-        {
-            System.out.println("No countries");
-            return;
-        }
-        //Print header
-        System.out.println(String.format("\n %s %s %s %s %s %s", "Code", "Name", "Continent",
-                "Region", "Population", "Capital"));
-
-        for (Country country : countries)
-        {
-            if (country == null)
-                continue;
-            String country_string =
-                    String.format("%s %s %s %s %s %s", country.code, country.name, country.continent,
-                    country.region, country.population, country.capital);
-            System.out.println(country_string);
-        }
-    }
-
     public void connect(String location, int delay) {
         try {
             // Load Database driver
