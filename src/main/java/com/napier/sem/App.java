@@ -63,9 +63,9 @@ public class App {
         con.printCountries(countries2);
         /*****************************************************************/
         // LANGUAGE REPORT 1
-        // Show all conuntry where language = Chinese
+        // Show all conuntry where languages = 'Chinese','English','Hindi','Spanish','Arabic'
         ArrayList<Language> LanguageReport1 = con.getLanguages1();
-        // Print out countries where language = Chinese
+        // Print out countries where languages = 'Chinese','English','Hindi','Spanish','Arabic'
         con.displayCountryLanguage1(LanguageReport1);
         /*****************************************************************/
 
