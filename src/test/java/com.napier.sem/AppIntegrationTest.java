@@ -88,4 +88,16 @@ public class AppIntegrationTest {
         assertNotNull(cities.get(0).district);
     }
 //--------------------------------------------------------------------------------------------------------------------//
+    /** integration test for getting cities by country ordered desc - report 10
+     */
+    @Test
+    public void getCityByCountry() {
+        ArrayList<City> cities = City.getCitiesByCountry("united kingdom", app.con);
+        //validates
+        assertNotNull(cities);
+        assertNotNull(cities.get(0).name);
+        assertNotNull(cities.get(0).country);
+        assertNotNull(cities.get(0).district);
+    }
+//--------------------------------------------------------------------------------------------------------------------//
 }
