@@ -29,7 +29,7 @@ public class City {
         public String country;
 
         /**
-         * getsReport 7
+         * gets Report 7
          * @param con connection to database
          * @return returns a list of cities or null if fails
          */
@@ -80,7 +80,7 @@ public class City {
                         return;
                 }
                 //Print header
-                System.out.printf("\n %s %s %s %s%n", "City Name", "City Country", "City District", "City Population");
+                System.out.printf("\n %s %s %s %s%n", "Name", "Country", "District", "Population");
 
                 for (City city : cities)
                 {
