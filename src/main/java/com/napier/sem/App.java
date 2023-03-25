@@ -17,13 +17,6 @@ public class App {
     public Connection con;
 
     /**
-     * Connect to the MySQL database.
-     */
-   // public void connect() {
-
-  //  }
-
-    /**
      * Disconnect from the MySQL database.
      */
     public void disconnect() {
@@ -45,37 +38,37 @@ public class App {
      */
     public static void main(String[] args) throws IOException {
         // Create new Application
-        App con = new App();
+        App a = new App();
 
         // Connect to database
         //a.connect();
         if (args.length < 1) {
-            con.connect("localhost:33060", 30000);
+            a.connect("localhost:33060", 30000);
         } else {
-            con.connect("db:3306", 30000);
+            a.connect("db:3306", 30000);
         }
 
         //Extract country information
-        ArrayList<Country> countries = con.getAllCountries();
+        ArrayList<Country> countries = a.getAllCountries();
 
         //Print table of countries in the world
-        con.printCountries(countries);
+        a.printCountries(countries);
 
         //Extract country by continent information
-        ArrayList<Country> countries1 = con.getContinentCountries();
+        ArrayList<Country> countries1 = a.getContinentCountries();
 
         //Print table of countries in a continent e.g. Asia
-        con.printCountries(countries1);
+        a.printCountries(countries1);
 
         //Extract country by region information
-        ArrayList<Country> countries2 = con.getRegionCountries();
+        ArrayList<Country> countries2 = a.getRegionCountries();
 
         //Print table of countries in a region e.g. Western Europe
-        con.printCountries(countries2);
+        a.printCountries(countries2);
 
 
         // Disconnect from database
-        con.disconnect();
+        a.disconnect();
 
     }
 
