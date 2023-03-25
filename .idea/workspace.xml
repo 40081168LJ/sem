@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - Updated layout/comments.">
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - Updated Menu, added report 26.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Population.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Population.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -591,7 +592,21 @@
       <option name="project" value="LOCAL" />
       <updated>1679752461851</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="LJ - Updated Menu, added report 26.">
+      <created>1679753196727</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1679753196727</updated>
+    </task>
+    <task id="LOCAL-00038" summary="LJ - Updated Menu, added report 26.">
+      <created>1679753252978</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1679753252978</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -609,7 +624,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="AG - Added Get all Salaries method" />
     <MESSAGE value="AOB - add use cases feature branch" />
     <MESSAGE value="AOB - use case 1 added" />
     <MESSAGE value="AOB - use case 1 amended, use case 2 added" />
@@ -634,7 +648,8 @@
     <MESSAGE value="AG - Population1 code updated within Population class" />
     <MESSAGE value="LJ - Updated commenting, layout, edited connection for countries as overwritten." />
     <MESSAGE value="LJ - Updated layout/comments." />
-    <option name="LAST_COMMIT_MESSAGE" value="LJ - Updated layout/comments." />
+    <MESSAGE value="LJ - Updated Menu, added report 26." />
+    <option name="LAST_COMMIT_MESSAGE" value="LJ - Updated Menu, added report 26." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
