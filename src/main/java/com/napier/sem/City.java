@@ -29,11 +29,11 @@ public class City {
         public String country;
 
         /**
-         * Report 7
+         * getsReport 7
          * @param con connection to database
-         * @return
+         * @return returns a list of cities or null if fails
          */
-        public static ArrayList<City> getCityPopulationDescending(Connection con) {
+        public static ArrayList<City> getCityPopulation(Connection con) {
                 try {
 
                         Statement stmt = con.createStatement();
@@ -71,9 +71,9 @@ public class City {
         }
 
         /**Display cities when given a list of cities - report 7
-         *@param cities
+         *@param cities a list of the city object to display
          */
-        public static void displayCitesDescending(ArrayList<City> cities) {
+        public static void displayCites(ArrayList<City> cities) {
                 if (cities == null)
                 {
                         System.out.println("no cities have been found");

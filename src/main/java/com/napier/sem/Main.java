@@ -107,15 +107,14 @@ public class Main {
                     break;
                 case 7:
                     System.out.println("Report 7 Selected");
-
-                    System.out.println("Report Languages 1 Selected, Displaying Countries with Languages... ");
+                    System.out.println("Report 7 Selected, Displaying Countries with Languages... ");
                     System.out.println("<|************************************************************************************|>");
                     // Show all conuntry by language, greatest to smallest who speak it (Percentage)
-                    ArrayList<City> cities = City.getCityPopulationDescending(con.con);
+                    ArrayList<City> cities = City.getCityPopulation(con.con);
                     // Print out countries languages
-                    City.displayCitesDescending(cities);
+                    City.displayCites(cities);
                     System.out.println("<|************************************************************************************|>");
-                    System.out.println("Report Languages 1 Finished, Returning to Main Menu...");
+                    System.out.println("Report 7 Finished, Returning to Main Menu...");
                     break;
                 case 8:
                     System.out.println("Report 8 Selected");

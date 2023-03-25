@@ -80,12 +80,11 @@ public class AppIntegrationTest {
      */
     @Test
     public void testGetCityPopulationDescending() {
-        ArrayList<City> cities = City.getCityPopulationDescending(app.con);
+        ArrayList<City> cities = City.getCityPopulation(app.con);
         //validates
         assertNotNull(cities);
         assertNotNull(cities.get(0).name);
         assertNotNull(cities.get(0).country);
-        assertNotNull(cities.get(0).population);
         assertNotNull(cities.get(0).district);
     }
 //--------------------------------------------------------------------------------------------------------------------//

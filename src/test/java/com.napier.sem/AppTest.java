@@ -106,8 +106,8 @@ public class AppTest {
      */
     @Test
     void DisplayCitiesTestEmpty() {
-        ArrayList<City> city = new ArrayList<City>();
-        City.displayCitesDescending(city);
+        ArrayList<City> city = new ArrayList<>();
+        City.displayCites(city);
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
@@ -117,7 +117,7 @@ public class AppTest {
      */
     @Test
     void DisplayCities() {
-        ArrayList<City> cities = new ArrayList<City>();
+        ArrayList<City> cities = new ArrayList<>();
         City city = new City();
         city.name = "testCity";
         city.district = "testDistrict";
@@ -125,7 +125,7 @@ public class AppTest {
         city.population = 123;
         cities.add(city);
 
-        City.displayCitesDescending(cities);
+        City.displayCites(cities);
     }
 
 }
