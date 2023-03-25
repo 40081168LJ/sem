@@ -1,8 +1,9 @@
 package com.napier.sem;
 
+//--------------------------------------------------------------------------------------------------------------------//
 import java.sql.*;
 
-
+//--------------------------------------------------------------------------------------------------------------------//
 /**
  * Class to calculate world population
  */
@@ -13,6 +14,7 @@ public class Population {
      */
     public long population;
 
+//--------------------------------------------------------------------------------------------------------------------//
     /**
      * Create an SQL Statement to get world population
      * *  Used in additional_info 1 report
@@ -33,13 +35,18 @@ public class Population {
             return null;    }
     }
 
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Displays world population
+     * @param population
+     */
     public static void displayPopulation(Population population){
         if (population != null)    {
-            System.out.println("world population : "+ population.population);
+            System.out.println("World Population : "+ population.population);
         }
     }
 
 }
 
-
-
+//--------------------------------------------------------------------------------------------------------------------//

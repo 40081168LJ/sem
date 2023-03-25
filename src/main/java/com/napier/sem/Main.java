@@ -2,6 +2,7 @@ import com.napier.sem.App;
 import com.napier.sem.City;
 import com.napier.sem.Country;
 import com.napier.sem.Language;
+import com.napier.sem.Population;
 
 //--------------------------------------------------------------------------------------------------------------------//
 import java.io.IOException;
@@ -38,34 +39,34 @@ public class Main {
 
         // Beginning of loop for menu return
         do {
-            int swValue;
-            System.out.println("<|************************************************************************************|>");
-            System.out.println("<|                                                                                    |>");
-            System.out.println("<|                                  REPORTSELECTION                                   |>");
-            System.out.println("<|                                                                                    |>");
-            System.out.println("<|       The below is a list of avaiable Reports,that can be viewed. To view a        |>");
-            System.out.println("<|       Report simply input the report number (to the left of the Report Name)       |>");
-            System.out.println("<|       which will select the report and display its contents.                       |>");
-            System.out.println("<|                                                                                    |>");
-            System.out.println("<|       Report List :                                                                |>");
-            System.out.println("<|                                                                                    |>");
-            System.out.println("<|       1.Report 1                2.Report 2                3.Report 3               |>");
-            System.out.println("<|       4.Report 4                5.Report 5                6.Report 6               |>");
-            System.out.println("<|       7.Report 7                8.Report 8                9.Report 9               |>");
-            System.out.println("<|       10.Report 10              11.Report 11              12.Report 12             |>");
-            System.out.println("<|       13.Report 13              14.Report 14              15.Report 15             |>");
-            System.out.println("<|       16.Report 16              17.Report 17              18.Report 18             |>");
-            System.out.println("<|       19.Report 19              20.Report 20              21.Report 21             |>");
-            System.out.println("<|       22.Report 22              23.Report 23              24.Report 24             |>");
-            System.out.println("<|       25.Report 25              26.Additional Info 1      27.Additional Info 2     |>");
-            System.out.println("<|       28.Additional Info 3      29.Additional Info 4      30.Additional Info 5     |>");
-            System.out.println("<|       31.Additional Info 6      32.Languages 1                                     |>");
-            System.out.println("<|                                                                                    |>");
-            System.out.println("<|                               33.Exit Report Program                               |>");
-            System.out.println("<|                                                                                    |>");
-            System.out.println("<|************************************************************************************|>");
-            System.out.println("<|                                                                                    |>");
-            swValue = Keyin.inInt("<| Please, Select a Report to view:");
+        int swValue;
+        System.out.println("<|************************************************************************************|>");
+        System.out.println("<|                                                                                    |>");
+        System.out.println("<|                                  REPORTSELECTION                                   |>");
+        System.out.println("<|                                                                                    |>");
+        System.out.println("<|       The below is a list of avaiable Reports,that can be viewed. To view a        |>");
+        System.out.println("<|       Report simply input the report number (to the left of the Report Name)       |>");
+        System.out.println("<|       which will select the report and display its contents.                       |>");
+        System.out.println("<|                                                                                    |>");
+        System.out.println("<|       Report List :                                                                |>");
+        System.out.println("<|                                                                                    |>");
+        System.out.println("<|       1.Report 1                2.Report 2                3.Report 3               |>");
+        System.out.println("<|       4.Report 4                5.Report 5                6.Report 6               |>");
+        System.out.println("<|       7.Report 7                8.Report 8                9.Report 9               |>");
+        System.out.println("<|       10.Report 10              11.Report 11              12.Report 12             |>");
+        System.out.println("<|       13.Report 13              14.Report 14              15.Report 15             |>");
+        System.out.println("<|       16.Report 16              17.Report 17              18.Report 18             |>");
+        System.out.println("<|       19.Report 19              20.Report 20              21.Report 21             |>");
+        System.out.println("<|       22.Report 22              23.Report 23              24.Report 24             |>");
+        System.out.println("<|       25.Report 25              26.Additional Info 1      27.Additional Info 2     |>");
+        System.out.println("<|       28.Additional Info 3      29.Additional Info 4      30.Additional Info 5     |>");
+        System.out.println("<|       31.Additional Info 6      32.Languages 1                                     |>");
+        System.out.println("<|                                                                                    |>");
+        System.out.println("<|                               33.Exit Report Program                               |>");
+        System.out.println("<|                                                                                    |>");
+        System.out.println("<|************************************************************************************|>");
+        System.out.println("<|                                                                                    |>");
+        swValue = Keyin.inInt("<| Please, Select a Report to view:");
 
 //--------------------------------------------------------------------------------------------------------------------//
             /**
@@ -173,6 +174,13 @@ public class Main {
                     break;
                 case 26:
                     System.out.println("Report Additional Info 1 Selected");
+                    System.out.println("<|************************************************************************************|>");
+                    // Getting world population
+                    Population populationreport1 = Population.getPopulation(con.con);
+                    // Display world population
+                    Population.displayPopulation(populationreport1);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report Additional Info 1 Finished, Returning to Main Menu...");
                     break;
                 case 27:
                     System.out.println("Report Additional Info 2 Selected");
@@ -206,7 +214,6 @@ public class Main {
                 default:
                     System.out.println("Invalid Input, try again...");
                     break;
-                 // This break is not really necessary but good practice, TODO:look at removing if needed?
             }
         } while (!quit);
         con.disconnect();
@@ -218,7 +225,7 @@ public class Main {
         /**
          *SupportMethods
          *Method to display th euser's prompt string
-         *@paramprompt
+         *@param prompt
          */
         public static void printPrompt(String prompt) {
             System.out.print(prompt + "");
@@ -226,7 +233,7 @@ public class Main {
         }
 
         /**
-         *Method to make sure no data is available in the input stream
+         * Method to make sure no data is available in the input stream
          */
         public static void inputFlush() throws IOException {
             int dummy;
@@ -268,7 +275,7 @@ public class Main {
 //--------------------------------------------------------------------------------------------------------------------//
         /**
          * For checking the input from the user is a integer and can be used to call a report
-         *@paramprompt
+         *@param prompt
          *@return
          */
         public static int inInt(String prompt) throws IOException {

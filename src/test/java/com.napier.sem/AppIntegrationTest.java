@@ -1,16 +1,19 @@
 package com.napier.sem;
 
+//--------------------------------------------------------------------------------------------------------------------//
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-
 import java.util.ArrayList;
-
 import static org.junit.jupiter.api.Assertions.*;
+
+//--------------------------------------------------------------------------------------------------------------------//
 /**
  * Integration Test to test reports
  */
 public class AppIntegrationTest {
-
+    /**Test connection to database
+     * Used in all reports
+     */
     static App app;
     @BeforeAll
     static void init()
@@ -21,6 +24,39 @@ public class AppIntegrationTest {
 
     }
 
+//--------------------------------------------------------------------------------------------------------------------//
+    /** Integration test for extract all world countries
+     * Author - AOB
+     */
+    @Test
+    public void testGetAllCountries(){
+        ArrayList<Country> country = Country.getAllCountries(app.con);
+        assertNotNull(country);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /** integration test for extract specific continent countries
+     * Author - AOB
+     */
+    @Test
+    public void testGetContinentCountries(){
+        ArrayList<Country> country = Country.getContinentCountries(app.con);
+        assertNotNull(country);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /** integration test for extract specific region countries
+     * Author - AOB
+     */
+    @Test
+    public void testGetRegionCountries() {
+        ArrayList<Country> country = Country.getRegionCountries(app.con);
+        //validates
+
+        assertNotNull(country);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
     /**
      * Test connection to database and to test getting world population
      * Used in additional_info 1 report
@@ -32,42 +68,6 @@ public class AppIntegrationTest {
         assertNotEquals(0, pop.population );
     }
 
-    /** Integration test for extract all world countries
-     * Author - AOB
-     */
-    @Test
-    public void testGetAllCountries(){
-        ArrayList<Country> country = app.getAllCountries();
-        assertNotNull(country);
-    }
-
-    /** integration test for extract specific continent countries
-     * Author - AOB
-     */
-    @Test
-    public void testGetContinentCountries(){
-        ArrayList<Country> country = app.getContinentCountries();
-        assertNotNull(country);
-    }
-
-    /** integration test for extract specific region countries
-     * Author - AOB
-     */
-    @Test
-    public void testGetRegionCountries() {
-        ArrayList<Country> country = app.getRegionCountries();
-        //validates
-
-        assertNotNull(country);
-    }
-    /** integration test for getting countries descending order - report 7
-     * Author - SL
-     */
-    @Test
-    public void testGetCityPopulationDescending() {
-        ArrayList<City> cities = City.getCityPopulationDescending(app.con);
-        //validates
-        assertNotNull(cities);
-    }
 }
 
+//--------------------------------------------------------------------------------------------------------------------//
