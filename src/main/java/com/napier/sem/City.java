@@ -70,6 +70,46 @@ public class City {
                 }
         }
 
+        /**
+         * gets the cities of a single region when given a region. - report 9
+         * @param region The region used to select cities from
+         * @param con connection to database
+         * @return returns null if fail or a list of cities
+         */
+        public static ArrayList<City> getCityPopulationByRegion(String region, Connection con) {
+                try {
+                        Statement stmt = con.createStatement();
+                        // Create string for SQL statement
+                        String strSelect =
+                                "SELECT city.Name, country.Name, city.District, city.Population " +
+                                        "FROM city " +
+                                        "JOIN country " +
+                                        "ON city.countrycode = country.Code " +
+                                        "WHERE country.Region " + "LIKE \"%" + region + "%\" " +
+                                        "ORDER BY city.population DESC";
+                        // Execute SQL statement
+                        ResultSet rset = stmt.executeQuery(strSelect);
+
+                        // Extract city information
+                        ArrayList<City> cities = new ArrayList<>();
+
+                        //adds each city to cities
+                        while (rset.next()) {
+                                City city = new City();
+                                city.name = rset.getString("city.Name");
+                                city.country = rset.getString("country.Name");
+                                city.district = rset.getString("city.District");
+                                city.population = rset.getInt("city.Population");
+                                cities.add(city);
+                        }
+                        return cities;
+                } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                        System.out.println("Failed to get city details");
+                        return null;
+                }
+
+        }
         /**Display cities when given a list of cities - report 7
          *@param cities a list of the city object to display
          */

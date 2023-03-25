@@ -113,7 +113,7 @@ public class AppTest {
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
-     * tests passing city expected values - report 7
+     * tests passing city expected values - report 7,8,9
      */
     @Test
     void DisplayCities() {

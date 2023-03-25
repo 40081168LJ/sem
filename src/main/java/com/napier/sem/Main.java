@@ -30,6 +30,7 @@ public class Main {
         // Create new Application
         App con = new App();
 
+        Scanner scanner = new Scanner(System.in);
         // Connect to database
         if (args.length < 1) {
             con.connect("localhost:33060", 30000);
@@ -105,7 +106,7 @@ public class Main {
                 case 6:
                     System.out.println("Report 6 Selected");
                     break;
-                case 7:
+                case 7:{
                     System.out.println("Report 7 Selected");
                     System.out.println("Report 7 Selected, Displaying Countries with Languages... ");
                     System.out.println("<|************************************************************************************|>");
@@ -114,15 +115,23 @@ public class Main {
                     // Print out countries languages
                     City.displayCites(cities);
                     System.out.println("<|************************************************************************************|>");
-                    System.out.println("Report 7 Finished, Returning to Main Menu...");
+                    System.out.println("Report 7 Finished, Returning to Main Menu...");}
                     break;
                 case 8:
                     System.out.println("Report 8 Selected");
                     break;
-
-                case 9:
+                case 9: {
                     System.out.println("Report 9 Selected");
-                    break;
+                    System.out.println("please select a region");
+                    String region = scanner.nextLine();
+                    System.out.println("<|************************************************************************************|>");
+                    // Getting city population by region
+                    ArrayList<City> cities = City.getCityPopulationByRegion(region, con.con);
+                    // Display world population
+                    City.displayCites(cities);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 9 Finished, Returning to Main Menu...");
+                    break;}
                 case 10:
                     System.out.println("Report 10 Selected");
                     break;

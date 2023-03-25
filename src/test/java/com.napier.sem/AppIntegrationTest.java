@@ -79,9 +79,21 @@ public class AppIntegrationTest {
     /** integration test for getting countries descending order - report 7
      */
     @Test
-    public void testGetCityPopulationDescending() {
+    public void getCityPopulation() {
         ArrayList<City> cities = City.getCityPopulation(app.con);
         //validates
+        assertNotNull(cities);
+        assertNotNull(cities.get(0).name);
+        assertNotNull(cities.get(0).country);
+        assertNotNull(cities.get(0).district);
+    }
+//--------------------------------------------------------------------------------------------------------------------//
+    /** integration test for getting countries descending order - report 7
+     */
+    @Test
+    public void getCityByRegion() {
+        ArrayList<City> cities = City.getCityPopulationByRegion("Caribbean", app.con);
+        //validates not null
         assertNotNull(cities);
         assertNotNull(cities.get(0).name);
         assertNotNull(cities.get(0).country);
