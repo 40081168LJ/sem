@@ -1,6 +1,7 @@
 import com.napier.sem.App;
 import com.napier.sem.Country;
 import com.napier.sem.Language;
+import com.napier.sem.Population;
 
 //--------------------------------------------------------------------------------------------------------------------//
 import java.io.IOException;
@@ -162,6 +163,13 @@ public class Main {
                     break;
                 case 26:
                     System.out.println("Report Additional Info 1 Selected");
+                    System.out.println("<|************************************************************************************|>");
+                    // Getting world population
+                    Population populationreport1 = Population.getPopulation(con.con);
+                    // Display world population
+                    Population.displayPopulation(populationreport1);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report Additional Info 1 Finished, Returning to Main Menu...");
                     break;
                 case 27:
                     System.out.println("Report Additional Info 2 Selected");
@@ -195,7 +203,6 @@ public class Main {
                 default:
                     System.out.println("Invalid Input, try again...");
                     break;
-                 // This break is not really necessary but good practice, TODO:look at removing if needed?
             }
         } while (!quit);
         con.disconnect();
