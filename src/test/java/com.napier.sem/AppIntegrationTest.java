@@ -88,4 +88,17 @@ public class AppIntegrationTest {
         assertNotNull(cities.get(0).district);
     }
 //--------------------------------------------------------------------------------------------------------------------//
+
+    /** integration test for getting countries descending order - report 7
+     */
+    @Test
+    public void getTopPopulatedCities() {
+        ArrayList<City> cities = City.getTopPopulatedCities(1, app.con);
+        //validates
+        assertNotNull(cities);
+        assertNotNull(cities.get(0).name);
+        assertNotNull(cities.get(0).country);
+        assertNotNull(cities.get(0).district);
+    }
+//--------------------------------------------------------------------------------------------------------------------//
 }
