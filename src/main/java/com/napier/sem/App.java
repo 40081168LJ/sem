@@ -229,11 +229,28 @@ public class App {
             // Create an SQL statement
             Statement stmt = con.createStatement();
 
-            //CreatestringforSQLstatement
+            // Create string for SQL statement
+            // Group By doesn't work with this SQL table without making changes to the DB, Union used instead
             String strSelect =
-                    "SELECT CountryCode, Language, IsOfficial, Percentage"
+                    "(SELECT CountryCode, Language, IsOfficial, Percentage"
                             + " FROM countrylanguage"
-                            + " WHERE Language LIKE 'Chinese'";
+                            + " WHERE Language IN ('Chinese')"
+                            + " ORDER BY Percentage DESC)"
+                            + " UNION"
+                            + " (SELECT CountryCode, Language, IsOfficial, Percentage"
+                            + " FROM countrylanguage"
+                            + " WHERE Language IN ('Hindi')"
+                            + " ORDER BY Percentage DESC)"
+                            + " UNION"
+                            + " UNION"
+                            + " (SELECT CountryCode, Language, IsOfficial, Percentage"
+                            + " FROM countrylanguage"
+                            + " WHERE Language IN ('Spanish')"
+                            + " ORDER BY Percentage DESC)"
+                            + " (SELECT CountryCode, Language, IsOfficial, Percentage"
+                            + " FROM countrylanguage"
+                            + " WHERE Language IN ('Arabic')"
+                            + " ORDER BY Percentage DESC)";
 
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
@@ -243,16 +260,15 @@ public class App {
 
             //Return new language if valid.
             //Check one is returned
-            if (rset.next()) {
+            while (rset.next()) {
                 Language countryLanguage1 = new Language();
                 countryLanguage1.countryCode = rset.getString("CountryCode");
                 countryLanguage1.language = rset.getString("Language");
                 countryLanguage1.isOfficial = rset.getString("IsOfficial");
                 countryLanguage1.percentage = rset.getInt("Percentage");
                 Languages1.add(countryLanguage1);
+            }
                 return Languages1;
-            } else
-                return null;
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
             System.out.println("Failed to get Language Information");
@@ -267,7 +283,8 @@ public class App {
     public void displayCountryLanguage1(ArrayList<Language> Languages1) {
         if (Languages1 == null)
         {
-            System.out.println("No Countries with the Language = Chinese");
+            System.out.println("No Countries with the Languages " +
+                    "('Chinese','English','Hindi','Spanish','Arabic') can be found.");
             return;
         }
         //Print header

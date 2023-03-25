@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - added language 1 report, java class and comments.">
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - Languages Report Updated. To be reviewed.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" afterDir="false" />
@@ -599,7 +599,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679537389487</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="LJ - Languages Report Updated. To be reviewed.">
+      <created>1679539354951</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1679539354951</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -617,7 +624,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="AG - Added Get all Salaries method" />
     <MESSAGE value="AOB - add use cases feature branch" />
     <MESSAGE value="AOB - use case 1 added" />
     <MESSAGE value="AOB - use case 1 amended, use case 2 added" />
@@ -642,7 +648,8 @@
     <MESSAGE value="LJ - Updated, with new connection settings. Works locally and menu report 1 also working." />
     <MESSAGE value="LJ - Updated, menu slimmer and added report 2." />
     <MESSAGE value="LJ - added language 1 report, java class and comments." />
-    <option name="LAST_COMMIT_MESSAGE" value="LJ - added language 1 report, java class and comments." />
+    <MESSAGE value="LJ - Languages Report Updated. To be reviewed." />
+    <option name="LAST_COMMIT_MESSAGE" value="LJ - Languages Report Updated. To be reviewed." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

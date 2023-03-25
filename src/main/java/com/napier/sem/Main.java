@@ -55,10 +55,9 @@ public class Main {
             System.out.println("<|       22.Report 22              23.Report 23              24.Report 24             |>");
             System.out.println("<|       25.Report 25              26.Additional Info 1      27.Additional Info 2     |>");
             System.out.println("<|       28.Additional Info 3      29.Additional Info 4      30.Additional Info 5     |>");
-            System.out.println("<|       31.Additional Info 6      32.Languages 1            33.Languages 2           |>");
-            System.out.println("<|       34.Languages 3            35.Languages 4            36.Languages 5           |>");
+            System.out.println("<|       31.Additional Info 6      32.Languages 1                                     |>");
             System.out.println("<|                                                                                    |>");
-            System.out.println("<|                              37.Exit Report Program                                |>");
+            System.out.println("<|                               37.Exit Report Program                               |>");
             System.out.println("<|                                                                                    |>");
             System.out.println("<|************************************************************************************|>");
             System.out.println("<|                                                                                    |>");
@@ -181,24 +180,12 @@ public class Main {
                 case 32:
                     System.out.println("Report Languages 1 Selected, Displaying Countries with Language = Chinese... ");
                     System.out.println("<|************************************************************************************|>");
-                    // Show all conuntry where language = Chinese
+                    // Show all conuntry by language, greatest to smallest who speak it (Percentage)
                     ArrayList<Language> LanguageReport1 = con.getLanguages1();
-                    // Print out countries where language = Chinese
+                    // Print out countries languages
                     con.displayCountryLanguage1(LanguageReport1);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report Languages 1 Finished, Returning to Main Menu...");
-                    break;
-                case 33:
-                    System.out.println("Report Languages 2 Selected");
-                    break;
-                case 34:
-                    System.out.println("Report Languages 3 Selected");
-                    break;
-                case 35:
-                    System.out.println("Report Languages 4 Selected");
-                    break;
-                case 36:
-                    System.out.println("Report Languages 5 Selected");
                     break;
                 case 37:
                     System.out.println("Exit Report Program Selected, Have a nice day!");
