@@ -21,22 +21,22 @@ public class AppTest
     /**
      * tests passing an empty object
      */
-//    @Test
-//   void DisplayWorldPopulationTestEmpty()
-//    {
-//        Population population = new Population();
-//        app.displayPopulation(population);
-//    }
-//    /**
-//     * tests passing expected values
-//     */
-//    @Test
-//    void DisplayWorldPopulation()
-//    {
-//        Population population = new Population();
-//        population.population = 23123122;
-//        app.displayPopulation(population);
-//    }
+    @Test
+   void DisplayWorldPopulationTestEmpty()
+    {
+        Population population = new Population();
+        Population.displayPopulation(population);
+    }
+    /**
+     * tests passing expected values
+     */
+    @Test
+    void DisplayWorldPopulation()
+    {
+        Population population = new Population();
+        population.population = 23123122;
+        Population.displayPopulation(population);
+    }
 
     /** Unit test for print extracted list of countries if null
      * Author - AOB

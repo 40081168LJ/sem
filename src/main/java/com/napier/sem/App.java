@@ -21,7 +21,7 @@ public class App {
      */
    // public void connect() {
 
-  //  }
+   // }
 
     /**
      * Disconnect from the MySQL database.
@@ -79,8 +79,10 @@ public class App {
 
     }
 
-    /** Extract all countries in the world, order by population descending
+    /**
+     * Extract all countries in the world, order by population descending
      * Author - AOB
+     *
      * @return
      */
     public ArrayList<Country> getAllCountries() {
@@ -119,8 +121,10 @@ public class App {
         }
     }
 
-    /** Extract all countries in specified continent, ordered by population
+    /**
+     * Extract all countries in specified continent, ordered by population
      * Author - AOB
+     *
      * @return
      */
     public ArrayList<Country> getContinentCountries() {
@@ -158,8 +162,10 @@ public class App {
         }
     }
 
-    /** Extract countries in specified region, order by population descending
+    /**
+     * Extract countries in specified region, order by population descending
      * Author - AOB
+     *
      * @return
      */
     public ArrayList<Country> getRegionCountries() {
@@ -198,16 +204,16 @@ public class App {
     }
 
 
-    /** Print table of countries extracted
+    /**
+     * Print table of countries extracted
      * Author - AOB
+     *
      * @param countries
      */
 
     //Print list of countries in the world
-    public void printCountries(ArrayList<Country> countries)
-    {
-        if (countries == null)
-        {
+    public void printCountries(ArrayList<Country> countries) {
+        if (countries == null) {
             System.out.println("No countries");
             return;
         }
@@ -215,13 +221,12 @@ public class App {
         System.out.println(String.format("\n %s %s %s %s %s %s", "Code", "Name", "Continent",
                 "Region", "Population", "Capital"));
 
-        for (Country country : countries)
-        {
+        for (Country country : countries) {
             if (country == null)
                 continue;
             String country_string =
                     String.format("%s %s %s %s %s %s", country.code, country.name, country.continent,
-                    country.region, country.population, country.capital);
+                            country.region, country.population, country.capital);
             System.out.println(country_string);
         }
     }
@@ -248,12 +253,14 @@ public class App {
                 System.out.println("Successfully connected");
                 break;
             } catch (SQLException sqle) {
-                System.out.println("Failed to connect to database attempt " +                                  Integer.toString(i));
+                System.out.println("Failed to connect to database attempt " + Integer.toString(i));
                 System.out.println(sqle.getMessage());
             } catch (InterruptedException ie) {
                 System.out.println("Thread interrupted? Should not happen.");
             }
         }
     }
+
 }
+
 
