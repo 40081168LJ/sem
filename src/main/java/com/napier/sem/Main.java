@@ -69,8 +69,6 @@ public class Main {
 /**********************************************************************************************************************/
             /**
              Switch construct, Each case represents a Report.
-             TODO:Could be used to them call each report method as needed?
-             TODO:Would also need to loopback to the menu after a report is selected or at least an option to exit/menu
              */
             switch (swValue) {
                 case 1:
