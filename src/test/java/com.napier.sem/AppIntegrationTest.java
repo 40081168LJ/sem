@@ -57,6 +57,7 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
+
     /**
      * Test connection to database and to test getting world population
      * Used in additional_info 1 report
@@ -68,6 +69,21 @@ public class AppIntegrationTest {
         assertNotEquals(0, pop.population );
     }
 
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Test connection to database and to test getting world population
+     * Used in report 8
+     */
+    @Test
+    public void getCityByContinent() {
+        ArrayList<City> cities = City.getCityPopulationByContinent("europe", app.con);
+        //validates that only selected continent cities are selected.
+        boolean allEqual = cities.stream().distinct().count() <= 1;
+        assertEquals(true, allEqual);
+    }
+//--------------------------------------------------------------------------------------------------------------------//
 }
 
-//--------------------------------------------------------------------------------------------------------------------//
+
+

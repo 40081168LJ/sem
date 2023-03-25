@@ -1,7 +1,4 @@
-import com.napier.sem.App;
-import com.napier.sem.Country;
-import com.napier.sem.Language;
-import com.napier.sem.Population;
+import com.napier.sem.*;
 
 //--------------------------------------------------------------------------------------------------------------------//
 import java.io.IOException;
@@ -109,6 +106,16 @@ public class Main {
                     break;
                 case 8:
                     System.out.println("Report 8 Selected");
+                    System.out.println("please select a continent");
+                    Scanner scanner = new Scanner(System.in);  // Create a Scanner object
+                    String continent = scanner.nextLine();
+                    System.out.println("<|************************************************************************************|>");
+                    // Getting city population by continent
+                    ArrayList<City> cities = City.getCityPopulationByContinent(continent, con.con);
+                    // Display world population
+                    City.displayCites(cities);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 8 Finished, Returning to Main Menu...");
                     break;
                 case 9:
                     System.out.println("Report 9 Selected");
