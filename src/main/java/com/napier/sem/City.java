@@ -29,8 +29,7 @@ public class City {
         public String country;
 
         /**
-         * Report 8
-         *
+         * Report 7
          * @param con connection to database
          * @return
          */
@@ -71,10 +70,10 @@ public class City {
                 }
         }
 
-        /**Display cities when given a list of cities
+        /**Display cities when given a list of cities - report 7
          *@param cities
          */
-        public static void displayCites(ArrayList<City> cities) {
+        public static void displayCitesDescending(ArrayList<City> cities) {
                 if (cities == null)
                 {
                         System.out.println("no cities have been found");

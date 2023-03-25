@@ -1,10 +1,12 @@
 package com.napier.sem;
 
 //--------------------------------------------------------------------------------------------------------------------//
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 //--------------------------------------------------------------------------------------------------------------------//
 /**
@@ -21,7 +23,10 @@ public class AppIntegrationTest {
         app = new App();
         // Connect to database
         app.connect("localhost:33060", 30000);
-
+    }
+    @AfterAll
+    public static void cleanUp(){
+        app.disconnect();
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
@@ -68,6 +73,20 @@ public class AppIntegrationTest {
         assertNotEquals(0, pop.population );
     }
 
-}
 
 //--------------------------------------------------------------------------------------------------------------------//
+
+    /** integration test for getting countries descending order - report 7
+     */
+    @Test
+    public void testGetCityPopulationDescending() {
+        ArrayList<City> cities = City.getCityPopulationDescending(app.con);
+        //validates
+        assertNotNull(cities);
+        assertNotNull(cities.get(0).name);
+        assertNotNull(cities.get(0).country);
+        assertNotNull(cities.get(0).population);
+        assertNotNull(cities.get(0).district);
+    }
+//--------------------------------------------------------------------------------------------------------------------//
+}

@@ -113,7 +113,7 @@ public class Main {
                     // Show all conuntry by language, greatest to smallest who speak it (Percentage)
                     ArrayList<City> cities = City.getCityPopulationDescending(con.con);
                     // Print out countries languages
-                    City.displayCites(cities);
+                    City.displayCitesDescending(cities);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report Languages 1 Finished, Returning to Main Menu...");
                     break;
