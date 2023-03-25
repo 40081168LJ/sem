@@ -26,6 +26,7 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
+
 target/
 pom.xml.tag
 pom.xml.releaseBackup
@@ -36,5 +37,7 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
+
+.idea/workspace.xml
 
 .idea/
