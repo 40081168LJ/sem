@@ -3,6 +3,7 @@ package com.napier.sem;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 /**
  * city object
@@ -28,35 +29,40 @@ public class City {
         public String country;
 
         /**
+         * Report 8
          *
          * @param con connection to database
          * @return
          */
-        public static City getCityPopulationDescending(Connection con) {
+        public static ArrayList<City> getCityPopulationDescending(Connection con) {
                 try {
 
                         Statement stmt = con.createStatement();
                         // Create string for SQL statement
                         String strSelect =
-                                "SELECT ID, Name, CountryCode, District, Population " +
+                                "SELECT city.Name, country.Name, city.District, city.Population " +
                                         "FROM city " +
-                                        "ORDER BY CITY DESC";
+                                        "JOIN country " +
+                                        "ON city.countrycode = country.Code " +
+                                        "ORDER BY city.population DESC";
 
                         // Execute SQL statement
                         ResultSet rset = stmt.executeQuery(strSelect);
 
-                        // Check one is returned
-                        if (rset.next()) {
+                        // Extract Language information
+                        ArrayList<City> cities = new ArrayList<>();
+
+                        //Return new language if valid.
+                        //Check one is returned
+                        while (rset.next()) {
                                 City city = new City();
-                                city.iD = rset.getInt("id");
-                                city.name = rset.getString("name");
-                                city.countryCode = rset.getString("countrycode");
-                                city.district = rset.getString("district");
-                                city.population = rset.getInt("population");
-                                return city;
+                                city.name = rset.getString("city.Name");
+                                city.country = rset.getString("country.Name");
+                                city.district = rset.getString("city.District");
+                                city.population = rset.getInt("city.Population");
+                                cities.add(city);
                         }
-                        else
-                        return null;
+                        return cities;
 
                 } catch (Exception e) {
                         System.out.println(e.getMessage());
@@ -65,18 +71,28 @@ public class City {
                 }
         }
 
-        public static void displayCity(City city)
-        {
-                if (city != null)
+        /**Display cities when given a list of cities
+         *@param cities
+         */
+        public static void displayCites(ArrayList<City> cities) {
+                if (cities == null)
                 {
-                        System.out.println("ID: " + city.iD + " "
-                                + "City Name: " + city.name + " "
-                                + "City Country Code: " + city.countryCode + "\n"
-                                + "City District: " + city.district + "\n"
-                                + "City Population: " + city.population + "\n"
-                                + "City Country: " + city.country + "\n");
+                        System.out.println("no cities have been found");
+                        return;
+                }
+                //Print header
+                System.out.printf("\n %s %s %s %s%n", "City Name", "City Country", "City District", "City Population");
+
+                for (City city : cities)
+                {
+                        if (city == null)
+                                continue;
+                        String citiesString =
+                                String.format("%s %s %s %s ", city.name, city.country, city.district,
+                                        city.population);
+
+                        System.out.println(citiesString);
                 }
         }
-
     }
 

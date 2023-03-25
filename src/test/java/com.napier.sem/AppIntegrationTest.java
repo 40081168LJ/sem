@@ -25,6 +25,12 @@ public class AppIntegrationTest {
      * Test connection to database and to test getting world population
      * Used in additional_info 1 report
      */
+    @Test
+    public void GetWorldPopulation() {
+        Population pop = Population.getPopulation(app.con);
+        //validates
+        assertNotEquals(0, pop.population );
+    }
 
     /** Integration test for extract all world countries
      * Author - AOB
@@ -56,30 +62,3 @@ public class AppIntegrationTest {
     }
 }
 
-/**
- * Unit Test to test worldPopulation is not null
- */
-class IntegrationTests {
-
-    static App app;
-    @BeforeAll
-    static void init()
-    {
-        app = new App();
-        // Connect to database
-        app.connect("localhost:33060", 30000);
-
-    }
-
-    /**
-     * Test connection to database and to test getting world population
-     * Used in additional_info 1 report
-     */
-    @Test
-    public void GetWorldPopulation() {
-        Population pop = Population.getPopulation(app.con);
-        //validates
-        assertNotEquals(0, pop.population );
-    }
-
-}
