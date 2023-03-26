@@ -128,6 +128,21 @@ public class AppTest {
         City.displayCites(cities);
     }
 
+
+//--------------------------------------------------------------------------------------------------------------------//
+/**
+ *  test to display continents with 0 population - Report 27
+ */
+
+@Test
+    void printContinentsTestEmpty() {
+        ArrayList<Population> populations = new ArrayList<>();
+        Population.displayContinentPopulations(populations);
+    }
+
 }
 
 //--------------------------------------------------------------------------------------------------------------------//
+
+
+

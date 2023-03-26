@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="AOB - added get/display city">
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="AG - Additional info 2 report">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Population.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Population.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +62,6 @@
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$USER_HOME$/.jdks/openjdk-19.0.2/lib/src.zip!/java.base/sun/nio/ch/Net.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" root0="SKIP_INSPECTION" />
   </component>
@@ -128,6 +131,38 @@
       <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppIntegrationTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppIntegrationTest.printContinentsPopulationTestEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seMethods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.napier.sem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.napier.sem" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppIntegrationTest" />
+      <option name="METHOD_NAME" value="printContinentsPopulationTestEmpty" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppIntegrationTest.printContinentsTestEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seMethods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.napier.sem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.napier.sem" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppIntegrationTest" />
+      <option name="METHOD_NAME" value="printContinentsTestEmpty" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -237,14 +272,6 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="sourceFilePath" value="Dockerfile" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
@@ -263,15 +290,6 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="db/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="containerName" value="" />
-          <option name="sourceFilePath" value="db/Dockerfile" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <configuration name="docker-compose.yml.db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -287,23 +305,23 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="Docker.Dockerfile" />
       <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
-      <item itemvalue="Docker.db/Dockerfile" />
       <item itemvalue="JUnit.Report123Tests" />
       <item itemvalue="JUnit.UnitTests" />
       <item itemvalue="JUnit.IntegrationTests" />
       <item itemvalue="JUnit.AppIntegrationTest" />
+      <item itemvalue="JUnit.AppIntegrationTest.printContinentsPopulationTestEmpty" />
+      <item itemvalue="JUnit.AppIntegrationTest.printContinentsTestEmpty" />
       <item itemvalue="JUnit.AppTest.DisplayCities" />
       <item itemvalue="Maven.seMethods [install]" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.AppIntegrationTest.printContinentsPopulationTestEmpty" />
+        <item itemvalue="JUnit.AppIntegrationTest.printContinentsTestEmpty" />
         <item itemvalue="JUnit.AppTest.DisplayCities" />
         <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
-        <item itemvalue="Docker.db/Dockerfile" />
-        <item itemvalue="Docker.Dockerfile" />
       </list>
     </recent_temporary>
   </component>
@@ -585,7 +603,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="SL - added employee class with related employee methods" />
     <MESSAGE value="AG - Added Get all Salaries method" />
     <MESSAGE value="AOB - add use cases feature branch" />
     <MESSAGE value="AOB - use case 1 added" />
@@ -610,7 +627,8 @@
     <MESSAGE value="AOB - main.yml branches added" />
     <MESSAGE value="AOB - added get/display city" />
     <MESSAGE value="AOB - added integration test" />
-    <option name="LAST_COMMIT_MESSAGE" value="AOB - added integration test" />
+    <MESSAGE value="AG - Additional info 2 report" />
+    <option name="LAST_COMMIT_MESSAGE" value="AG - Additional info 2 report" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
