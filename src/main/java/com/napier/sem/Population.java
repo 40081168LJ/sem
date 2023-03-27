@@ -62,7 +62,7 @@ public class Population {
 
     /**
      * Gets population of each Continent.
-     * Used for additional report 2
+     * Used for additional info - report 2
      * @param con
      * @return
      */
@@ -80,10 +80,10 @@ public class Population {
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
 
-            // Extract Language information
+            // Extract Population information
             ArrayList<Population> populations = new ArrayList<>();
 
-            //
+            //Gets population and Continent
             while (rset.next()) {
 
                 Population population = new Population();
@@ -110,7 +110,7 @@ public class Population {
     public static void displayContinentPopulations(ArrayList<Population> populations) {
         if (populations == null)
         {
-            System.out.println("Populations of continents could now be displayed");
+            System.out.println("Populations of continents could not be displayed");
             return;
         }
         //Print header
