@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="AG - Additional info 2 report">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Population.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Population.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppIntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -318,10 +316,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
         <item itemvalue="JUnit.AppIntegrationTest.printContinentsPopulationTestEmpty" />
         <item itemvalue="JUnit.AppIntegrationTest.printContinentsTestEmpty" />
         <item itemvalue="JUnit.AppTest.DisplayCities" />
-        <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -603,7 +601,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="AG - Added Get all Salaries method" />
     <MESSAGE value="AOB - add use cases feature branch" />
     <MESSAGE value="AOB - use case 1 added" />
     <MESSAGE value="AOB - use case 1 amended, use case 2 added" />
@@ -628,7 +625,8 @@
     <MESSAGE value="AOB - added get/display city" />
     <MESSAGE value="AOB - added integration test" />
     <MESSAGE value="AG - Additional info 2 report" />
-    <option name="LAST_COMMIT_MESSAGE" value="AG - Additional info 2 report" />
+    <MESSAGE value="AG - Updating comments for Additional info 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="AG - Updating comments for Additional info 2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

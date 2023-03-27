@@ -20,6 +20,12 @@ public class Population {
      */
     public String continent;
 
+    /**
+     * Stores City
+     */
+
+    public String city;
+
 
 //--------------------------------------------------------------------------------------------------------------------//
 
@@ -63,6 +69,7 @@ public class Population {
     /**
      * Gets population of each Continent.
      * Used for additional report 2
+     *
      * @param con
      * @return
      */
@@ -105,19 +112,18 @@ public class Population {
 
     /**
      * Displays population of each continent
+     *
      * @param populations
      */
     public static void displayContinentPopulations(ArrayList<Population> populations) {
-        if (populations == null)
-        {
+        if (populations == null) {
             System.out.println("Populations of continents could now be displayed");
             return;
         }
         //Print header
         System.out.printf("\n %s %s%n", "Continent", "Population");
 
-        for (Population population : populations)
-        {
+        for (Population population : populations) {
             if (population == null)
                 continue;
             String continentsString =
@@ -126,4 +132,74 @@ public class Population {
             System.out.println(continentsString);
         }
     }
+
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Used to get population of a city. Used in Additional info 6 - report 31
+     * @param con
+     * @return
+     */
+    public static ArrayList<Population> getcityPopulation(Connection con) {
+        try{
+
+            Statement stmt = con.createStatement();
+
+            // Create string for SQL statement
+            String strSelect =
+                    "(SELECT Name, SUM(Population)"
+                            + " FROM city"
+                            + " GROUP BY Name)";
+
+            // Execute population information
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // Extract population information
+            ArrayList<Population> populations = new ArrayList<>();
+
+            //Get values to be displayed
+            while (rset.next()) {
+
+                Population population = new Population();
+                population.population = rset.getLong("SUM(Population)");
+                population.city = rset.getString("Name");
+                populations.add(population);
+            }
+            return populations;
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get populations of cities.");
+            return null;
+        }
+
+    }
+
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Displays City Populations
+     * @param populations
+     */
+   public static void displayCityPopulations(ArrayList<Population> populations) {
+        if (populations == null) {
+            System.out.println("Populations of cities could not be displayed");
+            return;
+        }
+
+        //Print header
+        System.out.printf("\n $s $s%n", "city: ", "Population");
+
+        for(Population population : populations){
+            if (population == null)
+                continue;
+            String cityString =
+                    String.format("%s %s ", population.city, population.population);
+
+            System.out.println(cityString);
+        }
+}
+
 }
