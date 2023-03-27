@@ -118,7 +118,7 @@ public class AppIntegrationTest {
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
-     * integration test for getting all city populations
+     * integration test for getting all city populations - Report 31
      */
 
     @Test
@@ -128,3 +128,5 @@ public class AppIntegrationTest {
 
     }
 }
+
+//--------------------------------------------------------------------------------------------------------------------//

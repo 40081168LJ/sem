@@ -194,13 +194,20 @@ public class Main {
                 case 28:
                     System.out.println("Report Additional Info 3 Selected");
                     break;
-                case 29:
+                case 29:{
                     System.out.println("Report Additional Info 4 Selected");
-                    break;
+                    System.out.println("<|************************************************************************************|>");
+                    // Getting Continent population
+                    ArrayList<Population> population = Population.getCountryPopulations(con.con);
+                    // Display world population
+                    Population.displayCountryPopulations(population);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report Additional Info 4 Finished, Returning to Main Menu...");
+                    break;}
                 case 30:
                     System.out.println("Report Additional Info 5 Selected");
                     break;
-                case 31:
+                case 31:{
                     System.out.println("Report Additional Info 6 Selected");
                     System.out.println("<|************************************************************************************|>");
                     // Getting City population
@@ -209,7 +216,7 @@ public class Main {
                     Population.displayCityPopulations(population);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report Languages 2 Finished, Returning to Main Menu...");
-                    break;
+                    break;}
                 case 32:
                     System.out.println("Report Languages 1 Selected, Displaying Countries with Languages... ");
                     System.out.println("<|************************************************************************************|>");

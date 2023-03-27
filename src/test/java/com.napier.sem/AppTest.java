@@ -5,6 +5,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 
+import static com.sun.tools.javac.main.Option.O;
+
 //--------------------------------------------------------------------------------------------------------------------//
 /** Unit tests for reports
  * Author - AOB
@@ -160,6 +162,19 @@ public class AppTest {
 
     }
 
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Test to display countries with 0 population - Report 29
+     */
+
+    @Test
+    void DisplayCountriesWithNoPopulation() {
+        Population population = new Population();
+        population.population = O.ordinal();
+        Population.displayPopulation(population);
+    }
 }
 
 //--------------------------------------------------------------------------------------------------------------------//
