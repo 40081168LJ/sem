@@ -125,6 +125,8 @@ public class AppIntegrationTest {
     public void printCitiesPopulations() {
         ArrayList<Population> populations = Population.getcityPopulation(app.con);
         assertNotNull(populations);
+        assertNotNull(populations.get(0).city);
+
 
     }
 }
