@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="AG - Additional info 2 report">
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="AG - Additional info 6 Report">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +23,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/feature/additional_info_2" />
+    <option name="BRANCH" value="feature/gitActions" />
   </component>
   <component name="Git.Settings">
     <favorite-branches>
@@ -50,7 +52,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/additional_info_2" />
+        <entry key="$PROJECT_DIR$" value="feature/report7" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -112,7 +114,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.AppIntegrationTest.testGetCityPopulationDescending">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="seMethods" />
@@ -162,7 +164,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.DisplayCities" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppIntegrationTest.testGetCityPopulationDescending" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seMethods" />
       <extension name="coverage">
         <pattern>
@@ -171,8 +173,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.napier.sem" />
-      <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppTest" />
-      <option name="METHOD_NAME" value="DisplayCities" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppIntegrationTest" />
+      <option name="METHOD_NAME" value="testGetCityPopulationDescending" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -305,18 +307,18 @@
       <item itemvalue="JUnit.UnitTests" />
       <item itemvalue="JUnit.IntegrationTests" />
       <item itemvalue="JUnit.AppIntegrationTest" />
+      <item itemvalue="JUnit.AppIntegrationTest.testGetCityPopulationDescending" />
       <item itemvalue="JUnit.AppIntegrationTest.printContinentsPopulationTestEmpty" />
       <item itemvalue="JUnit.AppIntegrationTest.printContinentsTestEmpty" />
-      <item itemvalue="JUnit.AppTest.DisplayCities" />
       <item itemvalue="Maven.seMethods [install]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.AppIntegrationTest.testGetCityPopulationDescending" />
         <item itemvalue="JUnit.AppIntegrationTest.printContinentsPopulationTestEmpty" />
-        <item itemvalue="JUnit.AppIntegrationTest.printContinentsTestEmpty" />
-        <item itemvalue="JUnit.AppTest.DisplayCities" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
+        <item itemvalue="JUnit.AppIntegrationTest.printContinentsTestEmpty" />
       </list>
     </recent_temporary>
   </component>
@@ -580,12 +582,12 @@
       <option name="project" value="LOCAL" />
       <updated>1679751405001</updated>
     </task>
-    <task id="LOCAL-00036" summary="AG - Additional info 2 report&#10;40346200Aidan">
-      <created>1679841144082</created>
+    <task id="LOCAL-00036" summary="AG - Additional info 6 Report">
+      <created>1679947064418</created>
       <option name="number" value="00036" />
       <option name="presentableId" value="LOCAL-00036" />
       <option name="project" value="LOCAL" />
-      <updated>1679841144082</updated>
+      <updated>1679947064418</updated>
     </task>
     <option name="localTasksCounter" value="37" />
     <servers />
@@ -605,8 +607,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="AG - Added Get all Salaries method" />
-    <MESSAGE value="AOB - add use cases feature branch" />
     <MESSAGE value="AOB - use case 1 added" />
     <MESSAGE value="AOB - use case 1 amended, use case 2 added" />
     <MESSAGE value="AOB - use case 2 amended, use case 3 added" />
@@ -630,7 +630,9 @@
     <MESSAGE value="AOB - added get/display city" />
     <MESSAGE value="AOB - added integration test" />
     <MESSAGE value="AG - Additional info 2 report" />
-    <option name="LAST_COMMIT_MESSAGE" value="AG - Additional info 2 report" />
+    <MESSAGE value="AG - Updating comments for Additional info 2" />
+    <MESSAGE value="AG - Additional info 6 Report" />
+    <option name="LAST_COMMIT_MESSAGE" value="AG - Additional info 6 Report" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

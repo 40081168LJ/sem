@@ -114,7 +114,17 @@ public class AppIntegrationTest {
 
     }
 
-}
-
 
 //--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * integration test for getting all city populations
+     */
+
+    @Test
+    public void printCitiesPopulations() {
+        ArrayList<Population> populations = Population.getcityPopulation(app.con);
+        assertNotNull(populations);
+
+    }
+}

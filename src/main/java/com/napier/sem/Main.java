@@ -202,6 +202,13 @@ public class Main {
                     break;
                 case 31:
                     System.out.println("Report Additional Info 6 Selected");
+                    System.out.println("<|************************************************************************************|>");
+                    // Getting City population
+                    ArrayList<Population> population = Population.getcityPopulation(con.con);
+                    // Display City population
+                    Population.displayCityPopulations(population);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report Languages 2 Finished, Returning to Main Menu...");
                     break;
                 case 32:
                     System.out.println("Report Languages 1 Selected, Displaying Countries with Languages... ");
