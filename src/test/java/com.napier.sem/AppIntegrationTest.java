@@ -1,6 +1,7 @@
 package com.napier.sem;
 
 //--------------------------------------------------------------------------------------------------------------------//
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
@@ -76,6 +77,7 @@ public class AppIntegrationTest {
     public void GetWorldPopulation() {
         Population pop = Population.getPopulation(app.con);
         //validates
+        assertNotNull(pop);
         assertNotEquals(0, pop.population);
     }
 
@@ -83,10 +85,10 @@ public class AppIntegrationTest {
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
-     * integration test for getting countries descending order - report 7
+     * integration test for getting cities descending order - report 7
      */
     @Test
-    public void testGetCityPopulationDescending() {
+    public void GetCityPopulation() {
         ArrayList<City> cities = City.getCityPopulation(app.con);
         //validates
         assertNotNull(cities);
@@ -107,7 +109,6 @@ public class AppIntegrationTest {
 
         assertNotNull(populations);
         assertNotNull(populations.get(0).continent);
-        assertNotNull(populations.get(0).population);
 
     }
 
@@ -125,5 +126,20 @@ public class AppIntegrationTest {
         assertNotNull(populations.get(0).city);
 
 
+    }
+
+    //----------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * integration test for getting cities descending order - report 7
+     */
+    @Test
+    public void GetCityPopulationByContinent() {
+        ArrayList<City> cities = City.getCityPopulationByContinent("Europe", app.con);
+        //validates
+        assertNotNull(cities);
+        assertNotNull(cities.get(0).name);
+        assertNotNull(cities.get(0).country);
+        assertNotNull(cities.get(0).district);
     }
 }
