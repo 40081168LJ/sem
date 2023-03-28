@@ -103,7 +103,7 @@ public class AppTest {
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
-     * tests displaying cities with an empty object - report 7
+     * tests displaying cities with an empty object - report 7, 8
      */
     @Test
     void DisplayCitiesTestEmpty() {
@@ -114,7 +114,7 @@ public class AppTest {
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
-     * tests passing city expected values - report 7
+     * tests passing city expected values - report 7, 8
      */
     @Test
     void DisplayCities() {

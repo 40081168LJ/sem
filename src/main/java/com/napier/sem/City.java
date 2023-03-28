@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
-
 /**
  * city object
  **/
@@ -93,5 +92,47 @@ public class City {
                         System.out.println(citiesString);
                 }
         }
-    }
+
+
+
+        /**
+         * gets the cities of a single continent when given a continent. - report 8
+         * @param continent The continent used to select cities from
+         * @param con connection to database
+         * @return returns null if fail or a list of cities
+         */
+        public static ArrayList<City> getCityPopulationByContinent(String continent, Connection con) {
+                try {
+                        Statement stmt = con.createStatement();
+                        // Create string for SQL statement
+                        String strSelect =
+                                "SELECT city.Name, country.Name, city.District, city.Population " +
+                                        "FROM city " +
+                                        "JOIN country " +
+                                        "ON city.countrycode = country.Code " +
+                                        "WHERE country.continent " + "LIKE \"%" + continent + "%\" " +
+                                        "ORDER BY city.population DESC";
+                        // Execute SQL statement
+                        ResultSet rset = stmt.executeQuery(strSelect);
+
+                        // Extract city information
+                        ArrayList<City> cities = new ArrayList<>();
+
+                        //adds each city to cities
+                        while (rset.next()) {
+                                City city = new City();
+                                city.name = rset.getString("city.Name");
+                                city.country = rset.getString("country.Name");
+                                city.district = rset.getString("city.District");
+                                city.population = rset.getInt("city.Population");
+                                cities.add(city);
+                        }
+                        return cities;
+                } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                        System.out.println("Failed to get city details");
+                        return null;
+                }
+        }
+}
 

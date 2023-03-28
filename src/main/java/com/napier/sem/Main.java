@@ -1,8 +1,4 @@
-import com.napier.sem.App;
-import com.napier.sem.City;
-import com.napier.sem.Country;
-import com.napier.sem.Language;
-import com.napier.sem.Population;
+import com.napier.sem.*;
 
 //--------------------------------------------------------------------------------------------------------------------//
 import java.io.IOException;
@@ -30,6 +26,7 @@ public class Main {
         // Create new Application
         App con = new App();
 
+        Scanner scanner = new Scanner(System.in);
         // Connect to database
         if (args.length < 1) {
             con.connect("localhost:33060", 30000);
@@ -116,13 +113,21 @@ public class Main {
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 7 Finished, Returning to Main Menu...");
                     break;}
-                case 8:
+                case 8: {
                     System.out.println("Report 8 Selected");
-                    break;
-
-                case 9:
+                    System.out.println("please select a continent");
+                    String continent = scanner.nextLine();
+                    System.out.println("<|************************************************************************************|>");
+                    // Getting city population by continent
+                    ArrayList<City> cities = City.getCityPopulationByContinent(continent, con.con);
+                    // Display city population
+                    City.displayCites(cities);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 8 Finished, Returning to Main Menu...");
+                    break;}
+                case 9: {
                     System.out.println("Report 9 Selected");
-                    break;
+                    break;}
                 case 10:
                     System.out.println("Report 10 Selected");
                     break;
