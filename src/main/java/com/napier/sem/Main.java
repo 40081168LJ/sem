@@ -153,7 +153,7 @@ public class Main {
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 11 Finished, Returning to Main Menu...");
                     break;}
-                case 12:
+                case 12:{
                     System.out.println("Report 12 Selected");
                     System.out.println("please select the number of rows to display top populated cities");
                     int rows = scanner.nextInt();

@@ -160,7 +160,7 @@ public class AppIntegrationTest {
      */
     @Test
     public void printCountriesPopulations() {
-        ArrayList<Population> populations = Population.getcityPopulation(app.con);
+        ArrayList<Population> populations = Population.getCountryPopulations(app.con);
         assertNotNull(populations);
         assertNotNull(populations.get(0).country);
 
@@ -170,7 +170,7 @@ public class AppIntegrationTest {
     //----------------------------------------------------------------------------------------------------------------//
 
     /**
-     * integration test for getting cities descending order - report 7
+     * integration test for getting cities descending order - report 8
      */
     @Test
     public void GetCityPopulationByContinent() {
@@ -182,7 +182,7 @@ public class AppIntegrationTest {
         assertNotNull(cities.get(0).district);
     }
 
-    /** integration test for getting countries descending order - report 7
+    /** integration test for getting countries descending order - report 12
      */
     @Test
     public void getTopPopulatedCities() {
