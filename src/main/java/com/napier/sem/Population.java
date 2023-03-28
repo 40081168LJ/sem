@@ -33,6 +33,8 @@ public class Population {
     public String country;
 
 
+
+
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
@@ -267,7 +269,7 @@ public class Population {
 
         }
         //Print header
-        System.out.printf("\n %s %S%n", "City", "Population");
+        System.out.printf("\n %s %S%n", "Country", "Population");
 
         for (Population population : populations) {
             if (population == null)

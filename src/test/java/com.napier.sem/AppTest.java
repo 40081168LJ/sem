@@ -5,7 +5,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 
-import static com.sun.tools.javac.main.Option.O;
 
 //--------------------------------------------------------------------------------------------------------------------//
 /** Unit tests for reports
@@ -170,10 +169,15 @@ public class AppTest {
      */
 
     @Test
-    void DisplayCountriesWithNoPopulation() {
+    void DisplayCountryPopulation() {
+        ArrayList<Population> countries = new ArrayList<>();
         Population population = new Population();
-        population.population = O.ordinal();
-        Population.displayPopulation(population);
+        population.country = "Aruba";
+        population.population = 103000;
+        countries.add(population);
+
+        Population.displayCountryPopulations(countries);
+
     }
 }
 
