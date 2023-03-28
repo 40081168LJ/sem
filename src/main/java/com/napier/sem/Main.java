@@ -153,9 +153,18 @@ public class Main {
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 11 Finished, Returning to Main Menu...");
                     break;}
-                case 12:
+                case 12:{
                     System.out.println("Report 12 Selected");
-                    break;
+                    System.out.println("please select the number of rows to display top populated cities");
+                    int rows = scanner.nextInt();
+                    System.out.println("<|************************************************************************************|>");
+                    // Getting city population by continent
+                    ArrayList<City> cities = City.getTopPopulatedCities(rows, con.con);
+                    // Display world population
+                    City.displayCites(cities);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 12 Finished, Returning to Main Menu...");
+                    break;}
                 case 13:{
                     System.out.println("Report 13 Selected");
                     //get continent and number of rows to select
