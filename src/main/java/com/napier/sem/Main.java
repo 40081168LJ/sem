@@ -137,7 +137,7 @@ public class Main {
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 9 Finished, Returning to Main Menu...");
                     break;}
-                case 10:
+                case 10:{
                     System.out.println("Report 10 Selected");
                     System.out.println("please select a country");
 
