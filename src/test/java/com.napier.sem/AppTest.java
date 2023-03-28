@@ -102,7 +102,7 @@ public class AppTest {
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
-     * tests displaying cities with an empty object - report 7
+     * tests displaying cities with an empty object - report 7, 8
      */
     @Test
     void DisplayCitiesTestEmpty() {
@@ -113,7 +113,7 @@ public class AppTest {
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
-     * tests passing city expected values - report 7,8,9
+     * tests passing city expected values - report 7, 8
      */
     @Test
     void DisplayCities() {
@@ -128,6 +128,56 @@ public class AppTest {
         City.displayCites(cities);
     }
 
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * test to display continents with 0 population - Report Additional info 2
+     */
+
+    @Test
+    void printContinentsTestEmpty() {
+        ArrayList<Population> populations = new ArrayList<>();
+        Population.displayContinentPopulations(populations);
+    }
+
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Test to make sure Kabul prints expected population - report Additional info 6
+     */
+
+    @Test
+    void DisplayCityPopulation() {
+        ArrayList<City> cities = new ArrayList<>();
+        City city = new City();
+        city.name = "Kabul";
+        city.population = 1780000;
+        cities.add(city);
+
+        City.displayCites(cities);
+
+    }
+
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Test to display countries with 0 population - Report Additional info 4
+     */
+
+    @Test
+    void DisplayCountryPopulation() {
+        ArrayList<Population> countries = new ArrayList<>();
+        Population population = new Population();
+        population.country = "Aruba";
+        population.population = 103000;
+        countries.add(population);
+
+        Population.displayCountryPopulations(countries);
+
+    }
 }
 
 //--------------------------------------------------------------------------------------------------------------------//
