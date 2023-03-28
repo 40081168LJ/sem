@@ -134,7 +134,7 @@ public class AppTest {
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
-     * test to display continents with 0 population - Report 27
+     * test to display continents with 0 population - Report Additional info 2
      */
 
     @Test
@@ -147,7 +147,7 @@ public class AppTest {
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
-     * Test to make sure Kabul prints expected population - report 31
+     * Test to make sure Kabul prints expected population - report Additional info 6
      */
 
     @Test
@@ -166,7 +166,7 @@ public class AppTest {
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
-     * Test to display countries with 0 population - Report 29
+     * Test to display countries with 0 population - Report Additional info 4
      */
 
     @Test
@@ -178,3 +178,4 @@ public class AppTest {
 }
 
 //--------------------------------------------------------------------------------------------------------------------//
+

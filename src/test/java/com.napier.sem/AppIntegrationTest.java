@@ -101,7 +101,7 @@ public class AppIntegrationTest {
 
 
     /**
-     * integration test for getting continents with not null population - report 27
+     * integration test for getting continents with not null population - report Additional info 2
      */
 
     @Test
@@ -118,7 +118,7 @@ public class AppIntegrationTest {
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
-     * integration test for getting all city populations - Report 31
+     * integration test for getting all city populations - Report Additional info 6
      */
 
     @Test
@@ -129,6 +129,19 @@ public class AppIntegrationTest {
 
 
     }
-}
+
 
 //--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     *  integration test for getting all country populations - Report Additional info 4
+     */
+    @Test
+    public void printCountriesPopulations() {
+        ArrayList<Population> populations = Population.getcityPopulation(app.con);
+        assertNotNull(populations);
+        assertNotNull(populations.get(0).country);
+
+
+    }
+}
