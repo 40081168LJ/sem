@@ -97,7 +97,7 @@ public class AppIntegrationTest {
         assertNotNull(cities.get(0).district);
     }
 //--------------------------------------------------------------------------------------------------------------------//
-    /** integration test for getting countries descending order - report 7
+    /** integration test for getting countries descending order - report 9
      */
     @Test
     public void getCityByRegion() {
