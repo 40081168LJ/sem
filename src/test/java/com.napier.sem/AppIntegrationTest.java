@@ -160,7 +160,7 @@ public class AppIntegrationTest {
      */
     @Test
     public void printCountriesPopulations() {
-        ArrayList<Population> populations = Population.getcityPopulation(app.con);
+        ArrayList<Population> populations = Population.getCountryPopulations(app.con);
         assertNotNull(populations);
         assertNotNull(populations.get(0).country);
 

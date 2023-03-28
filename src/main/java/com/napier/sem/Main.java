@@ -143,7 +143,6 @@ public class Main {
                 case 11:{
                     System.out.println("Report 11 Selected");
                     System.out.println("please select a district");
-
                     String district = scanner.nextLine();
                     System.out.println("<|************************************************************************************|>");
                     // Getting city population by continent
