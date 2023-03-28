@@ -61,7 +61,7 @@ public class Population {
     /**
      * Displays world population
      *
-     * @param population
+     * @param population stores population
      */
     public static void displayPopulation(Population population) {
         if (population != null) {
@@ -76,8 +76,8 @@ public class Population {
      * Gets population of each Continent.
      * Used for additional report 2
      *
-     * @param con
-     * @return
+     * @param con connection to database
+     * @return returns populations or null if fail
      */
 
     public static ArrayList<Population> getContinentPopulation(Connection con) {
@@ -119,7 +119,7 @@ public class Population {
     /**
      * Displays population of each continent
      *
-     * @param populations
+     * @param populations stores population
      */
     public static void displayContinentPopulations(ArrayList<Population> populations) {
         if (populations == null) {
@@ -145,8 +145,8 @@ public class Population {
     /**
      * Used to get population of a city. Used in Additional info 6 - report 31
      *
-     * @param con
-     * @return
+     * @param con connection to database
+     * @return returns population or null if fail
      */
     public static ArrayList<Population> getcityPopulation(Connection con) {
         try {
@@ -189,7 +189,7 @@ public class Population {
     /**
      * Displays City Populations
      *
-     * @param populations
+     * @param populations stores population
      */
     public static void displayCityPopulations(ArrayList<Population> populations) {
         if (populations == null) {
@@ -198,7 +198,7 @@ public class Population {
         }
 
         //Print header
-        System.out.printf("\n $s $s%n", "city: ", "Population");
+        System.out.printf("\n $s $s%n", "city ", "Population");
 
         for (Population population : populations) {
             if (population == null)
@@ -213,6 +213,11 @@ public class Population {
 
 //--------------------------------------------------------------------------------------------------------------------//
 
+    /**
+     * Used to get Country Populations
+     * @param con connection to database
+     * @return returns populations or null if fails
+     */
     public static ArrayList<Population> getCountryPopulations(Connection con) {
         try {
 
@@ -251,6 +256,10 @@ public class Population {
 
 //--------------------------------------------------------------------------------------------------------------------//
 
+    /**
+     * Used to display populations of countries
+     * @param populations used to store populations
+     */
     public static void displayCountryPopulations(ArrayList<Population> populations) {
         if (populations == null) {
             System.out.println("Populations of countries could not be displayed");
