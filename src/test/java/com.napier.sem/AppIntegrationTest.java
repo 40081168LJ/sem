@@ -189,7 +189,7 @@ public class AppIntegrationTest {
         ArrayList<City> cities = City.getTopCitiesByContinent(5,"europe", app.con);
         //validates
         assertNotNull(cities);
-        assertNotNull(cities.get(4).name);
+        assertNotNull(cities.get(4).name); //checks data in row 5 is in range and not null
         assertNotNull(cities.get(4).country);
         assertNotNull(cities.get(4).district);
     }
