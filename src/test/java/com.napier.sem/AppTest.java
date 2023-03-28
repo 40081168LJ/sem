@@ -128,6 +128,38 @@ public class AppTest {
         City.displayCites(cities);
     }
 
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * test to display continents with 0 population - Report 27
+     */
+
+    @Test
+    void printContinentsTestEmpty() {
+        ArrayList<Population> populations = new ArrayList<>();
+        Population.displayContinentPopulations(populations);
+    }
+
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Test to make sure Kabul prints expected population - report 31
+     */
+
+    @Test
+    void DisplayCityPopulation() {
+        ArrayList<City> cities = new ArrayList<>();
+        City city = new City();
+        city.name = "Kabul";
+        city.population = 1780000;
+        cities.add(city);
+
+        City.displayCites(cities);
+
+    }
+
 }
 
 //--------------------------------------------------------------------------------------------------------------------//

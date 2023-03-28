@@ -70,7 +70,7 @@ public class Main {
              Switch construct, Each case represents a Report.
              */
             switch (swValue) {
-                case 1:
+                case 1:{
                     System.out.println("Report 1 Selected, Displaying all Countries and population detials...");
                     System.out.println("<|************************************************************************************|>");
                     // Extract country information
@@ -79,8 +79,8 @@ public class Main {
                     Country.printCountries(countries);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 1 Finished, Returning to Main Menu...");
-                    break;
-                case 2:
+                    break;}
+                case 2:{
                     System.out.println("Report 2 Selected, Displaying Countries by Continent = Asia...");
                     System.out.println("<|************************************************************************************|>");
                     // Extract country by continent information
@@ -89,7 +89,7 @@ public class Main {
                     Country.printCountries(countries1);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 2 Finished, Returning to Main Menu...");
-                    break;
+                    break;}
                 case 3:
                     System.out.println("Report 3 Selected");
                     break;
@@ -102,8 +102,22 @@ public class Main {
                 case 6:
                     System.out.println("Report 6 Selected");
                     break;
-                case 7:
+                case 7:{
                     System.out.println("Report 7 Selected");
+                    System.out.println("Report 7 Selected, Displaying Countries with Languages... ");
+                    System.out.println("<|************************************************************************************|>");
+                    // Show all conuntry by language, greatest to smallest who speak it (Percentage)
+                    ArrayList<City> cities = City.getCityPopulation(con.con);
+                    // Print out countries languages
+                    City.displayCites(cities);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 7 Finished, Returning to Main Menu...");
+                    break;}
+                case 8:
+                    System.out.println("Report 8 Selected");
+                    break;
+
+                case 9:
                     break;
                     case 8: {
                         System.out.println("Report 8 Selected");
@@ -171,7 +185,7 @@ public class Main {
                 case 25:
                     System.out.println("Report 25 Selected");
                     break;
-                case 26:
+                case 26:{
                     System.out.println("Report Additional Info 1 Selected");
                     System.out.println("<|************************************************************************************|>");
                     // Getting world population
@@ -180,10 +194,17 @@ public class Main {
                     Population.displayPopulation(populationreport1);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report Additional Info 1 Finished, Returning to Main Menu...");
-                    break;
-                case 27:
+                    break;}
+                case 27:{
                     System.out.println("Report Additional Info 2 Selected");
-                    break;
+                    System.out.println("<|************************************************************************************|>");
+                    // Getting Continent population
+                    ArrayList<Population> population = Population.getContinentPopulation(con.con);
+                    // Display world population
+                    Population.displayContinentPopulations(population);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report Additional Info 2 Finished, Returning to Main Menu...");
+                    break;}
                 case 28:
                     System.out.println("Report Additional Info 3 Selected");
                     break;
@@ -195,6 +216,13 @@ public class Main {
                     break;
                 case 31:
                     System.out.println("Report Additional Info 6 Selected");
+                    System.out.println("<|************************************************************************************|>");
+                    // Getting City population
+                    ArrayList<Population> population = Population.getcityPopulation(con.con);
+                    // Display City population
+                    Population.displayCityPopulations(population);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report Languages 2 Finished, Returning to Main Menu...");
                     break;
                 case 32:
                     System.out.println("Report Languages 1 Selected, Displaying Countries with Languages... ");
