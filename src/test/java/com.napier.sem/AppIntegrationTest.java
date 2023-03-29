@@ -156,7 +156,7 @@ public class AppIntegrationTest {
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
-     *  integration test for getting all country populations - Report Additional info 4
+     *  integration test for getting all country populations - Report Additional info 4, also used in additional info 5
      */
     @Test
     public void printCountriesPopulations() {

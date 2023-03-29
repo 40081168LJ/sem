@@ -32,8 +32,11 @@ public class Population {
 
     public String country;
 
+    /**
+     * Stores District
+     */
 
-
+    public String district;
 
 //--------------------------------------------------------------------------------------------------------------------//
 
@@ -217,6 +220,7 @@ public class Population {
 
     /**
      * Used to get Country Populations
+     *
      * @param con connection to database
      * @return returns populations or null if fails
      */
@@ -260,6 +264,7 @@ public class Population {
 
     /**
      * Used to display populations of countries
+     *
      * @param populations used to store populations
      */
     public static void displayCountryPopulations(ArrayList<Population> populations) {
@@ -283,4 +288,74 @@ public class Population {
 
     }
 
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Used to get populations of districts used in report 30 - Additional info 5
+     * @param con database connection
+     * @return returns populations
+     */
+    public static ArrayList<Population> getDistrictPopulation(Connection con) {
+        try {
+
+            Statement stmt = con.createStatement();
+
+            //Create string for sql statement
+            String strSelect =
+                    "(SELECT District, SUM(Population)"
+                            + " FROM city"
+                            + " GROUP BY District)";
+
+            //Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            //Extract population information
+            ArrayList<Population> populations = new ArrayList<>();
+
+            //Get values to be displayed
+            while (rset.next()) {
+
+                Population population = new Population();
+                population.population = rset.getLong("SUM(Population)");
+                population.district = rset.getString("District");
+                populations.add(population);
+            }
+            return populations;
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get populations of Districts.");
+            return null;
+        }
+
+    }
+
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Used to display districts populations. Used in report 30 Additional info 5
+     * @param populations Used to store populations
+     */
+    public static void displayDistrictPopulations(ArrayList<Population> populations) {
+        if (populations == null) {
+            System.out.println("Populations of Districts could not be displayed");
+            return;
+        }
+        //Print header
+        System.out.printf("\n %s %s%n", "District", "Population");
+
+        for(Population population : populations) {
+            if (population == null)
+                continue;
+            String DistrictsString =
+                    String.format("%s %s ", population.district, population.population);
+
+            System.out.println(DistrictsString);
+        }
+
+    }
 }
+
+//--------------------------------------------------------------------------------------------------------------------//

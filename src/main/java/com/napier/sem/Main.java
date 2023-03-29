@@ -251,9 +251,16 @@ public class Main {
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report Additional Info 4 Finished, Returning to Main Menu...");
                     break;}
-                case 30:
+                case 30:{
                     System.out.println("Report Additional Info 5 Selected");
-                    break;
+                    System.out.println("<|************************************************************************************|>");
+                    // Getting Continent population
+                    ArrayList<Population> population = Population.getDistrictPopulation(con.con);
+                    // Display world population
+                    Population.displayDistrictPopulations(population);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report Additional Info 5 Finished, Returning to Main Menu...");
+                    break;}
                 case 31:{
                     System.out.println("Report Additional Info 6 Selected");
                     System.out.println("<|************************************************************************************|>");

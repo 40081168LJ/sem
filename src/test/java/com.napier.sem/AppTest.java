@@ -164,7 +164,7 @@ public class AppTest {
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
-     * Test to display countries with 0 population - Report Additional info 4
+     * Test to display countries expected population - Report Additional info 4
      */
 
     @Test
@@ -178,6 +178,23 @@ public class AppTest {
         Population.displayCountryPopulations(countries);
 
     }
-}
+
 
 //--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Test to display Districts expected population - Report Additional info 5
+     */
+
+    @Test
+    void DisplayDistrictPopulation() {
+        ArrayList<Population> countries = new ArrayList<>();
+        Population population = new Population();
+        population.country = "Kabol";
+        population.population = 1780000;
+        countries.add(population);
+
+        Population.displayCountryPopulations(countries);
+
+    }
+}
