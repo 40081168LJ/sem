@@ -38,6 +38,12 @@ public class Population {
 
     public String district;
 
+    /**
+     * Stores Region
+     */
+
+    public String region;
+
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
@@ -293,6 +299,7 @@ public class Population {
 
     /**
      * Used to get populations of districts used in report 30 - Additional info 5
+     *
      * @param con database connection
      * @return returns populations
      */
@@ -336,6 +343,7 @@ public class Population {
 
     /**
      * Used to display districts populations. Used in report 30 Additional info 5
+     *
      * @param populations Used to store populations
      */
     public static void displayDistrictPopulations(ArrayList<Population> populations) {
@@ -346,7 +354,7 @@ public class Population {
         //Print header
         System.out.printf("\n %s %s%n", "District", "Population");
 
-        for(Population population : populations) {
+        for (Population population : populations) {
             if (population == null)
                 continue;
             String DistrictsString =
@@ -356,6 +364,75 @@ public class Population {
         }
 
     }
-}
+
 
 //--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Used to get populations of Regions used in report 38 - Additional info 3
+     *
+     * @param con database connection
+     * @return returns populations
+     */
+    public static ArrayList<Population> getRegionPopulations(Connection con) {
+        try {
+
+            Statement stmt = con.createStatement();
+
+            //Create string for sql statement
+            String strSelect =
+                    "(SELECT Region, SUM(Population)"
+                            + " FROM country"
+                            + " GROUP BY Region)";
+
+            //Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            //Extract population information
+            ArrayList<Population> populations = new ArrayList<>();
+
+            //Get values to be displayed
+            while (rset.next()) {
+
+                Population population = new Population();
+                population.population = rset.getLong("SUM(Population)");
+                population.region = rset.getString("Region");
+                populations.add(population);
+            }
+            return populations;
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get populations of Regions.");
+            return null;
+        }
+
+    }
+
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Used to display Region populations. Used in report 28 Additional info 3
+     *
+     * @param populations Used to store populations
+     */
+    public static void displayRegionPopulations(ArrayList<Population> populations) {
+        if (populations == null) {
+            System.out.println("Populations of Regions could not be displayed");
+            return;
+        }
+        //Print header
+        System.out.printf("\n %s %s%n", "Region", "Population");
+
+        for (Population population : populations) {
+            if (population == null)
+                continue;
+            String regionsString =
+                    String.format("%s %s ", population.region, population.population);
+
+            System.out.println(regionsString);
+        }
+
+    }
+}
