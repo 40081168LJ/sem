@@ -91,10 +91,25 @@ public class Main {
                     System.out.println("Report 2 Finished, Returning to Main Menu...");
                     break;}
                 case 3:
-                    System.out.println("Report 3 Selected");
+                    System.out.println("Report 3 Selected, Displaying Countries by Region = Western Europe...");
+                    System.out.println("<|************************************************************************************|>");
+                    // Extract country by continent information
+                    ArrayList<Country> countries2 = Country.getRegionCountries(con.con);
+                    Country.printCountries(countries2);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 2 Finished, Returning to Main Menu...");
                     break;
                 case 4:
                     System.out.println("Report 4 Selected");
+                    System.out.println("please select the number of rows to display top populated countries");
+                    int num = scanner.nextInt();
+                    System.out.println("<|************************************************************************************|>");
+                    // Getting top n countries
+                    ArrayList<Country> countries3 = Country.getTopPopulatedCountries(num, con.con);
+                    // Display top n countries
+                    Country.printCountries(countries3);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 2 Finished, Returning to Main Menu...");
                     break;
                 case 5:
                     System.out.println("Report 5 Selected");
