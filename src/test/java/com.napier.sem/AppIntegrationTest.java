@@ -68,6 +68,26 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * integration test for getting given number of countries in given
+     * continent in descending order
+     * Author - AOB
+     */
+
+    @Test
+    public void testGetTopCountriesInContinent(){
+        ArrayList<Country> countries = Country.getTopCountriesInContinent(1, "Asia", app.con);
+        //validates
+        assertNotNull(countries);
+        assertNotNull(countries.get(0).code);
+        assertNotNull(countries.get(0).name);
+        assertNotNull(countries.get(0).continent);
+        assertNotNull(countries.get(0).region);
+        assertNotNull(countries.get(0).population);
+        assertNotNull(countries.get(0).capital);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
 
     /**
      * Test connection to database and to test getting world population

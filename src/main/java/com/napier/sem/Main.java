@@ -97,7 +97,7 @@ public class Main {
                     ArrayList<Country> countries2 = Country.getRegionCountries(con.con);
                     Country.printCountries(countries2);
                     System.out.println("<|************************************************************************************|>");
-                    System.out.println("Report 2 Finished, Returning to Main Menu...");
+                    System.out.println("Report 3 Finished, Returning to Main Menu...");
                     break;
                 case 4:
                     System.out.println("Report 4 Selected");
@@ -109,10 +109,22 @@ public class Main {
                     // Display top n countries
                     Country.printCountries(countries3);
                     System.out.println("<|************************************************************************************|>");
-                    System.out.println("Report 2 Finished, Returning to Main Menu...");
+                    System.out.println("Report 4 Finished, Returning to Main Menu...");
                     break;
                 case 5:
                     System.out.println("Report 5 Selected");
+                    System.out.println("please select the continent to select from");
+                    String continent1 = scanner.nextLine();
+                    System.out.println("please select the number of rows to display top populated countries");
+                    int num1 = scanner.nextInt();
+
+                    System.out.println("<|************************************************************************************|>");
+                    // Getting top n countries in continent
+                    ArrayList<Country> countries4 = Country.getTopCountriesInContinent(num1, continent1, con.con);
+                    // Display top n countries in continent
+                    Country.printCountries(countries4);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 5 Finished, Returning to Main Menu...");
                     break;
                 case 6:
                     System.out.println("Report 6 Selected");
