@@ -13,12 +13,14 @@ import java.util.ArrayList;
 public class City {
         /** ID column */
         public int iD;
+        // TODO: CHECK AS NOT BEING USED?
 
         /**  City name string column  */
         public String name;
 
         /** Country Code sting column  */
         public String countryCode;
+        // TODO: CHECK AS NOT BEING USED?
 
         /** District string column */
         public String district;
@@ -355,13 +357,14 @@ public class City {
 
 //--------------------------------------------------------------------------------------------------------------------//
         /**
-         * gets the top populated capital cities with the number of rows selected and continent given by user.
+         * gets the top populated capital cities with the number of rows selected and region given by user.
          * Report 22
          * @param selected the number of rows to be selected inputted by user
          * @param con connection to database
+         * @param region region selected by user
          * @return returns null if fail or a list of cities
          */
-        public static ArrayList<City> getTopCapitalCities(int selected, Connection con) {
+        public static ArrayList<City> getTopCapitalCities(int selected, String region, Connection con) {
                 try {
                         Statement stmt = con.createStatement();
                         // Create string for SQL statement
@@ -371,6 +374,7 @@ public class City {
                                         "JOIN country " +
                                         "ON city.countrycode = country.Code " +
                                         "WHERE city.id IN (SELECT Capital FROM country)" +
+                                        "AND country.region LIKE \"%" + region + "%\" " +
                                         "ORDER BY city.population DESC " +
                                         "LIMIT " + selected;
                         // Execute SQL statement
@@ -416,6 +420,50 @@ public class City {
                                 String.format("%s %s %s ", city.name, city.country, city.population);
 
                         System.out.println(citiesString);
+                }
+        }
+
+//--------------------------------------------------------------------------------------------------------------------//
+        /**
+         * gets the top populated capital cities with the number of rows selected and continent given by user.
+         * Report 21
+         * @param selected the number of rows to be selected inputted by user
+         * @param con connection to database
+         * @param continent region selected by user
+         * @return returns null if fail or a list of cities
+         */
+        public static ArrayList<City> getTopCapitalCities2(int selected, String continent, Connection con) {
+                try {
+                        Statement stmt = con.createStatement();
+                        // Create string for SQL statement
+                        String strSelect =
+                                "SELECT city.Name, country.Name, city.Population " +
+                                        "FROM city " +
+                                        "JOIN country " +
+                                        "ON city.countrycode = country.Code " +
+                                        "WHERE city.id IN (SELECT Capital FROM country)" +
+                                        "AND country.continent LIKE \"%" + continent + "%\" " +
+                                        "ORDER BY city.population DESC " +
+                                        "LIMIT " + selected;
+                        // Execute SQL statement
+                        ResultSet rset = stmt.executeQuery(strSelect);
+
+                        // Extract city information
+                        ArrayList<City> capitalCities = new ArrayList<>();
+
+                        //adds each city to cities
+                        while (rset.next()) {
+                                City city = new City();
+                                city.name = rset.getString("city.Name");
+                                city.country = rset.getString("country.Name");
+                                city.population = rset.getInt("city.Population");
+                                capitalCities.add(city);
+                        }
+                        return capitalCities;
+                } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                        System.out.println("Failed to get city details");
+                        return null;
                 }
         }
 
