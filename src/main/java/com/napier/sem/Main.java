@@ -202,6 +202,20 @@ public class Main {
                     break;}
                 case 15:
                     System.out.println("Report 15 Selected");
+                    //get country and number of rows to select
+                    System.out.println("please select the country to select from");
+                    String country = scanner.nextLine();
+                    System.out.println("please select the number of rows to display top populated cities");
+                    int num15 = scanner.nextInt();
+
+                    System.out.println("<|************************************************************************************|>");
+                    // Getting city population by continent
+                    ArrayList<City> cities1 = City.getTopCitiesByCountry(num15, country, con.con);
+                    // Display world population
+                    City.displayCites(cities1);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 15 Finished, Returning to Main Menu...");
+                    scanner.nextLine();
                     break;
                 case 16:
                     System.out.println("Report 16 Selected");

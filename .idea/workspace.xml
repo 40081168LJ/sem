@@ -8,7 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/City.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Population.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Population.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppIntegrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +118,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.AppIntegrationTest.getTopCitiesByCountry">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.napier.sem.App" />
       <module name="seMethods" />
@@ -128,6 +128,13 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="seMethods" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -142,6 +149,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AppIntegrationTest.getTopCitiesByCountry" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seMethods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.napier.sem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.napier.sem" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppIntegrationTest" />
+      <option name="METHOD_NAME" value="getTopCitiesByCountry" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="IntegrationTests" type="JUnit" factoryName="JUnit">
       <module name="seMethods" />
       <shortenClasspath name="NONE" />
@@ -149,16 +172,6 @@
       <option name="MAIN_CLASS_NAME" value="IntegrationTests" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IntegrationTests.GetWorldPopulation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="seMethods" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="IntegrationTests" />
-      <option name="METHOD_NAME" value="GetWorldPopulation" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -241,31 +254,6 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration name="seMethods [package]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="package" />
-              </list>
-            </option>
-            <option name="pomFileName" value="pom.xml" />
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
@@ -307,6 +295,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.Main" />
       <item itemvalue="Application.App" />
       <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
       <item itemvalue="Docker.db/Dockerfile" />
@@ -314,17 +303,16 @@
       <item itemvalue="JUnit.UnitTests" />
       <item itemvalue="JUnit.IntegrationTests" />
       <item itemvalue="JUnit.AppIntegrationTest" />
-      <item itemvalue="JUnit.IntegrationTests.GetWorldPopulation" />
+      <item itemvalue="JUnit.AppIntegrationTest.getTopCitiesByCountry" />
       <item itemvalue="Maven.seMethods [install]" />
-      <item itemvalue="Maven.seMethods [package]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AppIntegrationTest.getTopCitiesByCountry" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
         <item itemvalue="Docker.db/Dockerfile" />
         <item itemvalue="Application.App" />
-        <item itemvalue="JUnit.IntegrationTests.GetWorldPopulation" />
-        <item itemvalue="Maven.seMethods [package]" />
       </list>
     </recent_temporary>
   </component>
