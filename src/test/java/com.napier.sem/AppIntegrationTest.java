@@ -68,6 +68,25 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * integration test for getting countries in descending order
+     * Author - AOB
+     */
+
+    @Test
+    public void testGetTopPopulatedCountries(){
+        ArrayList<Country> countries = Country.getTopPopulatedCountries(1, app.con);
+        //validates
+        assertNotNull(countries);
+        assertNotNull(countries.get(0).code);
+        assertNotNull(countries.get(0).name);
+        assertNotNull(countries.get(0).continent);
+        assertNotNull(countries.get(0).region);
+        assertNotNull(countries.get(0).population);
+        assertNotNull(countries.get(0).capital);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
 
     /**
      * Test connection to database and to test getting world population
