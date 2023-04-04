@@ -229,6 +229,15 @@ public class Main {
                     break;
                 case 24:
                     System.out.println("Report 24 Selected");
+                    System.out.println("Report 24 Selected, Displaying Region Populations...");
+                    System.out.println("<|************************************************************************************|>");
+                    // TODO: FIX THIS SQL AS THE GROUP BY IS NOT WORKING
+                    // Extract Region Populations
+                    ArrayList<Country> regionPopulation1 = Population.getRegionPopulation(con.con);
+                    // Print table of Regions and their populations
+                    Population.displayRegionPopulation(regionPopulation1);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 24 Finished, Returning to Main Menu...");
                     break;
                 case 25:
                     System.out.println("Report 25 Selected");
