@@ -210,6 +210,20 @@ public class Main {
                     break;
                 case 16:
                     System.out.println("Report 16 Selected");
+                    //get country and number of rows to select
+                    System.out.println("please select the district to select from");
+                    String district16 = scanner.nextLine();
+                    System.out.println("please select the number of rows to display top populated cities");
+                    int num16 = scanner.nextInt();
+
+                    System.out.println("<|************************************************************************************|>");
+                    // Getting city population by continent
+                    ArrayList<City> cities16 = City.getTopCitiesByDistrict(num16, district16, con.con);
+                    // Display world population
+                    City.displayCites(cities16);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 16 Finished, Returning to Main Menu...");
+                    scanner.nextLine();
                     break;
                 case 17:
                     System.out.println("Report 17 Selected");

@@ -206,6 +206,23 @@ public class AppIntegrationTest {
         assertNotNull(cities.get(0).country);
         assertNotNull(cities.get(0).district);
     }
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /** integration test for getting cities when given number of rows to select
+     *  and a district
+     */
+    @Test
+    public void getTopCitiesByDistrict() {
+        ArrayList<City> cities = City.getTopCitiesByDistrict(5, "Noord-Holland",app.con);
+        //validates
+        assertNotNull(cities);
+        assertNotNull(cities.get(0).name);
+        assertNotNull(cities.get(0).country);
+        assertNotNull(cities.get(0).district);
+    }
+
+
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
