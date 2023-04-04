@@ -313,7 +313,7 @@ public class Main {
     static class Keyin {
         /**
          *SupportMethods
-         *Method to display th euser's prompt string
+         *Method to display the user's prompt string
          *@param prompt
          */
         public static void printPrompt(String prompt) {
@@ -338,7 +338,7 @@ public class Main {
 
 //--------------------------------------------------------------------------------------------------------------------//
         /**
-         * For input turnin into string
+         * For input turn into string
          *@return
          */
         public static String inString() {
