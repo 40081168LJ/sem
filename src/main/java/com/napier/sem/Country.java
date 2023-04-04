@@ -75,9 +75,9 @@ public class Country {
 //--------------------------------------------------------------------------------------------------------------------//
     /** Extract all countries in specified continent, ordered by population
      * Author - AOB
-     * @return Get all Countries from Continent "Asia"
+     * @return Get all Countries from user input continent
      */
-    public static ArrayList<Country> getContinentCountries(Connection con) {
+    public static ArrayList<Country> getContinentCountries(String continent, Connection con) {
         try {
             // Create an SQL statement
             Statement stmt = con.createStatement();
@@ -85,8 +85,10 @@ public class Country {
             String strSelect =
                     "SELECT country.Code, country.Name, country.Continent, country.Region, " +
                             "country.Population, city.Name "
-                            + "FROM country, city "
-                            + "WHERE country.Capital = city.ID AND country.Continent = 'Asia' "
+                            + "FROM country "
+                            + "JOIN city "
+                            + "ON country.Capital = city.ID "
+                            + "WHERE country.continent " + "LIKE \"%" + continent + "%\" "
                             + "ORDER BY country.Population DESC";
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);

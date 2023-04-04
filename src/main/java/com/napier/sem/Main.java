@@ -81,10 +81,12 @@ public class Main {
                     System.out.println("Report 1 Finished, Returning to Main Menu...");
                     break;}
                 case 2:{
-                    System.out.println("Report 2 Selected, Displaying Countries by Continent = Asia...");
+                    System.out.println("Report 2 Selected");
+                    System.out.println("please select a continent");
+                    String continent = scanner.nextLine();
                     System.out.println("<|************************************************************************************|>");
                     // Extract country by continent information
-                    ArrayList<Country> countries1 = Country.getContinentCountries(con.con);
+                    ArrayList<Country> countries1 = Country.getContinentCountries(continent, con.con);
                     // Print table of countries in a continent e.g. Asia
                     Country.printCountries(countries1);
                     System.out.println("<|************************************************************************************|>");

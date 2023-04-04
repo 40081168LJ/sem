@@ -49,7 +49,7 @@ public class AppIntegrationTest {
      */
     @Test
     public void testGetContinentCountries() {
-        ArrayList<Country> country = Country.getContinentCountries(app.con);
+        ArrayList<Country> country = Country.getContinentCountries("Europe", app.con);
         assertNotNull(country);
     }
 
