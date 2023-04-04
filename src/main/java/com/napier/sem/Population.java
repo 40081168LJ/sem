@@ -210,6 +210,7 @@ public class Population {
 
         //Print header
         System.out.printf("\n $s $s%n", "city ", "Population");
+        // TODO: Warning flagged here: "Too many arguments for format string (found 2, expected 0)"
 
         for (Population population : populations) {
             if (population == null)
