@@ -114,9 +114,9 @@ public class Country {
 //--------------------------------------------------------------------------------------------------------------------//
     /** Extract countries in specified region, order by population descending
      * Author - AOB
-     * @return Get all Countries within Region "Western Europe"
+     * @return Get all Countries within user input region
      */
-    public static ArrayList<Country> getRegionCountries(Connection con) {
+    public static ArrayList<Country> getRegionCountries(String region, Connection con) {
         try {
             // Create an SQL statement
             Statement stmt = con.createStatement();
@@ -124,8 +124,10 @@ public class Country {
             String strSelect =
                     "SELECT country.Code, country.Name, country.Continent, country.Region, " +
                             "country.Population, city.Name "
-                            + "FROM country, city "
-                            + "WHERE country.Capital = city.ID AND country.Region = 'Western Europe' "
+                            + "FROM country "
+                            + "JOIN city "
+                            + "ON country.Capital = city.ID "
+                            + "WHERE country.Region " + "LIKE \"%" + region + "%\" "
                             + "ORDER BY country.Population DESC";
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
