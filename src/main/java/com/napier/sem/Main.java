@@ -172,6 +172,7 @@ public class Main {
                     String continent = scanner.nextLine();
                     System.out.println("please select the number of rows to display top populated cities");
                     int rows = scanner.nextInt();
+                    scanner.nextLine();
 
                     System.out.println("<|************************************************************************************|>");
                     // Getting city population by continent
