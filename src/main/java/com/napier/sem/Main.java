@@ -223,9 +223,15 @@ public class Main {
                     break;
                 case 22:
                     System.out.println("Report 22 Selected");
+                    //get number of rows to select
+                    System.out.println("please select the number of rows to display top populated Captial Cities");
+                    int rows = scanner.nextInt();
                     System.out.println("Report 22 Selected, Displaying...");
                     System.out.println("<|************************************************************************************|>");
-
+                    // Getting city population by continent
+                    ArrayList<City> cities2 = City.getTopCapitalCities(rows, con.con);
+                    // Display world population
+                    City.displayCapitalCites(cities2);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 22 Finished, Returning to Main Menu...");
                     break;
