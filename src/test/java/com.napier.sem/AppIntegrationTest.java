@@ -68,6 +68,27 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * integration test for getting given number of countries in given
+     * region in descending order
+     * Author - AOB
+     */
+
+    @Test
+    public void testGetTopCountriesInRegion(){
+        ArrayList<Country> countries = Country.getTopCountriesInRegion(1, "Middle East", app.con);
+        //validates
+        assertNotNull(countries);
+        assertNotNull(countries.get(0).code);
+        assertNotNull(countries.get(0).name);
+        assertNotNull(countries.get(0).continent);
+        assertNotNull(countries.get(0).region);
+        assertNotNull(countries.get(0).population);
+        assertNotNull(countries.get(0).capital);
+    }
+
+
+//--------------------------------------------------------------------------------------------------------------------//
 
     /**
      * Test connection to database and to test getting world population
