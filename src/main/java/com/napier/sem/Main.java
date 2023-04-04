@@ -223,13 +223,16 @@ public class Main {
                     break;
                 case 22:
                     System.out.println("Report 22 Selected");
+                    //get region and number of rows to select
+                    System.out.println("please select the the region to select from:");
+                    String region = scanner.nextLine();
                     //get number of rows to select
-                    System.out.println("please select the number of rows to display top populated Captial Cities");
+                    System.out.println("please select the number of rows to display top populated Captial Cities:");
                     int rows = scanner.nextInt();
                     System.out.println("Report 22 Selected, Displaying...");
                     System.out.println("<|************************************************************************************|>");
                     // Getting city population by continent
-                    ArrayList<City> cities2 = City.getTopCapitalCities(rows, con.con);
+                    ArrayList<City> cities2 = City.getTopCapitalCities(rows, region, con.con);
                     // Display world population
                     City.displayCapitalCites(cities2);
                     System.out.println("<|************************************************************************************|>");
@@ -250,7 +253,6 @@ public class Main {
                     System.out.println("Report 24 Selected");
                     System.out.println("Report 24 Selected, Displaying Region Populations...");
                     System.out.println("<|************************************************************************************|>");
-                    // TODO: FIX THIS SQL AS THE GROUP BY IS NOT WORKING
                     // Extract Region Populations
                     ArrayList<Population> regionPopulation1 = Population.getRegionPopulation(con.con);
                     // Print table of Regions and their populations

@@ -314,9 +314,10 @@ public class City {
          * Report 22
          * @param selected the number of rows to be selected inputted by user
          * @param con connection to database
+         * @param region region selected by user
          * @return returns null if fail or a list of cities
          */
-        public static ArrayList<City> getTopCapitalCities(int selected, Connection con) {
+        public static ArrayList<City> getTopCapitalCities(int selected, String region, Connection con) {
                 try {
                         Statement stmt = con.createStatement();
                         // Create string for SQL statement
@@ -326,6 +327,7 @@ public class City {
                                         "JOIN country " +
                                         "ON city.countrycode = country.Code " +
                                         "WHERE city.id IN (SELECT Capital FROM country)" +
+                                        "AND country.region LIKE \"%" + region + "%\" " +
                                         "ORDER BY city.population DESC " +
                                         "LIMIT " + selected;
                         // Execute SQL statement
