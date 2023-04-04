@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - Update spelling mistakes.">
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - Highlighted warning message on TODO list.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Population.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Population.java" afterDir="false" />
@@ -70,7 +70,9 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2KmO256pZRXN5u5tAHVsrV1GrMW" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -115,7 +117,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.napier.sem.App" />
       <module name="seMethods" />
@@ -613,7 +615,21 @@
       <option name="project" value="LOCAL" />
       <updated>1679756763085</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="LJ - Fixed Merge Errors.">
+      <created>1680601360869</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1680601360869</updated>
+    </task>
+    <task id="LOCAL-00041" summary="LJ - Highlighted warning message on TODO list.">
+      <created>1680601426444</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1680601426444</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -631,8 +647,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="AOB - add use cases feature branch" />
-    <MESSAGE value="AOB - use case 1 added" />
     <MESSAGE value="AOB - use case 1 amended, use case 2 added" />
     <MESSAGE value="AOB - use case 2 amended, use case 3 added" />
     <MESSAGE value="AOB - use case 2 amended, use case 4 added" />
@@ -656,7 +670,9 @@
     <MESSAGE value="LJ - Updated commenting, layout, edited connection for countries as overwritten." />
     <MESSAGE value="LJ - Updated layout/comments." />
     <MESSAGE value="LJ - Updated Menu, added report 26." />
-    <option name="LAST_COMMIT_MESSAGE" value="LJ - Updated Menu, added report 26." />
+    <MESSAGE value="LJ - Fixed Merge Errors." />
+    <MESSAGE value="LJ - Highlighted warning message on TODO list." />
+    <option name="LAST_COMMIT_MESSAGE" value="LJ - Highlighted warning message on TODO list." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

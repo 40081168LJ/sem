@@ -223,9 +223,22 @@ public class Main {
                     break;
                 case 22:
                     System.out.println("Report 22 Selected");
+                    System.out.println("Report 22 Selected, Displaying...");
+                    System.out.println("<|************************************************************************************|>");
+
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 22 Finished, Returning to Main Menu...");
                     break;
                 case 23:
                     System.out.println("Report 23 Selected");
+                    System.out.println("Report 23 Selected, Displaying Continent Populations...");
+                    System.out.println("<|************************************************************************************|>");
+                    // Extract Continent Populations
+                    ArrayList<Population> population2 = Population.getContinentPopulation2(con.con);
+                    // Print table of Regions and their populations
+                    Population.displayContinentPopulation2(population2);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 23 Finished, Returning to Main Menu...");
                     break;
                 case 24:
                     System.out.println("Report 24 Selected");
