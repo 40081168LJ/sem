@@ -233,7 +233,7 @@ public class Main {
                     System.out.println("<|************************************************************************************|>");
                     // TODO: FIX THIS SQL AS THE GROUP BY IS NOT WORKING
                     // Extract Region Populations
-                    ArrayList<Country> regionPopulation1 = Population.getRegionPopulation(con.con);
+                    ArrayList<Population> regionPopulation1 = Population.getRegionPopulation(con.con);
                     // Print table of Regions and their populations
                     Population.displayRegionPopulation(regionPopulation1);
                     System.out.println("<|************************************************************************************|>");
