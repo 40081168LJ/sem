@@ -103,6 +103,8 @@ public class Main {
                     System.out.println("Report 4 Selected");
                     System.out.println("please select the number of rows to display top populated countries");
                     int num = scanner.nextInt();
+                    scanner.nextLine();
+
                     System.out.println("<|************************************************************************************|>");
                     // Getting top n countries
                     ArrayList<Country> countries3 = Country.getTopPopulatedCountries(num, con.con);
@@ -172,6 +174,8 @@ public class Main {
                     System.out.println("Report 12 Selected");
                     System.out.println("please select the number of rows to display top populated cities");
                     int rows = scanner.nextInt();
+                    scanner.nextLine();
+
                     System.out.println("<|************************************************************************************|>");
                     // Getting city population by continent
                     ArrayList<City> cities = City.getTopPopulatedCities(rows, con.con);
@@ -190,6 +194,7 @@ public class Main {
                     String region = scanner.nextLine();
                     System.out.println("please select the number of rows to display top populated cities");
                     int rows = scanner.nextInt();
+                    scanner.nextLine();
 
                     System.out.println("<|************************************************************************************|>");
                     // Getting city population by continent
@@ -227,6 +232,8 @@ public class Main {
                     // Get number of rows to select
                     System.out.println("please select the number of rows to display top populated Captial Cities:");
                     int rows2 = scanner.nextInt();
+                    scanner.nextLine();
+
                     System.out.println("Report 21 Selected, Displaying...");
                     System.out.println("<|************************************************************************************|>");
                     // Getting city population by continent
@@ -245,6 +252,8 @@ public class Main {
                     // Get number of rows to select
                     System.out.println("please select the number of rows to display top populated Captial Cities:");
                     int rows = scanner.nextInt();
+                    scanner.nextLine();
+
                     System.out.println("Report 22 Selected, Displaying...");
                     System.out.println("<|************************************************************************************|>");
                     // Getting city population by region
