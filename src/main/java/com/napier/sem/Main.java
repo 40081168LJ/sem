@@ -312,9 +312,9 @@ public class Main {
                     System.out.println("Report Additional Info 3 Selected");
                     System.out.println("<|************************************************************************************|>");
                     // Getting Region population
-                    ArrayList<Population> population = Population.getRegionPopulations(con.con);
+                    ArrayList<Population> population = Population.getRegionPopulation(con.con);
                     // Display world population
-                    Population.displayRegionPopulations(population);
+                    Population.displayRegionPopulation(population);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report Additional Info 3 Finished, Returning to Main Menu...");
                     break;}
