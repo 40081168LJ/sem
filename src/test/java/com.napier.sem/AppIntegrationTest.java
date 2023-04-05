@@ -237,7 +237,7 @@ public class AppIntegrationTest {
 
     @Test
     public void getRegionPopulations() {
-        ArrayList<Population> populations = Population.getRegionPopulations(app.con);
+        ArrayList<Population> populations = Population.getRegionPopulation(app.con);
         assertNotNull(populations);
         assertNotNull(populations.get(0).region);
 
