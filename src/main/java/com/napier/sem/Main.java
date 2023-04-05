@@ -70,7 +70,7 @@ public class Main {
              Switch construct, Each case represents a Report.
              */
             switch (swValue) {
-                case 1:{
+                case 1: {
                     System.out.println("Report 1 Selected, Displaying all Countries and population detials...");
                     System.out.println("<|************************************************************************************|>");
                     // Extract country information
@@ -79,8 +79,9 @@ public class Main {
                     Country.printCountries(countries);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 1 Finished, Returning to Main Menu...");
-                    break;}
-                case 2:{
+                    break;
+                }
+                case 2: {
                     System.out.println("Report 2 Selected, Displaying Countries by Continent = Asia...");
                     System.out.println("<|************************************************************************************|>");
                     // Extract country by continent information
@@ -89,7 +90,8 @@ public class Main {
                     Country.printCountries(countries1);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 2 Finished, Returning to Main Menu...");
-                    break;}
+                    break;
+                }
                 case 3:
                     System.out.println("Report 3 Selected, Displaying Countries by Region = Western Europe...");
                     System.out.println("<|************************************************************************************|>");
@@ -119,7 +121,7 @@ public class Main {
                 case 6:
                     System.out.println("Report 6 Selected");
                     break;
-                case 7:{
+                case 7: {
                     System.out.println("Report 7 Selected");
                     System.out.println("Report 7 Selected, Displaying Countries with Languages... ");
                     System.out.println("<|************************************************************************************|>");
@@ -129,7 +131,8 @@ public class Main {
                     City.displayCites(cities);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 7 Finished, Returning to Main Menu...");
-                    break;}
+                    break;
+                }
                 case 8: {
                     System.out.println("Report 8 Selected");
                     System.out.println("please select a continent");
@@ -141,7 +144,8 @@ public class Main {
                     City.displayCites(cities);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 8 Finished, Returning to Main Menu...");
-                    break;}
+                    break;
+                }
                 case 9: {
                     System.out.println("Report 9 Selected");
                     System.out.println("please select a region");
@@ -153,11 +157,12 @@ public class Main {
                     City.displayCites(cities);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 9 Finished, Returning to Main Menu...");
-                    break;}
+                    break;
+                }
                 case 10:
                     System.out.println("Report 10 Selected");
                     break;
-                case 11:{
+                case 11: {
                     System.out.println("Report 11 Selected");
                     System.out.println("please select a district");
 
@@ -169,8 +174,9 @@ public class Main {
                     City.displayCites(cities);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 11 Finished, Returning to Main Menu...");
-                    break;}
-                case 12:{
+                    break;
+                }
+                case 12: {
                     System.out.println("Report 12 Selected");
                     System.out.println("please select the number of rows to display top populated cities");
                     int rows = scanner.nextInt();
@@ -183,11 +189,13 @@ public class Main {
                     City.displayCites(cities);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 12 Finished, Returning to Main Menu...");
-                    break;}
-                case 13:{
+                    break;
+                }
+                case 13: {
                     System.out.println("Report 13 Selected");
-                    break;}
-                case 14:{
+                    break;
+                }
+                case 14: {
                     System.out.println("Report 14 Selected");
                     // Get continent and number of rows to select
                     System.out.println("please select the the region to select from");
@@ -204,7 +212,8 @@ public class Main {
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 14 Finished, Returning to Main Menu...");
                     scanner.nextLine();
-                    break;}
+                    break;
+                }
                 case 15:
                     System.out.println("Report 15 Selected");
                     break;
@@ -279,7 +288,8 @@ public class Main {
                     System.out.println("Report 24 Selected, Displaying Region Populations...");
                     System.out.println("<|************************************************************************************|>");
                     // Extract Region Populations
-                    ArrayList<Population> regionPopulation1 = Population.getRegionPopulation(con.con);
+                    String regionPop = null;
+                    ArrayList<Population> regionPopulation1 = Population.getRegionPopulation(regionPop, con.con);
                     // Print table of Regions and their populations
                     Population.displayRegionPopulation(regionPopulation1);
                     System.out.println("<|************************************************************************************|>");
@@ -288,7 +298,7 @@ public class Main {
                 case 25:
                     System.out.println("Report 25 Selected");
                     break;
-                case 26:{
+                case 26: {
                     System.out.println("Report Additional Info 1 Selected");
                     System.out.println("<|************************************************************************************|>");
                     // Getting world population
@@ -297,50 +307,88 @@ public class Main {
                     Population.displayPopulation(populationreport1);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report Additional Info 1 Finished, Returning to Main Menu...");
-                    break;}
-                case 27:{
+                    break;
+                }
+                case 27: {
                     System.out.println("Report Additional Info 2 Selected");
+                    // Get Continent
+                    System.out.println("please select the the continent to view the population:");
+                    String continentPop = scanner.nextLine();
+
+                    System.out.println("Report Additional Info 2 Selected, Displaying.....");
                     System.out.println("<|************************************************************************************|>");
                     // Getting Continent population
-                    ArrayList<Population> population = Population.getContinentPopulation(con.con);
+                    ArrayList<Population> population = Population.getContinentPopulation(continentPop, con.con);
                     // Display world population
                     Population.displayContinentPopulations(population);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report Additional Info 2 Finished, Returning to Main Menu...");
-                    break;}
-                case 28:
-                    System.out.println("Report Additional Info 3 Selected");
                     break;
-                case 29:{
-                    System.out.println("Report Additional Info 4 Selected");
+                }
+                case 28: {
+                    System.out.println("Report Additional Info 3 Selected");
+                    // Get Region
+                    System.out.println("please select the the continent to view the population:");
+                    regionPop = scanner.nextLine();
+
+                    System.out.println("Report Additional Info 3 Selected, Displaying.....");
                     System.out.println("<|************************************************************************************|>");
-                    // Getting Continent population
-                    ArrayList<Population> population = Population.getCountryPopulations(con.con);
-                    // Display world population
+                    // Getting Region population
+                    ArrayList<Population> population = Population.getRegionPopulation(regionPop, con.con);
+                    // Display Region population
+                    Population.displayRegionPopulation(population);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report Additional Info 3 Finished, Returning to Main Menu...");
+                    break;
+                }
+                case 29: {
+                    System.out.println("Report Additional Info 4 Selected, Displaying Population of selected Country...");
+                    // Get Country
+                    System.out.println("please select the the country to select from:");
+                    String countryPop = scanner.nextLine();
+
+                    System.out.println("Report Additional Info 4 Selected, Displaying...");
+                    System.out.println("<|************************************************************************************|>");
+                    // Getting country population by Country
+                    ArrayList<Population> population = Population.getCountryPopulations(countryPop, con.con);
+                    // Display country population
                     Population.displayCountryPopulations(population);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report Additional Info 4 Finished, Returning to Main Menu...");
-                    break;}
-                case 30:{
-                    System.out.println("Report Additional Info 5 Selected");
+                    break;
+                }
+                case 30: {
+                    System.out.println("Report Additional Info 5 Selected, Displaying Population of selected district...");
+                    // Get District
+                    System.out.println("please select the the district to select from:");
+                    String districtPop = scanner.nextLine();
+
+                    System.out.println("Report Additional Info 5 Selected, Displaying...");
                     System.out.println("<|************************************************************************************|>");
-                    // Getting Continent population
-                    ArrayList<Population> population = Population.getDistrictPopulation(con.con);
-                    // Display world population
+                    // Getting district population
+                    ArrayList<Population> population = Population.getDistrictPopulation(districtPop, con.con);
+                    // Display country population
                     Population.displayDistrictPopulations(population);
                     System.out.println("<|************************************************************************************|>");
-                    System.out.println("Report Additional Info 5 Finished, Returning to Main Menu...");
-                    break;}
-                case 31:{
-                    System.out.println("Report Additional Info 6 Selected");
+                    System.out.println("Report Additional Info 4 Finished, Returning to Main Menu...");
+                    break;
+                }
+                case 31: {
+                    System.out.println("Report Additional Info 6 Selected, Displaying Population of selected City...");
+                    // Get City
+                    System.out.println("please select the the district to select from:");
+                    String cityPop = scanner.nextLine();
+
+                    System.out.println("Report Additional Info 6 Selected, Displaying...");
                     System.out.println("<|************************************************************************************|>");
-                    // Getting City population
-                    ArrayList<Population> population = Population.getcityPopulation(con.con);
-                    // Display City population
+                    // Getting city population
+                    ArrayList<Population> population = Population.getcityPopulation(cityPop, con.con);
+                    // Display city population
                     Population.displayCityPopulations(population);
                     System.out.println("<|************************************************************************************|>");
-                    System.out.println("Report Languages 2 Finished, Returning to Main Menu...");
-                    break;}
+                    System.out.println("Report Additional Info 6 Finished, Returning to Main Menu...");
+                    break;
+                }
                 case 32:
                     System.out.println("Report Languages 1 Selected, Displaying Countries with Languages... ");
                     System.out.println("<|************************************************************************************|>");

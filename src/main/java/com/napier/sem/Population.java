@@ -89,7 +89,7 @@ public class Population {
      * @return returns populations or null if fail
      */
 
-    public static ArrayList<Population> getContinentPopulation(Connection con) {
+    public static ArrayList<Population> getContinentPopulation(String continentPop, Connection con) {
         try {
 
             Statement stmt = con.createStatement();
@@ -97,6 +97,7 @@ public class Population {
             String strSelect =
                     "(SELECT Continent, SUM(Population)"
                             + " FROM country"
+                            + " WHERE Continent LIKE \"%" + continentPop + "%\" "
                             + " GROUP BY Continent)";
 
             // Execute SQL statement
@@ -155,7 +156,7 @@ public class Population {
      * @param con connection to database
      * @return returns population or null if fail
      */
-    public static ArrayList<Population> getcityPopulation(Connection con) {
+    public static ArrayList<Population> getcityPopulation(String cityPop, Connection con) {
         try {
 
             Statement stmt = con.createStatement();
@@ -164,6 +165,7 @@ public class Population {
             String strSelect =
                     "(SELECT Name, SUM(Population)"
                             + " FROM city"
+                            + " WHERE Name LIKE \"%" + cityPop + "%\" "
                             + " GROUP BY Name)";
 
             // Execute population information
@@ -225,7 +227,7 @@ public class Population {
      * @param con connection to database
      * @return returns populations or null if fails
      */
-    public static ArrayList<Population> getCountryPopulations(Connection con) {
+    public static ArrayList<Population> getCountryPopulations(String countryPop, Connection con) {
         try {
 
             Statement stmt = con.createStatement();
@@ -234,6 +236,7 @@ public class Population {
             String strSelect =
                     "(SELECT Name, SUM(Population)"
                             + " FROM country"
+                            + " WHERE Name LIKE \"%" + countryPop + "%\" "
                             + " GROUP BY Name)";
 
             // Execute population information
@@ -296,7 +299,7 @@ public class Population {
      * @param con database connection
      * @return returns populations
      */
-    public static ArrayList<Population> getDistrictPopulation(Connection con) {
+    public static ArrayList<Population> getDistrictPopulation(String districtPop, Connection con) {
         try {
 
             Statement stmt = con.createStatement();
@@ -305,6 +308,7 @@ public class Population {
             String strSelect =
                     "(SELECT District, SUM(Population)"
                             + " FROM city"
+                            + " WHERE Region LIKE \"%" + districtPop + "%\" "
                             + " GROUP BY District)";
 
             //Execute SQL statement
@@ -365,7 +369,7 @@ public class Population {
      * @param con database connection
      * @return returns populations
      */
-    public static ArrayList<Population> getRegionPopulation(Connection con) {
+    public static ArrayList<Population> getRegionPopulation(String regionPop, Connection con) {
         try {
 
             Statement stmt = con.createStatement();
@@ -374,6 +378,7 @@ public class Population {
             String strSelect =
                     "(SELECT Region, SUM(Population)"
                             + " FROM country"
+                            + " WHERE Region LIKE \"%" + regionPop + "%\" "
                             + " GROUP BY Region)";
 
             //Execute SQL statement
