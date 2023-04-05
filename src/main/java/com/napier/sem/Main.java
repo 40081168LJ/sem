@@ -91,10 +91,27 @@ public class Main {
                     System.out.println("Report 2 Finished, Returning to Main Menu...");
                     break;}
                 case 3:
-                    System.out.println("Report 3 Selected");
+                    System.out.println("Report 3 Selected, Displaying Countries by Region = Western Europe...");
+                    System.out.println("<|************************************************************************************|>");
+                    // Extract country by continent information
+                    ArrayList<Country> countries2 = Country.getRegionCountries(con.con);
+                    Country.printCountries(countries2);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 2 Finished, Returning to Main Menu...");
                     break;
                 case 4:
                     System.out.println("Report 4 Selected");
+                    System.out.println("please select the number of rows to display top populated countries");
+                    int num = scanner.nextInt();
+                    scanner.nextLine();
+
+                    System.out.println("<|************************************************************************************|>");
+                    // Getting top n countries
+                    ArrayList<Country> countries3 = Country.getTopPopulatedCountries(num, con.con);
+                    // Display top n countries
+                    Country.printCountries(countries3);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 2 Finished, Returning to Main Menu...");
                     break;
                 case 5:
                     System.out.println("Report 5 Selected");
@@ -157,6 +174,8 @@ public class Main {
                     System.out.println("Report 12 Selected");
                     System.out.println("please select the number of rows to display top populated cities");
                     int rows = scanner.nextInt();
+                    scanner.nextLine();
+
                     System.out.println("<|************************************************************************************|>");
                     // Getting city population by continent
                     ArrayList<City> cities = City.getTopPopulatedCities(rows, con.con);
@@ -170,11 +189,12 @@ public class Main {
                     break;}
                 case 14:{
                     System.out.println("Report 14 Selected");
-                    //get continent and number of rows to select
+                    // Get continent and number of rows to select
                     System.out.println("please select the the region to select from");
                     String region = scanner.nextLine();
                     System.out.println("please select the number of rows to display top populated cities");
                     int rows = scanner.nextInt();
+                    scanner.nextLine();
 
                     System.out.println("<|************************************************************************************|>");
                     // Getting city population by continent
@@ -205,15 +225,65 @@ public class Main {
                     break;
                 case 21:
                     System.out.println("Report 21 Selected");
+                    System.out.println("Report 21 Selected, Displaying Top Populated Capital Cities in the Continent...");
+                    // Get region and number of rows to select
+                    System.out.println("please select the the continent to select from:");
+                    String continent = scanner.nextLine();
+                    // Get number of rows to select
+                    System.out.println("please select the number of rows to display top populated Captial Cities:");
+                    int rows2 = scanner.nextInt();
+                    scanner.nextLine();
+
+                    System.out.println("Report 21 Selected, Displaying...");
+                    System.out.println("<|************************************************************************************|>");
+                    // Getting city population by continent
+                    ArrayList<City> cities3 = City.getTopCapitalCities2(rows2, continent, con.con);
+                    // Display world population
+                    City.displayCapitalCites(cities3);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 21 Finished, Returning to Main Menu...");
                     break;
                 case 22:
                     System.out.println("Report 22 Selected");
+                    System.out.println("Report 22 Selected, Displaying Top Populated Capital Cities in the Region...");
+                    // Get region and number of rows to select
+                    System.out.println("please select the the region to select from:");
+                    String region = scanner.nextLine();
+                    // Get number of rows to select
+                    System.out.println("please select the number of rows to display top populated Captial Cities:");
+                    int rows = scanner.nextInt();
+                    scanner.nextLine();
+
+                    System.out.println("Report 22 Selected, Displaying...");
+                    System.out.println("<|************************************************************************************|>");
+                    // Getting city population by region
+                    ArrayList<City> cities2 = City.getTopCapitalCities(rows, region, con.con);
+                    // Display world population
+                    City.displayCapitalCites(cities2);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 22 Finished, Returning to Main Menu...");
                     break;
                 case 23:
                     System.out.println("Report 23 Selected");
+                    System.out.println("Report 23 Selected, Displaying Continent Populations...");
+                    System.out.println("<|************************************************************************************|>");
+                    // Extract Continent Populations
+                    ArrayList<Population> population2 = Population.getContinentPopulation2(con.con);
+                    // Print table of Regions and their populations
+                    Population.displayContinentPopulation2(population2);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 23 Finished, Returning to Main Menu...");
                     break;
                 case 24:
                     System.out.println("Report 24 Selected");
+                    System.out.println("Report 24 Selected, Displaying Region Populations...");
+                    System.out.println("<|************************************************************************************|>");
+                    // Extract Region Populations
+                    ArrayList<Population> regionPopulation1 = Population.getRegionPopulation(con.con);
+                    // Print table of Regions and their populations
+                    Population.displayRegionPopulation(regionPopulation1);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 24 Finished, Returning to Main Menu...");
                     break;
                 case 25:
                     System.out.println("Report 25 Selected");
@@ -305,7 +375,7 @@ public class Main {
     static class Keyin {
         /**
          *SupportMethods
-         *Method to display th euser's prompt string
+         *Method to display the user's prompt string
          *@param prompt
          */
         public static void printPrompt(String prompt) {
@@ -330,7 +400,7 @@ public class Main {
 
 //--------------------------------------------------------------------------------------------------------------------//
         /**
-         * For input turnin into string
+         * For input turn into string
          *@return
          */
         public static String inString() {

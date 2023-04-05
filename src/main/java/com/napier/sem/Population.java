@@ -48,7 +48,7 @@ public class Population {
 
     /**
      * Create an SQL Statement to get world population
-     * *  Used in additional_info 1 report
+     * Used in additional_info 1 report
      **/
     public static Population getPopulation(Connection con) {
         try {
@@ -71,7 +71,6 @@ public class Population {
 
     /**
      * Displays world population
-     *
      * @param population stores population
      */
     public static void displayPopulation(Population population) {
@@ -86,7 +85,6 @@ public class Population {
     /**
      * Gets population of each Continent.
      * Used for additional report 2
-     *
      * @param con connection to database
      * @return returns populations or null if fail
      */
@@ -129,7 +127,6 @@ public class Population {
 
     /**
      * Displays population of each continent
-     *
      * @param populations stores population
      */
     public static void displayContinentPopulations(ArrayList<Population> populations) {
@@ -155,7 +152,6 @@ public class Population {
 
     /**
      * Used to get population of a city. Used in Additional info 6 - report 31
-     *
      * @param con connection to database
      * @return returns population or null if fail
      */
@@ -199,7 +195,6 @@ public class Population {
 
     /**
      * Displays City Populations
-     *
      * @param populations stores population
      */
     public static void displayCityPopulations(ArrayList<Population> populations) {
@@ -210,6 +205,7 @@ public class Population {
 
         //Print header
         System.out.printf("\n $s $s%n", "city ", "Population");
+        // TODO: Warning flagged here: "Too many arguments for format string (found 2, expected 0)"
 
         for (Population population : populations) {
             if (population == null)
@@ -226,7 +222,6 @@ public class Population {
 
     /**
      * Used to get Country Populations
-     *
      * @param con connection to database
      * @return returns populations or null if fails
      */
@@ -270,7 +265,6 @@ public class Population {
 
     /**
      * Used to display populations of countries
-     *
      * @param populations used to store populations
      */
     public static void displayCountryPopulations(ArrayList<Population> populations) {
@@ -299,7 +293,6 @@ public class Population {
 
     /**
      * Used to get populations of districts used in report 30 - Additional info 5
-     *
      * @param con database connection
      * @return returns populations
      */
@@ -343,7 +336,6 @@ public class Population {
 
     /**
      * Used to display districts populations. Used in report 30 Additional info 5
-     *
      * @param populations Used to store populations
      */
     public static void displayDistrictPopulations(ArrayList<Population> populations) {
@@ -370,11 +362,10 @@ public class Population {
 
     /**
      * Used to get populations of Regions used in report 38 - Additional info 3
-     *
      * @param con database connection
      * @return returns populations
      */
-    public static ArrayList<Population> getRegionPopulations(Connection con) {
+    public static ArrayList<Population> getRegionPopulation(Connection con) {
         try {
 
             Statement stmt = con.createStatement();
@@ -413,11 +404,10 @@ public class Population {
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
-     * Used to display Region populations. Used in report 28 Additional info 3
-     *
+     * Used to display Region populations. Used in report 24 Additional info 3
      * @param populations Used to store populations
      */
-    public static void displayRegionPopulations(ArrayList<Population> populations) {
+    public static void displayRegionPopulation(ArrayList<Population> populations) {
         if (populations == null) {
             System.out.println("Populations of Regions could not be displayed");
             return;
@@ -435,4 +425,76 @@ public class Population {
         }
 
     }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Gets population of each Continent.
+     * Used for report 23
+     * @param con connection to database
+     * @return returns populations or null if fail
+     */
+
+    public static ArrayList<Population> getContinentPopulation2(Connection con) {
+        try {
+
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "(SELECT Continent, SUM(Population)"
+                            + " FROM country"
+                            + " GROUP BY Continent)";
+
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // Extract Language information
+            ArrayList<Population> populations = new ArrayList<>();
+
+            //
+            while (rset.next()) {
+
+                Population population = new Population();
+                population.population = rset.getLong("SUM(Population)");
+                population.continent = rset.getString("Continent");
+                populations.add(population);
+            }
+            return populations;
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get populations of Continents.");
+            return null;
+        }
+    }
+
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Displays population of each continent for Report 23
+     * @param populations stores population
+     */
+    public static void displayContinentPopulation2(ArrayList<Population> populations) {
+        if (populations == null) {
+            System.out.println("Populations of continents could now be displayed");
+            return;
+        }
+        //Print header
+        System.out.printf("\n %s %s%n", "Continent", "Population");
+
+        for (Population population : populations) {
+            if (population == null)
+                continue;
+            String continentsString =
+                    String.format("%s %s ", population.continent, population.population);
+
+            System.out.println(continentsString);
+        }
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+
 }
+
+//--------------------------------------------------------------------------------------------------------------------//
+
