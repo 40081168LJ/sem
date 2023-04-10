@@ -32,6 +32,8 @@ public class City {
         /**  Country string column */
         public String country;
 
+        public Object continent;
+
 //--------------------------------------------------------------------------------------------------------------------//
         /**
          * gets Report 7
