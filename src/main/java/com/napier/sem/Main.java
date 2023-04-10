@@ -225,7 +225,6 @@ public class Main {
                     // Getting city population by continent
                     ArrayList<City> capitalCities = Population.getTopCapitalCitiesByContinent(continentPop, con.con);
                     // Display world population
-                   // Population.displayTopCapitalCitiesByContinent(capitalCities);
                     City.displayCapitalCites(capitalCities);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 14 Finished, Returning to Main Menu...");

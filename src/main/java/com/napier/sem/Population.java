@@ -496,6 +496,12 @@ public class Population {
 
 //--------------------------------------------------------------------------------------------------------------------//
 
+    /**
+     * Used to get capitalCities from Continent
+     * @param continentPop stores continent population
+     * @param con connection to database
+     * @return returns capitalCities
+     */
     public static ArrayList<City> getTopCapitalCitiesByContinent(String continentPop, Connection con) {
         try {
             Statement stmt = con.createStatement();

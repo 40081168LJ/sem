@@ -45,7 +45,7 @@ public class AppIntegrationTest {
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
-     * integration test for extract specific continent countries
+     * integration test for extract specific continent countries applies to report 18 as well
      * Author - AOB
      */
     @Test
@@ -243,4 +243,7 @@ public class AppIntegrationTest {
 
 
     }
+
+//--------------------------------------------------------------------------------------------------------------------//
+
 }
