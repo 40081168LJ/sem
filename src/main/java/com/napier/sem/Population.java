@@ -44,6 +44,8 @@ public class Population {
 
     public String region;
 
+    public String name;
+
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
@@ -494,6 +496,12 @@ public class Population {
 
 //--------------------------------------------------------------------------------------------------------------------//
 
+    /**
+     * Gets top populated capital cities in a region - Used in report 19
+     * @param regionPop stores region
+     * @param con Database Connection
+     * @return return capital cities
+     */
     public static ArrayList<City> getTopCapitalCitiesInRegion( String regionPop, Connection con) {
         try {
             Statement stmt = con.createStatement();
@@ -529,8 +537,10 @@ public class Population {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-    /**Display cities when given a list of cities - report 7
-     *@param capitalCities a list of the city object to display
+
+    /**
+     * Displays Capital Cities In a Region Used in Report 19
+     * @param capitalCities stores capital cities
      */
     public static void displayCapitalCitesInRegion(ArrayList<City> capitalCities) {
         if (capitalCities == null)
