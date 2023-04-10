@@ -494,6 +494,65 @@ public class Population {
 
 //--------------------------------------------------------------------------------------------------------------------//
 
+    public static ArrayList<City> getTopCapitalCitiesInRegion( String regionPop, Connection con) {
+        try {
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT city.Name, country.Name, city.Population " +
+                            "FROM city " +
+                            "JOIN country " +
+                            "ON city.countrycode = country.Code " +
+                            "WHERE city.id IN (SELECT Capital FROM country)" +
+                            "AND country.region LIKE \"%" + regionPop + "%\" " +
+                            "ORDER BY city.population DESC ";
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // Extract city information
+            ArrayList<City> capitalCities = new ArrayList<>();
+
+            //adds each city to cities
+            while (rset.next()) {
+                City city = new City();
+                city.name = rset.getString("city.Name");
+                city.country = rset.getString("country.Name");
+                city.population = rset.getInt("city.Population");
+                capitalCities.add(city);
+            }
+            return capitalCities;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get capital city details");
+            return null;
+        }
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**Display cities when given a list of cities - report 7
+     *@param capitalCities a list of the city object to display
+     */
+    public static void displayCapitalCitesInRegion(ArrayList<City> capitalCities) {
+        if (capitalCities == null)
+        {
+            System.out.println("no cities have been found");
+            return;
+        }
+        //Print header
+        System.out.printf("\n %s %s %s%n", "Name", "Country", "Population");
+
+        for (City city : capitalCities)
+        {
+            if (city == null)
+                continue;
+            String citiesString =
+                    String.format("%s %s %s ", city.name, city.country, city.population);
+
+            System.out.println(citiesString);
+        }
+    }
+
+
 }
 
 //--------------------------------------------------------------------------------------------------------------------//

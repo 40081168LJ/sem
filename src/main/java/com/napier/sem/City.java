@@ -11,16 +11,10 @@ import java.util.ArrayList;
  * city object
  **/
 public class City {
-        /** ID column */
-        public int iD;
-        // TODO: CHECK AS NOT BEING USED?
 
         /**  City name string column  */
         public String name;
 
-        /** Country Code sting column  */
-        public String countryCode;
-        // TODO: CHECK AS NOT BEING USED?
 
         /** District string column */
         public String district;
@@ -31,6 +25,9 @@ public class City {
 
         /**  Country string column */
         public String country;
+
+        /** Stores region */
+        public String region;
 
 //--------------------------------------------------------------------------------------------------------------------//
         /**
