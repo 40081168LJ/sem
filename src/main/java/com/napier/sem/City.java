@@ -445,10 +445,10 @@ public class City {
         }
 
 //--------------------------------------------------------------------------------------------------------------------//
-        /**Display cities when given a list of cities - report 7
+        /**Display cities when given a list of cities - report 17
          *@param capitalCities a list of the city object to display
          */
-        public static void displayCapitalCites(ArrayList<City> capitalCities) {
+        public static void displayCapitalCities(ArrayList<City> capitalCities) {
                 if (capitalCities == null)
                 {
                         System.out.println("no cities have been found");

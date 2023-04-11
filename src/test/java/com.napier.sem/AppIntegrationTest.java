@@ -308,6 +308,7 @@ public class AppIntegrationTest {
 
     /** integration test for getting cities when given by country when given number
      * of rows to select and a country
+     * report 15
      */
     @Test
     public void getTopCitiesByCountry() {
@@ -362,6 +363,21 @@ public class AppIntegrationTest {
         assertNotNull(cities.get(0).name);
         assertNotNull(cities.get(0).country);
         assertNotNull(cities.get(0).population);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /** integration test for getting cities when given number of rows to select
+     *  and a district - report 16
+     */
+    @Test
+    public void getTopCitiesByDistrict() {
+        ArrayList<City> cities = City.getTopCitiesByDistrict(5, "Noord-Holland",app.con);
+        //validates
+        assertNotNull(cities);
+        assertNotNull(cities.get(0).name);
+        assertNotNull(cities.get(0).country);
+        assertNotNull(cities.get(0).district);
     }
 
 }
