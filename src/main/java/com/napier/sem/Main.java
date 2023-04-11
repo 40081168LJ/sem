@@ -108,7 +108,6 @@ public class Main {
                     System.out.println("please select the number of rows to display top populated countries");
                     int num = scanner.nextInt();
                     scanner.nextLine();
-
                     System.out.println("<|************************************************************************************|>");
                     // Getting top n countries
                     ArrayList<Country> countries3 = Country.getTopPopulatedCountries(num, con.con);
@@ -123,7 +122,7 @@ public class Main {
                     String continent1 = scanner.nextLine();
                     System.out.println("please select the number of rows to display top populated countries");
                     int num1 = scanner.nextInt();
-
+                    scanner.nextLine();
                     System.out.println("<|************************************************************************************|>");
                     // Getting top n countries in continent
                     ArrayList<Country> countries4 = Country.getTopCountriesInContinent(num1, continent1, con.con);
@@ -138,7 +137,7 @@ public class Main {
                     String continent2 = scanner.nextLine();
                     System.out.println("please select the number of rows to display top populated countries");
                     int num2 = scanner.nextInt();
-
+                    scanner.nextLine();
                     System.out.println("<|************************************************************************************|>");
                     // Getting top n countries in continent
                     ArrayList<Country> countries5 = Country.getTopCountriesInRegion(num2, continent2, con.con);
@@ -240,7 +239,7 @@ public class Main {
                     String country = scanner.nextLine();
                     System.out.println("please select the number of rows to display top populated cities");
                     int num15 = scanner.nextInt();
-
+                    scanner.nextLine();
                     System.out.println("<|************************************************************************************|>");
                     // Getting city population by continent
                     ArrayList<City> cities1 = City.getTopCitiesByCountry(num15, country, con.con);
@@ -257,7 +256,7 @@ public class Main {
                     String district16 = scanner.nextLine();
                     System.out.println("please select the number of rows to display top populated cities");
                     int num16 = scanner.nextInt();
-
+                    scanner.nextLine();
                     System.out.println("<|************************************************************************************|>");
                     // Getting city population by continent
                     ArrayList<City> cities16 = City.getTopCitiesByDistrict(num16, district16, con.con);

@@ -246,7 +246,8 @@ public class City {
 
 //--------------------------------------------------------------------------------------------------------------------//
         /**
-         * gets the top populated cities with the number of rows selected and country given by user. - report 15
+         * gets the top populated cities with the number of rows selected and country given
+         * by user - report 15
          * @param selected the number of rows to be selected inputted by user
          * @param country the country to select rows from
          * @param con connection to database
