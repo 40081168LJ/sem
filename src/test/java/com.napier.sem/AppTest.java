@@ -219,12 +219,9 @@ public class AppTest {
 
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * Test to display continent expected population - Report 18
      */
-
-
     @Test
     void DisplayCapitalCities() {
         ArrayList<City> cities = new ArrayList<>();
@@ -233,5 +230,7 @@ public class AppTest {
         city.country = "Egypt";
         city.population = 6789479;
         cities.add(city);
+
+        City.displayCapitalCites(cities);
     }
 }

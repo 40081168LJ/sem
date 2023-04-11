@@ -218,17 +218,16 @@ public class Main {
                     System.out.println("Report 17 Selected");
                     break;
                 case 18:{
-                    System.out.println("Report 18 Selected. Displaying all capital cities in a continent");
+                    System.out.println("Report 18 Selected. Displaying all Capital Cities in a continent");
                     System.out.println("please select the the continent to select from");
                     String continentPop = scanner.nextLine();
                     System.out.println("<|************************************************************************************|>");
-                    // Getting city population by continent
+                    // Getting capital cities by continent
                     ArrayList<City> capitalCities = Population.getTopCapitalCitiesByContinent(continentPop, con.con);
-                    // Display world population
+                    // Display capital cities by continent
                     City.displayCapitalCites(capitalCities);
                     System.out.println("<|************************************************************************************|>");
-                    System.out.println("Report 14 Finished, Returning to Main Menu...");
-                    scanner.nextLine();
+                    System.out.println("Report 18 Finished, Returning to Main Menu...");
                     break;}
                 case 19:
                     System.out.println("Report 19 Selected");

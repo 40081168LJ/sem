@@ -363,7 +363,7 @@ public class City {
         public static void displayCapitalCites(ArrayList<City> capitalCities) {
                 if (capitalCities == null)
                 {
-                        System.out.println("no cities have been found");
+                        System.out.println("no capital cities have been found");
                         return;
                 }
                 //Print header

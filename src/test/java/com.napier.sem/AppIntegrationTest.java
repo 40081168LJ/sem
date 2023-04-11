@@ -57,6 +57,19 @@ public class AppIntegrationTest {
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
+     * integration test for extract specific continent countries applies to report 18 as well
+     * Author - AOB
+     */
+    @Test
+    public void testGetCapitalCities() {
+        ArrayList<City> capitalCities = Population.getTopCapitalCitiesByContinent("Africa", app.con);
+        assertNotNull(capitalCities);
+        assertNotNull(capitalCities.get(0).name);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
      * integration test for extract specific region countries
      * Author - AOB
      */
