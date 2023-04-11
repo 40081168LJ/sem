@@ -278,4 +278,20 @@ public class AppIntegrationTest {
 
 
     }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * integration test for getting all capital cities in descending order - report 17
+     */
+    @Test
+    public void getAllCapitalCities() {
+        ArrayList<City> cities = City.getAllCapitalCities(app.con);
+        //validates
+        assertNotNull(cities);
+        assertNotNull(cities.get(0).name);
+        assertNotNull(cities.get(0).country);
+        assertNotNull(cities.get(0).population);
+    }
+
 }
+

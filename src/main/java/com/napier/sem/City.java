@@ -512,7 +512,50 @@ public class City {
                 }
         }
 
+
 //--------------------------------------------------------------------------------------------------------------------//
+
+        /**
+         * Extract all capital cities in the world, order by population descending
+         * Author - AOB
+         *
+         * @return All capital cities
+         */
+
+        public static ArrayList<City> getAllCapitalCities(Connection con) {
+                try {
+                        Statement stmt = con.createStatement();
+                        // Create string for SQL statement
+                        String strSelect =
+                                "SELECT city.Name, country.Name, city.Population " +
+                                        "FROM city " +
+                                        "JOIN country " +
+                                        "ON city.countrycode = country.Code " +
+                                        "WHERE city.id IN (SELECT Capital FROM country)" +
+                                        "ORDER BY city.population DESC ";
+                        // Execute SQL statement
+                        ResultSet rset = stmt.executeQuery(strSelect);
+
+                        // Extract city information
+                        ArrayList<City> capitalCities = new ArrayList<>();
+
+                        //adds each city to cities
+                        while (rset.next()) {
+                                City city = new City();
+                                city.name = rset.getString("city.Name");
+                                city.country = rset.getString("country.Name");
+                                city.population = rset.getInt("city.Population");
+                                capitalCities.add(city);
+                        }
+                        return capitalCities;
+                } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                        System.out.println("Failed to get city details");
+                        return null;
+                }
+
+        }
 }
 
+//--------------------------------------------------------------------------------------------------------------------//
 //--------------------------------------------------------------------------------------------------------------------//
