@@ -213,6 +213,20 @@ public class Main {
                     break;}
                 case 13:{
                     System.out.println("Report 13 Selected");
+                    //get continent and number of rows to select
+                    System.out.println("please select the the continent to select from");
+                    String continent = scanner.nextLine();
+                    System.out.println("please select the number of rows to display top populated cities");
+                    int rows = scanner.nextInt();
+                    scanner.nextLine();
+
+                    System.out.println("<|************************************************************************************|>");
+                    // Getting city population by continent
+                    ArrayList<City> cities = City.getTopCitiesByContinent(rows, continent, con.con);
+                    // Display city population by continent
+                    City.displayCites(cities);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 13 Finished, Returning to Main Menu...");
                     break;}
                 case 14:{
                     System.out.println("Report 14 Selected");

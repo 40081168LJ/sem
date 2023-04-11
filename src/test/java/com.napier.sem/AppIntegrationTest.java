@@ -26,7 +26,7 @@ public class AppIntegrationTest {
     }
 
     @AfterAll
-    public static void cleanUp() {
+    public static void cleanUp(){
         app.disconnect();
     }
 
@@ -181,13 +181,11 @@ public class AppIntegrationTest {
         assertNotNull(cities.get(0).district);
     }
 //--------------------------------------------------------------------------------------------------------------------//
-
-    /**
-     * integration test for getting countries by district in descending order - report 11
+    /** integration test for getting countries by district in descending order - report 11
      */
     @Test
     public void getCityByDistrict() {
-        ArrayList<City> cities = City.getCityPopulationByDistrict("Noord-Holland", app.con);
+        ArrayList<City> cities = City.getCityPopulationByDistrict("Noord-Holland",app.con);
         //validates
         assertNotNull(cities);
         assertNotNull(cities.get(0).name);
@@ -195,9 +193,7 @@ public class AppIntegrationTest {
         assertNotNull(cities.get(0).district);
     }
 //--------------------------------------------------------------------------------------------------------------------//
-
-    /**
-     * integration test for getting countries descending order - report 9
+    /** integration test for getting countries descending order - report 9
      */
     @Test
     public void getCityByRegion() {
@@ -283,9 +279,20 @@ public class AppIntegrationTest {
         assertNotNull(cities.get(0).district);
     }
 //--------------------------------------------------------------------------------------------------------------------//
+    /** integration test to get cities by continent when given continent and number of rows to select - report 13
+     */
+    @Test
+    public void getTopCitiesByContinent() {
+        ArrayList<City> cities = City.getTopCitiesByContinent(5,"europe", app.con);
+        //validates
+        assertNotNull(cities);
+        assertNotNull(cities.get(4).name); //checks data in row 5 is in range and not null
+        assertNotNull(cities.get(4).country);
+        assertNotNull(cities.get(4).district);
+    }
+//--------------------------------------------------------------------------------------------------------------------//
 
-    /**
-     * integration test for getting cities when given by region when given number of rows to select and a region
+    /** integration test for getting cities when given by region when given number of rows to select and a region
      */
     @Test
     public void getTopCitiesByRegion() {
