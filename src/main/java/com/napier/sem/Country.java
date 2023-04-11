@@ -200,6 +200,54 @@ public class Country {
         }
 
     }
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * gets the top populated countries in a continent with the number of rows selected given by user. - report 5
+     * @param selected the number of rows to be selected inputted by user
+     * @param continent the continent input by user
+     * @param con connection to database
+     * @return returns null if fail or a list of countries
+     */
+
+    public static ArrayList<Country> getTopCountriesInContinent(int selected, String continent, Connection con) {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT country.Code, country.Name, country.Continent, country.Region, " +
+                            "country.Population, city.Name "
+                            + "FROM country "
+                            + "JOIN city "
+                            + "ON country.Capital = city.ID "
+                            + "WHERE country.continent LIKE \"%" + continent + "%\" "
+                            + "ORDER BY country.Population DESC "
+                            + "LIMIT " + selected;
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // Extract Country information
+            ArrayList<Country> countries = new ArrayList<>();
+
+            while (rset.next()) {
+                Country country = new Country();
+                country.code = rset.getString("country.Code");
+                country.name = rset.getString("country.Name");
+                country.continent = rset.getString("country.Continent");
+                country.region = rset.getString("country.Region");
+                country.population = rset.getInt("country.Population");
+                country.capital = rset.getString("city.Name");
+                countries.add(country);
+            }
+            return countries;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get country details");
+            return null;
+        }
+    }
+
+
 
 //--------------------------------------------------------------------------------------------------------------------//
     /** Print table of countries extracted
