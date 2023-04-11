@@ -353,14 +353,17 @@ public class AppIntegrationTest {
     }
 
     /**
-     * integration test for getting top 5 populated capital cities in the world - Report 20
+     * integration test for getting all top populated cities when giving the number of rows (eg 5)- Report 20
      */
 
     @Test
     public void getTopCapitalCitiesInTheWorld(){
         ArrayList<City> cities = City.getTopCapitalCitiesInTheWorld(5, app.con);
+        //validates
         assertNotNull(cities);
-        assertNotNull(cities.get(5).name);
+        assertNotNull(cities.get(0).name);
+        assertNotNull(cities.get(0).country);
+        assertNotNull(cities.get(0).population);
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
@@ -408,6 +411,20 @@ public class AppIntegrationTest {
 
 //--------------------------------------------------------------------------------------------------------------------//
 
+    /**
+     * Integration test to get top 1 populated capital city in the region the Carribean - Report 19
+     */
+    @Test
+    public void getTopCapitalCitiesInRegion(){
+        ArrayList<City> cities = City.getTopCitiesByRegion(1, "Carribean", app.con);
+
+        //validates
+        assertNotNull(cities);
+        assertNotNull(cities.get(0).name);
+        assertNotNull(cities.get(0).country);
+        assertNotNull(cities.get(0).population);
+
+    }
 }
 
 //--------------------------------------------------------------------------------------------------------------------//

@@ -298,6 +298,21 @@ public class AppTest {
 
 //--------------------------------------------------------------------------------------------------------------------//
 
+    /**
+     * Test to display region capital city expected population - Report 19
+     */
+    @Test
+    void DisplayCapitalCitiesInRegion() {
+        ArrayList<City> cities = new ArrayList<>();
+        City city = new City();
+        city.region = "Caribbean";
+        city.name = "La Habana";
+        city.country = "Cuba";
+        city.population = 2256000;
+        cities.add(city);
+
+        City.displayCapitalCites(cities);
+    }
 }
 
 //--------------------------------------------------------------------------------------------------------------------//
