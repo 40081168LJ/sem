@@ -404,7 +404,7 @@ public class Population {
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
-     * Used to display Region populations. Used in report 28 Additional info 3
+     * Used to display Region populations. Used in report 24 Additional info 3
      * @param populations Used to store populations
      */
     public static void displayRegionPopulation(ArrayList<Population> populations) {
