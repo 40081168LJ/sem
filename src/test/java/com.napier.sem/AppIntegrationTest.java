@@ -24,6 +24,7 @@ public class AppIntegrationTest {
         // Connect to database
         app.connect("localhost:33060", 30000);
     }
+
     @AfterAll
     public static void cleanUp(){
         app.disconnect();
@@ -156,7 +157,7 @@ public class AppIntegrationTest {
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
-     *  integration test for getting all country populations - Report Additional info 4
+     * integration test for getting all country populations - Report Additional info 4
      */
     @Test
     public void GetCountriesPopulations() {
@@ -182,7 +183,8 @@ public class AppIntegrationTest {
         assertNotNull(cities.get(0).district);
     }
 
-    /** integration test for getting countries descending order - report 12
+    /**
+     * integration test for getting countries descending order - report 12
      */
     @Test
     public void getTopPopulatedCities() {
@@ -195,6 +197,8 @@ public class AppIntegrationTest {
     }
 //--------------------------------------------------------------------------------------------------------------------//
 
+    /**
+     * integration test for getting cities when given by region when given number of rows to select and a region
     /** integration test to get cities by continent when given continent and number of rows to select - report 13
      */
     @Test
@@ -212,7 +216,7 @@ public class AppIntegrationTest {
      */
     @Test
     public void getTopCitiesByRegion() {
-        ArrayList<City> cities = City.getTopCitiesByRegion(5, "Caribbean",app.con);
+        ArrayList<City> cities = City.getTopCitiesByRegion(5, "Caribbean", app.con);
         //validates
         assertNotNull(cities);
         assertNotNull(cities.get(0).name);
@@ -230,6 +234,22 @@ public class AppIntegrationTest {
         ArrayList<Population> populations = Population.getcityPopulation(app.con);
         assertNotNull(populations);
         assertNotNull(populations.get(0).district);
+
+
+    }
+
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * integration test for getting all Region populations - Report Additional info 3
+     */
+
+    @Test
+    public void getRegionPopulations() {
+        ArrayList<Population> populations = Population.getRegionPopulation(app.con);
+        assertNotNull(populations);
+        assertNotNull(populations.get(0).region);
 
 
     }
