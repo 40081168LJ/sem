@@ -216,4 +216,20 @@ public class AppTest {
         Population.displayCountryPopulations(countries);
 
     }
+
+    /**
+     * Test to display expected population of the highest populated city in the world - Report 20
+     */
+
+    @Test
+    void displayCapitalCities(){
+        ArrayList<City> cities = new ArrayList<>();
+        City city = new City();
+        city.name = "Seoul";
+        city.country = "South Korea";
+        city.population = 9981619;
+        cities.add(city);
+
+        City.getTopCapitalCitiesInTheWorld(1, app.con);
+    }
 }
