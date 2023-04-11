@@ -223,7 +223,6 @@ public class Main {
                     // Get region
                     System.out.println("please select the region to select from:");
                     String regionPop = scanner.nextLine();
-
                     System.out.println("Report 19 Selected, Displaying...");
                     System.out.println("<|************************************************************************************|>");
                     // Getting capital city by region
