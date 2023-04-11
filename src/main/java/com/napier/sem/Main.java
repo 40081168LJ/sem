@@ -301,6 +301,18 @@ public class Main {
                     break;}
                 case 19:
                     System.out.println("Report 19 Selected");
+                    System.out.println("Report 19 Selected, Displaying Capital Cities in the Region...");
+                    // Get region
+                    System.out.println("please select the region to select from:");
+                    String regionPop = scanner.nextLine();
+                    System.out.println("Report 19 Selected, Displaying...");
+                    System.out.println("<|************************************************************************************|>");
+                    // Getting capital city by region
+                    ArrayList<City> capitalCities = Population.getTopCapitalCitiesInRegion(regionPop, con.con);
+                    // Display capital cities by region
+                    Population.displayCapitalCitesInRegion(capitalCities);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 19 Finished, Returning to Main Menu...");
                     break;
                 case 20:
                     System.out.println("Report 20 Selected");

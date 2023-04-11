@@ -34,6 +34,9 @@ public class City {
 
         public Object continent;
 
+        /** Stores region */
+        public String region;
+
 //--------------------------------------------------------------------------------------------------------------------//
         /**
          * gets Report 7
