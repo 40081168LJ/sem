@@ -249,7 +249,7 @@ public class City {
                 }
         }
 
-
+//--------------------------------------------------------------------------------------------------------------------//
         /**
          * gets the top populated cities with the number of rows selected and continent given by user. - report 12
          * @param selected the number of rows to be selected inputted by user
@@ -337,7 +337,6 @@ public class City {
                         return null;
                 }
         }
-
 
 //--------------------------------------------------------------------------------------------------------------------//
         /**Display cities when given a list of cities - report 7
@@ -608,4 +607,49 @@ public class City {
 }
 
 //--------------------------------------------------------------------------------------------------------------------//
+        /**
+         * gets the top populated capital cities within the world and the number of rows selected and given by user.
+         * Report 20
+         * @param selected the number of rows to be selected inputted by user
+         * @param con connection to database
+         * @return returns null if fail or a list of cities
+         */
+        public static ArrayList<City> getTopCapitalCitiesInTheWorld(int selected, Connection con) {
+                try {
+                        Statement stmt = con.createStatement();
+                        // Create string for SQL statement
+                        String strSelect =
+                                "SELECT city.Name, country.Name, city.Population " +
+                                        "FROM city " +
+                                        "JOIN country " +
+                                        "ON city.countrycode = country.Code " +
+                                        "WHERE city.id IN (SELECT Capital FROM country)" +
+                                        "ORDER BY city.population DESC " +
+                                        "LIMIT " + selected;
+                        // Execute SQL statement
+                        ResultSet rset = stmt.executeQuery(strSelect);
+
+                        // Extract city information
+                        ArrayList<City> capitalCities = new ArrayList<>();
+
+                        //adds each city to cities
+                        while (rset.next()) {
+                                City city = new City();
+                                city.name = rset.getString("city.Name");
+                                city.country = rset.getString("country.Name");
+                                city.population = rset.getInt("city.Population");
+                                capitalCities.add(city);
+                        }
+                        return capitalCities;
+                } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                        System.out.println("Failed to get city details");
+                        return null;
+                }
+        }
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+}
+
 //--------------------------------------------------------------------------------------------------------------------//

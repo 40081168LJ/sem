@@ -11,7 +11,7 @@ import java.sql.*;
 
 import static com.napier.sem.Population.continentPop;
 import static com.napier.sem.Population.getPopulation;
-
+//TODO: WHAT IS THIS?
 //--------------------------------------------------------------------------------------------------------------------//
 /**
  * The main class, used for menu and report selection
@@ -314,9 +314,22 @@ public class Main {
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 19 Finished, Returning to Main Menu...");
                     break;
-                case 20:
+                case 20:{
                     System.out.println("Report 20 Selected");
-                    break;
+                    System.out.println("Report 20 Selected, Displaying Top Populated Capital Cities in the World...");
+                    // Get number of rows to select
+                    System.out.println("please select the number of rows to display top populated Captial Cities:");
+                    int rows3 = scanner.nextInt();
+                    scanner.nextLine();
+                    System.out.println("Report 20 Selected, Displaying...");
+                    System.out.println("<|************************************************************************************|>");
+                    // Getting city population by continent
+                    ArrayList<City> capitalCities2 = City.getTopCapitalCitiesInTheWorld(rows3, con.con);
+                    // Display world population
+                    City.displayCapitalCites(capitalCities2);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 20 Finished, Returning to Main Menu...");
+                    break;}
                 case 21:{
                     System.out.println("Report 21 Selected, Displaying Top Populated Capital Cities in the Continent...");
                     // Get region and number of rows to select
@@ -335,7 +348,7 @@ public class Main {
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 21 Finished, Returning to Main Menu...");
                     break;}
-                case 22:
+                case 22:{
                     System.out.println("Report 22 Selected");
                     System.out.println("Report 22 Selected, Displaying Top Populated Capital Cities in the Region...");
                     // Get region and number of rows to select
@@ -353,8 +366,8 @@ public class Main {
                     City.displayCapitalCites(cities2);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 22 Finished, Returning to Main Menu...");
-                    break;
-                case 23:
+                    break;}
+                case 23:{
                     System.out.println("Report 23 Selected");
                     System.out.println("Report 23 Selected, Displaying Continent Populations...");
                     System.out.println("<|************************************************************************************|>");
@@ -364,8 +377,8 @@ public class Main {
                     Population.displayContinentPopulation2(population2);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 23 Finished, Returning to Main Menu...");
-                    break;
-                case 24:
+                    break;}
+                case 24:{
                     System.out.println("Report 24 Selected");
                     System.out.println("Report 24 Selected, Displaying Region Populations...");
                     System.out.println("<|************************************************************************************|>");
@@ -375,10 +388,10 @@ public class Main {
                     Population.displayRegionPopulation(regionPopulation1);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 24 Finished, Returning to Main Menu...");
-                    break;
-                case 25:
+                    break;}
+                case 25:{
                     System.out.println("Report 25 Selected");
-                    break;
+                    break;}
                 case 26:{
                     System.out.println("Report Additional Info 1 Selected");
                     System.out.println("<|************************************************************************************|>");

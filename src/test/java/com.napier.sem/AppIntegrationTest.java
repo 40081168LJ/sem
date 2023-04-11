@@ -352,6 +352,17 @@ public class AppIntegrationTest {
 
     }
 
+    /**
+     * integration test for getting top 5 populated capital cities in the world - Report 20
+     */
+
+    @Test
+    public void getTopCapitalCitiesInTheWorld(){
+        ArrayList<City> cities = City.getTopCapitalCitiesInTheWorld(5, app.con);
+        assertNotNull(cities);
+        assertNotNull(cities.get(5).name);
+    }
+
 //--------------------------------------------------------------------------------------------------------------------//
     /**
      * integration test for getting capital cities descending order - report 18
