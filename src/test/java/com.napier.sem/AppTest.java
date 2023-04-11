@@ -197,4 +197,23 @@ public class AppTest {
         Population.displayCountryPopulations(countries);
 
     }
+
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Test to display Region expected population - Report Additional info 3
+     */
+
+    @Test
+    void DisplayRegionPopulation() {
+        ArrayList<Population> countries = new ArrayList<>();
+        Population population = new Population();
+        population.country = "Caribbean";
+        population.population = 38140000;
+        countries.add(population);
+
+        Population.displayCountryPopulations(countries);
+
+    }
 }
