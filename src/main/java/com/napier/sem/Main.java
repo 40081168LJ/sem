@@ -283,7 +283,7 @@ public class Main {
                     // Extract country information
                     ArrayList<City> cities17 = City.getAllCapitalCities(con.con);
                     // Print table of countries in the world
-                    City.displayCapitalCities(cities17);
+                    City.displayCapitalCites(cities17);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 17 Finished, Returning to Main Menu...");
                     break;
@@ -319,7 +319,7 @@ public class Main {
                     // Getting city population by continent
                     ArrayList<City> cities3 = City.getTopCapitalCities2(rows2, continent, con.con);
                     // Display world population
-                    City.displayCapitalCities(cities3);
+                    City.displayCapitalCites(cities3);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 21 Finished, Returning to Main Menu...");
                     break;}
@@ -338,7 +338,7 @@ public class Main {
                     // Getting city population by region
                     ArrayList<City> cities2 = City.getTopCapitalCities(rows, region, con.con);
                     // Display world population
-                    City.displayCapitalCities(cities2);
+                    City.displayCapitalCites(cities2);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 22 Finished, Returning to Main Menu...");
                     break;
