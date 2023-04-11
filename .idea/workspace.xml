@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - Updated comments, layout and spacing.">
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - Updated comments and layout. (after merge Report 20)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +50,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/Report_20" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -658,7 +656,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680617772405</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="LJ - Updated comments and layout. (after merge Report 20)">
+      <created>1681245805566</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1681245805566</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -676,7 +681,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="AOB - use case 7 amended, use case 8 added" />
     <MESSAGE value="LJ - Basic Menu implementation in &quot;Main&quot;" />
     <MESSAGE value="LJ - Updates to Java Menu, condensed view." />
     <MESSAGE value="LJ - JavaMenu abandoned. SAmple SQL in place instead." />
@@ -701,7 +705,8 @@
     <MESSAGE value="LJ - Updated Report 22 to Main.java to include region selection." />
     <MESSAGE value="LJ - Updated grammar and layout of comments." />
     <MESSAGE value="LJ - Updates to report 18, spelling, testing, etc." />
-    <option name="LAST_COMMIT_MESSAGE" value="LJ - Updates to report 18, spelling, testing, etc." />
+    <MESSAGE value="LJ - Updated comments and layout. (after merge Report 20)" />
+    <option name="LAST_COMMIT_MESSAGE" value="LJ - Updated comments and layout. (after merge Report 20)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
