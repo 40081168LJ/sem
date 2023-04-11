@@ -62,7 +62,7 @@ public class AppIntegrationTest {
      */
     @Test
     public void testGetRegionCountries() {
-        ArrayList<Country> country = Country.getRegionCountries(app.con);
+        ArrayList<Country> country = Country.getRegionCountries("Middle East", app.con);
         //validates
 
         assertNotNull(country);

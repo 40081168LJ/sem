@@ -93,10 +93,12 @@ public class Main {
                     System.out.println("Report 2 Finished, Returning to Main Menu...");
                     break;}
                 case 3:
-                    System.out.println("Report 3 Selected, Displaying Countries by Region = Western Europe...");
+                    System.out.println("Report 3 Selected");
+                    System.out.println("please select a region");
+                    String region1 = scanner.nextLine();
                     System.out.println("<|************************************************************************************|>");
                     // Extract country by continent information
-                    ArrayList<Country> countries2 = Country.getRegionCountries(con.con);
+                    ArrayList<Country> countries2 = Country.getRegionCountries(region1, con.con);
                     Country.printCountries(countries2);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 2 Finished, Returning to Main Menu...");
