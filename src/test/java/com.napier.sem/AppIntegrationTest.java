@@ -243,4 +243,36 @@ public class AppIntegrationTest {
 
 
     }
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * integration test for getting Continent population report styled with % - Report 23
+     */
+    @Test
+    public void getContinentPopulation2(){
+        ArrayList<Population> population2 = Population.getContinentPopulation2(app.con);
+        assertNotNull(population2);
+        assertNotNull(population2.get(0).continent);
+        assertNotNull(population2.get(0).inCities);
+        assertNotNull(population2.get(0).outCities);
+        //assertNotNull(population2.get(0).population); Redundant null-check: a value of primitive type 'long' is never null
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * integration test for getting Region population report styled with % - Report 24
+     */
+    @Test
+    public void getRegionPopulation2(){
+        ArrayList<Population> regionPopulation1 = Population.getRegionPopulation2(app.con);
+        assertNotNull(regionPopulation1);
+        assertNotNull(regionPopulation1.get(0).region);
+        assertNotNull(regionPopulation1.get(0).inCities);
+        assertNotNull(regionPopulation1.get(0).outCities);
+        //assertNotNull(regionPopulation1.get(0).population); Redundant null-check: a value of primitive type 'long' is never null
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+
 }
+
+//--------------------------------------------------------------------------------------------------------------------//

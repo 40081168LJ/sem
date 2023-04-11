@@ -200,7 +200,6 @@ public class AppTest {
 
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * Test to display Region expected population - Report Additional info 3
      */
@@ -216,4 +215,45 @@ public class AppTest {
         Population.displayCountryPopulations(countries);
 
     }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+    * Test to display Continent population report styled with % - Report 23
+    */
+    @Test
+    void displayContinentPopulation2(){
+        ArrayList<Population> populations = new ArrayList<>();
+        Population population = new Population();
+        population.continent = "Asia";
+        population.population = 900937599;
+        population.inCities = "0.0774%";
+        population.outCities = "99.9226%";
+
+        populations.add(population);
+
+        Population.displayContinentPopulation2(populations);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Test to display Region population report styled with % - Report 24
+     */
+    @Test
+    void getRegionPopulation2(){
+        ArrayList<Population> populations = new ArrayList<>();
+        Population population = new Population();
+        population.region = "Southern and Central Asia";
+        population.population = 363665421;
+        population.inCities = "0.0571%";
+        population.outCities = "99.9429%";
+
+        populations.add(population);
+
+        Population.displayRegionPopulation2(populations);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+
 }
+
+//--------------------------------------------------------------------------------------------------------------------//
