@@ -71,7 +71,7 @@ public class Main {
              */
             switch (swValue) {
                 case 1:{
-                    System.out.println("Report 1 Selected, Displaying all Countries and population detials...");
+                    System.out.println("Report 1 Selected, Displaying all Countries and population details...");
                     System.out.println("<|************************************************************************************|>");
                     // Extract country information
                     ArrayList<Country> countries = Country.getAllCountries(con.con);
@@ -268,7 +268,14 @@ public class Main {
                     scanner.nextLine();
                     break;
                 case 17:
-                    System.out.println("Report 17 Selected");
+                    System.out.println("Report 17 Selected. Displaying All Capital Cities in the world.");
+                    System.out.println("<|************************************************************************************|>");
+                    // Extract country information
+                    ArrayList<City> cities17 = City.getAllCapitalCities(con.con);
+                    // Print table of countries in the world
+                    City.displayCapitalCites(cities17);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 17 Finished, Returning to Main Menu...");
                     break;
                 case 18:
                     System.out.println("Report 18 Selected");
