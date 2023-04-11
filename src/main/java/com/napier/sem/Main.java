@@ -134,6 +134,18 @@ public class Main {
                     break;
                 case 6:
                     System.out.println("Report 6 Selected");
+                    System.out.println("please select the region to select from");
+                    String continent2 = scanner.nextLine();
+                    System.out.println("please select the number of rows to display top populated countries");
+                    int num2 = scanner.nextInt();
+
+                    System.out.println("<|************************************************************************************|>");
+                    // Getting top n countries in continent
+                    ArrayList<Country> countries5 = Country.getTopCountriesInRegion(num2, continent2, con.con);
+                    // Display top n countries in continent
+                    Country.printCountries(countries5);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 6 Finished, Returning to Main Menu...");
                     break;
                 case 7:{
                     System.out.println("Report 7 Selected");
