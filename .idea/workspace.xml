@@ -117,7 +117,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.AppIntegrationTest.getTopCapitalCitiesByContinent">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="seMethods" />
@@ -131,6 +131,22 @@
       <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppIntegrationTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppIntegrationTest.getTopCapitalCitiesByContinent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seMethods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.napier.sem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.napier.sem" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppIntegrationTest" />
+      <option name="METHOD_NAME" value="getTopCapitalCitiesByContinent" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -286,38 +302,25 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="db" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
       <item itemvalue="Docker.db/Dockerfile" />
       <item itemvalue="JUnit.Report123Tests" />
       <item itemvalue="JUnit.UnitTests" />
       <item itemvalue="JUnit.IntegrationTests" />
       <item itemvalue="JUnit.AppIntegrationTest" />
+      <item itemvalue="JUnit.AppIntegrationTest.getTopCapitalCitiesByContinent" />
       <item itemvalue="JUnit.IntegrationTests.GetWorldPopulation" />
       <item itemvalue="Maven.seMethods [install]" />
       <item itemvalue="Maven.seMethods [package]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AppIntegrationTest.getTopCapitalCitiesByContinent" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Maven.seMethods [package]" />
         <item itemvalue="JUnit.IntegrationTests.GetWorldPopulation" />
         <item itemvalue="Docker.db/Dockerfile" />
-        <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
