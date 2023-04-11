@@ -235,13 +235,14 @@ public class AppTest {
         city.population = 9981619;
         cities.add(city);
 
+        //TODO: CHECK THIS AS YOU ARE NOT CALLING "cities" BELOW
         City.getTopCapitalCitiesInTheWorld(1, app.con);
     }
 
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
-     * Test to display continent expected population - Report 18
+     * Test to display continent expected population - Report 18, Report 17
      */
     @Test
     void DisplayCapitalCities() {
@@ -296,21 +297,7 @@ public class AppTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-    /**
-     * Unit test for extract list of capital cities with city object variables present
-     * report 17
-     * Author - AOB
-     */
-
-    @Test
-    void displayCapitalCities() {
-        ArrayList<City> cities = new ArrayList<>();
-        City city = new City();
-        city.name = "Paris";
-        city.country = "France";
-        city.population = 55000;
-        cities.add(city);
-        City.displayCapitalCites(cities);
-    }
 
 }
+
+//--------------------------------------------------------------------------------------------------------------------//
