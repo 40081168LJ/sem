@@ -20,7 +20,7 @@ public class Main {
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
-     * Created a little Menu selection for each of the 36 types of reports and an exit option.
+     * Created a little Menu selection for each of the 32 types of reports and an exit option.
      */
     public static void main(String[] args) throws IOException {
         // Create new Application
@@ -279,9 +279,9 @@ public class Main {
                     System.out.println("Report 24 Selected, Displaying Region Populations...");
                     System.out.println("<|************************************************************************************|>");
                     // Extract Region Populations
-                    ArrayList<Population> regionPopulation1 = Population.getRegionPopulation(con.con);
+                    ArrayList<Population> regionPopulation1 = Population.getRegionPopulation2(con.con);
                     // Print table of Regions and their populations
-                    Population.displayRegionPopulation(regionPopulation1);
+                    Population.displayRegionPopulation2(regionPopulation1);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 24 Finished, Returning to Main Menu...");
                     break;
