@@ -1,54 +1,54 @@
-//package com.napier.sem;
-//
-////--------------------------------------------------------------------------------------------------------------------//
-//import org.junit.jupiter.api.AfterAll;
-//import org.junit.jupiter.api.BeforeAll;
-//import org.junit.jupiter.api.Test;
-//import java.util.ArrayList;
-//import static org.junit.jupiter.api.Assertions.*;
-//
-////--------------------------------------------------------------------------------------------------------------------//
-///**
-// * Integration Test to test reports
-// */
-//public class AppIntegrationTest {
-//    /**
-//     * Test connection to database
-//     * Used in all reports
-//     */
-//    static App app;
-//
-//    @BeforeAll
-//    static void init() {
-//        app = new App();
-//        // Connect to database
-//        app.connect("localhost:33060", 30000);
-//    }
-//
-//    @AfterAll
-//    public static void cleanUp(){
-//        app.disconnect();
-//    }
-//
-////--------------------------------------------------------------------------------------------------------------------//
-//    /**
-//     * Integration test for extract all world countries - report 1
-//     * Author - AOB
-//     */
-//    @Test
-//    public void testGetAllCountries() {
-//        ArrayList<Country> countries = Country.getAllCountries(app.con);
-//        assertNotNull(countries);
-//        assertNotNull(countries.get(0).code);
-//        assertNotNull(countries.get(0).name);
-//        assertNotNull(countries.get(0).continent);
-//        assertNotNull(countries.get(0).region);
-//        //removed NotNull for population variable as variable never Null
-//        // assertNotNull(countries.get(0).population);
-//        assertNotNull(countries.get(0).capital);
-//    }
-//
-////--------------------------------------------------------------------------------------------------------------------//
+package com.napier.sem;
+
+//--------------------------------------------------------------------------------------------------------------------//
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import java.util.ArrayList;
+import static org.junit.jupiter.api.Assertions.*;
+
+//--------------------------------------------------------------------------------------------------------------------//
+/**
+ * Integration Test to test reports
+ */
+public class AppIntegrationTest {
+    /**
+     * Test connection to database
+     * Used in all reports
+     */
+    static App app;
+
+    @BeforeAll
+    static void init() {
+        app = new App();
+        // Connect to database
+        app.connect("localhost:33060", 30000);
+    }
+
+    @AfterAll
+    public static void cleanUp(){
+        app.disconnect();
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Integration test for extract all world countries - report 1
+     * Author - AOB
+     */
+    @Test
+    public void testGetAllCountries() {
+        ArrayList<Country> countries = Country.getAllCountries(app.con);
+        assertNotNull(countries);
+        assertNotNull(countries.get(0).code);
+        assertNotNull(countries.get(0).name);
+        assertNotNull(countries.get(0).continent);
+        assertNotNull(countries.get(0).region);
+        //removed NotNull for population variable as variable never Null
+        // assertNotNull(countries.get(0).population);
+        assertNotNull(countries.get(0).capital);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
 //    /**
 //     * integration test for extract specific continent countries applies to report 18 as well
 //     * integration test for extract specific continent countries - report 2
@@ -405,9 +405,9 @@
 //        assertNotNull(cities.get(0).country);
 //        assertNotNull(cities.get(0).district);
 //    }
-//
-////--------------------------------------------------------------------------------------------------------------------//
-//
-//}
-//
-////--------------------------------------------------------------------------------------------------------------------//
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+}
+
+//--------------------------------------------------------------------------------------------------------------------//
