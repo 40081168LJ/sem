@@ -226,9 +226,9 @@ public class Main {
 
                     System.out.println("Report 19 Selected, Displaying...");
                     System.out.println("<|************************************************************************************|>");
-                    // Getting city population by region
+                    // Getting capital city by region
                     ArrayList<City> capitalCities = Population.getTopCapitalCitiesInRegion(regionPop, con.con);
-                    // Display world population
+                    // Display capital cities by region
                     Population.displayCapitalCitesInRegion(capitalCities);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 19 Finished, Returning to Main Menu...");
