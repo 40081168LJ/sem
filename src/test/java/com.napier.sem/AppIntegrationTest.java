@@ -24,8 +24,9 @@ public class AppIntegrationTest {
         // Connect to database
         app.connect("localhost:33060", 30000);
     }
+
     @AfterAll
-    public static void cleanUp(){
+    public static void cleanUp() {
         app.disconnect();
     }
 
@@ -116,11 +117,13 @@ public class AppIntegrationTest {
         assertNotNull(cities.get(0).district);
     }
 //--------------------------------------------------------------------------------------------------------------------//
-    /** integration test for getting countries by district in descending order - report 11
+
+    /**
+     * integration test for getting countries by district in descending order - report 11
      */
     @Test
     public void getCityByDistrict() {
-        ArrayList<City> cities = City.getCityPopulationByDistrict("Noord-Holland",app.con);
+        ArrayList<City> cities = City.getCityPopulationByDistrict("Noord-Holland", app.con);
         //validates
         assertNotNull(cities);
         assertNotNull(cities.get(0).name);
@@ -128,7 +131,9 @@ public class AppIntegrationTest {
         assertNotNull(cities.get(0).district);
     }
 //--------------------------------------------------------------------------------------------------------------------//
-    /** integration test for getting countries descending order - report 9
+
+    /**
+     * integration test for getting countries descending order - report 9
      */
     @Test
     public void getCityByRegion() {
@@ -175,7 +180,7 @@ public class AppIntegrationTest {
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
-     *  integration test for getting all country populations - Report Additional info 4
+     * integration test for getting all country populations - Report Additional info 4
      */
     @Test
     public void GetCountriesPopulations() {
@@ -201,7 +206,8 @@ public class AppIntegrationTest {
         assertNotNull(cities.get(0).district);
     }
 
-    /** integration test for getting countries descending order - report 12
+    /**
+     * integration test for getting countries descending order - report 12
      */
     @Test
     public void getTopPopulatedCities() {
@@ -214,11 +220,12 @@ public class AppIntegrationTest {
     }
 //--------------------------------------------------------------------------------------------------------------------//
 
-    /** integration test for getting cities when given by region when given number of rows to select and a region
+    /**
+     * integration test for getting cities when given by region when given number of rows to select and a region
      */
     @Test
     public void getTopCitiesByRegion() {
-        ArrayList<City> cities = City.getTopCitiesByRegion(5, "Caribbean",app.con);
+        ArrayList<City> cities = City.getTopCitiesByRegion(5, "Caribbean", app.con);
         //validates
         assertNotNull(cities);
         assertNotNull(cities.get(0).name);
@@ -236,6 +243,22 @@ public class AppIntegrationTest {
         ArrayList<Population> populations = Population.getcityPopulation(app.con);
         assertNotNull(populations);
         assertNotNull(populations.get(0).district);
+
+
+    }
+
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * integration test for getting all Region populations - Report Additional info 3
+     */
+
+    @Test
+    public void getRegionPopulations() {
+        ArrayList<Population> populations = Population.getRegionPopulation(app.con);
+        assertNotNull(populations);
+        assertNotNull(populations.get(0).region);
 
 
     }
