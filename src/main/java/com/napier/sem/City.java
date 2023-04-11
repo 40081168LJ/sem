@@ -32,6 +32,8 @@ public class City {
         /**  Country string column */
         public String country;
 
+        public Object continent;
+
 //--------------------------------------------------------------------------------------------------------------------//
         /**
          * gets Report 7
@@ -399,13 +401,13 @@ public class City {
         }
 
 //--------------------------------------------------------------------------------------------------------------------//
-        /**Display cities when given a list of cities - report 7
+        /**Display cities when given a list of cities - report 7, report 18
          *@param capitalCities a list of the city object to display
          */
         public static void displayCapitalCites(ArrayList<City> capitalCities) {
                 if (capitalCities == null)
                 {
-                        System.out.println("no cities have been found");
+                        System.out.println("no capital cities have been found");
                         return;
                 }
                 //Print header

@@ -216,4 +216,21 @@ public class AppTest {
         Population.displayCountryPopulations(countries);
 
     }
+
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Test to display continent expected population - Report 18
+     */
+    @Test
+    void DisplayCapitalCities() {
+        ArrayList<City> cities = new ArrayList<>();
+        City city = new City();
+        city.name = "Cairo";
+        city.country = "Egypt";
+        city.population = 6789479;
+        cities.add(city);
+
+        City.displayCapitalCites(cities);
+    }
 }

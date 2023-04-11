@@ -44,6 +44,8 @@ public class Population {
 
     public String region;
 
+    public static String continentPop;
+
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
@@ -491,6 +493,50 @@ public class Population {
             System.out.println(continentsString);
         }
     }
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Used to get capitalCities from Continent
+     * @param continentPop stores continent population
+     * @param con connection to database
+     * @return returns capitalCities
+     */
+    public static ArrayList<City> getTopCapitalCitiesByContinent(String continentPop, Connection con) {
+        try {
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT city.Name, country.Name, city.Population " +
+                            "FROM country " +
+                            "JOIN city " +
+                            "ON city.countrycode = country.Code " +
+                            "WHERE city.id IN (SELECT Capital FROM country)" +
+                            "AND country.Continent LIKE \"%" + continentPop + "%\" " +
+                            "ORDER BY city.population DESC ";
+
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // Extract city information
+            ArrayList<City> capitalCities = new ArrayList<>();
+
+            //adds each city to cities
+            while (rset.next()) {
+                City city = new City();
+                city.name = rset.getString("city.Name");
+                city.country = rset.getString("country.Name");
+                city.population = rset.getInt("city.Population");
+                capitalCities.add(city);
+            }
+            return capitalCities;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get capital city details");
+            return null;
+        }
+    }
+
 
 //--------------------------------------------------------------------------------------------------------------------//
 

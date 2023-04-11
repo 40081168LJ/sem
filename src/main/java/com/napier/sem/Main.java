@@ -9,6 +9,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.sql.*;
 
+import static com.napier.sem.Population.continentPop;
+import static com.napier.sem.Population.getPopulation;
+
 //--------------------------------------------------------------------------------------------------------------------//
 /**
  * The main class, used for menu and report selection
@@ -228,17 +231,25 @@ public class Main {
                 case 17:
                     System.out.println("Report 17 Selected");
                     break;
-                case 18:
-                    System.out.println("Report 18 Selected");
-                    break;
+                case 18:{
+                    System.out.println("Report 18 Selected. Displaying all Capital Cities in a continent");
+                    System.out.println("please select the the continent to select from");
+                    String continentPop = scanner.nextLine();
+                    System.out.println("<|************************************************************************************|>");
+                    // Getting capital cities by continent
+                    ArrayList<City> capitalCities = Population.getTopCapitalCitiesByContinent(continentPop, con.con);
+                    // Display capital cities by continent
+                    City.displayCapitalCites(capitalCities);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 18 Finished, Returning to Main Menu...");
+                    break;}
                 case 19:
                     System.out.println("Report 19 Selected");
                     break;
                 case 20:
                     System.out.println("Report 20 Selected");
                     break;
-                case 21:
-                    System.out.println("Report 21 Selected");
+                case 21:{
                     System.out.println("Report 21 Selected, Displaying Top Populated Capital Cities in the Continent...");
                     // Get region and number of rows to select
                     System.out.println("please select the the continent to select from:");
@@ -256,7 +267,7 @@ public class Main {
                     City.displayCapitalCites(cities3);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 21 Finished, Returning to Main Menu...");
-                    break;
+                    break;}
                 case 22:
                     System.out.println("Report 22 Selected");
                     System.out.println("Report 22 Selected, Displaying Top Populated Capital Cities in the Region...");

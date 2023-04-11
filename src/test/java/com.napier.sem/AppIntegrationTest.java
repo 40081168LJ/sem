@@ -45,13 +45,26 @@ public class AppIntegrationTest {
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
-     * integration test for extract specific continent countries
+     * integration test for extract specific continent countries applies to report 18 as well
      * Author - AOB
      */
     @Test
     public void testGetContinentCountries() {
         ArrayList<Country> country = Country.getContinentCountries(app.con);
         assertNotNull(country);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * integration test for extract specific continent countries applies to report 18 as well
+     * Author - AOB
+     */
+    @Test
+    public void testGetCapitalCities() {
+        ArrayList<City> capitalCities = Population.getTopCapitalCitiesByContinent("Africa", app.con);
+        assertNotNull(capitalCities);
+        assertNotNull(capitalCities.get(0).name);
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
@@ -249,5 +262,20 @@ public class AppIntegrationTest {
         assertNotNull(populations.get(0).region);
 
 
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * integration test for getting capital cities descending order - report 18
+     */
+    @Test
+    public void getTopCapitalCitiesByContinent() {
+        ArrayList<City> cities = City.getCityPopulationByContinent("Europe", app.con);
+        //validates
+        assertNotNull(cities);
+        assertNotNull(cities.get(0).name);
+        assertNotNull(cities.get(0).country);
+        assertNotNull(cities.get(0).district);
     }
 }
