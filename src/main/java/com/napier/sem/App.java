@@ -52,6 +52,7 @@ public class App {
     }
 
     //--------------------------------------------------------------------------------------------------------------------//
+
     public void connect(String location, int delay) {
         try {
             // Load Database driver
