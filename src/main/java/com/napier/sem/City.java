@@ -244,7 +244,7 @@ public class City {
                 }
         }
 
-
+//--------------------------------------------------------------------------------------------------------------------//
         /**
          * gets the top populated cities with the number of rows selected and continent given by user. - report 12
          * @param selected the number of rows to be selected inputted by user
@@ -467,7 +467,6 @@ public class City {
         }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
         /**
          * gets the top populated capital cities within the world and the number of rows selected and given by user.
          * Report 20
@@ -508,6 +507,9 @@ public class City {
                         return null;
                 }
         }
+
+//--------------------------------------------------------------------------------------------------------------------//
+
 }
 
 //--------------------------------------------------------------------------------------------------------------------//

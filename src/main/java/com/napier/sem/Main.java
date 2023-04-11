@@ -241,7 +241,6 @@ public class Main {
                     System.out.println("please select the number of rows to display top populated Captial Cities:");
                     int rows3 = scanner.nextInt();
                     scanner.nextLine();
-
                     System.out.println("Report 20 Selected, Displaying...");
                     System.out.println("<|************************************************************************************|>");
                     // Getting city population by continent
