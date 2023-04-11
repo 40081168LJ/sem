@@ -196,7 +196,7 @@ public class Main {
                     System.out.println("<|************************************************************************************|>");
                     // Getting city population by continent
                     ArrayList<City> cities = City.getTopCitiesByContinent(rows, continent, con.con);
-                    // Display world population
+                    // Display city population by continent
                     City.displayCites(cities);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 13 Finished, Returning to Main Menu...");
