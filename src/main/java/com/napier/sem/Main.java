@@ -261,7 +261,6 @@ public class Main {
                     City.displayCites(cities1);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 15 Finished, Returning to Main Menu...");
-                    scanner.nextLine();
                     break;
                 case 16:
                     System.out.println("Report 16 Selected");
@@ -278,7 +277,6 @@ public class Main {
                     City.displayCites(cities16);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 16 Finished, Returning to Main Menu...");
-                    scanner.nextLine();
                     break;
                 case 17:
                     System.out.println("Report 17 Selected. Displaying All Capital Cities in the world.");
