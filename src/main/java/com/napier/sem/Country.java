@@ -72,6 +72,7 @@ public class Country {
             return null;
         }
     }
+
 //--------------------------------------------------------------------------------------------------------------------//
     /** Extract all countries in specified continent, ordered by population
      * Author - AOB
@@ -113,6 +114,7 @@ public class Country {
             return null;
         }
     }
+
 //--------------------------------------------------------------------------------------------------------------------//
     /** Extract countries in specified region, order by population descending
      * Author - AOB
@@ -200,6 +202,7 @@ public class Country {
         }
 
     }
+
 //--------------------------------------------------------------------------------------------------------------------//
     /**
      * gets the top populated countries in a continent with the number of rows selected given by user. - report 5
@@ -247,9 +250,7 @@ public class Country {
         }
     }
 
-
-
- //--------------------------------------------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
     /**
      * gets the top populated countries in a region with the number of rows selected given by user. - report 6
      * @param selected the number of rows to be selected inputted by user
@@ -296,7 +297,6 @@ public class Country {
         }
     }
 
-
 //--------------------------------------------------------------------------------------------------------------------//
     /** Print table of countries extracted
      * Author - AOB
@@ -324,5 +324,9 @@ public class Country {
             System.out.println(country_string);
         }
     }
+
+//--------------------------------------------------------------------------------------------------------------------//
+
 }
+
 //--------------------------------------------------------------------------------------------------------------------//

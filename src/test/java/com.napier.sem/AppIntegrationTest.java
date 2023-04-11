@@ -31,7 +31,6 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * Integration test for extract all world countries - report 1
      * Author - AOB
@@ -50,7 +49,6 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * integration test for extract specific continent countries applies to report 18 as well
      * integration test for extract specific continent countries - report 2
@@ -70,7 +68,6 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * integration test for extract specific continent countries applies to report 18 as well
      * Author - AOB
@@ -83,7 +80,6 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * integration test for extract specific region countries - report 3
      * Author - AOB
@@ -165,7 +161,6 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * Test connection to database and to test getting world population
      * Used in additional_info 1 report
@@ -178,9 +173,7 @@ public class AppIntegrationTest {
         assertNotEquals(0, pop.population);
     }
 
-
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * integration test for getting cities descending order - report 7
      */
@@ -193,6 +186,7 @@ public class AppIntegrationTest {
         assertNotNull(cities.get(0).country);
         assertNotNull(cities.get(0).district);
     }
+
 //--------------------------------------------------------------------------------------------------------------------//
     /** integration test for getting countries by district in descending order - report 11
      */
@@ -205,6 +199,7 @@ public class AppIntegrationTest {
         assertNotNull(cities.get(0).country);
         assertNotNull(cities.get(0).district);
     }
+
 //--------------------------------------------------------------------------------------------------------------------//
     /** integration test for getting countries descending order - report 9
      */
@@ -217,9 +212,8 @@ public class AppIntegrationTest {
         assertNotNull(cities.get(0).country);
         assertNotNull(cities.get(0).district);
     }
+
 //--------------------------------------------------------------------------------------------------------------------//
-
-
     /**
      * integration test for getting continents with not null population - report Additional info 2
      */
@@ -233,9 +227,7 @@ public class AppIntegrationTest {
 
     }
 
-
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * integration test for getting all city populations - Report Additional info 6
      */
@@ -249,9 +241,7 @@ public class AppIntegrationTest {
 
     }
 
-
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * integration test for getting all country populations - Report Additional info 4
      */
@@ -264,8 +254,7 @@ public class AppIntegrationTest {
 
     }
 
-    //----------------------------------------------------------------------------------------------------------------//
-
+//----------------------------------------------------------------------------------------------------------------//
     /**
      * integration test for getting cities descending order - report 8
      */
@@ -279,6 +268,7 @@ public class AppIntegrationTest {
         assertNotNull(cities.get(0).district);
     }
 
+//--------------------------------------------------------------------------------------------------------------------//
     /**
      * integration test for getting countries descending order - report 12
      */
@@ -291,6 +281,7 @@ public class AppIntegrationTest {
         assertNotNull(cities.get(0).country);
         assertNotNull(cities.get(0).district);
     }
+
 //--------------------------------------------------------------------------------------------------------------------//
     /** integration test to get cities by continent when given continent and number of rows to select - report 13
      */
@@ -303,6 +294,7 @@ public class AppIntegrationTest {
         assertNotNull(cities.get(4).country);
         assertNotNull(cities.get(4).district);
     }
+
 //--------------------------------------------------------------------------------------------------------------------//
 
     /** integration test for getting cities when given by region when given number of rows to select and a region
@@ -318,7 +310,6 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /** integration test for getting cities when given by country when given number
      * of rows to select and a country
      * report 15
@@ -334,7 +325,6 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * integration test for getting all district populations - Report Additional info 5
      */
@@ -348,9 +338,7 @@ public class AppIntegrationTest {
 
     }
 
-
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * integration test for getting all Region populations - Report Additional info 3
      */
@@ -365,7 +353,6 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * integration test for getting capital cities descending order - report 18
      */
@@ -390,11 +377,11 @@ public class AppIntegrationTest {
         assertNotNull(cities);
         assertNotNull(cities.get(0).name);
         assertNotNull(cities.get(0).country);
-        assertNotNull(cities.get(0).population);
+        //removed NotNull for population variable as variable never Null
+        //assertNotNull(cities.get(0).population);
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /** integration test for getting cities when given number of rows to select
      *  and a district - report 16
      */
@@ -408,5 +395,8 @@ public class AppIntegrationTest {
         assertNotNull(cities.get(0).district);
     }
 
+//--------------------------------------------------------------------------------------------------------------------//
+
 }
 
+//--------------------------------------------------------------------------------------------------------------------//
