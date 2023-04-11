@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - Updated comments and layout. (after merge Report 20)">
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - Updated .xml and .yml files as per Lab08.">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -663,7 +664,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681245805566</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="LJ - Updated .xml and .yml files as per Lab08.">
+      <created>1681246923085</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1681246923085</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -681,7 +689,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LJ - Basic Menu implementation in &quot;Main&quot;" />
     <MESSAGE value="LJ - Updates to Java Menu, condensed view." />
     <MESSAGE value="LJ - JavaMenu abandoned. SAmple SQL in place instead." />
     <MESSAGE value="SL - fixed test file structure&#10;fixed getWorldPopulation methods and added testing" />
@@ -706,7 +713,8 @@
     <MESSAGE value="LJ - Updated grammar and layout of comments." />
     <MESSAGE value="LJ - Updates to report 18, spelling, testing, etc." />
     <MESSAGE value="LJ - Updated comments and layout. (after merge Report 20)" />
-    <option name="LAST_COMMIT_MESSAGE" value="LJ - Updated comments and layout. (after merge Report 20)" />
+    <MESSAGE value="LJ - Updated .xml and .yml files as per Lab08." />
+    <option name="LAST_COMMIT_MESSAGE" value="LJ - Updated .xml and .yml files as per Lab08." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

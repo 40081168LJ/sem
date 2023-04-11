@@ -51,6 +51,16 @@ jobs:
           directory: ./target/site/jacoco
           flags: Integration Tests # optional
           verbose: true # optional (default = false)
+          # LJ - Trying to connect with CodeCov
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v2
+        with:
+            token: ${{ secrets.CODECOV_TOKEN }}
+            directory: ./target/site/jacoco
+            fail_ci_if_error: true # optional
+            flags: unittests # optional
+            name: codecov-umbrella # optional (default = false)
+            verbose: true # optional (default = false)
   build:
     name: Build and Start Using docker-compose
     runs-on: ubuntu-20.04
