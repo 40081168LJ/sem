@@ -74,7 +74,7 @@ public class Main {
              */
             switch (swValue) {
                 case 1:{
-                    System.out.println("Report 1 Selected, Displaying all Countries and population detials...");
+                    System.out.println("Report 1 Selected, Displaying all Countries and population details...");
                     System.out.println("<|************************************************************************************|>");
                     // Extract country information
                     ArrayList<Country> countries = Country.getAllCountries(con.con);
@@ -84,23 +84,27 @@ public class Main {
                     System.out.println("Report 1 Finished, Returning to Main Menu...");
                     break;}
                 case 2:{
-                    System.out.println("Report 2 Selected, Displaying Countries by Continent = Asia...");
+                    System.out.println("Report 2 Selected");
+                    System.out.println("please select a continent");
+                    String continent = scanner.nextLine();
                     System.out.println("<|************************************************************************************|>");
                     // Extract country by continent information
-                    ArrayList<Country> countries1 = Country.getContinentCountries(con.con);
+                    ArrayList<Country> countries1 = Country.getContinentCountries(continent, con.con);
                     // Print table of countries in a continent e.g. Asia
                     Country.printCountries(countries1);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 2 Finished, Returning to Main Menu...");
                     break;}
                 case 3:
-                    System.out.println("Report 3 Selected, Displaying Countries by Region = Western Europe...");
+                    System.out.println("Report 3 Selected");
+                    System.out.println("please select a region");
+                    String region1 = scanner.nextLine();
                     System.out.println("<|************************************************************************************|>");
                     // Extract country by continent information
-                    ArrayList<Country> countries2 = Country.getRegionCountries(con.con);
+                    ArrayList<Country> countries2 = Country.getRegionCountries(region1, con.con);
                     Country.printCountries(countries2);
                     System.out.println("<|************************************************************************************|>");
-                    System.out.println("Report 2 Finished, Returning to Main Menu...");
+                    System.out.println("Report 3 Finished, Returning to Main Menu...");
                     break;
                 case 4:
                     System.out.println("Report 4 Selected");
@@ -113,13 +117,37 @@ public class Main {
                     // Display top n countries
                     Country.printCountries(countries3);
                     System.out.println("<|************************************************************************************|>");
-                    System.out.println("Report 2 Finished, Returning to Main Menu...");
+                    System.out.println("Report 4 Finished, Returning to Main Menu...");
                     break;
                 case 5:
                     System.out.println("Report 5 Selected");
+                    System.out.println("please select the continent to select from");
+                    String continent1 = scanner.nextLine();
+                    System.out.println("please select the number of rows to display top populated countries");
+                    int num1 = scanner.nextInt();
+                    scanner.nextLine();
+                    System.out.println("<|************************************************************************************|>");
+                    // Getting top n countries in continent
+                    ArrayList<Country> countries4 = Country.getTopCountriesInContinent(num1, continent1, con.con);
+                    // Display top n countries in continent
+                    Country.printCountries(countries4);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 5 Finished, Returning to Main Menu...");
                     break;
                 case 6:
                     System.out.println("Report 6 Selected");
+                    System.out.println("please select the region to select from");
+                    String continent2 = scanner.nextLine();
+                    System.out.println("please select the number of rows to display top populated countries");
+                    int num2 = scanner.nextInt();
+                    scanner.nextLine();
+                    System.out.println("<|************************************************************************************|>");
+                    // Getting top n countries in continent
+                    ArrayList<Country> countries5 = Country.getTopCountriesInRegion(num2, continent2, con.con);
+                    // Display top n countries in continent
+                    Country.printCountries(countries5);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 6 Finished, Returning to Main Menu...");
                     break;
                 case 7:{
                     System.out.println("Report 7 Selected");
@@ -219,12 +247,45 @@ public class Main {
                     break;}
                 case 15:
                     System.out.println("Report 15 Selected");
+                    //get country and number of rows to select
+                    System.out.println("please select the country to select from");
+                    String country = scanner.nextLine();
+                    System.out.println("please select the number of rows to display top populated cities");
+                    int num15 = scanner.nextInt();
+                    scanner.nextLine();
+                    System.out.println("<|************************************************************************************|>");
+                    // Getting city population by continent
+                    ArrayList<City> cities1 = City.getTopCitiesByCountry(num15, country, con.con);
+                    // Display world population
+                    City.displayCites(cities1);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 15 Finished, Returning to Main Menu...");
                     break;
                 case 16:
                     System.out.println("Report 16 Selected");
+                    //get country and number of rows to select
+                    System.out.println("please select the district to select from");
+                    String district16 = scanner.nextLine();
+                    System.out.println("please select the number of rows to display top populated cities");
+                    int num16 = scanner.nextInt();
+                    scanner.nextLine();
+                    System.out.println("<|************************************************************************************|>");
+                    // Getting city population by continent
+                    ArrayList<City> cities16 = City.getTopCitiesByDistrict(num16, district16, con.con);
+                    // Display world population
+                    City.displayCites(cities16);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 16 Finished, Returning to Main Menu...");
                     break;
                 case 17:
-                    System.out.println("Report 17 Selected");
+                    System.out.println("Report 17 Selected. Displaying All Capital Cities in the world.");
+                    System.out.println("<|************************************************************************************|>");
+                    // Extract country information
+                    ArrayList<City> cities17 = City.getAllCapitalCities(con.con);
+                    // Print table of countries in the world
+                    City.displayCapitalCities(cities17);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 17 Finished, Returning to Main Menu...");
                     break;
                 case 18:{
                     System.out.println("Report 18 Selected. Displaying all Capital Cities in a continent");
@@ -258,7 +319,7 @@ public class Main {
                     // Getting city population by continent
                     ArrayList<City> cities3 = City.getTopCapitalCities2(rows2, continent, con.con);
                     // Display world population
-                    City.displayCapitalCites(cities3);
+                    City.displayCapitalCities(cities3);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 21 Finished, Returning to Main Menu...");
                     break;}
@@ -277,7 +338,7 @@ public class Main {
                     // Getting city population by region
                     ArrayList<City> cities2 = City.getTopCapitalCities(rows, region, con.con);
                     // Display world population
-                    City.displayCapitalCites(cities2);
+                    City.displayCapitalCities(cities2);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 22 Finished, Returning to Main Menu...");
                     break;

@@ -46,6 +46,7 @@ public class AppTest {
 
     /**
      * Unit test for print extracted list of countries if null
+     * reports 1,2,3,4,5,6
      * Author - AOB
      */
     @Test
@@ -57,6 +58,7 @@ public class AppTest {
 
     /**
      * Unit test for print extracted list of countries if empty
+     * reports 1,2,3,4,5,6
      * Author - AOB
      */
     @Test
@@ -69,6 +71,7 @@ public class AppTest {
 
     /**
      * Unit test for print extracted list of countries if array item is null
+     * reports 1,2,3,4,5,6
      * Author - AOB
      */
     @Test
@@ -82,6 +85,7 @@ public class AppTest {
 
     /**
      * Unit test for extract list of countries with country object variables present
+     * reports 1,2,3,4,5,6
      * Author - AOB
      */
     @Test
@@ -102,7 +106,7 @@ public class AppTest {
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
-     * tests displaying cities with an empty object - report 7, 8, 9
+     * tests displaying cities with an empty object - report 7, 8, 9, 15, 16
      */
     @Test
     void DisplayCitiesTestEmpty() {
@@ -113,7 +117,7 @@ public class AppTest {
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
-     * tests passing city expected values - report 7, 8, 9
+     * tests passing city expected values - report 7, 8, 9, 15, 16
      */
     @Test
     void DisplayCities() {
@@ -233,4 +237,63 @@ public class AppTest {
 
         City.displayCapitalCites(cities);
     }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Unit test for print extracted list of capital cities if null
+     * report 17
+     * Author - AOB
+     */
+
+    @Test
+    void displayCapitalCitiesTestNull() {
+        City.displayCapitalCities(null);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Unit test for print extracted list of capital cities if empty
+     * report 17
+     * Author - AOB
+     */
+
+    @Test
+    void displayCapitalCitiesTestEmpty() {
+        ArrayList<City> cities = new ArrayList<>();
+        City.displayCapitalCities(cities);
+    }
+
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Unit test for print extracted list of capital cities if array item is null
+     * report 17
+     * Author - AOB
+     */
+
+    @Test
+    void displayCapitalCitiesTestContainsNull() {
+        ArrayList<City> cities = new ArrayList<>();
+        cities.add(null);
+        City.displayCapitalCities(cities);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Unit test for extract list of capital cities with city object variables present
+     * report 17
+     * Author - AOB
+     */
+
+    @Test
+    void displayCapitalCities() {
+        ArrayList<City> cities = new ArrayList<>();
+        City city = new City();
+        city.name = "Paris";
+        city.country = "France";
+        city.population = 55000;
+        cities.add(city);
+        City.displayCapitalCities(cities);
+    }
+
 }

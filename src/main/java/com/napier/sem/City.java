@@ -291,6 +291,52 @@ public class City {
         }
 
 //--------------------------------------------------------------------------------------------------------------------//
+        /**
+         * gets the top populated cities with the number of rows selected and country given
+         * by user - report 15
+         * @param selected the number of rows to be selected inputted by user
+         * @param country the country to select rows from
+         * @param con connection to database
+         * @return returns null if fail or a list of cities
+         */
+
+        public static ArrayList<City> getTopCitiesByCountry(int selected, String country, Connection con) {
+                try {
+                        Statement stmt = con.createStatement();
+                        // Create string for SQL statement
+                        String strSelect =
+                                "SELECT city.Name, country.Name, city.District, city.Population " +
+                                        "FROM city " +
+                                        "JOIN country " +
+                                        "ON city.countrycode = country.Code " +
+                                        "WHERE country.name LIKE \"%" + country + "%\" " +
+                                        "ORDER BY city.population DESC " +
+                                        "LIMIT " + selected;
+                        // Execute SQL statement
+                        ResultSet rset = stmt.executeQuery(strSelect);
+
+                        // Extract city information
+                        ArrayList<City> cities = new ArrayList<>();
+
+                        //adds each city to cities
+                        while (rset.next()) {
+                                City city = new City();
+                                city.name = rset.getString("city.Name");
+                                city.country = rset.getString("country.Name");
+                                city.district = rset.getString("city.District");
+                                city.population = rset.getInt("city.Population");
+                                cities.add(city);
+                        }
+                        return cities;
+                } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                        System.out.println("Failed to get city details");
+                        return null;
+                }
+        }
+
+
+//--------------------------------------------------------------------------------------------------------------------//
         /**Display cities when given a list of cities - report 7
          *@param cities a list of the city object to display
          */
@@ -401,7 +447,7 @@ public class City {
         }
 
 //--------------------------------------------------------------------------------------------------------------------//
-        /**Display cities when given a list of cities - report 7, report 18
+        /**Display cities when given a list of cities - report 7, report 18, report 17
          *@param capitalCities a list of the city object to display
          */
         public static void displayCapitalCites(ArrayList<City> capitalCities) {
@@ -468,7 +514,95 @@ public class City {
                 }
         }
 
+
 //--------------------------------------------------------------------------------------------------------------------//
+        /**
+         * gets the top populated cities with the number of rows selected and district given by user. - report 16
+         * @param selected the number of rows to be selected inputted by user
+         * @param district the country to select rows from
+         * @param con connection to database
+         * @return returns null if fail or a list of cities
+         */
+
+        public static ArrayList<City> getTopCitiesByDistrict(int selected, String district, Connection con) {
+                try {
+                        Statement stmt = con.createStatement();
+                        // Create string for SQL statement
+                        String strSelect =
+                                "SELECT city.Name, country.Name, city.District, city.Population " +
+                                        "FROM city " +
+                                        "JOIN country " +
+                                        "ON city.countrycode = country.Code " +
+                                        "WHERE city.district LIKE \"%" + district + "%\" " +
+                                        "ORDER BY city.population DESC " +
+                                        "LIMIT " + selected;
+                        // Execute SQL statement
+                        ResultSet rset = stmt.executeQuery(strSelect);
+
+                        // Extract city information
+                        ArrayList<City> cities = new ArrayList<>();
+
+                        //adds each city to cities
+                        while (rset.next()) {
+                                City city = new City();
+                                city.name = rset.getString("city.Name");
+                                city.country = rset.getString("country.Name");
+                                city.district = rset.getString("city.District");
+                                city.population = rset.getInt("city.Population");
+                                cities.add(city);
+                        }
+                        return cities;
+                } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                        System.out.println("Failed to get city details");
+                        return null;
+                }
+        }
+
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+        /**
+         * Extract all capital cities in the world, order by population descending
+         * Author - AOB
+         *
+         * @return All capital cities
+         */
+
+        public static ArrayList<City> getAllCapitalCities(Connection con) {
+                try {
+                        Statement stmt = con.createStatement();
+                        // Create string for SQL statement
+                        String strSelect =
+                                "SELECT city.Name, country.Name, city.Population " +
+                                        "FROM city " +
+                                        "JOIN country " +
+                                        "ON city.countrycode = country.Code " +
+                                        "WHERE city.id IN (SELECT Capital FROM country)" +
+                                        "ORDER BY city.population DESC ";
+                        // Execute SQL statement
+                        ResultSet rset = stmt.executeQuery(strSelect);
+
+                        // Extract city information
+                        ArrayList<City> capitalCities = new ArrayList<>();
+
+                        //adds each city to cities
+                        while (rset.next()) {
+                                City city = new City();
+                                city.name = rset.getString("city.Name");
+                                city.country = rset.getString("country.Name");
+                                city.population = rset.getInt("city.Population");
+                                capitalCities.add(city);
+                        }
+                        return capitalCities;
+                } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                        System.out.println("Failed to get city details");
+                        return null;
+                }
+
+        }
 }
 
+//--------------------------------------------------------------------------------------------------------------------//
 //--------------------------------------------------------------------------------------------------------------------//
