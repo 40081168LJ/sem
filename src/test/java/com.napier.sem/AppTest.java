@@ -247,7 +247,7 @@ public class AppTest {
 
     @Test
     void displayCapitalCitiesTestNull() {
-        City.displayCapitalCities(null);
+        City.displayCapitalCites(null);
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
@@ -260,7 +260,7 @@ public class AppTest {
     @Test
     void displayCapitalCitiesTestEmpty() {
         ArrayList<City> cities = new ArrayList<>();
-        City.displayCapitalCities(cities);
+        City.displayCapitalCites(cities);
     }
 
 
@@ -275,7 +275,7 @@ public class AppTest {
     void displayCapitalCitiesTestContainsNull() {
         ArrayList<City> cities = new ArrayList<>();
         cities.add(null);
-        City.displayCapitalCities(cities);
+        City.displayCapitalCites(cities);
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
@@ -293,7 +293,7 @@ public class AppTest {
         city.country = "France";
         city.population = 55000;
         cities.add(city);
-        City.displayCapitalCities(cities);
+        City.displayCapitalCites(cities);
     }
 
 }
