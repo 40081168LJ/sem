@@ -200,7 +200,6 @@ public class Main {
                     City.displayCites(cities);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 13 Finished, Returning to Main Menu...");
-                    scanner.nextLine();
                     break;}
                 case 14:{
                     System.out.println("Report 14 Selected");

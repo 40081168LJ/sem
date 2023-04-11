@@ -115,16 +115,10 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.napier.sem.App" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="seMethods" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value=".*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -304,7 +298,7 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.App" />
+      <item itemvalue="Application.Main" />
       <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
       <item itemvalue="Docker.db/Dockerfile" />
       <item itemvalue="JUnit.Report123Tests" />
@@ -317,11 +311,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Maven.seMethods [package]" />
         <item itemvalue="JUnit.IntegrationTests.GetWorldPopulation" />
         <item itemvalue="Docker.db/Dockerfile" />
         <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
-        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
