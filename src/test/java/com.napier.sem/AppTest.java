@@ -1,6 +1,7 @@
 package com.napier.sem;
 
 //--------------------------------------------------------------------------------------------------------------------//
+
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
@@ -13,16 +14,19 @@ public class AppTest {
     static App app;
 
 //--------------------------------------------------------------------------------------------------------------------//
-
+    /** Before all the unit test take place setting up app
+     * Author - Shaun
+     */
     @BeforeAll
     static void init() {
         app = new App();
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
-     * tests passing an empty object
+     * Tests passing an empty object
+     * Reports - Additional Info 1
+     * Author - Aidan
      */
     @Test
     void DisplayWorldPopulationTestEmpty() {
@@ -31,9 +35,10 @@ public class AppTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
-     * tests passing expected values
+     * Tests passing expected values
+     * Reports - Additional Info 1
+     * Author - Aidan
      */
     @Test
     void DisplayWorldPopulation() {
@@ -43,10 +48,9 @@ public class AppTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * Unit test for print extracted list of countries if null
-     * reports 1,2,3,4,5,6
+     * Reports - 1, 2, 3, 4, 5, 6
      * Author - AOB
      */
     @Test
@@ -55,10 +59,9 @@ public class AppTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * Unit test for print extracted list of countries if empty
-     * reports 1,2,3,4,5,6
+     * Reports - 1, 2, 3, 4, 5, 6
      * Author - AOB
      */
     @Test
@@ -68,10 +71,9 @@ public class AppTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * Unit test for print extracted list of countries if array item is null
-     * reports 1,2,3,4,5,6
+     * Reports - 1, 2, 3, 4, 5, 6
      * Author - AOB
      */
     @Test
@@ -82,10 +84,9 @@ public class AppTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * Unit test for extract list of countries with country object variables present
-     * reports 1,2,3,4,5,6
+     * Reports - 1, 2, 3, 4, 5, 6
      * Author - AOB
      */
     @Test
@@ -102,11 +103,11 @@ public class AppTest {
         Country.printCountries(countries);
     }
 
-
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
-     * tests displaying cities with an empty object - report 7, 8, 9, 15, 16
+     * tests displaying cities with an empty object
+     * Reports - 7, 8, 9, 15, 16
+     * Author - Shaun
      */
     @Test
     void DisplayCitiesTestEmpty() {
@@ -115,9 +116,10 @@ public class AppTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
-     * tests passing city expected values - report 7, 8, 9, 15, 16
+     * Tests passing city expected values
+     * Reports - 7, 8, 9, 15, 16
+     * Author - Shaun
      */
     @Test
     void DisplayCities() {
@@ -132,26 +134,24 @@ public class AppTest {
         City.displayCites(cities);
     }
 
-
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
-     * test to display continents with 0 population - Report Additional info 2
+     * Test to display continents with 0 population
+     * Reports - Additional info 2
+     * Author - Aidan
      */
-
     @Test
     void printContinentsTestEmpty() {
         ArrayList<Population> populations = new ArrayList<>();
         Population.displayContinentPopulations(populations);
     }
 
-
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
-     * Test to make sure Kabul prints expected population - report Additional info 6
+     * Test to make sure Kabul prints expected population
+     * Reports - Additional info 6
+     * Author - Aidan
      */
-
     @Test
     void DisplayCityPopulation() {
         ArrayList<City> cities = new ArrayList<>();
@@ -164,13 +164,12 @@ public class AppTest {
 
     }
 
-
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
-     * Test to display countries expected population - Report Additional info 4
+     * Test to display countries expected population
+     * Reports - Additional info 4
+     * Author - Aidan
      */
-
     @Test
     void DisplayCountryPopulation() {
         ArrayList<Population> countries = new ArrayList<>();
@@ -183,13 +182,12 @@ public class AppTest {
 
     }
 
-
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
-     * Test to display Districts expected population - Report Additional info 5
+     * Test to display Districts expected population
+     * Reports - Additional info 5
+     * Author - Aidan
      */
-
     @Test
     void DisplayDistrictPopulation() {
         ArrayList<Population> countries = new ArrayList<>();
@@ -202,12 +200,12 @@ public class AppTest {
 
     }
 
-
 //--------------------------------------------------------------------------------------------------------------------//
     /**
-     * Test to display Region expected population - Report Additional info 3
+     * Test to display Region expected population
+     * Reports - Additional info 3
+     * Author - Aidan
      */
-
     @Test
     void DisplayRegionPopulation() {
         ArrayList<Population> countries = new ArrayList<>();
@@ -222,9 +220,10 @@ public class AppTest {
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
-     * Test to display expected population of the highest populated city in the world - Report 20
+     * Test to display expected population of the highest populated city in the world
+     * Reports - 20
+     * Author - Aidan
      */
-
     @Test
     void displayCapitalCities(){
         ArrayList<City> cities = new ArrayList<>();
@@ -239,7 +238,9 @@ public class AppTest {
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
-     * Test to display continent expected population - Report 18, Report 17
+     * Test to display continent expected population
+     * Reports - 18, 17
+     * Author - Aidan
      */
     @Test
     void DisplayCapitalCities() {
@@ -255,7 +256,9 @@ public class AppTest {
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
-    * Test to display Continent population report styled with % - Report 23
+    * Test to display Continent population report styled with %
+     * Reports - 23
+     * Author - LJ
     */
     @Test
     void displayContinentPopulation2(){
@@ -273,7 +276,9 @@ public class AppTest {
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
-     * Test to display Region population report styled with % - Report 24
+     * Test to display Region population report styled with %
+     * Reports - 24
+     * Author - LJ
      */
     @Test
     void getRegionPopulation2(){
@@ -292,10 +297,9 @@ public class AppTest {
 //--------------------------------------------------------------------------------------------------------------------//
     /**
      * Unit test for print extracted list of capital cities if null
-     * report 17
+     * Reports - 17
      * Author - AOB
      */
-
     @Test
     void displayCapitalCitiesTestNull() {
         City.displayCapitalCites(null);
@@ -304,24 +308,21 @@ public class AppTest {
 //--------------------------------------------------------------------------------------------------------------------//
     /**
      * Unit test for print extracted list of capital cities if empty
-     * report 17
+     * Reports - 17
      * Author - AOB
      */
-
     @Test
     void displayCapitalCitiesTestEmpty() {
         ArrayList<City> cities = new ArrayList<>();
         City.displayCapitalCites(cities);
     }
 
-
 //--------------------------------------------------------------------------------------------------------------------//
     /**
      * Unit test for print extracted list of capital cities if array item is null
-     * report 17
+     * Reports - 17
      * Author - AOB
      */
-
     @Test
     void displayCapitalCitiesTestContainsNull() {
         ArrayList<City> cities = new ArrayList<>();
@@ -330,9 +331,10 @@ public class AppTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
-     * Test to display region capital city expected population - Report 19
+     * Test to display region capital city expected population
+     * Reports - 19
+     * Author - Aidan
      */
     @Test
     void DisplayCapitalCitiesInRegion() {
@@ -346,6 +348,9 @@ public class AppTest {
 
         Population.displayCapitalCitesInRegion(cities);
     }
+
+//--------------------------------------------------------------------------------------------------------------------//
+
 }
 
 //--------------------------------------------------------------------------------------------------------------------//
