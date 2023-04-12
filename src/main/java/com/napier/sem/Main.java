@@ -1,6 +1,7 @@
 import com.napier.sem.*;
 
 //--------------------------------------------------------------------------------------------------------------------//
+
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -12,6 +13,7 @@ import java.sql.*;
 import static com.napier.sem.Population.continentPop;
 import static com.napier.sem.Population.getPopulation;
 //TODO: WHAT IS THIS?
+
 //--------------------------------------------------------------------------------------------------------------------//
 /**
  * The main class, used for menu and report selection
@@ -95,7 +97,7 @@ public class Main {
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 2 Finished, Returning to Main Menu...");
                     break;}
-                case 3:
+                case 3:{
                     System.out.println("Report 3 Selected");
                     System.out.println("please select a region");
                     String region1 = scanner.nextLine();
@@ -105,8 +107,8 @@ public class Main {
                     Country.printCountries(countries2);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 3 Finished, Returning to Main Menu...");
-                    break;
-                case 4:
+                    break;}
+                case 4:{
                     System.out.println("Report 4 Selected");
                     System.out.println("please select the number of rows to display top populated countries");
                     int num = scanner.nextInt();
@@ -118,8 +120,8 @@ public class Main {
                     Country.printCountries(countries3);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 4 Finished, Returning to Main Menu...");
-                    break;
-                case 5:
+                    break;}
+                case 5:{
                     System.out.println("Report 5 Selected");
                     System.out.println("please select the continent to select from");
                     String continent1 = scanner.nextLine();
@@ -133,8 +135,8 @@ public class Main {
                     Country.printCountries(countries4);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 5 Finished, Returning to Main Menu...");
-                    break;
-                case 6:
+                    break;}
+                case 6:{
                     System.out.println("Report 6 Selected");
                     System.out.println("please select the region to select from");
                     String continent2 = scanner.nextLine();
@@ -148,7 +150,7 @@ public class Main {
                     Country.printCountries(countries5);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 6 Finished, Returning to Main Menu...");
-                    break;
+                    break;}
                 case 7:{
                     System.out.println("Report 7 Selected");
                     System.out.println("Report 7 Selected, Displaying Countries with Languages... ");
@@ -187,7 +189,6 @@ public class Main {
                 case 10:{
                     System.out.println("Report 10 Selected");
                     System.out.println("please select a country");
-
                     String country = scanner.nextLine();
                     System.out.println("<|************************************************************************************|>");
                     // Getting city population by country
@@ -255,7 +256,7 @@ public class Main {
                     System.out.println("Report 14 Finished, Returning to Main Menu...");
                     scanner.nextLine();
                     break;}
-                case 15:
+                case 15:{
                     System.out.println("Report 15 Selected");
                     //get country and number of rows to select
                     System.out.println("please select the country to select from");
@@ -270,8 +271,8 @@ public class Main {
                     City.displayCites(cities1);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 15 Finished, Returning to Main Menu...");
-                    break;
-                case 16:
+                    break;}
+                case 16:{
                     System.out.println("Report 16 Selected");
                     //get country and number of rows to select
                     System.out.println("please select the district to select from");
@@ -286,8 +287,8 @@ public class Main {
                     City.displayCites(cities16);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 16 Finished, Returning to Main Menu...");
-                    break;
-                case 17:
+                    break;}
+                case 17:{
                     System.out.println("Report 17 Selected. Displaying All Capital Cities in the world.");
                     System.out.println("<|************************************************************************************|>");
                     // Extract country information
@@ -296,7 +297,7 @@ public class Main {
                     City.displayCapitalCites(cities17);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 17 Finished, Returning to Main Menu...");
-                    break;
+                    break;}
                 case 18:{
                     System.out.println("Report 18 Selected. Displaying all Capital Cities in a continent");
                     System.out.println("please select the the continent to select from");
@@ -309,7 +310,7 @@ public class Main {
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 18 Finished, Returning to Main Menu...");
                     break;}
-                case 19:
+                case 19:{
                     System.out.println("Report 19 Selected");
                     System.out.println("Report 19 Selected, Displaying Capital Cities in the Region...");
                     // Get region
@@ -323,7 +324,7 @@ public class Main {
                     Population.displayCapitalCitesInRegion(capitalCities);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 19 Finished, Returning to Main Menu...");
-                    break;
+                    break;}
                 case 20:{
                     System.out.println("Report 20 Selected");
                     System.out.println("Report 20 Selected, Displaying Top Populated Capital Cities in the World...");
@@ -470,7 +471,7 @@ public class Main {
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report Languages 2 Finished, Returning to Main Menu...");
                     break;}
-                case 32:
+                case 32:{
                     System.out.println("Report Languages 1 Selected, Displaying Countries with Languages... ");
                     System.out.println("<|************************************************************************************|>");
                     // Show all conuntry by language, greatest to smallest who speak it (Percentage)
@@ -479,11 +480,11 @@ public class Main {
                     Language.displayCountryLanguage1(LanguageReport1);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report Languages 1 Finished, Returning to Main Menu...");
-                    break;
-                case 33:
+                    break;}
+                case 33:{
                     System.out.println("Exit Report Program Selected, Have a nice day!");
                     quit = true;
-                    break;
+                    break;}
                 default:
                     System.out.println("Invalid Input, try again...");
                     break;

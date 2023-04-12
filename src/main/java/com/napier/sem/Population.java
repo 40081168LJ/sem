@@ -207,7 +207,6 @@ public class Population {
 
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * Displays City Populations
      * @param populations stores population
@@ -219,8 +218,7 @@ public class Population {
         }
 
         //Print header
-        System.out.printf("\n $s $s%n", "city ", "Population");
-        // TODO: Warning flagged here: "Too many arguments for format string (found 2, expected 0)"
+        System.out.printf("\n %s %s%n", "city ", "Population");
 
         for (Population population : populations) {
             if (population == null)
@@ -232,9 +230,7 @@ public class Population {
         }
     }
 
-
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * Used to get Country Populations
      * @param con connection to database
@@ -275,9 +271,7 @@ public class Population {
 
     }
 
-
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * Used to display populations of countries
      * @param populations used to store populations
@@ -300,9 +294,7 @@ public class Population {
             System.out.println(countriesString);
         }
 
-
     }
-
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
@@ -527,14 +519,13 @@ public class Population {
         }
     }
 
-    //--------------------------------------------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
     /**
      * Gets population of each Region.
      * Used for report 24
      * @param con connection to database
      * @return returns populations or null if fail
      */
-
     public static ArrayList<Population> getCountryPopulation2(Connection con) {
         try {
 
@@ -573,7 +564,7 @@ public class Population {
         }
     }
 
-    //--------------------------------------------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
     /**
      * Used to display Region populations. Used in report 24
      * @param populations Used to store populations
@@ -597,7 +588,6 @@ public class Population {
 
     }
 
-
 //--------------------------------------------------------------------------------------------------------------------//
     /**
      * Gets population of each Region.
@@ -605,7 +595,6 @@ public class Population {
      * @param con connection to database
      * @return returns populations or null if fail
      */
-
     public static ArrayList<Population> getRegionPopulation2(Connection con) {
         try {
 
@@ -645,7 +634,6 @@ public class Population {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * Used to get capitalCities from Continent
      * @param continentPop stores continent population
@@ -687,9 +675,7 @@ public class Population {
         }
     }
 
-
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * Gets top populated capital cities in a region - Used in report 19
      * @param regionPop stores region
@@ -731,7 +717,6 @@ public class Population {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * Displays Capital Cities In a Region Used in Report 19
      * @param capitalCities stores capital cities
@@ -756,6 +741,7 @@ public class Population {
         }
     }
 
+//--------------------------------------------------------------------------------------------------------------------//
 
 }
 
