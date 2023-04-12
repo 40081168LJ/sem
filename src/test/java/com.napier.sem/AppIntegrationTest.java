@@ -379,48 +379,48 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-//    /**
-//     * integration test for getting all capital cities in descending order - report 17
-//     */
-//    @Test
-//    public void getAllCapitalCities() {
-//        ArrayList<City> cities = City.getAllCapitalCities(app.con);
-//        //validates
-//        assertNotNull(cities);
-//        assertNotNull(cities.get(0).name);
-//        assertNotNull(cities.get(0).country);
-//        //removed NotNull for population variable as variable never Null
-//        //assertNotNull(cities.get(0).population);
-//    }
-//
-////--------------------------------------------------------------------------------------------------------------------//
-//    /** integration test for getting cities when given number of rows to select
-//     *  and a district - report 16
-//     */
-//    @Test
-//    public void getTopCitiesByDistrict() {
-//        ArrayList<City> cities = City.getTopCitiesByDistrict(5, "Noord-Holland",app.con);
-//        //validates
-//        assertNotNull(cities);
-//        assertNotNull(cities.get(0).name);
-//        assertNotNull(cities.get(0).country);
-//        assertNotNull(cities.get(0).district);
-//    }
-//
-////--------------------------------------------------------------------------------------------------------------------//
-//    /**
-//     * integration test for getting Country population report styled with % - Report 25
-//     */
-//    @Test
-//    public void getCountryPopulation2(){
-//        ArrayList<Population> countryPopulation = Population.getCountryPopulation2(app.con);
-//        assertNotNull(countryPopulation);
-//        assertNotNull(countryPopulation.get(0).country);
-//        assertNotNull(countryPopulation.get(0).inCities);
-//        assertNotNull(countryPopulation.get(0).outCities);
-//    }
-//
-////--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * integration test for getting all capital cities in descending order - report 17
+     */
+    @Test
+    public void getAllCapitalCities() {
+        ArrayList<City> cities = City.getAllCapitalCities(app.con);
+        //validates
+        assertNotNull(cities);
+        assertNotNull(cities.get(0).name);
+        assertNotNull(cities.get(0).country);
+        //removed NotNull for population variable as variable never Null
+        //assertNotNull(cities.get(0).population);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /** integration test for getting cities when given number of rows to select
+     *  and a district - report 16
+     */
+    @Test
+    public void getTopCitiesByDistrict() {
+        ArrayList<City> cities = City.getTopCitiesByDistrict(5, "Noord-Holland",app.con);
+        //validates
+        assertNotNull(cities);
+        assertNotNull(cities.get(0).name);
+        assertNotNull(cities.get(0).country);
+        assertNotNull(cities.get(0).district);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * integration test for getting Country population report styled with % - Report 25
+     */
+    @Test
+    public void getCountryPopulation2(){
+        ArrayList<Population> countryPopulation = Population.getCountryPopulation2(app.con);
+        assertNotNull(countryPopulation);
+        assertNotNull(countryPopulation.get(0).country);
+        assertNotNull(countryPopulation.get(0).inCities);
+        assertNotNull(countryPopulation.get(0).outCities);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
 
 }
 
