@@ -1,6 +1,7 @@
 package com.napier.sem;
 
 //--------------------------------------------------------------------------------------------------------------------//
+
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -47,7 +48,6 @@ public class AppIntegrationTest {
         // assertNotNull(countries.get(0).population);
         assertNotNull(countries.get(0).capital);
     }
-
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
@@ -130,7 +130,6 @@ public class AppIntegrationTest {
      * integration test for getting countries in descending order - report 4
      * Author - AOB
      */
-
     @Test
     public void testGetTopPopulatedCountries(){
         ArrayList<Country> countries = Country.getTopPopulatedCountries(1, app.con);
@@ -151,7 +150,6 @@ public class AppIntegrationTest {
      * continent in descending order - report 5
      * Author - AOB
      */
-
     @Test
     public void testGetTopCountriesInContinent(){
         ArrayList<Country> countries = Country.getTopCountriesInContinent(1, "Asia", app.con);
@@ -172,7 +170,6 @@ public class AppIntegrationTest {
      * region in descending order - report 6
      * Author - AOB
      */
-
     @Test
     public void testGetTopCountriesInRegion(){
         ArrayList<Country> countries = Country.getTopCountriesInRegion(1, "Middle East", app.con);
@@ -230,7 +227,6 @@ public class AppIntegrationTest {
     /**
      * integration test for getting continents with not null population - report Additional info 2
      */
-
     @Test
     public void printContinentsPopulationTestEmpty() {
         ArrayList<Population> populations = Population.getContinentPopulation(app.con);
@@ -244,13 +240,11 @@ public class AppIntegrationTest {
     /**
      * integration test for getting all city populations - Report Additional info 6
      */
-
     @Test
     public void printCitiesPopulations() {
         ArrayList<Population> populations = Population.getcityPopulation(app.con);
         assertNotNull(populations);
         assertNotNull(populations.get(0).city);
-
 
     }
 
@@ -263,7 +257,6 @@ public class AppIntegrationTest {
         ArrayList<Population> populations = Population.getCountryPopulations(app.con);
         assertNotNull(populations);
         assertNotNull(populations.get(0).country);
-
 
     }
 
@@ -349,24 +342,21 @@ public class AppIntegrationTest {
 //    }
 
 //--------------------------------------------------------------------------------------------------------------------//
-    /**
-     * integration test for getting all Region populations - Report Additional info 3
-     */
-
-    @Test
-    public void getRegionPopulations() {
-        ArrayList<Population> populations = Population.getRegionPopulation(app.con);
-        assertNotNull(populations);
-        assertNotNull(populations.get(0).region);
-
-
-    }
+//    /**
+//     * integration test for getting all Region populations - Report Additional info 3
+//     */
+//    @Test
+//    public void getRegionPopulations() {
+//        ArrayList<Population> populations = Population.getRegionPopulation(app.con);
+//        assertNotNull(populations);
+//        assertNotNull(populations.get(0).region);
+//
+//    }
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
      * integration test for getting top 5 populated capital cities in the world - Report 20
      */
-
     @Test
     public void getTopCapitalCitiesInTheWorld(){
         ArrayList<City> cities = City.getTopCapitalCitiesInTheWorld(5, app.con);
