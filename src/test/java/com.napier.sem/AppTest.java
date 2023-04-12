@@ -234,10 +234,8 @@ public class AppTest {
         city.population = 9981619;
         cities.add(city);
 
-        //TODO: CHECK THIS AS YOU ARE NOT CALLING "cities" BELOW
-        City.getTopCapitalCitiesInTheWorld(1, app.con);
+        City.displayCapitalCites(cities);
     }
-
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
@@ -333,6 +331,21 @@ public class AppTest {
 
 //--------------------------------------------------------------------------------------------------------------------//
 
+    /**
+     * Test to display region capital city expected population - Report 19
+     */
+    @Test
+    void DisplayCapitalCitiesInRegion() {
+        ArrayList<City> cities = new ArrayList<>();
+        City city = new City();
+        city.region = "Caribbean";
+        city.name = "La Habana";
+        city.country = "Cuba";
+        city.population = 2256000;
+        cities.add(city);
+
+        Population.displayCapitalCitesInRegion(cities);
+    }
 }
 
 //--------------------------------------------------------------------------------------------------------------------//
