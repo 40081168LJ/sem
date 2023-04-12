@@ -107,87 +107,87 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-//    /**
-//     * integration test for extract specific region countries - report 3
-//     * Author - AOB
-//     */
-//    @Test
-//    public void testGetRegionCountries() {
-//        ArrayList<Country> countries = Country.getRegionCountries("Middle East", app.con);
-//        //validates
-//        assertNotNull(countries);
-//        assertNotNull(countries.get(0).code);
-//        assertNotNull(countries.get(0).name);
-//        assertNotNull(countries.get(0).continent);
-//        assertNotNull(countries.get(0).region);
-//        //removed NotNull for population variable as variable never Null
-//        //assertNotNull(countries.get(0).population);
-//        assertNotNull(countries.get(0).capital);
-//    }
-//
-////--------------------------------------------------------------------------------------------------------------------//
-//    /**
-//     * integration test for getting countries in descending order - report 4
-//     * Author - AOB
-//     */
-//
-//    @Test
-//    public void testGetTopPopulatedCountries(){
-//        ArrayList<Country> countries = Country.getTopPopulatedCountries(1, app.con);
-//        //validates
-//        assertNotNull(countries);
-//        assertNotNull(countries.get(0).code);
-//        assertNotNull(countries.get(0).name);
-//        assertNotNull(countries.get(0).continent);
-//        assertNotNull(countries.get(0).region);
-//        //removed NotNull for population variable as variable never Null
-//        //assertNotNull(countries.get(0).population);
-//        assertNotNull(countries.get(0).capital);
-//    }
-//
-////--------------------------------------------------------------------------------------------------------------------//
-//    /**
-//     * integration test for getting given number of countries in given
-//     * continent in descending order - report 5
-//     * Author - AOB
-//     */
-//
-//    @Test
-//    public void testGetTopCountriesInContinent(){
-//        ArrayList<Country> countries = Country.getTopCountriesInContinent(1, "Asia", app.con);
-//        //validates
-//        assertNotNull(countries);
-//        assertNotNull(countries.get(0).code);
-//        assertNotNull(countries.get(0).name);
-//        assertNotNull(countries.get(0).continent);
-//        assertNotNull(countries.get(0).region);
-//        //removed NotNull for population variable as variable never Null
-//        //assertNotNull(countries.get(0).population);
-//        assertNotNull(countries.get(0).capital);
-//    }
-//
-////--------------------------------------------------------------------------------------------------------------------//
-//    /**
-//     * integration test for getting given number of countries in given
-//     * region in descending order - report 6
-//     * Author - AOB
-//     */
-//
-//    @Test
-//    public void testGetTopCountriesInRegion(){
-//        ArrayList<Country> countries = Country.getTopCountriesInRegion(1, "Middle East", app.con);
-//        //validates
-//        assertNotNull(countries);
-//        assertNotNull(countries.get(0).code);
-//        assertNotNull(countries.get(0).name);
-//        assertNotNull(countries.get(0).continent);
-//        assertNotNull(countries.get(0).region);
-//        //removed NotNull for population variable as variable never Null
-//        //assertNotNull(countries.get(0).population);
-//        assertNotNull(countries.get(0).capital);
-//    }
-//
-////--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * integration test for extract specific region countries - report 3
+     * Author - AOB
+     */
+    @Test
+    public void testGetRegionCountries() {
+        ArrayList<Country> countries = Country.getRegionCountries("Middle East", app.con);
+        //validates
+        assertNotNull(countries);
+        assertNotNull(countries.get(0).code);
+        assertNotNull(countries.get(0).name);
+        assertNotNull(countries.get(0).continent);
+        assertNotNull(countries.get(0).region);
+        //removed NotNull for population variable as variable never Null
+        //assertNotNull(countries.get(0).population);
+        assertNotNull(countries.get(0).capital);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * integration test for getting countries in descending order - report 4
+     * Author - AOB
+     */
+
+    @Test
+    public void testGetTopPopulatedCountries(){
+        ArrayList<Country> countries = Country.getTopPopulatedCountries(1, app.con);
+        //validates
+        assertNotNull(countries);
+        assertNotNull(countries.get(0).code);
+        assertNotNull(countries.get(0).name);
+        assertNotNull(countries.get(0).continent);
+        assertNotNull(countries.get(0).region);
+        //removed NotNull for population variable as variable never Null
+        //assertNotNull(countries.get(0).population);
+        assertNotNull(countries.get(0).capital);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * integration test for getting given number of countries in given
+     * continent in descending order - report 5
+     * Author - AOB
+     */
+
+    @Test
+    public void testGetTopCountriesInContinent(){
+        ArrayList<Country> countries = Country.getTopCountriesInContinent(1, "Asia", app.con);
+        //validates
+        assertNotNull(countries);
+        assertNotNull(countries.get(0).code);
+        assertNotNull(countries.get(0).name);
+        assertNotNull(countries.get(0).continent);
+        assertNotNull(countries.get(0).region);
+        //removed NotNull for population variable as variable never Null
+        //assertNotNull(countries.get(0).population);
+        assertNotNull(countries.get(0).capital);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * integration test for getting given number of countries in given
+     * region in descending order - report 6
+     * Author - AOB
+     */
+
+    @Test
+    public void testGetTopCountriesInRegion(){
+        ArrayList<Country> countries = Country.getTopCountriesInRegion(1, "Middle East", app.con);
+        //validates
+        assertNotNull(countries);
+        assertNotNull(countries.get(0).code);
+        assertNotNull(countries.get(0).name);
+        assertNotNull(countries.get(0).continent);
+        assertNotNull(countries.get(0).region);
+        //removed NotNull for population variable as variable never Null
+        //assertNotNull(countries.get(0).population);
+        assertNotNull(countries.get(0).capital);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
 //    /**
 //     * Test connection to database and to test getting world population
 //     * Used in additional_info 1 report
