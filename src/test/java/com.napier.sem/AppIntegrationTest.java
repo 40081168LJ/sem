@@ -302,17 +302,17 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-//    /** integration test for getting cities when given by region when given number of rows to select and a region
-//     */
-//    @Test
-//    public void getTopCitiesByRegion() {
-//        ArrayList<City> cities = City.getTopCitiesByRegion(5, "Caribbean", app.con);
-//        //validates
-//        assertNotNull(cities);
-//        assertNotNull(cities.get(0).name);
-//        assertNotNull(cities.get(0).country);
-//        assertNotNull(cities.get(0).district);
-//    }
+    /** integration test for getting cities when given by region when given number of rows to select and a region
+     */
+    @Test
+    public void getTopCitiesByRegion() {
+        ArrayList<City> cities = City.getTopCitiesByRegion(5, "Caribbean", app.con);
+        //validates
+        assertNotNull(cities);
+        assertNotNull(cities.get(0).name);
+        assertNotNull(cities.get(0).country);
+        assertNotNull(cities.get(0).district);
+    }
 
 //--------------------------------------------------------------------------------------------------------------------//
     /** integration test for getting cities when given by country when given number
@@ -330,28 +330,28 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-//    /**
-//     * integration test for getting all district populations - Report Additional info 5
-//     */
-//    @Test
-//    public void GetDistrictPopulations() {
-//        ArrayList<Population> populations = Population.getcityPopulation(app.con);
-//        assertNotNull(populations);
-//        assertNotNull(populations.get(0).district);
-//
-//    }
+    /**
+     * integration test for getting all district populations - Report Additional info 5
+     */
+    @Test
+    public void GetDistrictPopulations() {
+        ArrayList<Population> populations = Population.getcityPopulation(app.con);
+        assertNotNull(populations);
+        assertNotNull(populations.get(0).district);
+
+    }
 
 //--------------------------------------------------------------------------------------------------------------------//
-//    /**
-//     * integration test for getting all Region populations - Report Additional info 3
-//     */
-//    @Test
-//    public void getRegionPopulations() {
-//        ArrayList<Population> populations = Population.getRegionPopulation(app.con);
-//        assertNotNull(populations);
-//        assertNotNull(populations.get(0).region);
-//
-//    }
+    /**
+     * integration test for getting all Region populations - Report Additional info 3
+     */
+    @Test
+    public void getRegionPopulations() {
+        ArrayList<Population> populations = Population.getRegionPopulation(app.con);
+        assertNotNull(populations);
+        assertNotNull(populations.get(0).region);
+
+    }
 
 //--------------------------------------------------------------------------------------------------------------------//
 //    /**
