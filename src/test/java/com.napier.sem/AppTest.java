@@ -296,6 +296,25 @@ public class AppTest {
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
+     * Test to display country population report styled with % - Report 25
+     */
+    @Test
+    void getCountryPopulation2(){
+        ArrayList<Population> populations = new ArrayList<>();
+        Population population = new Population();
+        population.country = "spain";
+        population.population = 363665421;
+        population.inCities = "0.0571%";
+        population.outCities = "99.9429%";
+
+        populations.add(population);
+
+        Population.displayCountryPopulation2(populations);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
      * Unit test for print extracted list of capital cities if null
      * Reports - 17
      * Author - AOB

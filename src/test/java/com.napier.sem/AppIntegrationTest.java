@@ -420,7 +420,20 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * integration test for getting Country population report styled with % - Report 25
+     */
+    @Test
+    public void getCountryPopulation2(){
+        ArrayList<Population> countryPopulation = Population.getCountryPopulation2(app.con);
+        assertNotNull(countryPopulation);
+        assertNotNull(countryPopulation.get(0).country);
+        assertNotNull(countryPopulation.get(0).inCities);
+        assertNotNull(countryPopulation.get(0).outCities);
+    }
 
+//--------------------------------------------------------------------------------------------------------------------//
 }
 
 //--------------------------------------------------------------------------------------------------------------------//
