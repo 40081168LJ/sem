@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - CodeCov Test - Report 1" />
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - CodeCov Test - Report 10" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -331,20 +331,6 @@
       <workItem from="1675180857391" duration="3618000" />
       <workItem from="1676360482399" duration="1826000" />
       <workItem from="1676382680779" duration="521000" />
-    </task>
-    <task id="LOCAL-00006" summary="SL - updating github actions">
-      <created>1675776021350</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1675776021350</updated>
-    </task>
-    <task id="LOCAL-00007" summary="SL - sql integration">
-      <created>1676385054064</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1676385054065</updated>
     </task>
     <task id="LOCAL-00008" summary="SL - added docker-compose file">
       <created>1676386488222</created>
@@ -675,7 +661,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681334870282</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="LJ - CodeCov Test - Report 7">
+      <created>1681335074786</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1681335074786</updated>
+    </task>
+    <task id="LOCAL-00056" summary="LJ - CodeCov Test - Report 10">
+      <created>1681335251599</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1681335251599</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -693,8 +693,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="AOB - added commenting" />
-    <MESSAGE value="AOB - main.yml changes" />
     <MESSAGE value="AOB - git Action changes" />
     <MESSAGE value="AOB - file name changes" />
     <MESSAGE value="AOB - integration tests update" />
@@ -718,7 +716,9 @@
     <MESSAGE value="LJ - CodeCov, attempt2." />
     <MESSAGE value="LJ - Merged all reports and checked layout." />
     <MESSAGE value="LJ - CodeCov Test - Report 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="LJ - CodeCov Test - Report 1" />
+    <MESSAGE value="LJ - CodeCov Test - Report 7" />
+    <MESSAGE value="LJ - CodeCov Test - Report 10" />
+    <option name="LAST_COMMIT_MESSAGE" value="LJ - CodeCov Test - Report 10" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

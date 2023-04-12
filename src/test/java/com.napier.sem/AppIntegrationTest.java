@@ -76,37 +76,37 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-//    /**
-//     * integration test for extract specific continent countries applies to report 18 as well
-//     * integration test for extract specific continent countries - report 2
-//     * Author - AOB
-//     */
-//    @Test
-//    public void testGetContinentCountries() {
-//        ArrayList<Country> countries = Country.getContinentCountries("Europe", app.con);
-//        assertNotNull(countries);
-//        assertNotNull(countries.get(0).code);
-//        assertNotNull(countries.get(0).name);
-//        assertNotNull(countries.get(0).continent);
-//        assertNotNull(countries.get(0).region);
-//        //removed NotNull for population variable as variable never Null
-//        //assertNotNull(countries.get(0).population);
-//        assertNotNull(countries.get(0).capital);
-//    }
-//
-////--------------------------------------------------------------------------------------------------------------------//
-//    /**
-//     * integration test for extract specific continent countries applies to report 18 as well
-//     * Author - AOB
-//     */
-//    @Test
-//    public void testGetCapitalCities() {
-//        ArrayList<City> capitalCities = Population.getTopCapitalCitiesByContinent("Africa", app.con);
-//        assertNotNull(capitalCities);
-//        assertNotNull(capitalCities.get(0).name);
-//    }
-//
-////--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * integration test for extract specific continent countries applies to report 18 as well
+     * integration test for extract specific continent countries - report 2
+     * Author - AOB
+     */
+    @Test
+    public void testGetContinentCountries() {
+        ArrayList<Country> countries = Country.getContinentCountries("Europe", app.con);
+        assertNotNull(countries);
+        assertNotNull(countries.get(0).code);
+        assertNotNull(countries.get(0).name);
+        assertNotNull(countries.get(0).continent);
+        assertNotNull(countries.get(0).region);
+        //removed NotNull for population variable as variable never Null
+        //assertNotNull(countries.get(0).population);
+        assertNotNull(countries.get(0).capital);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * integration test for extract specific continent countries applies to report 18 as well
+     * Author - AOB
+     */
+    @Test
+    public void testGetCapitalCities() {
+        ArrayList<City> capitalCities = Population.getTopCapitalCitiesByContinent("Africa", app.con);
+        assertNotNull(capitalCities);
+        assertNotNull(capitalCities.get(0).name);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
 //    /**
 //     * integration test for extract specific region countries - report 3
 //     * Author - AOB
