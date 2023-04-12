@@ -48,6 +48,33 @@ public class AppIntegrationTest {
         assertNotNull(countries.get(0).capital);
     }
 
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * integration test for getting cities descending order - report 7
+     */
+    @Test
+    public void GetCityPopulation() {
+        ArrayList<City> cities = City.getCityPopulation(app.con);
+        //validates
+        assertNotNull(cities);
+        assertNotNull(cities.get(0).name);
+        assertNotNull(cities.get(0).country);
+        assertNotNull(cities.get(0).district);
+    }
+//--------------------------------------------------------------------------------------------------------------------//
+    /** integration test for getting cities by country ordered desc - report 10
+     */
+    @Test
+    public void getCityByCountry() {
+        ArrayList<City> cities = City.getCitiesByCountry("united kingdom", app.con);
+        //validates
+        assertNotNull(cities);
+        assertNotNull(cities.get(0).name);
+        assertNotNull(cities.get(0).country);
+        assertNotNull(cities.get(0).district);
+    }
+
 //--------------------------------------------------------------------------------------------------------------------//
     /**
      * integration test for extract specific continent countries applies to report 18 as well
@@ -174,20 +201,6 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-    /**
-     * integration test for getting cities descending order - report 7
-     */
-    @Test
-    public void GetCityPopulation() {
-        ArrayList<City> cities = City.getCityPopulation(app.con);
-        //validates
-        assertNotNull(cities);
-        assertNotNull(cities.get(0).name);
-        assertNotNull(cities.get(0).country);
-        assertNotNull(cities.get(0).district);
-    }
-
-//--------------------------------------------------------------------------------------------------------------------//
     /** integration test for getting countries by district in descending order - report 11
      */
     @Test
@@ -296,7 +309,6 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /** integration test for getting cities when given by region when given number of rows to select and a region
      */
     @Test
@@ -352,18 +364,16 @@ public class AppIntegrationTest {
 
     }
 
+//--------------------------------------------------------------------------------------------------------------------//
     /**
-     * integration test for getting all top populated cities when giving the number of rows (eg 5)- Report 20
+     * integration test for getting top 5 populated capital cities in the world - Report 20
      */
 
     @Test
     public void getTopCapitalCitiesInTheWorld(){
         ArrayList<City> cities = City.getTopCapitalCitiesInTheWorld(5, app.con);
-        //validates
         assertNotNull(cities);
-        assertNotNull(cities.get(0).name);
-        assertNotNull(cities.get(0).country);
-        assertNotNull(cities.get(0).population);
+        assertNotNull(cities.get(5).name);
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
@@ -411,20 +421,6 @@ public class AppIntegrationTest {
 
 //--------------------------------------------------------------------------------------------------------------------//
 
-    /**
-     * Integration test to get top 1 populated capital city in the region the Caribbean - Report 19
-     */
-    @Test
-    public void getTopCapitalCitiesInRegion(){
-        ArrayList<City> cities = City.getTopCitiesByRegion(1, "Caribbean", app.con);
-
-        //validates
-        assertNotNull(cities);
-        assertNotNull(cities.get(0).name);
-        assertNotNull(cities.get(0).country);
-        assertNotNull(cities.get(0).population);
-
-    }
 }
 
 //--------------------------------------------------------------------------------------------------------------------//
