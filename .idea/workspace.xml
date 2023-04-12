@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - Uncommented AppIntegrationTest for merging branches.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Population.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Population.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppIntegrationTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - CodeCov Test - Report 1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -336,20 +331,6 @@
       <workItem from="1675180857391" duration="3618000" />
       <workItem from="1676360482399" duration="1826000" />
       <workItem from="1676382680779" duration="521000" />
-    </task>
-    <task id="LOCAL-00004" summary="SL - fixed issues with mongodb support">
-      <created>1675774733594</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1675774733594</updated>
-    </task>
-    <task id="LOCAL-00005" summary="SL - got mongodb working">
-      <created>1675775881613</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1675775881613</updated>
     </task>
     <task id="LOCAL-00006" summary="SL - updating github actions">
       <created>1675776021350</created>
@@ -680,7 +661,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681248314439</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="LJ - Merged all reports and checked layout.">
+      <created>1681334754155</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1681334754155</updated>
+    </task>
+    <task id="LOCAL-00054" summary="LJ - CodeCov Test - Report 1">
+      <created>1681334870282</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1681334870282</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -698,8 +693,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="SL - fixed test file structure&#10;fixed getWorldPopulation methods and added testing" />
-    <MESSAGE value="AOB - report 1,2,3 tests" />
     <MESSAGE value="AOB - added commenting" />
     <MESSAGE value="AOB - main.yml changes" />
     <MESSAGE value="AOB - git Action changes" />
@@ -723,7 +716,9 @@
     <MESSAGE value="LJ - Updated .xml and .yml files as per Lab08." />
     <MESSAGE value="LJ - CodeCov, attempt1." />
     <MESSAGE value="LJ - CodeCov, attempt2." />
-    <option name="LAST_COMMIT_MESSAGE" value="LJ - CodeCov, attempt2." />
+    <MESSAGE value="LJ - Merged all reports and checked layout." />
+    <MESSAGE value="LJ - CodeCov Test - Report 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="LJ - CodeCov Test - Report 1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

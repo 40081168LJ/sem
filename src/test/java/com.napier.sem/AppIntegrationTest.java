@@ -49,20 +49,20 @@ public class AppIntegrationTest {
     }
 
 
-////--------------------------------------------------------------------------------------------------------------------//
-//    /**
-//     * integration test for getting cities descending order - report 7
-//     */
-//    @Test
-//    public void GetCityPopulation() {
-//        ArrayList<City> cities = City.getCityPopulation(app.con);
-//        //validates
-//        assertNotNull(cities);
-//        assertNotNull(cities.get(0).name);
-//        assertNotNull(cities.get(0).country);
-//        assertNotNull(cities.get(0).district);
-//    }
-////--------------------------------------------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * integration test for getting cities descending order - report 7
+     */
+    @Test
+    public void GetCityPopulation() {
+        ArrayList<City> cities = City.getCityPopulation(app.con);
+        //validates
+        assertNotNull(cities);
+        assertNotNull(cities.get(0).name);
+        assertNotNull(cities.get(0).country);
+        assertNotNull(cities.get(0).district);
+    }
+//--------------------------------------------------------------------------------------------------------------------//
 //    /** integration test for getting cities by country ordered desc - report 10
 //     */
 //    @Test
