@@ -227,88 +227,88 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-//    /**
-//     * integration test for getting continents with not null population - report Additional info 2
-//     */
-//
-//    @Test
-//    public void printContinentsPopulationTestEmpty() {
-//        ArrayList<Population> populations = Population.getContinentPopulation(app.con);
-//
-//        assertNotNull(populations);
-//        assertNotNull(populations.get(0).continent);
-//
-//    }
-//
-////--------------------------------------------------------------------------------------------------------------------//
-//    /**
-//     * integration test for getting all city populations - Report Additional info 6
-//     */
-//
-//    @Test
-//    public void printCitiesPopulations() {
-//        ArrayList<Population> populations = Population.getcityPopulation(app.con);
-//        assertNotNull(populations);
-//        assertNotNull(populations.get(0).city);
-//
-//
-//    }
-//
-////--------------------------------------------------------------------------------------------------------------------//
-//    /**
-//     * integration test for getting all country populations - Report Additional info 4
-//     */
-//    @Test
-//    public void GetCountriesPopulations() {
-//        ArrayList<Population> populations = Population.getCountryPopulations(app.con);
-//        assertNotNull(populations);
-//        assertNotNull(populations.get(0).country);
-//
-//
-//    }
-//
-////----------------------------------------------------------------------------------------------------------------//
-//    /**
-//     * integration test for getting cities descending order - report 8
-//     */
-//    @Test
-//    public void GetCityPopulationByContinent() {
-//        ArrayList<City> cities = City.getCityPopulationByContinent("Europe", app.con);
-//        //validates
-//        assertNotNull(cities);
-//        assertNotNull(cities.get(0).name);
-//        assertNotNull(cities.get(0).country);
-//        assertNotNull(cities.get(0).district);
-//    }
-//
-////--------------------------------------------------------------------------------------------------------------------//
-//    /**
-//     * integration test for getting countries descending order - report 12
-//     */
-//    @Test
-//    public void getTopPopulatedCities() {
-//        ArrayList<City> cities = City.getTopPopulatedCities(1, app.con);
-//        //validates
-//        assertNotNull(cities);
-//        assertNotNull(cities.get(0).name);
-//        assertNotNull(cities.get(0).country);
-//        assertNotNull(cities.get(0).district);
-//    }
-//
-////--------------------------------------------------------------------------------------------------------------------//
-//    /** integration test to get cities by continent when given continent and number of rows to select - report 13
-//     */
-//    @Test
-//    public void getTopCitiesByContinent() {
-//        ArrayList<City> cities = City.getTopCitiesByContinent(5,"europe", app.con);
-//        //validates
-//        assertNotNull(cities);
-//        assertNotNull(cities.get(4).name); //checks data in row 5 is in range and not null
-//        assertNotNull(cities.get(4).country);
-//        assertNotNull(cities.get(4).district);
-//    }
-//
-////--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * integration test for getting continents with not null population - report Additional info 2
+     */
+
+    @Test
+    public void printContinentsPopulationTestEmpty() {
+        ArrayList<Population> populations = Population.getContinentPopulation(app.con);
+
+        assertNotNull(populations);
+        assertNotNull(populations.get(0).continent);
+
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * integration test for getting all city populations - Report Additional info 6
+     */
+
+    @Test
+    public void printCitiesPopulations() {
+        ArrayList<Population> populations = Population.getcityPopulation(app.con);
+        assertNotNull(populations);
+        assertNotNull(populations.get(0).city);
+
+
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * integration test for getting all country populations - Report Additional info 4
+     */
+    @Test
+    public void GetCountriesPopulations() {
+        ArrayList<Population> populations = Population.getCountryPopulations(app.con);
+        assertNotNull(populations);
+        assertNotNull(populations.get(0).country);
+
+
+    }
+
+//----------------------------------------------------------------------------------------------------------------//
+    /**
+     * integration test for getting cities descending order - report 8
+     */
+    @Test
+    public void GetCityPopulationByContinent() {
+        ArrayList<City> cities = City.getCityPopulationByContinent("Europe", app.con);
+        //validates
+        assertNotNull(cities);
+        assertNotNull(cities.get(0).name);
+        assertNotNull(cities.get(0).country);
+        assertNotNull(cities.get(0).district);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * integration test for getting countries descending order - report 12
+     */
+    @Test
+    public void getTopPopulatedCities() {
+        ArrayList<City> cities = City.getTopPopulatedCities(1, app.con);
+        //validates
+        assertNotNull(cities);
+        assertNotNull(cities.get(0).name);
+        assertNotNull(cities.get(0).country);
+        assertNotNull(cities.get(0).district);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /** integration test to get cities by continent when given continent and number of rows to select - report 13
+     */
+    @Test
+    public void getTopCitiesByContinent() {
+        ArrayList<City> cities = City.getTopCitiesByContinent(5,"europe", app.con);
+        //validates
+        assertNotNull(cities);
+        assertNotNull(cities.get(4).name); //checks data in row 5 is in range and not null
+        assertNotNull(cities.get(4).country);
+        assertNotNull(cities.get(4).district);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
 //    /** integration test for getting cities when given by region when given number of rows to select and a region
 //     */
 //    @Test
