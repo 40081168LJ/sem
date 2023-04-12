@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - CodeCov Test - Report 10" />
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - CodeCov Test - Report 3 + 4 + 5 + 6&#10;(From line 110 Up to line 190)">
+      <change beforePath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppIntegrationTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -331,20 +333,6 @@
       <workItem from="1675180857391" duration="3618000" />
       <workItem from="1676360482399" duration="1826000" />
       <workItem from="1676382680779" duration="521000" />
-    </task>
-    <task id="LOCAL-00008" summary="SL - added docker-compose file">
-      <created>1676386488222</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1676386488222</updated>
-    </task>
-    <task id="LOCAL-00009" summary="SL - added disconnect and connect methods">
-      <created>1677091606814</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1677091606814</updated>
     </task>
     <task id="LOCAL-00010" summary="SL - added employee class with related employee methods">
       <created>1677255219345</created>
@@ -675,7 +663,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681335251599</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="LJ - CodeCov Test - Report 18 + 2&#10;(From line 79 Up to line 109)">
+      <created>1681335425936</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1681335425936</updated>
+    </task>
+    <task id="LOCAL-00058" summary="LJ - CodeCov Test - Report 3 + 4 + 5 + 6&#10;(From line 110 Up to line 190)">
+      <created>1681335598208</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1681335598208</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -693,8 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="AOB - git Action changes" />
-    <MESSAGE value="AOB - file name changes" />
     <MESSAGE value="AOB - integration tests update" />
     <MESSAGE value="AOB - codecov token uncomment" />
     <MESSAGE value="AOB - main.yml branches added" />
@@ -718,7 +718,9 @@
     <MESSAGE value="LJ - CodeCov Test - Report 1" />
     <MESSAGE value="LJ - CodeCov Test - Report 7" />
     <MESSAGE value="LJ - CodeCov Test - Report 10" />
-    <option name="LAST_COMMIT_MESSAGE" value="LJ - CodeCov Test - Report 10" />
+    <MESSAGE value="LJ - CodeCov Test - Report 18 + 2&#10;(From line 79 Up to line 109)" />
+    <MESSAGE value="LJ - CodeCov Test - Report 3 + 4 + 5 + 6&#10;(From line 110 Up to line 190)" />
+    <option name="LAST_COMMIT_MESSAGE" value="LJ - CodeCov Test - Report 3 + 4 + 5 + 6&#10;(From line 110 Up to line 190)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
