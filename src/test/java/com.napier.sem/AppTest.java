@@ -46,6 +46,7 @@ public class AppTest {
 
     /**
      * Unit test for print extracted list of countries if null
+     * reports 1,2,3,4,5,6
      * Author - AOB
      */
     @Test
@@ -57,6 +58,7 @@ public class AppTest {
 
     /**
      * Unit test for print extracted list of countries if empty
+     * reports 1,2,3,4,5,6
      * Author - AOB
      */
     @Test
@@ -69,6 +71,7 @@ public class AppTest {
 
     /**
      * Unit test for print extracted list of countries if array item is null
+     * reports 1,2,3,4,5,6
      * Author - AOB
      */
     @Test
@@ -82,6 +85,7 @@ public class AppTest {
 
     /**
      * Unit test for extract list of countries with country object variables present
+     * reports 1,2,3,4,5,6
      * Author - AOB
      */
     @Test
@@ -102,7 +106,7 @@ public class AppTest {
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
-     * tests displaying cities with an empty object - report 7, 8, 9
+     * tests displaying cities with an empty object - report 7, 8, 9, 15, 16
      */
     @Test
     void DisplayCitiesTestEmpty() {
@@ -113,7 +117,7 @@ public class AppTest {
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
-     * tests passing city expected values - report 7, 8, 9
+     * tests passing city expected values - report 7, 8, 9, 15, 16
      */
     @Test
     void DisplayCities() {
@@ -218,6 +222,41 @@ public class AppTest {
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
+     * Test to display expected population of the highest populated city in the world - Report 20
+     */
+
+    @Test
+    void displayCapitalCities(){
+        ArrayList<City> cities = new ArrayList<>();
+        City city = new City();
+        city.name = "Seoul";
+        city.country = "South Korea";
+        city.population = 9981619;
+        cities.add(city);
+
+        //TODO: CHECK THIS AS YOU ARE NOT CALLING "cities" BELOW
+        City.getTopCapitalCitiesInTheWorld(1, app.con);
+    }
+
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Test to display continent expected population - Report 18, Report 17
+     */
+    @Test
+    void DisplayCapitalCities() {
+        ArrayList<City> cities = new ArrayList<>();
+        City city = new City();
+        city.name = "Cairo";
+        city.country = "Egypt";
+        city.population = 6789479;
+        cities.add(city);
+
+        City.displayCapitalCites(cities);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
     * Test to display Continent population report styled with % - Report 23
     */
     @Test
@@ -250,6 +289,46 @@ public class AppTest {
         populations.add(population);
 
         Population.displayRegionPopulation2(populations);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Unit test for print extracted list of capital cities if null
+     * report 17
+     * Author - AOB
+     */
+
+    @Test
+    void displayCapitalCitiesTestNull() {
+        City.displayCapitalCites(null);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Unit test for print extracted list of capital cities if empty
+     * report 17
+     * Author - AOB
+     */
+
+    @Test
+    void displayCapitalCitiesTestEmpty() {
+        ArrayList<City> cities = new ArrayList<>();
+        City.displayCapitalCites(cities);
+    }
+
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Unit test for print extracted list of capital cities if array item is null
+     * report 17
+     * Author - AOB
+     */
+
+    @Test
+    void displayCapitalCitiesTestContainsNull() {
+        ArrayList<City> cities = new ArrayList<>();
+        cities.add(null);
+        City.displayCapitalCites(cities);
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
