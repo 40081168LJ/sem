@@ -197,7 +197,7 @@ public class Main {
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 10 Finished, Returning to Main Menu...");
                     break;}
-                case 11:
+                case 11:{
                     System.out.println("Report 11 Selected");
                     System.out.println("please select a district");
                     String district = scanner.nextLine();
