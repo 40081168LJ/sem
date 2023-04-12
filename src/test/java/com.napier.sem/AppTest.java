@@ -235,10 +235,8 @@ public class AppTest {
         city.population = 9981619;
         cities.add(city);
 
-        //TODO: CHECK THIS AS YOU ARE NOT CALLING "cities" BELOW
-        City.getTopCapitalCitiesInTheWorld(1, app.con);
+        City.displayCapitalCites(cities);
     }
-
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
@@ -311,7 +309,7 @@ public class AppTest {
         city.population = 2256000;
         cities.add(city);
 
-        City.displayCapitalCites(cities);
+        Population.displayCapitalCitesInRegion(cities);
     }
 }
 

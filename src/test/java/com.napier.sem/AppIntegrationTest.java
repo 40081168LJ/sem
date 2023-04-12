@@ -412,11 +412,11 @@ public class AppIntegrationTest {
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
-     * Integration test to get top 1 populated capital city in the region the Carribean - Report 19
+     * Integration test to get top 1 populated capital city in the region the Caribbean - Report 19
      */
     @Test
     public void getTopCapitalCitiesInRegion(){
-        ArrayList<City> cities = City.getTopCitiesByRegion(1, "Carribean", app.con);
+        ArrayList<City> cities = City.getTopCitiesByRegion(1, "Caribbean", app.con);
 
         //validates
         assertNotNull(cities);
