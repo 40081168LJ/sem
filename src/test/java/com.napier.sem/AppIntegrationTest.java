@@ -188,45 +188,45 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-//    /**
-//     * Test connection to database and to test getting world population
-//     * Used in additional_info 1 report
-//     */
-//    @Test
-//    public void GetWorldPopulation() {
-//        Population pop = Population.getPopulation(app.con);
-//        //validates
-//        assertNotNull(pop);
-//        assertNotEquals(0, pop.population);
-//    }
-//
-////--------------------------------------------------------------------------------------------------------------------//
-//    /** integration test for getting countries by district in descending order - report 11
-//     */
-//    @Test
-//    public void getCityByDistrict() {
-//        ArrayList<City> cities = City.getCityPopulationByDistrict("Noord-Holland",app.con);
-//        //validates
-//        assertNotNull(cities);
-//        assertNotNull(cities.get(0).name);
-//        assertNotNull(cities.get(0).country);
-//        assertNotNull(cities.get(0).district);
-//    }
-//
-////--------------------------------------------------------------------------------------------------------------------//
-//    /** integration test for getting countries descending order - report 9
-//     */
-//    @Test
-//    public void getCityByRegion() {
-//        ArrayList<City> cities = City.getCityPopulationByRegion("Caribbean", app.con);
-//        //validates not null
-//        assertNotNull(cities);
-//        assertNotNull(cities.get(0).name);
-//        assertNotNull(cities.get(0).country);
-//        assertNotNull(cities.get(0).district);
-//    }
-//
-////--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Test connection to database and to test getting world population
+     * Used in additional_info 1 report
+     */
+    @Test
+    public void GetWorldPopulation() {
+        Population pop = Population.getPopulation(app.con);
+        //validates
+        assertNotNull(pop);
+        assertNotEquals(0, pop.population);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /** integration test for getting countries by district in descending order - report 11
+     */
+    @Test
+    public void getCityByDistrict() {
+        ArrayList<City> cities = City.getCityPopulationByDistrict("Noord-Holland",app.con);
+        //validates
+        assertNotNull(cities);
+        assertNotNull(cities.get(0).name);
+        assertNotNull(cities.get(0).country);
+        assertNotNull(cities.get(0).district);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /** integration test for getting countries descending order - report 9
+     */
+    @Test
+    public void getCityByRegion() {
+        ArrayList<City> cities = City.getCityPopulationByRegion("Caribbean", app.con);
+        //validates not null
+        assertNotNull(cities);
+        assertNotNull(cities.get(0).name);
+        assertNotNull(cities.get(0).country);
+        assertNotNull(cities.get(0).district);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
 //    /**
 //     * integration test for getting continents with not null population - report Additional info 2
 //     */
