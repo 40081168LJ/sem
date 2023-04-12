@@ -32,14 +32,27 @@ public class Population {
 
     public String country;
 
+    /**
+     * Stores District
+     */
 
+    public String district;
 
+    /**
+     * Stores Region
+     */
+
+    public String region;
+
+    public static String continentPop;
+
+    public String name;
 
 //--------------------------------------------------------------------------------------------------------------------//
 
     /**
      * Create an SQL Statement to get world population
-     * *  Used in additional_info 1 report
+     * Used in additional_info 1 report
      **/
     public static Population getPopulation(Connection con) {
         try {
@@ -62,7 +75,6 @@ public class Population {
 
     /**
      * Displays world population
-     *
      * @param population stores population
      */
     public static void displayPopulation(Population population) {
@@ -77,7 +89,6 @@ public class Population {
     /**
      * Gets population of each Continent.
      * Used for additional report 2
-     *
      * @param con connection to database
      * @return returns populations or null if fail
      */
@@ -120,7 +131,6 @@ public class Population {
 
     /**
      * Displays population of each continent
-     *
      * @param populations stores population
      */
     public static void displayContinentPopulations(ArrayList<Population> populations) {
@@ -146,7 +156,6 @@ public class Population {
 
     /**
      * Used to get population of a city. Used in Additional info 6 - report 31
-     *
      * @param con connection to database
      * @return returns population or null if fail
      */
@@ -190,7 +199,6 @@ public class Population {
 
     /**
      * Displays City Populations
-     *
      * @param populations stores population
      */
     public static void displayCityPopulations(ArrayList<Population> populations) {
@@ -201,6 +209,7 @@ public class Population {
 
         //Print header
         System.out.printf("\n $s $s%n", "city ", "Population");
+        // TODO: Warning flagged here: "Too many arguments for format string (found 2, expected 0)"
 
         for (Population population : populations) {
             if (population == null)
@@ -283,4 +292,324 @@ public class Population {
 
     }
 
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Used to get populations of districts used in report 30 - Additional info 5
+     * @param con database connection
+     * @return returns populations
+     */
+    public static ArrayList<Population> getDistrictPopulation(Connection con) {
+        try {
+
+            Statement stmt = con.createStatement();
+
+            //Create string for sql statement
+            String strSelect =
+                    "(SELECT District, SUM(Population)"
+                            + " FROM city"
+                            + " GROUP BY District)";
+
+            //Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            //Extract population information
+            ArrayList<Population> populations = new ArrayList<>();
+
+            //Get values to be displayed
+            while (rset.next()) {
+
+                Population population = new Population();
+                population.population = rset.getLong("SUM(Population)");
+                population.district = rset.getString("District");
+                populations.add(population);
+            }
+            return populations;
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get populations of Districts.");
+            return null;
+        }
+
+    }
+
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Used to display districts populations. Used in report 30 Additional info 5
+     * @param populations Used to store populations
+     */
+    public static void displayDistrictPopulations(ArrayList<Population> populations) {
+        if (populations == null) {
+            System.out.println("Populations of Districts could not be displayed");
+            return;
+        }
+        //Print header
+        System.out.printf("\n %s %s%n", "District", "Population");
+
+        for (Population population : populations) {
+            if (population == null)
+                continue;
+            String DistrictsString =
+                    String.format("%s %s ", population.district, population.population);
+
+            System.out.println(DistrictsString);
+        }
+
+    }
+
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Used to get populations of Regions used in report 38 - Additional info 3
+     * @param con database connection
+     * @return returns populations
+     */
+    public static ArrayList<Population> getRegionPopulation(Connection con) {
+        try {
+
+            Statement stmt = con.createStatement();
+
+            //Create string for sql statement
+            String strSelect =
+                    "(SELECT Region, SUM(Population)"
+                            + " FROM country"
+                            + " GROUP BY Region)";
+
+            //Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            //Extract population information
+            ArrayList<Population> populations = new ArrayList<>();
+
+            //Get values to be displayed
+            while (rset.next()) {
+
+                Population population = new Population();
+                population.population = rset.getLong("SUM(Population)");
+                population.region = rset.getString("Region");
+                populations.add(population);
+            }
+            return populations;
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get populations of Regions.");
+            return null;
+        }
+
+    }
+
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Used to display Region populations. Used in report 24 Additional info 3
+     * @param populations Used to store populations
+     */
+    public static void displayRegionPopulation(ArrayList<Population> populations) {
+        if (populations == null) {
+            System.out.println("Populations of Regions could not be displayed");
+            return;
+        }
+        //Print header
+        System.out.printf("\n %s %s%n", "Region", "Population");
+
+        for (Population population : populations) {
+            if (population == null)
+                continue;
+            String regionsString =
+                    String.format("%s %s ", population.region, population.population);
+
+            System.out.println(regionsString);
+        }
+
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Gets population of each Continent.
+     * Used for report 23
+     * @param con connection to database
+     * @return returns populations or null if fail
+     */
+
+    public static ArrayList<Population> getContinentPopulation2(Connection con) {
+        try {
+
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "(SELECT Continent, SUM(Population)"
+                            + " FROM country"
+                            + " GROUP BY Continent)";
+
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // Extract Language information
+            ArrayList<Population> populations = new ArrayList<>();
+
+            //
+            while (rset.next()) {
+
+                Population population = new Population();
+                population.population = rset.getLong("SUM(Population)");
+                population.continent = rset.getString("Continent");
+                populations.add(population);
+            }
+            return populations;
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get populations of Continents.");
+            return null;
+        }
+    }
+
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Displays population of each continent for Report 23
+     * @param populations stores population
+     */
+    public static void displayContinentPopulation2(ArrayList<Population> populations) {
+        if (populations == null) {
+            System.out.println("Populations of continents could now be displayed");
+            return;
+        }
+        //Print header
+        System.out.printf("\n %s %s%n", "Continent", "Population");
+
+        for (Population population : populations) {
+            if (population == null)
+                continue;
+            String continentsString =
+                    String.format("%s %s ", population.continent, population.population);
+
+            System.out.println(continentsString);
+        }
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Used to get capitalCities from Continent
+     * @param continentPop stores continent population
+     * @param con connection to database
+     * @return returns capitalCities
+     */
+    public static ArrayList<City> getTopCapitalCitiesByContinent(String continentPop, Connection con) {
+        try {
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT city.Name, country.Name, city.Population " +
+                            "FROM country " +
+                            "JOIN city " +
+                            "ON city.countrycode = country.Code " +
+                            "WHERE city.id IN (SELECT Capital FROM country)" +
+                            "AND country.Continent LIKE \"%" + continentPop + "%\" " +
+                            "ORDER BY city.population DESC ";
+
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // Extract city information
+            ArrayList<City> capitalCities = new ArrayList<>();
+
+            //adds each city to cities
+            while (rset.next()) {
+                City city = new City();
+                city.name = rset.getString("city.Name");
+                city.country = rset.getString("country.Name");
+                city.population = rset.getInt("city.Population");
+                capitalCities.add(city);
+            }
+            return capitalCities;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get capital city details");
+            return null;
+        }
+    }
+
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Gets top populated capital cities in a region - Used in report 19
+     * @param regionPop stores region
+     * @param con Database Connection
+     * @return return capital cities
+     */
+    public static ArrayList<City> getTopCapitalCitiesInRegion( String regionPop, Connection con) {
+        try {
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT city.Name, country.Name, city.Population " +
+                            "FROM city " +
+                            "JOIN country " +
+                            "ON city.countrycode = country.Code " +
+                            "WHERE city.id IN (SELECT Capital FROM country)" +
+                            "AND country.region LIKE \"%" + regionPop + "%\" " +
+                            "ORDER BY city.population DESC ";
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // Extract city information
+            ArrayList<City> capitalCities = new ArrayList<>();
+
+            //adds each city to cities
+            while (rset.next()) {
+                City city = new City();
+                city.name = rset.getString("city.Name");
+                city.country = rset.getString("country.Name");
+                city.population = rset.getInt("city.Population");
+                capitalCities.add(city);
+            }
+            return capitalCities;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get capital city details");
+            return null;
+        }
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Displays Capital Cities In a Region Used in Report 19
+     * @param capitalCities stores capital cities
+     */
+    public static void displayCapitalCitesInRegion(ArrayList<City> capitalCities) {
+        if (capitalCities == null)
+        {
+            System.out.println("no cities have been found");
+            return;
+        }
+        //Print header
+        System.out.printf("\n %s %s %s%n", "Name", "Country", "Population");
+
+        for (City city : capitalCities)
+        {
+            if (city == null)
+                continue;
+            String citiesString =
+                    String.format("%s %s %s ", city.name, city.country, city.population);
+
+            System.out.println(citiesString);
+        }
+    }
+
+
 }
+
+//--------------------------------------------------------------------------------------------------------------------//
+
