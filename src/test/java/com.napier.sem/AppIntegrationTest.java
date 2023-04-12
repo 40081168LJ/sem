@@ -365,20 +365,20 @@ public class AppIntegrationTest {
 //    }
 
 //--------------------------------------------------------------------------------------------------------------------//
-//    /**
-//     * integration test for getting capital cities descending order - report 18
-//     */
-//    @Test
-//    public void getTopCapitalCitiesByContinent() {
-//        ArrayList<City> cities = City.getCityPopulationByContinent("Europe", app.con);
-//        //validates
-//        assertNotNull(cities);
-//        assertNotNull(cities.get(0).name);
-//        assertNotNull(cities.get(0).country);
-//        assertNotNull(cities.get(0).district);
-//    }
-//
-////--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * integration test for getting capital cities descending order - report 18
+     */
+    @Test
+    public void getTopCapitalCitiesByContinent() {
+        ArrayList<City> cities = City.getCityPopulationByContinent("Europe", app.con);
+        //validates
+        assertNotNull(cities);
+        assertNotNull(cities.get(0).name);
+        assertNotNull(cities.get(0).country);
+        assertNotNull(cities.get(0).district);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
 //    /**
 //     * integration test for getting all capital cities in descending order - report 17
 //     */
