@@ -527,6 +527,77 @@ public class Population {
         }
     }
 
+    //--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Gets population of each Region.
+     * Used for report 24
+     * @param con connection to database
+     * @return returns populations or null if fail
+     */
+
+    public static ArrayList<Population> getCountryPopulation2(Connection con) {
+        try {
+
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "(SELECT country.Name, country.Population,"
+                            + " CONCAT((SUM(city.population)/country.Population*100), '%'),"
+                            + " CONCAT(((country.Population-SUM(city.Population))/country.Population*100), '%')"
+                            + " FROM country, city"
+                            + " WHERE city.CountryCode = country.Code"
+                            + " GROUP BY country.Code)";
+
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // Extract Language information
+            ArrayList<Population> populations = new ArrayList<>();
+
+            //
+            while (rset.next()) {
+
+                Population population = new Population();
+                population.country = rset.getString("country.Name");
+                population.population = rset.getLong("country.Population");
+                population.inCities = rset.getString("CONCAT((SUM(city.population)/country.Population*100), '%')");
+                population.outCities = rset.getString("CONCAT(((country.Population-SUM(city.Population))/country.Population*100), '%')");
+                populations.add(population);
+            }
+            return populations;
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get populations of Countries.");
+            return null;
+        }
+    }
+
+    //--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Used to display Region populations. Used in report 24
+     * @param populations Used to store populations
+     */
+    public static void displayCountryPopulation2(ArrayList<Population> populations) {
+        if (populations == null) {
+            System.out.println("Populations of the cities in the selected country could not be displayed");
+            return;
+        }
+        //Print header
+        System.out.printf("\n %s %s %s %s%n", "Country", "Population", "Out Cities", "In Cities");
+
+        for (Population population : populations) {
+            if (population == null)
+                continue;
+            String countryString =
+                    String.format("%s %s %s %s ", population.country, population.population, population.inCities, population.outCities);
+
+            System.out.println(countryString);
+        }
+
+    }
+
+
 //--------------------------------------------------------------------------------------------------------------------//
     /**
      * Gets population of each Region.

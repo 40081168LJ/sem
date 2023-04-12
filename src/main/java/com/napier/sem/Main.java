@@ -401,6 +401,14 @@ public class Main {
                     break;}
                 case 25:{
                     System.out.println("Report 25 Selected");
+                    System.out.println("Report 25 Selected, Displaying Country Populations...");
+                    System.out.println("<|************************************************************************************|>");
+                    // Extract countries Populations
+                    ArrayList<Population> countryPopulation = Population.getCountryPopulation2(con.con);
+                    // Print table of countries and their populations
+                    Population.displayCountryPopulation2(countryPopulation);
+                    System.out.println("<|************************************************************************************|>");
+                    System.out.println("Report 25 Finished, Returning to Main Menu...");
                     break;}
                 case 26:{
                     System.out.println("Report Additional Info 1 Selected");
