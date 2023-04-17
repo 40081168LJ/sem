@@ -331,38 +331,38 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-//    /**
-//     * integration test for getting all district populations - Report Additional info 5
-//     */
-//    @Test
-//    public void GetDistrictPopulations() {
-//        ArrayList<Population> populations = Population.getcityPopulation(app.con);
-//        assertNotNull(populations);
-//        assertNotNull(populations.get(0).district);
-//
-//    }
+    /**
+     * integration test for getting all district populations - Report Additional info 5
+     */
+    @Test
+    public void GetDistrictPopulations() {
+        ArrayList<Population> populations = Population.getDistrictPopulation(app.con);
+        assertNotNull(populations);
+        assertNotNull(populations.get(0).district);
 
-//--------------------------------------------------------------------------------------------------------------------//
-//    /**
-//     * integration test for getting all Region populations - Report Additional info 3
-//     */
-//    @Test
-//    public void getRegionPopulations() {
-//        ArrayList<Population> populations = Population.getRegionPopulation(app.con);
-//        assertNotNull(populations);
-//        assertNotNull(populations.get(0).region);
-//
-//    }
+    }
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
-     * integration test for getting top 5 populated capital cities in the world - Report 20
+     * integration test for getting all Region populations - Report Additional info 3
+     */
+    @Test
+    public void getRegionPopulation() {
+        ArrayList<Population> populations = Population.getRegionPopulation(app.con);
+        assertNotNull(populations);
+        assertNotNull(populations.get(0).region);
+
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * integration test for getting cities in the world when given number of rows to select - Report 20
      */
     @Test
     public void getTopCapitalCitiesInTheWorld(){
-        ArrayList<City> cities = City.getTopCapitalCitiesInTheWorld(5, app.con);
-        assertNotNull(cities);
-        assertNotNull(cities.get(5).name);
+        ArrayList<City> cities = City.getTopCapitalCitiesInTheWorld(10, app.con);
+        assertNotNull(cities.get(0).name);
+        assertNotNull(cities.get(0).country);
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
