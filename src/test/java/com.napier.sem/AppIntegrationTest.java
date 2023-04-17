@@ -423,6 +423,64 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * integration test for getting Capital Cities in the Region - Report 19
+     */
+    @Test
+    public void getTopCapitalCitiesInRegion(){
+        ArrayList<City> capitalCities = Population.getTopCapitalCitiesInRegion("Caribbean", app.con);
+        assertNotNull(capitalCities);
+        assertNotNull(capitalCities.get(0).name);
+        assertNotNull(capitalCities.get(0).country);
+        //assertNotNull(capitalCities.get(0).population);
+        Population.displayCapitalCitesInRegion(capitalCities);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * integration test for getting Top Populated Capital Cities in the Continent - Report 21
+     */
+    @Test
+    public void getTopCapitalCities2(){
+        ArrayList<City> cities3 = City.getTopCapitalCities2(2, "Europe", app.con);
+        assertNotNull(cities3);
+        assertNotNull(cities3.get(0).name);
+        assertNotNull(cities3.get(0).country);
+        //assertNotNull(cities3.get(0).population);
+        City.displayCapitalCites(cities3);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * integration test for getting Displaying Continent Populations - Report 23
+     */
+    @Test
+    public void getContinentPopulation2(){
+        ArrayList<Population> population2 = Population.getContinentPopulation2(app.con);
+        assertNotNull(population2);
+        assertNotNull(population2.get(0).continent);
+        //assertNotNull(population2.get(0).population);
+        assertNotNull(population2.get(0).inCities);
+        assertNotNull(population2.get(0).outCities);
+        Population.displayContinentPopulation2(population2);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * integration test for getting Displaying Region Populations - Report 24
+     */
+    @Test
+    public void getRegionPopulation2(){
+        ArrayList<Population> regionPopulation1 = Population.getRegionPopulation2(app.con);
+        assertNotNull(regionPopulation1);
+        assertNotNull(regionPopulation1.get(0).region);
+        //assertNotNull(regionPopulation1.get(0).population);
+        assertNotNull(regionPopulation1.get(0).inCities);
+        assertNotNull(regionPopulation1.get(0).outCities);
+        Population.displayRegionPopulation2(regionPopulation1);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
 
 }
 
