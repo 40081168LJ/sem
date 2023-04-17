@@ -467,7 +467,7 @@ public class AppIntegrationTest {
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
-     * integration test for getting Displaying Region Populations - Report 24
+     * Integration test for getting Displaying Region Populations - Report 24
      */
     @Test
     public void getRegionPopulation2(){
