@@ -199,7 +199,8 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-    /** integration test for getting countries by district in descending order - report 11
+    /**
+     * integration test for getting countries by district in descending order - report 11
      */
     @Test
     public void getCityByDistrict() {
