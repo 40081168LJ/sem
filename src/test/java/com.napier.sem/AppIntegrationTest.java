@@ -452,7 +452,7 @@ public class AppIntegrationTest {
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
-     * integration test for getting Displaying Continent Populations - Report 23
+     * Integration test for getting Displaying Continent Populations - Report 23
      */
     @Test
     public void getContinentPopulation2(){
