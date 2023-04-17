@@ -422,6 +422,21 @@ public class AppTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Test to display expected population of the highest populated city in the world, if empty
+     * Reports - 32
+     * Author - LJ
+     */
+    @Test
+    void displayCountryLanguage1Empty(){
+        ArrayList<Language> LanguageReport1 = new ArrayList<>();
+        Language LanguageReport1test = new Language();
+        LanguageReport1.add(LanguageReport1test);
+        Language.displayCountryLanguage1(LanguageReport1);
+
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
 
 }
 
