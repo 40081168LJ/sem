@@ -362,6 +362,7 @@ public class AppIntegrationTest {
     @Test
     public void getTopCapitalCitiesInTheWorld(){
         ArrayList<City> cities = City.getTopCapitalCitiesInTheWorld(10, app.con);
+        assert cities != null;
         assertNotNull(cities.get(0).name);
         assertNotNull(cities.get(0).country);
     }
@@ -478,6 +479,22 @@ public class AppIntegrationTest {
         assertNotNull(regionPopulation1.get(0).inCities);
         assertNotNull(regionPopulation1.get(0).outCities);
         Population.displayRegionPopulation2(regionPopulation1);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Integration test for getting Displaying Region Populations - Report 32
+     */
+    @Test
+    public void getLanguages1(){
+        ArrayList<Language> LanguageReport1 = Language.getLanguages1(app.con);
+        assertNotNull(LanguageReport1);
+        assertNotNull(LanguageReport1.get(0).countryCode);
+        assertNotNull(LanguageReport1.get(0).language);
+        assertNotNull(LanguageReport1.get(0).isOfficial);
+        //assertNotNull(LanguageReport1.get(0).percentage);
+        Language.displayCountryLanguage1(LanguageReport1);
+
     }
 
 //--------------------------------------------------------------------------------------------------------------------//

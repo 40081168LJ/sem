@@ -369,6 +369,59 @@ public class AppTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Test to display expected population of the highest populated city in the world
+     * Reports - 30
+     * Author - LJ
+     */
+    @Test
+    void displayDistrictPopulations(){
+        ArrayList<Population> population = new ArrayList<>();
+        Population populationTest = new Population();
+        populationTest.district = "testDistrict";
+        populationTest.population = 6969;
+        population.add(populationTest);
+
+        Population.displayDistrictPopulations(population);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Test to display expected population of the highest populated city in the world
+     * Reports - 31
+     * Author - LJ
+     */
+    @Test
+    void displayCityPopulations(){
+        ArrayList<Population> population = new ArrayList<>();
+        Population populationTest = new Population();
+        populationTest.population = 6969;
+        populationTest.city = "TestCity";
+        population.add(populationTest);
+        Population.displayCityPopulations(population);
+
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Test to display expected population of the highest populated city in the world
+     * Reports - 32
+     * Author - LJ
+     */
+    @Test
+    void displayCountryLanguage1(){
+        ArrayList<Language> LanguageReport1 = new ArrayList<>();
+        Language LanguageReport1test = new Language();
+        LanguageReport1test.countryCode = "CoutnryCodeTest";
+        LanguageReport1test.language = "LanguageTest";
+        LanguageReport1test.isOfficial = "OfficialTest";
+        LanguageReport1test.percentage = 69;
+        LanguageReport1.add(LanguageReport1test);
+        Language.displayCountryLanguage1(LanguageReport1);
+
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
 
 }
 
