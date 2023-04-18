@@ -405,7 +405,7 @@ public class AppTest {
 //--------------------------------------------------------------------------------------------------------------------//
     /**
      * Test to display expected population of the highest populated city in the world
-     * Reports - 32
+     * Reports - 32 - Expected Values
      * Author - LJ
      */
     @Test
@@ -424,7 +424,7 @@ public class AppTest {
 //--------------------------------------------------------------------------------------------------------------------//
     /**
      * Test to display expected population of the highest populated city in the world, if empty
-     * Reports - 32
+     * Reports - 32 - Empty Object
      * Author - LJ
      */
     @Test
@@ -432,6 +432,20 @@ public class AppTest {
         ArrayList<Language> LanguageReport1 = new ArrayList<>();
         Language LanguageReport1test = new Language();
         LanguageReport1.add(LanguageReport1test);
+        Language.displayCountryLanguage1(LanguageReport1);
+
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Test to display expected population of the highest populated city in the world
+     * Reports - 32 - Null Value
+     * Author - LJ
+     */
+    @Test
+    void displayCountryLanguage1Null(){
+        ArrayList<Language> LanguageReport1 = new ArrayList<>();
+        LanguageReport1.add(null);
         Language.displayCountryLanguage1(LanguageReport1);
 
     }
