@@ -106,7 +106,7 @@ public class AppTest {
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
-     * tests displaying cities with an empty object
+     * Tests displaying cities with an empty object
      * Reports - 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
      * Author - SL
      */
@@ -257,7 +257,7 @@ public class AppTest {
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
-    * Test to display Continent population report styled with %
+     * Test to display Continent population report styled with %
      * Reports - 23
      * Author - LJ
     */
@@ -316,7 +316,6 @@ public class AppTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * Unit test for print extracted list of capital cities if null
      * Reports - 17, 18, 20, 21, 22
