@@ -75,7 +75,7 @@ public class Main {
                 /**
                  * Below code is used to display report 1 results
                  */
-                case 1:
+                case 1:{
                     System.out.println("Report 1 Selected, Displaying all Countries and population details...");
                     System.out.println("<|************************************************************************************|>");
                     // Extract country information
@@ -84,7 +84,7 @@ public class Main {
                     Country.printCountries(countries);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 1 Finished, Returning to Main Menu...");
-                    break;
+                    break;}
 
                 /**
                  * Below code is used to display report 2 results
