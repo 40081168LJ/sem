@@ -458,7 +458,7 @@ public class AppTest {
      */
     @Test
     void SystemOutPrintln(){
-            String output = "TEST";
+            String output = "TEST OUTPUT";
             System.out.println(output);
         }
 
