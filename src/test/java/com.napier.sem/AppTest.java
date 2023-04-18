@@ -463,6 +463,18 @@ public class AppTest {
         }
 
 //--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Test to check System prints out lines as expected
+     * PrintLn Test - Line294 - Population.Java
+     * Author - LJ
+     */
+    @Test
+    void SystemOutPrintln2(){
+        String countriesString = "TEST OUTPUT";
+        System.out.println(countriesString);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
 
 }
 

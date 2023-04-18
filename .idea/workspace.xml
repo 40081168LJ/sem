@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - AppTest Review1, PrintLn Test." />
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - CodeCov Test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,7 +115,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AppTest.SystemOutPrintln (1)">
+  <component name="RunManager" selected="JUnit.AppTest.SystemOutPrintln2">
     <configuration name="AppIntegrationTest" type="JUnit" factoryName="JUnit">
       <module name="seMethods" />
       <option name="PACKAGE_NAME" value="com.napier.sem" />
@@ -170,8 +173,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.displayCountryLanguage1Empty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="seMethods" />
+    <configuration name="AppTest.SystemOutPrintln2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sem" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.napier.sem.*" />
@@ -180,7 +183,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.napier.sem" />
       <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppTest" />
-      <option name="METHOD_NAME" value="displayCountryLanguage1Empty" />
+      <option name="METHOD_NAME" value="SystemOutPrintln2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -314,20 +317,20 @@
       <item itemvalue="JUnit.UnitTests" />
       <item itemvalue="JUnit.IntegrationTests" />
       <item itemvalue="JUnit.AppIntegrationTest" />
+      <item itemvalue="JUnit.AppTest.SystemOutPrintln2" />
       <item itemvalue="JUnit.AppTest.SystemOutPrintln" />
       <item itemvalue="JUnit.AppTest.SystemOutPrintln (1)" />
       <item itemvalue="JUnit.AppTest" />
       <item itemvalue="JUnit.AppTest.displayCountryLanguage1Null" />
-      <item itemvalue="JUnit.AppTest.displayCountryLanguage1Empty" />
       <item itemvalue="Maven.seMethods [install]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AppTest.SystemOutPrintln2" />
         <item itemvalue="JUnit.AppTest.SystemOutPrintln (1)" />
         <item itemvalue="JUnit.AppTest.SystemOutPrintln" />
         <item itemvalue="JUnit.AppTest.displayCountryLanguage1Null" />
         <item itemvalue="JUnit.AppTest" />
-        <item itemvalue="JUnit.AppTest.displayCountryLanguage1Empty" />
       </list>
     </recent_temporary>
   </component>
@@ -345,13 +348,6 @@
       <workItem from="1675180857391" duration="3618000" />
       <workItem from="1676360482399" duration="1826000" />
       <workItem from="1676382680779" duration="521000" />
-    </task>
-    <task id="LOCAL-00029" summary="AOB - git Action changes">
-      <created>1679407604619</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1679407604619</updated>
     </task>
     <task id="LOCAL-00030" summary="AOB - file name changes">
       <created>1679408210346</created>
@@ -689,7 +685,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681815818155</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="LJ - CodeCov Test">
+      <created>1681816910282</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1681816910282</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -707,7 +710,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LJ - CodeCov, attempt1." />
     <MESSAGE value="LJ - CodeCov, attempt2." />
     <MESSAGE value="LJ - Merged all reports and checked layout." />
     <MESSAGE value="LJ - CodeCov Test - Report 1" />
@@ -732,7 +734,8 @@
     <MESSAGE value="LJ - Added Missing Tests:&#10;Report - 31, 32" />
     <MESSAGE value="LJ - AppTest Review1, null pass for Report 32.&#10;(Adding: 1. Empty Object, 2. Expected Values, 3. Null Value, to all reports for larger code coverage.)" />
     <MESSAGE value="LJ - AppTest Review1, PrintLn Test." />
-    <option name="LAST_COMMIT_MESSAGE" value="LJ - AppTest Review1, PrintLn Test." />
+    <MESSAGE value="LJ - CodeCov Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="LJ - CodeCov Test" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
