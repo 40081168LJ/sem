@@ -451,6 +451,18 @@ public class AppTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Test to check System prints out lines as expected
+     * PrintLn Test
+     * Author - LJ
+     */
+    @Test
+    void SystemOutPrintln(){
+            String output = "TEST";
+            System.out.println(output);
+        }
+
+//--------------------------------------------------------------------------------------------------------------------//
 
 }
 

@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - AppTest Review.">
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - AppTest Review1, null pass for Report 32.&#10;(Adding: 1. Empty Object, 2. Expected Values, 3. Null Value, to all reports for larger code coverage.)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +114,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AppTest.displayCountryLanguage1Null">
+  <component name="RunManager" selected="JUnit.AppTest.SystemOutPrintln (1)">
     <configuration name="AppIntegrationTest" type="JUnit" factoryName="JUnit">
       <module name="seMethods" />
       <option name="PACKAGE_NAME" value="com.napier.sem" />
@@ -141,8 +140,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.displayCityPopulations" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="seMethods" />
+    <configuration name="AppTest.SystemOutPrintln (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sem" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.napier.sem.*" />
@@ -151,14 +150,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.napier.sem" />
       <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppTest" />
-      <option name="METHOD_NAME" value="displayCityPopulations" />
+      <option name="METHOD_NAME" value="SystemOutPrintln" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.displayCountryLanguage1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="seMethods" />
+    <configuration name="AppTest.SystemOutPrintln" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sem" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.napier.sem.*" />
@@ -167,7 +166,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.napier.sem" />
       <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppTest" />
-      <option name="METHOD_NAME" value="displayCountryLanguage1" />
+      <option name="METHOD_NAME" value="SystemOutPrintln(java.lang.String)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -317,20 +316,20 @@
       <item itemvalue="JUnit.UnitTests" />
       <item itemvalue="JUnit.IntegrationTests" />
       <item itemvalue="JUnit.AppIntegrationTest" />
+      <item itemvalue="JUnit.AppTest.SystemOutPrintln" />
+      <item itemvalue="JUnit.AppTest.SystemOutPrintln (1)" />
       <item itemvalue="JUnit.AppTest" />
       <item itemvalue="JUnit.AppTest.displayCountryLanguage1Null" />
-      <item itemvalue="JUnit.AppTest.displayCityPopulations" />
-      <item itemvalue="JUnit.AppTest.displayCountryLanguage1" />
       <item itemvalue="JUnit.AppTest.displayCountryLanguage1Empty" />
       <item itemvalue="Maven.seMethods [install]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AppTest.SystemOutPrintln (1)" />
+        <item itemvalue="JUnit.AppTest.SystemOutPrintln" />
         <item itemvalue="JUnit.AppTest.displayCountryLanguage1Null" />
         <item itemvalue="JUnit.AppTest" />
         <item itemvalue="JUnit.AppTest.displayCountryLanguage1Empty" />
-        <item itemvalue="JUnit.AppTest.displayCountryLanguage1" />
-        <item itemvalue="JUnit.AppTest.displayCityPopulations" />
       </list>
     </recent_temporary>
   </component>
@@ -348,13 +347,6 @@
       <workItem from="1675180857391" duration="3618000" />
       <workItem from="1676360482399" duration="1826000" />
       <workItem from="1676382680779" duration="521000" />
-    </task>
-    <task id="LOCAL-00027" summary="AOB - main.yml changes">
-      <created>1679406882662</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1679406882662</updated>
     </task>
     <task id="LOCAL-00028" summary="AOB - main.yml changes">
       <created>1679407257805</created>
@@ -692,7 +684,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681765880772</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="LJ - AppTest Review1, null pass for Report 32.&#10;(Adding: 1. Empty Object, 2. Expected Values, 3. Null Value, to all reports for larger code coverage.)">
+      <created>1681814494337</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1681814494337</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -710,7 +709,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LJ - Updated comments and layout. (after merge Report 20)" />
     <MESSAGE value="LJ - Updated .xml and .yml files as per Lab08." />
     <MESSAGE value="LJ - CodeCov, attempt1." />
     <MESSAGE value="LJ - CodeCov, attempt2." />
@@ -735,7 +733,8 @@
     <MESSAGE value="LJ - AppIntegrationTest for Reports 20, AI3, AI5" />
     <MESSAGE value="LJ - Added Missing Tests:&#10;Report - 19, 21, 23, 24" />
     <MESSAGE value="LJ - Added Missing Tests:&#10;Report - 31, 32" />
-    <option name="LAST_COMMIT_MESSAGE" value="LJ - Added Missing Tests:&#10;Report - 31, 32" />
+    <MESSAGE value="LJ - AppTest Review1, null pass for Report 32.&#10;(Adding: 1. Empty Object, 2. Expected Values, 3. Null Value, to all reports for larger code coverage.)" />
+    <option name="LAST_COMMIT_MESSAGE" value="LJ - AppTest Review1, null pass for Report 32.&#10;(Adding: 1. Empty Object, 2. Expected Values, 3. Null Value, to all reports for larger code coverage.)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
