@@ -1,6 +1,7 @@
 package com.napier.sem;
 
 //--------------------------------------------------------------------------------------------------------------------//
+
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
@@ -13,16 +14,19 @@ public class AppTest {
     static App app;
 
 //--------------------------------------------------------------------------------------------------------------------//
-
+    /** Before all the unit test take place setting up app
+     * Author - Shaun
+     */
     @BeforeAll
     static void init() {
         app = new App();
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
-     * tests passing an empty object
+     * Tests passing an empty object
+     * Reports - Additional Info 1
+     * Author - Aidan
      */
     @Test
     void DisplayWorldPopulationTestEmpty() {
@@ -31,9 +35,10 @@ public class AppTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
-     * tests passing expected values
+     * Tests passing expected values
+     * Reports - Additional Info 1
+     * Author - Aidan
      */
     @Test
     void DisplayWorldPopulation() {
@@ -43,9 +48,9 @@ public class AppTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * Unit test for print extracted list of countries if null
+     * Reports - 1, 2, 3, 4, 5, 6
      * Author - AOB
      */
     @Test
@@ -54,9 +59,9 @@ public class AppTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * Unit test for print extracted list of countries if empty
+     * Reports - 1, 2, 3, 4, 5, 6
      * Author - AOB
      */
     @Test
@@ -66,9 +71,9 @@ public class AppTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * Unit test for print extracted list of countries if array item is null
+     * Reports - 1, 2, 3, 4, 5, 6
      * Author - AOB
      */
     @Test
@@ -79,9 +84,9 @@ public class AppTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * Unit test for extract list of countries with country object variables present
+     * Reports - 1, 2, 3, 4, 5, 6
      * Author - AOB
      */
     @Test
@@ -98,11 +103,11 @@ public class AppTest {
         Country.printCountries(countries);
     }
 
-
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
-     * tests displaying cities with an empty object - report 7, 8, 9
+     * tests displaying cities with an empty object
+     * Reports - 7, 8, 9, 15, 16
+     * Author - Shaun
      */
     @Test
     void DisplayCitiesTestEmpty() {
@@ -111,9 +116,10 @@ public class AppTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
-     * tests passing city expected values - report 7, 8, 9
+     * Tests passing city expected values
+     * Reports - 7, 8, 9, 15, 16
+     * Author - Shaun
      */
     @Test
     void DisplayCities() {
@@ -128,26 +134,24 @@ public class AppTest {
         City.displayCites(cities);
     }
 
-
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
-     * test to display continents with 0 population - Report Additional info 2
+     * Test to display continents with 0 population
+     * Reports - Additional info 2
+     * Author - Aidan
      */
-
     @Test
     void printContinentsTestEmpty() {
         ArrayList<Population> populations = new ArrayList<>();
         Population.displayContinentPopulations(populations);
     }
 
-
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
-     * Test to make sure Kabul prints expected population - report Additional info 6
+     * Test to make sure Kabul prints expected population
+     * Reports - Additional info 6
+     * Author - Aidan
      */
-
     @Test
     void DisplayCityPopulation() {
         ArrayList<City> cities = new ArrayList<>();
@@ -160,13 +164,12 @@ public class AppTest {
 
     }
 
-
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
-     * Test to display countries expected population - Report Additional info 4
+     * Test to display countries expected population
+     * Reports - Additional info 4
+     * Author - Aidan
      */
-
     @Test
     void DisplayCountryPopulation() {
         ArrayList<Population> countries = new ArrayList<>();
@@ -179,13 +182,12 @@ public class AppTest {
 
     }
 
-
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
-     * Test to display Districts expected population - Report Additional info 5
+     * Test to display Districts expected population
+     * Reports - Additional info 5
+     * Author - Aidan
      */
-
     @Test
     void DisplayDistrictPopulation() {
         ArrayList<Population> countries = new ArrayList<>();
@@ -197,4 +199,245 @@ public class AppTest {
         Population.displayCountryPopulations(countries);
 
     }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Test to display Region expected population
+     * Reports - Additional info 3
+     * Author - Aidan
+     */
+    @Test
+    void DisplayRegionPopulation() {
+        ArrayList<Population> countries = new ArrayList<>();
+        Population population = new Population();
+        population.country = "Caribbean";
+        population.population = 38140000;
+        countries.add(population);
+
+        Population.displayCountryPopulations(countries);
+
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Test to display expected population of the highest populated city in the world
+     * Reports - 20
+     * Author - Aidan
+     */
+    @Test
+    void displayCapitalCities(){
+        ArrayList<City> cities = new ArrayList<>();
+        City city = new City();
+        city.name = "Seoul";
+        city.country = "South Korea";
+        city.population = 9981619;
+        cities.add(city);
+
+        City.displayCapitalCites(cities);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Test to display continent expected population
+     * Reports - 18, 17
+     * Author - Aidan
+     */
+    @Test
+    void DisplayCapitalCities() {
+        ArrayList<City> cities = new ArrayList<>();
+        City city = new City();
+        city.name = "Cairo";
+        city.country = "Egypt";
+        city.population = 6789479;
+        cities.add(city);
+
+        City.displayCapitalCites(cities);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+    * Test to display Continent population report styled with %
+     * Reports - 23
+     * Author - LJ
+    */
+    @Test
+    void displayContinentPopulation2(){
+        ArrayList<Population> populations = new ArrayList<>();
+        Population population = new Population();
+        population.continent = "Asia";
+        population.population = 900937599;
+        population.inCities = "0.0774%";
+        population.outCities = "99.9226%";
+
+        populations.add(population);
+
+        Population.displayContinentPopulation2(populations);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Test to display Region population report styled with %
+     * Reports - 24
+     * Author - LJ
+     */
+    @Test
+    void getRegionPopulation2(){
+        ArrayList<Population> populations = new ArrayList<>();
+        Population population = new Population();
+        population.region = "Southern and Central Asia";
+        population.population = 363665421;
+        population.inCities = "0.0571%";
+        population.outCities = "99.9429%";
+
+        populations.add(population);
+
+        Population.displayRegionPopulation2(populations);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Test to display country population report styled with % - Report 25
+     */
+    @Test
+    void getCountryPopulation2(){
+        ArrayList<Population> populations = new ArrayList<>();
+        Population population = new Population();
+        population.country = "spain";
+        population.population = 363665421;
+        population.inCities = "0.0571%";
+        population.outCities = "99.9429%";
+
+        populations.add(population);
+
+        Population.displayCountryPopulation2(populations);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Unit test for print extracted list of capital cities if null
+     * Reports - 17
+     * Author - AOB
+     */
+    @Test
+    void displayCapitalCitiesTestNull() {
+        City.displayCapitalCites(null);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Unit test for print extracted list of capital cities if empty
+     * Reports - 17
+     * Author - AOB
+     */
+    @Test
+    void displayCapitalCitiesTestEmpty() {
+        ArrayList<City> cities = new ArrayList<>();
+        City.displayCapitalCites(cities);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Unit test for print extracted list of capital cities if array item is null
+     * Reports - 17
+     * Author - AOB
+     */
+    @Test
+    void displayCapitalCitiesTestContainsNull() {
+        ArrayList<City> cities = new ArrayList<>();
+        cities.add(null);
+        City.displayCapitalCites(cities);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Test to display region capital city expected population
+     * Reports - 19
+     * Author - Aidan
+     */
+    @Test
+    void DisplayCapitalCitiesInRegion() {
+        ArrayList<City> cities = new ArrayList<>();
+        City city = new City();
+        city.region = "Caribbean";
+        city.name = "La Habana";
+        city.country = "Cuba";
+        city.population = 2256000;
+        cities.add(city);
+
+        Population.displayCapitalCitesInRegion(cities);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Test to display expected population of the highest populated city in the world
+     * Reports - 30
+     * Author - LJ
+     */
+    @Test
+    void displayDistrictPopulations(){
+        ArrayList<Population> population = new ArrayList<>();
+        Population populationTest = new Population();
+        populationTest.district = "testDistrict";
+        populationTest.population = 6969;
+        population.add(populationTest);
+
+        Population.displayDistrictPopulations(population);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Test to display expected population of the highest populated city in the world
+     * Reports - 31
+     * Author - LJ
+     */
+    @Test
+    void displayCityPopulations(){
+        ArrayList<Population> population = new ArrayList<>();
+        Population populationTest = new Population();
+        populationTest.population = 6969;
+        populationTest.city = "TestCity";
+        population.add(populationTest);
+        Population.displayCityPopulations(population);
+
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Test to display expected population of the highest populated city in the world
+     * Reports - 32
+     * Author - LJ
+     */
+    @Test
+    void displayCountryLanguage1(){
+        ArrayList<Language> LanguageReport1 = new ArrayList<>();
+        Language LanguageReport1test = new Language();
+        LanguageReport1test.countryCode = "CoutnryCodeTest";
+        LanguageReport1test.language = "LanguageTest";
+        LanguageReport1test.isOfficial = "OfficialTest";
+        LanguageReport1test.percentage = 69;
+        LanguageReport1.add(LanguageReport1test);
+        Language.displayCountryLanguage1(LanguageReport1);
+
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Test to display expected population of the highest populated city in the world, if empty
+     * Reports - 32
+     * Author - LJ
+     */
+    @Test
+    void displayCountryLanguage1Empty(){
+        ArrayList<Language> LanguageReport1 = new ArrayList<>();
+        Language LanguageReport1test = new Language();
+        LanguageReport1.add(LanguageReport1test);
+        Language.displayCountryLanguage1(LanguageReport1);
+
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+
 }
+
+//--------------------------------------------------------------------------------------------------------------------//
