@@ -14,8 +14,9 @@ public class AppTest {
     static App app;
 
 //--------------------------------------------------------------------------------------------------------------------//
-    /** Before all the unit test take place setting up app
-     * Author - Shaun
+    /**
+     * Before all the unit test take place setting up app
+     * Author - SL
      */
     @BeforeAll
     static void init() {
@@ -24,9 +25,9 @@ public class AppTest {
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
-     * Tests passing an empty object
+     * Tests passing an empty object to display world population method
      * Reports - Additional Info 1
-     * Author - Aidan
+     * Author - AG
      */
     @Test
     void DisplayWorldPopulationTestEmpty() {
@@ -36,9 +37,9 @@ public class AppTest {
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
-     * Tests passing expected values
+     * Tests passing expected values to display world population method
      * Reports - Additional Info 1
-     * Author - Aidan
+     * Author - AG
      */
     @Test
     void DisplayWorldPopulation() {
@@ -105,9 +106,9 @@ public class AppTest {
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
-     * tests displaying cities with an empty object
-     * Reports - 7, 8, 9, 15, 16
-     * Author - Shaun
+     * Tests displaying cities with an empty object
+     * Reports - 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
+     * Author - SL
      */
     @Test
     void DisplayCitiesTestEmpty() {
@@ -118,7 +119,7 @@ public class AppTest {
 //--------------------------------------------------------------------------------------------------------------------//
     /**
      * Tests passing city expected values
-     * Reports - 7, 8, 9, 15, 16
+     * Reports - 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
      * Author - Shaun
      */
     @Test
@@ -138,7 +139,7 @@ public class AppTest {
     /**
      * Test to display continents with 0 population
      * Reports - Additional info 2
-     * Author - Aidan
+     * Author - AG
      */
     @Test
     void printContinentsTestEmpty() {
@@ -148,9 +149,9 @@ public class AppTest {
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
-     * Test to make sure Kabul prints expected population
+     * Test to make sure a city e.g. Kabul prints expected population
      * Reports - Additional info 6
-     * Author - Aidan
+     * Author - AG
      */
     @Test
     void DisplayCityPopulation() {
@@ -168,7 +169,7 @@ public class AppTest {
     /**
      * Test to display countries expected population
      * Reports - Additional info 4
-     * Author - Aidan
+     * Author - AG
      */
     @Test
     void DisplayCountryPopulation() {
@@ -186,7 +187,7 @@ public class AppTest {
     /**
      * Test to display Districts expected population
      * Reports - Additional info 5
-     * Author - Aidan
+     * Author - AG
      */
     @Test
     void DisplayDistrictPopulation() {
@@ -204,7 +205,7 @@ public class AppTest {
     /**
      * Test to display Region expected population
      * Reports - Additional info 3
-     * Author - Aidan
+     * Author - AG
      */
     @Test
     void DisplayRegionPopulation() {
@@ -222,7 +223,7 @@ public class AppTest {
     /**
      * Test to display expected population of the highest populated city in the world
      * Reports - 20
-     * Author - Aidan
+     * Author - AG
      */
     @Test
     void displayCapitalCities(){
@@ -239,8 +240,8 @@ public class AppTest {
 //--------------------------------------------------------------------------------------------------------------------//
     /**
      * Test to display continent expected population
-     * Reports - 18, 17
-     * Author - Aidan
+     * Reports - 17, 18, 21, 22
+     * Author - AG
      */
     @Test
     void DisplayCapitalCities() {
@@ -256,7 +257,7 @@ public class AppTest {
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
-    * Test to display Continent population report styled with %
+     * Test to display Continent population report styled with %
      * Reports - 23
      * Author - LJ
     */
@@ -296,7 +297,9 @@ public class AppTest {
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
-     * Test to display country population report styled with % - Report 25
+     * Test to display country population report styled with %
+     * Report 25
+     * Author - SL
      */
     @Test
     void getCountryPopulation2(){
@@ -313,10 +316,9 @@ public class AppTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * Unit test for print extracted list of capital cities if null
-     * Reports - 17
+     * Reports - 17, 18, 20, 21, 22
      * Author - AOB
      */
     @Test
@@ -327,7 +329,7 @@ public class AppTest {
 //--------------------------------------------------------------------------------------------------------------------//
     /**
      * Unit test for print extracted list of capital cities if empty
-     * Reports - 17
+     * Reports - 17, 18, 20, 21, 22
      * Author - AOB
      */
     @Test
@@ -339,7 +341,7 @@ public class AppTest {
 //--------------------------------------------------------------------------------------------------------------------//
     /**
      * Unit test for print extracted list of capital cities if array item is null
-     * Reports - 17
+     * Reports - 17, 18, 20, 21, 22
      * Author - AOB
      */
     @Test
@@ -353,7 +355,7 @@ public class AppTest {
     /**
      * Test to display region capital city expected population
      * Reports - 19
-     * Author - Aidan
+     * Author - AG
      */
     @Test
     void DisplayCapitalCitiesInRegion() {
