@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - #148 - CodeCov Coverage for Language.java">
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - #148 - CodeCov Coverage2 for Language.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppIntegrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +51,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/LJ_CR4" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -123,7 +123,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AppTest.displayCountryLanguageIfNullPrntLn">
+  <component name="RunManager" selected="JUnit.AppIntegrationTest.testGetLanguages1">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="seMethods" />
@@ -173,6 +173,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AppIntegrationTest.testGetLanguages1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seMethods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.napier.sem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.napier.sem" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppIntegrationTest" />
+      <option name="METHOD_NAME" value="testGetLanguages1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AppTest.displayCountryLanguageIfNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seMethods" />
       <extension name="coverage">
@@ -184,22 +200,6 @@
       <option name="PACKAGE_NAME" value="com.napier.sem" />
       <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppTest" />
       <option name="METHOD_NAME" value="displayCountryLanguageIfNull" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppTest.displayCountryLanguageIfNullPrntLn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="seMethods" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.napier.sem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.napier.sem" />
-      <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppTest" />
-      <option name="METHOD_NAME" value="displayCountryLanguageIfNullPrntLn" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -318,7 +318,7 @@
       <item itemvalue="JUnit.UnitTests" />
       <item itemvalue="JUnit.IntegrationTests" />
       <item itemvalue="JUnit.AppIntegrationTest" />
-      <item itemvalue="JUnit.AppTest.displayCountryLanguageIfNullPrntLn" />
+      <item itemvalue="JUnit.AppIntegrationTest.testGetLanguages1" />
       <item itemvalue="JUnit.AppTest.displayCountryLanguageIfNull" />
       <item itemvalue="JUnit.AppIntegrationTest.getRegionPopulation" />
       <item itemvalue="JUnit.AppIntegrationTest.getTopCapitalCitiesInTheWorld" />
@@ -326,7 +326,7 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AppTest.displayCountryLanguageIfNullPrntLn" />
+        <item itemvalue="JUnit.AppIntegrationTest.testGetLanguages1" />
         <item itemvalue="JUnit.AppTest.displayCountryLanguageIfNull" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.AppIntegrationTest.getTopCapitalCitiesInTheWorld" />
@@ -348,6 +348,13 @@
       <workItem from="1675180857391" duration="3618000" />
       <workItem from="1676360482399" duration="1826000" />
       <workItem from="1676382680779" duration="521000" />
+    </task>
+    <task id="LOCAL-00028" summary="AOB - main.yml changes">
+      <created>1679407257805</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1679407257805</updated>
     </task>
     <task id="LOCAL-00029" summary="AOB - git Action changes">
       <created>1679407604619</created>
@@ -685,14 +692,7 @@
       <option name="project" value="LOCAL" />
       <updated>1681929108811</updated>
     </task>
-    <task id="LOCAL-00077" summary="LJ - #148 - CodeCov Coverage for Language.java">
-      <created>1681932286755</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1681932286755</updated>
-    </task>
-    <option name="localTasksCounter" value="78" />
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -710,6 +710,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="LJ - Updated .xml and .yml files as per Lab08." />
     <MESSAGE value="LJ - CodeCov, attempt1." />
     <MESSAGE value="LJ - CodeCov, attempt2." />
     <MESSAGE value="LJ - Merged all reports and checked layout." />
@@ -734,8 +735,7 @@
     <MESSAGE value="LJ - AppTest Comment Review2." />
     <MESSAGE value="LJ - #135 - Removed unused Imports." />
     <MESSAGE value="LJ - #132 - Renaming Parameters." />
-    <MESSAGE value="LJ - #148 - CodeCov Coverage for Language.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="LJ - #148 - CodeCov Coverage for Language.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="LJ - #132 - Renaming Parameters." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
