@@ -493,7 +493,7 @@ public class AppIntegrationTest {
         assertNotNull(LanguageReport1.get(0).language);
         assertNotNull(LanguageReport1.get(0).isOfficial);
         //assertNotNull(LanguageReport1.get(0).percentage);
-        Language.displayCountryLanguage1(LanguageReport1);
+        Language.displayCountryLanguage(LanguageReport1);
 
     }
 

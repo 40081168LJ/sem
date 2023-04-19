@@ -597,7 +597,7 @@ public class Main {
                     // Show all conuntry by language, greatest to smallest who speak it (Percentage)
                     ArrayList<Language> LanguageReport1 = Language.getLanguages1(con.con);
                     // Print out countries languages
-                    Language.displayCountryLanguage1(LanguageReport1);
+                    Language.displayCountryLanguage(LanguageReport1);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report Languages 1 Finished, Returning to Main Menu...");
                     break;}

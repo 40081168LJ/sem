@@ -89,7 +89,7 @@ public class Language {
     /**Display Country Language where Language = 'Chinese','English','Hindi','Spanish','Arabic'
      *@param Languages1
      */
-    public static void displayCountryLanguage1(ArrayList<Language> Languages1) {
+    public static void displayCountryLanguage(ArrayList<Language> Languages1) {
         if (Languages1 == null)
         {
             System.out.println("No Countries with the Languages " +

@@ -411,7 +411,7 @@ public class AppTest {
      * Author - LJ
      */
     @Test
-    void displayCountryLanguage1(){
+    void displayCountryLanguage(){
         ArrayList<Language> LanguageReport1 = new ArrayList<>();
         Language LanguageReport1test = new Language();
         LanguageReport1test.countryCode = "CoutnryCodeTest";
@@ -419,7 +419,7 @@ public class AppTest {
         LanguageReport1test.isOfficial = "OfficialTest";
         LanguageReport1test.percentage = 69;
         LanguageReport1.add(LanguageReport1test);
-        Language.displayCountryLanguage1(LanguageReport1);
+        Language.displayCountryLanguage(LanguageReport1);
 
     }
 
@@ -430,11 +430,11 @@ public class AppTest {
      * Author - LJ
      */
     @Test
-    void displayCountryLanguage1Empty(){
+    void displayCountryLanguageEmpty(){
         ArrayList<Language> LanguageReport1 = new ArrayList<>();
         Language LanguageReport1test = new Language();
         LanguageReport1.add(LanguageReport1test);
-        Language.displayCountryLanguage1(LanguageReport1);
+        Language.displayCountryLanguage(LanguageReport1);
 
     }
 
@@ -445,10 +445,10 @@ public class AppTest {
      * Author - LJ
      */
     @Test
-    void displayCountryLanguage1Null(){
+    void displayCountryLanguageNull(){
         ArrayList<Language> LanguageReport1 = new ArrayList<>();
         LanguageReport1.add(null);
-        Language.displayCountryLanguage1(LanguageReport1);
+        Language.displayCountryLanguage(LanguageReport1);
 
     }
 
