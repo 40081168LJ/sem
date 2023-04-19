@@ -44,7 +44,9 @@ public class Population {
 
     public String region;
 
-    public static String continentPop;
+    /**
+     * the name of city
+     */
 
     public String name;
 
@@ -635,12 +637,12 @@ public class Population {
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
-     * Used to get capitalCities from Continent
+     * Used to get capitalCities from Continent - report 18
      * @param continentPop stores continent population
      * @param con connection to database
      * @return returns capitalCities
      */
-    public static ArrayList<City> getTopCapitalCitiesByContinent(String continentPop, Connection con) {
+    public static ArrayList<City> getCapitalCitiesByContinent(String continentPop, Connection con) {
         try {
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -740,10 +742,4 @@ public class Population {
             System.out.println(citiesString);
         }
     }
-
-//--------------------------------------------------------------------------------------------------------------------//
-
 }
-
-//--------------------------------------------------------------------------------------------------------------------//
-

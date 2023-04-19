@@ -373,7 +373,7 @@ public class Main {
                     String continentPop = scanner.nextLine();
                     System.out.println("<|************************************************************************************|>");
                     // Getting capital cities by continent
-                    ArrayList<City> capitalCities = Population.getTopCapitalCitiesByContinent(continentPop, con.con);
+                    ArrayList<City> capitalCities = Population.getCapitalCitiesByContinent(continentPop, con.con);
                     // Display capital cities by continent
                     City.displayCapitalCites(capitalCities);
                     System.out.println("<|************************************************************************************|>");

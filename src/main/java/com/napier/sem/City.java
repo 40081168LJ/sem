@@ -19,13 +19,10 @@ public class City {
         public String district;
 
         /** Population int column */
-
         public int population;
 
         /**  Country string column */
         public String country;
-
-        public Object continent;
 
         /** Stores region */
         public String region;
@@ -681,9 +678,4 @@ public class City {
                         return null;
                 }
         }
-
-//--------------------------------------------------------------------------------------------------------------------//
-
 }
-
-//--------------------------------------------------------------------------------------------------------------------//

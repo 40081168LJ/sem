@@ -30,6 +30,17 @@ public class AppIntegrationTest {
     public static void cleanUp(){
         app.disconnect();
     }
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Integration test for extract all world countries with bad connection - report 1
+     * Author - AOB
+     */
+    @Test
+    public void testGetAllCountriesBadConnection() {
+        ArrayList<Country> countries = Country.getAllCountries(null);
+        assertNull(countries);
+    }
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
@@ -75,10 +86,20 @@ public class AppIntegrationTest {
         assertNotNull(cities.get(0).country);
         assertNotNull(cities.get(0).district);
     }
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * integration test for extract specific continent countries with bad connection - report 2
+     * Author - AOB
+     */
+    @Test
+    public void testGetContinentCountriesBadConnection() {
+        ArrayList<Country> countries = Country.getContinentCountries("Europe", null);
+        assertNull(countries);
+    }
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
-     * integration test for extract specific continent countries applies to report 18 as well
      * integration test for extract specific continent countries - report 2
      * Author - AOB
      */
@@ -102,9 +123,20 @@ public class AppIntegrationTest {
      */
     @Test
     public void testGetCapitalCities() {
-        ArrayList<City> capitalCities = Population.getTopCapitalCitiesByContinent("Africa", app.con);
+        ArrayList<City> capitalCities = Population.getCapitalCitiesByContinent("Africa", app.con);
         assertNotNull(capitalCities);
         assertNotNull(capitalCities.get(0).name);
+    }
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * integration test for extract specific region countries with bad connection - report 3
+     * Author - AOB
+     */
+    @Test
+    public void testGetRegionCountriesBadConnection() {
+        ArrayList<Country> countries = Country.getRegionCountries("Middle East",null);
+        assertNull(countries);
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
@@ -127,6 +159,18 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * integration test for getting countries in descending order with a bad connection - report 4
+     * Author - AOB
+     */
+    @Test
+    public void testGetTopPopulatedCountriesBadConnection(){
+        ArrayList<Country> countries = Country.getTopPopulatedCountries(1, null);
+        assertNull(countries);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
     /**
      * integration test for getting countries in descending order - report 4
      * Author - AOB
@@ -144,8 +188,22 @@ public class AppIntegrationTest {
         //assertNotNull(countries.get(0).population);
         assertNotNull(countries.get(0).capital);
     }
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * integration test for getting given number of countries in given
+     * continent in descending order with a bad connection - report 5
+     * Author - AOB
+     */
+    @Test
+    public void testGetTopCountriesInContinentBadConnection(){
+        ArrayList<Country> countries = Country.getTopCountriesInContinent(1, "Asia", null);
+        assertNull(countries);
+    }
+
 
 //--------------------------------------------------------------------------------------------------------------------//
+
     /**
      * integration test for getting given number of countries in given
      * continent in descending order - report 5
@@ -163,6 +221,20 @@ public class AppIntegrationTest {
         //removed NotNull for population variable as variable never Null
         //assertNotNull(countries.get(0).population);
         assertNotNull(countries.get(0).capital);
+    }
+
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * integration test for getting given number of countries in given
+     * region in descending order with a bad connection - report 6
+     * Author - AOB
+     */
+    @Test
+    public void testGetTopCountriesInRegionBadConnection(){
+        ArrayList<Country> countries = Country.getTopCountriesInContinent(1, "Asia", null);
+        assertNull(countries);
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
@@ -368,20 +440,7 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-    /**
-     * integration test for getting capital cities descending order - report 18
-     */
-    @Test
-    public void getTopCapitalCitiesByContinent() {
-        ArrayList<City> cities = City.getCityPopulationByContinent("Europe", app.con);
-        //validates
-        assertNotNull(cities);
-        assertNotNull(cities.get(0).name);
-        assertNotNull(cities.get(0).country);
-        assertNotNull(cities.get(0).district);
-    }
 
-//--------------------------------------------------------------------------------------------------------------------//
     /**
      * integration test for getting all capital cities in descending order - report 17
      */
