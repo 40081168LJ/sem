@@ -497,6 +497,9 @@ public class AppIntegrationTest {
 
     }
 
+    /**
+     * Additional test - Report 32
+     */
     @Test
     public void testGetLanguages1() {
         // Call the method to be tested
