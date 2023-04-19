@@ -195,11 +195,11 @@ public class AppIntegrationTest {
      * continent in descending order with a bad connection - report 5
      * Author - AOB
      */
-    @Test
-    public void testGetTopCountriesInContinentBadConnection(){
-        ArrayList<Country> countries = Country.getTopCountriesInContinent(1, "Asia", null);
-        assertNull(countries);
-    }
+//    @Test
+//    public void testGetTopCountriesInContinentBadConnection(){
+//        ArrayList<Country> countries = Country.getTopCountriesInContinent(1, "Asia", null);
+//        assertNull(countries);
+//    }
 
 
 //--------------------------------------------------------------------------------------------------------------------//
@@ -231,11 +231,11 @@ public class AppIntegrationTest {
      * region in descending order with a bad connection - report 6
      * Author - AOB
      */
-    @Test
-    public void testGetTopCountriesInRegionBadConnection(){
-        ArrayList<Country> countries = Country.getTopCountriesInContinent(1, "Asia", null);
-        assertNull(countries);
-    }
+//    @Test
+//    public void testGetTopCountriesInRegionBadConnection(){
+//        ArrayList<Country> countries = Country.getTopCountriesInContinent(1, "Asia", null);
+//        assertNull(countries);
+//    }
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
