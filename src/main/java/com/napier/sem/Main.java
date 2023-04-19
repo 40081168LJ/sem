@@ -3,12 +3,7 @@ import com.napier.sem.*;
 //--------------------------------------------------------------------------------------------------------------------//
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.Scanner;
-import java.sql.*;
+import java.util.*;
 
 //--------------------------------------------------------------------------------------------------------------------//
 /**
@@ -602,7 +597,7 @@ public class Main {
                     // Show all conuntry by language, greatest to smallest who speak it (Percentage)
                     ArrayList<Language> LanguageReport1 = Language.getLanguages1(con.con);
                     // Print out countries languages
-                    Language.displayCountryLanguage1(LanguageReport1);
+                    Language.displayCountryLanguage(LanguageReport1);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report Languages 1 Finished, Returning to Main Menu...");
                     break;}

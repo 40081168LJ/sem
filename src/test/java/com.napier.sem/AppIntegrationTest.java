@@ -552,8 +552,30 @@ public class AppIntegrationTest {
         assertNotNull(LanguageReport1.get(0).language);
         assertNotNull(LanguageReport1.get(0).isOfficial);
         //assertNotNull(LanguageReport1.get(0).percentage);
-        Language.displayCountryLanguage1(LanguageReport1);
+        Language.displayCountryLanguage(LanguageReport1);
 
+    }
+
+    /**
+     * Additional test - Report 32
+     */
+    @Test
+    public void testGetLanguages1() {
+        // Call the method to be tested
+        ArrayList<Language> languages = Language.getLanguages1(app.con);
+
+        // Check that the returned list is not null
+        assertNotNull(languages);
+
+        // Check that the returned list contains at least one language
+        assertTrue(languages.size() > 0);
+
+        // Check that each language object in the list has all of its fields set
+        for (Language language : languages) {
+            assertNotNull(language.countryCode);
+            assertNotNull(language.language);
+            assertNotNull(language.isOfficial);
+        }
     }
 
 //--------------------------------------------------------------------------------------------------------------------//

@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="sl - report 25">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - #148 - CodeCov Coverage2 for Language.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Country.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Population.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Population.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppIntegrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,6 +65,13 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -121,7 +123,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.AppIntegrationTest.testGetLanguages1">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="seMethods" />
@@ -139,7 +141,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppIntegrationTest.testGetAllCountriesBadConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppIntegrationTest.getRegionPopulation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seMethods" />
       <extension name="coverage">
         <pattern>
@@ -149,13 +151,45 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.napier.sem" />
       <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppIntegrationTest" />
-      <option name="METHOD_NAME" value="testGetAllCountriesBadConnection" />
+      <option name="METHOD_NAME" value="getRegionPopulation" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.displayCityPopulations" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppIntegrationTest.getTopCapitalCitiesInTheWorld" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seMethods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.napier.sem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.napier.sem" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppIntegrationTest" />
+      <option name="METHOD_NAME" value="getTopCapitalCitiesInTheWorld" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppIntegrationTest.testGetLanguages1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seMethods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.napier.sem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.napier.sem" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppIntegrationTest" />
+      <option name="METHOD_NAME" value="testGetLanguages1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.displayCountryLanguageIfNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seMethods" />
       <extension name="coverage">
         <pattern>
@@ -165,39 +199,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.napier.sem" />
       <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppTest" />
-      <option name="METHOD_NAME" value="displayCityPopulations" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppTest.displayCountryLanguage1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="seMethods" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.napier.sem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.napier.sem" />
-      <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppTest" />
-      <option name="METHOD_NAME" value="displayCountryLanguage1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppTest.displayCountryLanguage1Empty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="seMethods" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.napier.sem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.napier.sem" />
-      <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppTest" />
-      <option name="METHOD_NAME" value="displayCountryLanguage1Empty" />
+      <option name="METHOD_NAME" value="displayCountryLanguageIfNull" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -316,19 +318,19 @@
       <item itemvalue="JUnit.UnitTests" />
       <item itemvalue="JUnit.IntegrationTests" />
       <item itemvalue="JUnit.AppIntegrationTest" />
-      <item itemvalue="JUnit.AppIntegrationTest.testGetAllCountriesBadConnection" />
-      <item itemvalue="JUnit.AppTest.displayCityPopulations" />
-      <item itemvalue="JUnit.AppTest.displayCountryLanguage1" />
-      <item itemvalue="JUnit.AppTest.displayCountryLanguage1Empty" />
+      <item itemvalue="JUnit.AppIntegrationTest.testGetLanguages1" />
+      <item itemvalue="JUnit.AppTest.displayCountryLanguageIfNull" />
+      <item itemvalue="JUnit.AppIntegrationTest.getRegionPopulation" />
+      <item itemvalue="JUnit.AppIntegrationTest.getTopCapitalCitiesInTheWorld" />
       <item itemvalue="Maven.seMethods [install]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AppIntegrationTest.testGetLanguages1" />
+        <item itemvalue="JUnit.AppTest.displayCountryLanguageIfNull" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.AppIntegrationTest.testGetAllCountriesBadConnection" />
-        <item itemvalue="JUnit.AppTest.displayCountryLanguage1Empty" />
-        <item itemvalue="JUnit.AppTest.displayCountryLanguage1" />
-        <item itemvalue="JUnit.AppTest.displayCityPopulations" />
+        <item itemvalue="JUnit.AppIntegrationTest.getTopCapitalCitiesInTheWorld" />
+        <item itemvalue="JUnit.AppIntegrationTest.getRegionPopulation" />
       </list>
     </recent_temporary>
   </component>
@@ -346,13 +348,6 @@
       <workItem from="1675180857391" duration="3618000" />
       <workItem from="1676360482399" duration="1826000" />
       <workItem from="1676382680779" duration="521000" />
-    </task>
-    <task id="LOCAL-00027" summary="AOB - main.yml changes">
-      <created>1679406882662</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1679406882662</updated>
     </task>
     <task id="LOCAL-00028" summary="AOB - main.yml changes">
       <created>1679407257805</created>
@@ -662,35 +657,42 @@
       <option name="project" value="LOCAL" />
       <updated>1681338182347</updated>
     </task>
-    <task id="LOCAL-00072" summary="LJ - AppIntegrationTest for Reports 20, AI3, AI5">
-      <created>1681763186236</created>
+    <task id="LOCAL-00072" summary="LJ - AppTest Comment Review.">
+      <created>1681818883836</created>
       <option name="number" value="00072" />
       <option name="presentableId" value="LOCAL-00072" />
       <option name="project" value="LOCAL" />
-      <updated>1681763186236</updated>
+      <updated>1681818883837</updated>
     </task>
-    <task id="LOCAL-00073" summary="LJ - Added Missing Tests:&#10;Report - 19, 21, 23, 24">
-      <created>1681764311658</created>
+    <task id="LOCAL-00073" summary="LJ - AppTest Comment Review2.">
+      <created>1681818902113</created>
       <option name="number" value="00073" />
       <option name="presentableId" value="LOCAL-00073" />
       <option name="project" value="LOCAL" />
-      <updated>1681764311658</updated>
+      <updated>1681818902113</updated>
     </task>
-    <task id="LOCAL-00074" summary="LJ - Added Missing Tests:&#10;Report - 19, 21, 23, 24">
-      <created>1681764415093</created>
+    <task id="LOCAL-00074" summary="LJ - #135 - Removed unused Imports.">
+      <created>1681928138088</created>
       <option name="number" value="00074" />
       <option name="presentableId" value="LOCAL-00074" />
       <option name="project" value="LOCAL" />
-      <updated>1681764415093</updated>
+      <updated>1681928138089</updated>
     </task>
-    <task id="LOCAL-00075" summary="LJ - Added Missing Tests:&#10;Report - 31, 32">
-      <created>1681765880772</created>
+    <task id="LOCAL-00075" summary="LJ - #135 - Removed unused Imports.">
+      <created>1681928832667</created>
       <option name="number" value="00075" />
       <option name="presentableId" value="LOCAL-00075" />
       <option name="project" value="LOCAL" />
-      <updated>1681765880772</updated>
+      <updated>1681928832668</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="LJ - #132 - Renaming Parameters.">
+      <created>1681929108811</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1681929108811</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -708,7 +710,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LJ - Updated comments and layout. (after merge Report 20)" />
     <MESSAGE value="LJ - Updated .xml and .yml files as per Lab08." />
     <MESSAGE value="LJ - CodeCov, attempt1." />
     <MESSAGE value="LJ - CodeCov, attempt2." />
@@ -730,10 +731,11 @@
     <MESSAGE value="LJ - CodeCov Test - Report 20 + AI3 + AI5 + 15 + n/a&#10;(From line 312 Up to line 379)&#10;Checking n/a - &#10;Checking A15 - x&#10;Checking AI3 - x&#10;Checking 20 - ISSUE - Fix Report 20 Test&#10;Checking 15 -" />
     <MESSAGE value="LJ - CodeCov Test - Report 20 + AI3 + AI5 + 15 + n/a + 18&#10;(From line 312 Up to line 379)&#10;Checking n/a - &#10;Checking A15 - ISSUE - Fix Report Additional Info 5 Test&#10;Checking AI3 - ISSUE - Fix Additional Info 3 Test&#10;Checking 20 - ISSUE - Fix Report 20 Test&#10;Checking 15 -&#10;Checking 18 -" />
     <MESSAGE value="LJ - CodeCov Test - Report 17 + 25 + 16 &#10;(From line 382 Up to line 423)&#10;Checking 17 - &#10;Checking 16 - &#10;Checking 25 -" />
-    <MESSAGE value="LJ - AppIntegrationTest for Reports 20, AI3, AI5" />
-    <MESSAGE value="LJ - Added Missing Tests:&#10;Report - 19, 21, 23, 24" />
-    <MESSAGE value="LJ - Added Missing Tests:&#10;Report - 31, 32" />
-    <option name="LAST_COMMIT_MESSAGE" value="LJ - Added Missing Tests:&#10;Report - 31, 32" />
+    <MESSAGE value="LJ - AppTest Comment Review." />
+    <MESSAGE value="LJ - AppTest Comment Review2." />
+    <MESSAGE value="LJ - #135 - Removed unused Imports." />
+    <MESSAGE value="LJ - #132 - Renaming Parameters." />
+    <option name="LAST_COMMIT_MESSAGE" value="LJ - #132 - Renaming Parameters." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
