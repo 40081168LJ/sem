@@ -31,7 +31,6 @@ public class AppIntegrationTest {
         app.disconnect();
     }
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * Integration test for extract all world countries with bad connection - report 1
      * Author - AOB
@@ -189,7 +188,6 @@ public class AppIntegrationTest {
         assertNotNull(countries.get(0).capital);
     }
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * integration test for getting given number of countries in given
      * continent in descending order with a bad connection - report 5
@@ -203,7 +201,6 @@ public class AppIntegrationTest {
 
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * integration test for getting given number of countries in given
      * continent in descending order - report 5
@@ -225,7 +222,6 @@ public class AppIntegrationTest {
 
 
 //--------------------------------------------------------------------------------------------------------------------//
-
     /**
      * integration test for getting given number of countries in given
      * region in descending order with a bad connection - report 6
@@ -577,6 +573,23 @@ public class AppIntegrationTest {
             assertNotNull(language.isOfficial);
         }
     }
+    /**
+     * Additional test - Report 32
+     * Author - LJ
+     */
+    @Test
+    public void testGetLanguagesBadConnection() {
+        ArrayList<Language> languages = Language.getLanguages1(null);
+        assertNull(languages);
+    }
+
+    @Test
+    public void testGetCityPopulationBadConnection() {
+        ArrayList<City> cities = City.getCityPopulation(null);
+        assertNull(cities);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
 
 //--------------------------------------------------------------------------------------------------------------------//
 

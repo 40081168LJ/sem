@@ -3,7 +3,6 @@ package com.napier.sem;
 //--------------------------------------------------------------------------------------------------------------------//
 import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
@@ -79,7 +78,8 @@ public class Language {
                 Languages1.add(countryLanguage1);
             }
             return Languages1;
-        } catch (SQLException ex) {
+
+        } catch (Exception ex) {
             System.out.println(ex.getMessage());
             System.out.println("Failed to get Language Information");
             return null;
