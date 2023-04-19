@@ -463,6 +463,14 @@ public class AppTest {
         Language.displayCountryLanguage(null);
 
     }
+    @Test
+    void displayCountryLanguageIfNullPrntLn(){
+        String output = "TEST OUTPUT";
+        System.out.println(output);
+        ArrayList<Language> LanguageReport1 = new ArrayList<>();
+        LanguageReport1.add(null);
+        Language.displayCountryLanguage(LanguageReport1);
+    }
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
