@@ -454,6 +454,18 @@ public class AppTest {
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
+     * Test to display expected population of the highest populated city in the world
+     * Reports - 32 - If Language1 == Null
+     * Author - LJ
+     */
+    @Test
+    void displayCountryLanguageIfNull(){
+        Language.displayCountryLanguage(null);
+
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
      * Test to check System prints out lines as expected
      * PrintLn Test
      * Author - LJ
