@@ -455,7 +455,7 @@ public class AppTest {
 //--------------------------------------------------------------------------------------------------------------------//
     /**
      * Test to display expected population of the highest populated city in the world
-     * Reports - 32 - If Language1 == Null
+     * Reports - 32 - If Language1 is passed Null
      * Author - LJ
      */
     @Test
