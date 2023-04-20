@@ -229,7 +229,7 @@ public class AppIntegrationTest {
      */
     @Test
     public void testGetTopCountriesInRegionBadConnection(){
-        ArrayList<Country> countries = Country.getTopCountriesInContinent(1, "Asia", null);
+        ArrayList<Country> countries = Country.getTopCountriesInRegion(1, "Middle East", null);
         assertNull(countries);
     }
 
