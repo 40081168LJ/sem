@@ -591,6 +591,120 @@ public class AppIntegrationTest {
 
 //--------------------------------------------------------------------------------------------------------------------//
 
+    /**
+     * Unit test for print extracted list of countries if null
+     * Reports - 1, 2, 3, 4, 5, 6
+     * Author - AOB
+     */
+    @Test
+    void printCountriesTestNull() {
+        Country.printCountries(null);
+    }
+    /**
+     * Unit test for print extracted list of countries if empty
+     * Reports - 1, 2, 3, 4, 5, 6
+     * Author - AOB
+     */
+    @Test
+    void printCountriesTestEmpty() {
+        ArrayList<Country> countries = new ArrayList<>();
+        Country.printCountries(countries);
+    }
+    /**
+     * Unit test for print extracted list of countries if array item is null
+     * Reports - 1, 2, 3, 4, 5, 6
+     * Author - AOB
+     */
+    @Test
+    void printCountriesTestContainsNull() {
+        ArrayList<Country> countries = new ArrayList<>();
+        countries.add(null);
+        Country.printCountries(countries);
+    }
+    /**
+     * Unit test for extract list of countries with country object variables present
+     * Reports - 1, 2, 3, 4, 5, 6
+     * Author - AOB
+     */
+    @Test
+    void printCountries() {
+        ArrayList<Country> countries = new ArrayList<>();
+        Country country = new Country();
+        country.code = "FRA";
+        country.name = "France";
+        country.continent = "Europe";
+        country.region = "Western Europe";
+        country.population = 55000;
+        country.capital = "Paris";
+        countries.add(country);
+        Country.printCountries(countries);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Test to check System prints out lines as expected
+     * PrintLn Test
+     * Author - LJ
+     */
+    @Test
+    void SystemOutPrintln(){
+        String output = "TEST OUTPUT";
+        System.out.println(output);
+    }
+    /**
+     * Test to check System prints out lines as expected
+     * PrintLn Test 2 - Line294 - Population.Java
+     * Author - LJ
+     */
+    @Test
+    void SystemOutPrintln2(){
+        String countriesString = "TEST OUTPUT";
+        System.out.println(countriesString);
+    }
+
+    /**
+     * Test to check System prints out lines as expected
+     * PrintLn Test 2 - Line294 - Population.Java
+     * Author - LJ
+     */
+    @Test
+    void SystemOutPrintf(){
+        String countriesString = "TEST OUTPUT";
+        System.out.printf(countriesString);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Test to display expected population of the highest populated city in the world
+     * Reports - 32 - If Language1 is passed Null
+     * Author - LJ
+     */
+    @Test
+    void displayCountryLanguageIfNull(){
+        Language.displayCountryLanguage(null);
+
+    }
+    @Test
+    void displayCountryLanguageIfNullPrntLn(){
+        String output = "TEST OUTPUT";
+        System.out.println(output);
+        ArrayList<Language> LanguageReport1 = new ArrayList<>();
+        LanguageReport1.add(null);
+        Language.displayCountryLanguage(LanguageReport1);
+    }
+    /**
+     * Test to display expected population of the highest populated city in the world
+     * Reports - 32 - Null Value
+     * Author - LJ
+     */
+    @Test
+    void displayCountryLanguageNull(){
+        ArrayList<Language> LanguageReport1 = new ArrayList<>();
+        LanguageReport1.add(null);
+        Language.displayCountryLanguage(LanguageReport1);
+
+    }
+
 //--------------------------------------------------------------------------------------------------------------------//
 
 }
