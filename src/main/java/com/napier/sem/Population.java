@@ -74,8 +74,9 @@ public class Population {
             // Execute SQL Statement and return population
             ResultSet rset = stmt.executeQuery(strSelect);
             Population pop = new Population();
-            rset.next();
-            pop.population = rset.getLong("popTotal");
+            while (rset.next()) {
+                pop.population = rset.getLong("popTotal");
+            }
             return pop;
         } catch (Exception e) {
             System.out.println(e.getMessage());

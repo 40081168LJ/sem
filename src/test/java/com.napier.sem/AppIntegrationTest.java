@@ -564,7 +564,7 @@ public class AppIntegrationTest {
         assertNotNull(languages);
 
         // Check that the returned list contains at least one language
-        assertTrue(languages.size() > 0);
+        assertFalse(languages.isEmpty());
 
         // Check that each language object in the list has all of its fields set
         for (Language language : languages) {
@@ -641,26 +641,6 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-    /**
-     * Test to check System prints out lines as expected
-     * PrintLn Test
-     * Author - LJ
-     */
-    @Test
-    void SystemOutPrintln(){
-        String output = "TEST OUTPUT";
-        System.out.println(output);
-    }
-    /**
-     * Test to check System prints out lines as expected
-     * PrintLn Test 2 - Line294 - Population.Java
-     * Author - LJ
-     */
-    @Test
-    void SystemOutPrintln2(){
-        String countriesString = "TEST OUTPUT";
-        System.out.println(countriesString);
-    }
 
     /**
      * Test to check System prints out lines as expected
@@ -668,7 +648,7 @@ public class AppIntegrationTest {
      * Author - LJ
      */
     @Test
-    void SystemOutPrintf(){
+    void systemOutPrintf(){
         String countriesString = "TEST OUTPUT";
         System.out.printf(countriesString);
     }
@@ -685,12 +665,12 @@ public class AppIntegrationTest {
 
     }
     @Test
-    void displayCountryLanguageIfNullPrntLn(){
+    void displayCountryLanguageIfNullPrintLn(){
         String output = "TEST OUTPUT";
         System.out.println(output);
-        ArrayList<Language> LanguageReport1 = new ArrayList<>();
-        LanguageReport1.add(null);
-        Language.displayCountryLanguage(LanguageReport1);
+        ArrayList<Language> languageReports = new ArrayList<>();
+        languageReports.add(null);
+        Language.displayCountryLanguage(languageReports);
     }
     /**
      * Test to display expected population of the highest populated city in the world
@@ -699,9 +679,9 @@ public class AppIntegrationTest {
      */
     @Test
     void displayCountryLanguageNull(){
-        ArrayList<Language> LanguageReport1 = new ArrayList<>();
-        LanguageReport1.add(null);
-        Language.displayCountryLanguage(LanguageReport1);
+        ArrayList<Language> languageReports = new ArrayList<>();
+        languageReports.add(null);
+        Language.displayCountryLanguage(languageReports);
 
     }
 

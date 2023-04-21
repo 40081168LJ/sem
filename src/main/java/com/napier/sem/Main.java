@@ -35,7 +35,7 @@ public class Main {
         int swValue;
         System.out.println("<|************************************************************************************|>");
         System.out.println("<|                                                                                    |>");
-        System.out.println("<|                                  REPORTSELECTION                                   |>");
+        System.out.println("<|                                 REPORTS ELECTION                                   |>");
         System.out.println("<|                                                                                    |>");
         System.out.println("<|       The below is a list of avaiable Reports,that can be viewed. To view a        |>");
         System.out.println("<|       Report simply input the report number (to the left of the Report Name)       |>");
@@ -302,7 +302,6 @@ public class Main {
                     City.displayCites(cities);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 14 Finished, Returning to Main Menu...");
-                    scanner.nextLine();
                     break;}
 
                 /**
@@ -639,7 +638,7 @@ public class Main {
 
             try {
                 while ((System.in.available()) != 0)
-                    dummy = System.in.read();
+                    System.in.read();
             } catch (java.io.IOException e) {
                 System.out.println("Input error");
             }
