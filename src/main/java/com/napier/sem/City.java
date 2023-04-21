@@ -371,14 +371,17 @@ public class City {
 
 
 //--------------------------------------------------------------------------------------------------------------------//
-        /**Display cities when given a list of cities - report 7
-         *@param cities a list of the city object to display
+        /**
+         * Display cities when given a list of cities - report 7
+         *
+         * @param cities a list of the city object to display
+         * @return
          */
-        public static void displayCites(ArrayList<City> cities) {
+        public static Object displayCites(ArrayList<City> cities) {
                 if (cities == null)
                 {
                         System.out.println("no cities have been found");
-                        return;
+                        return null;
                 }
                 //Print header
                 System.out.printf("\n %s %s %s %s%n", "Name", "Country", "District", "Population");
@@ -393,6 +396,7 @@ public class City {
 
                         System.out.println(citiesString);
                 }
+                return null;
         }
 
 //--------------------------------------------------------------------------------------------------------------------//
@@ -481,14 +485,17 @@ public class City {
         }
 
 //--------------------------------------------------------------------------------------------------------------------//
-        /**Display cities when given a list of cities - report 7, report 18, report 17
-         *@param capitalCities a list of the city object to display
+        /**
+         * Display cities when given a list of cities - report 7, report 18, report 17
+         *
+         * @param capitalCities a list of the city object to display
+         * @return
          */
-        public static void displayCapitalCites(ArrayList<City> capitalCities) {
+        public static Object displayCapitalCites(ArrayList<City> capitalCities) {
                 if (capitalCities == null)
                 {
                         System.out.println("no capital cities have been found");
-                        return;
+                        return null;
                 }
                 //Print header
                 System.out.printf("\n %s %s %s%n", "Name", "Country", "Population");
@@ -502,6 +509,7 @@ public class City {
 
                         System.out.println(citiesString);
                 }
+                return null;
         }
 
 //--------------------------------------------------------------------------------------------------------------------//

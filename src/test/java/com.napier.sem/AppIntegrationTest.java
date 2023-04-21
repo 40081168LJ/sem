@@ -64,7 +64,7 @@ public class AppIntegrationTest {
      * integration test for getting cities descending order - report 7
      */
     @Test
-    public void GetCityPopulation() {
+    public void getCityPopulation() {
         ArrayList<City> cities = City.getCityPopulation(app.con);
         //validates
         assertNotNull(cities);
@@ -259,7 +259,7 @@ public class AppIntegrationTest {
      * Used in additional_info 1 report
      */
     @Test
-    public void GetWorldPopulation() {
+    public void getWorldPopulation() {
         Population pop = Population.getPopulation(app.con);
         //validates
         assertNotNull(pop);
@@ -323,7 +323,7 @@ public class AppIntegrationTest {
      * integration test for getting all country populations - Report Additional info 4
      */
     @Test
-    public void GetCountriesPopulations() {
+    public void getCountriesPopulations() {
         ArrayList<Population> populations = Population.getCountryPopulations(app.con);
         assertNotNull(populations);
         assertNotNull(populations.get(0).country);
@@ -335,7 +335,7 @@ public class AppIntegrationTest {
      * integration test for getting cities descending order - report 8
      */
     @Test
-    public void GetCityPopulationByContinent() {
+    public void getCityPopulationByContinent() {
         ArrayList<City> cities = City.getCityPopulationByContinent("Europe", app.con);
         //validates
         assertNotNull(cities);
@@ -404,7 +404,7 @@ public class AppIntegrationTest {
      * integration test for getting all district populations - Report Additional info 5
      */
     @Test
-    public void GetDistrictPopulations() {
+    public void getDistrictPopulations() {
         ArrayList<Population> populations = Population.getDistrictPopulation(app.con);
         assertNotNull(populations);
         assertNotNull(populations.get(0).district);
@@ -542,13 +542,13 @@ public class AppIntegrationTest {
      */
     @Test
     public void getLanguages1(){
-        ArrayList<Language> LanguageReport1 = Language.getLanguages1(app.con);
-        assertNotNull(LanguageReport1);
-        assertNotNull(LanguageReport1.get(0).countryCode);
-        assertNotNull(LanguageReport1.get(0).language);
-        assertNotNull(LanguageReport1.get(0).isOfficial);
-        //assertNotNull(LanguageReport1.get(0).percentage);
-        Language.displayCountryLanguage(LanguageReport1);
+        ArrayList<Language> languageReport = Language.getLanguages1(app.con);
+        assertNotNull(languageReport);
+        assertNotNull(languageReport.get(0).countryCode);
+        assertNotNull(languageReport.get(0).language);
+        assertNotNull(languageReport.get(0).isOfficial);
+        //assertNotNull(languageReport.get(0).percentage);
+        Language.displayCountryLanguage(languageReport);
 
     }
 

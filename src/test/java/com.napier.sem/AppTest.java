@@ -6,6 +6,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 //--------------------------------------------------------------------------------------------------------------------//
 /** Unit tests for reports
  * Author - AOB
@@ -30,7 +32,7 @@ public class AppTest {
      * Author - AG
      */
     @Test
-    void DisplayWorldPopulationTestEmpty() {
+    void displayWorldPopulationTestEmpty() {
         Population population = new Population();
         Population.displayPopulation(population);
     }
@@ -42,11 +44,12 @@ public class AppTest {
      * Author - AG
      */
     @Test
-    void DisplayWorldPopulation() {
+    void displayWorldPopulation() {
         Population population = new Population();
         population.population = 23123122;
         Population.displayPopulation(population);
     }
+
 
 //--------------------------------------------------------------------------------------------------------------------//
     /**
@@ -56,7 +59,7 @@ public class AppTest {
      */
     @Test
     void printCountriesTestNull() {
-        Country.printCountries(null);
+       assertNull(Country.printCountries(null));
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
@@ -81,7 +84,7 @@ public class AppTest {
     void printCountriesTestContainsNull() {
         ArrayList<Country> countries = new ArrayList<>();
         countries.add(null);
-        Country.printCountries(countries);
+        assertNull(Country.printCountries(countries));
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
@@ -111,7 +114,7 @@ public class AppTest {
      * Author - SL
      */
     @Test
-    void DisplayCitiesTestEmpty() {
+    void displayCitiesTestEmpty() {
         ArrayList<City> city = new ArrayList<>();
         City.displayCites(city);
     }
@@ -123,12 +126,12 @@ public class AppTest {
      * Author - Shaun
      */
     @Test
-    void DisplayCities() {
+    void displayCities() {
         ArrayList<City> cities = new ArrayList<>();
         City city = new City();
         city.name = "testCity";
         city.district = "testDistrict";
-        city.country = "TestCountry";
+        city.country = "testCountry";
         city.population = 123;
         cities.add(city);
 
@@ -154,7 +157,7 @@ public class AppTest {
      * Author - AG
      */
     @Test
-    void DisplayCityPopulation() {
+    void displayCityPopulation() {
         ArrayList<City> cities = new ArrayList<>();
         City city = new City();
         city.name = "Kabul";
@@ -172,7 +175,7 @@ public class AppTest {
      * Author - AG
      */
     @Test
-    void DisplayCountryPopulation() {
+    void displayCountryPopulation() {
         ArrayList<Population> countries = new ArrayList<>();
         Population population = new Population();
         population.country = "Aruba";
@@ -190,10 +193,10 @@ public class AppTest {
      * Author - AG
      */
     @Test
-    void DisplayDistrictPopulation() {
+    void displayDistrictPopulation() {
         ArrayList<Population> countries = new ArrayList<>();
         Population population = new Population();
-        population.country = "Kabol";
+        population.country = "Kabul";
         population.population = 1780000;
         countries.add(population);
 
@@ -208,7 +211,7 @@ public class AppTest {
      * Author - AG
      */
     @Test
-    void DisplayRegionPopulation() {
+    void displayRegionPopulation() {
         ArrayList<Population> countries = new ArrayList<>();
         Population population = new Population();
         population.country = "Caribbean";
@@ -226,7 +229,7 @@ public class AppTest {
      * Author - AG
      */
     @Test
-    void displayCapitalCities(){
+    void displayCapitalCities2(){
         ArrayList<City> cities = new ArrayList<>();
         City city = new City();
         city.name = "Seoul";
@@ -244,7 +247,7 @@ public class AppTest {
      * Author - AG
      */
     @Test
-    void DisplayCapitalCities() {
+    void displayCapitalCities() {
         ArrayList<City> cities = new ArrayList<>();
         City city = new City();
         city.name = "Cairo";
@@ -305,7 +308,7 @@ public class AppTest {
     void getCountryPopulation2(){
         ArrayList<Population> populations = new ArrayList<>();
         Population population = new Population();
-        population.country = "spain";
+        population.country = "Spain";
         population.population = 363665421;
         population.inCities = "0.0571%";
         population.outCities = "99.9429%";
@@ -323,7 +326,7 @@ public class AppTest {
      */
     @Test
     void displayCapitalCitiesTestNull() {
-        City.displayCapitalCites(null);
+        assertNull(City.displayCapitalCites(null));
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
@@ -348,7 +351,7 @@ public class AppTest {
     void displayCapitalCitiesTestContainsNull() {
         ArrayList<City> cities = new ArrayList<>();
         cities.add(null);
-        City.displayCapitalCites(cities);
+       assertNull(City.displayCapitalCites(cities));
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
@@ -358,7 +361,7 @@ public class AppTest {
      * Author - AG
      */
     @Test
-    void DisplayCapitalCitiesInRegion() {
+    void displayCapitalCitiesInRegion() {
         ArrayList<City> cities = new ArrayList<>();
         City city = new City();
         city.region = "Caribbean";
@@ -412,14 +415,14 @@ public class AppTest {
      */
     @Test
     void displayCountryLanguage(){
-        ArrayList<Language> LanguageReport1 = new ArrayList<>();
-        Language LanguageReport1test = new Language();
-        LanguageReport1test.countryCode = "CoutnryCodeTest";
-        LanguageReport1test.language = "LanguageTest";
-        LanguageReport1test.isOfficial = "OfficialTest";
-        LanguageReport1test.percentage = 69;
-        LanguageReport1.add(LanguageReport1test);
-        Language.displayCountryLanguage(LanguageReport1);
+        ArrayList<Language> languageReport = new ArrayList<>();
+        Language languageReportTest = new Language();
+        languageReportTest.countryCode = "CountryCodeTest";
+        languageReportTest.language = "LanguageTest";
+        languageReportTest.isOfficial = "OfficialTest";
+        languageReportTest.percentage = 69;
+        languageReport.add(languageReportTest);
+        Language.displayCountryLanguage(languageReport);
 
     }
 
@@ -431,10 +434,10 @@ public class AppTest {
      */
     @Test
     void displayCountryLanguageEmpty(){
-        ArrayList<Language> LanguageReport1 = new ArrayList<>();
-        Language LanguageReport1test = new Language();
-        LanguageReport1.add(LanguageReport1test);
-        Language.displayCountryLanguage(LanguageReport1);
+        ArrayList<Language> languageReport = new ArrayList<>();
+        Language languageReportTest = new Language();
+        languageReport.add(languageReportTest);
+        Language.displayCountryLanguage(languageReport);
 
     }
 
@@ -446,9 +449,9 @@ public class AppTest {
      */
     @Test
     void displayCountryLanguageNull(){
-        ArrayList<Language> LanguageReport1 = new ArrayList<>();
-        LanguageReport1.add(null);
-        Language.displayCountryLanguage(LanguageReport1);
+        ArrayList<Language> languageReport = new ArrayList<>();
+        languageReport.add(null);
+        assertNull(Language.displayCountryLanguage(languageReport));
 
     }
 
@@ -460,16 +463,16 @@ public class AppTest {
      */
     @Test
     void displayCountryLanguageIfNull(){
-        Language.displayCountryLanguage(null);
+        assertNull(Language.displayCountryLanguage(null));
 
     }
     @Test
-    void displayCountryLanguageIfNullPrntLn(){
+    void displayCountryLanguageIfNullPrintLn(){
         String output = "TEST OUTPUT";
         System.out.println(output);
-        ArrayList<Language> LanguageReport1 = new ArrayList<>();
-        LanguageReport1.add(null);
-        Language.displayCountryLanguage(LanguageReport1);
+        ArrayList<Language> languageReport = new ArrayList<>();
+        languageReport.add(null);
+        assertNull(Language.displayCountryLanguage(languageReport));
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
@@ -479,7 +482,7 @@ public class AppTest {
      * Author - LJ
      */
     @Test
-    void SystemOutPrintln(){
+    void systemOutPrintln(){
             String output = "TEST OUTPUT";
             System.out.println(output);
         }
@@ -491,7 +494,7 @@ public class AppTest {
      * Author - LJ
      */
     @Test
-    void SystemOutPrintln2(){
+    void systemOutPrintln2(){
         String countriesString = "TEST OUTPUT";
         System.out.println(countriesString);
     }

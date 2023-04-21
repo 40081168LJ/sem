@@ -88,12 +88,15 @@ public class Population {
 
     /**
      * Displays world population
+     *
      * @param population stores population
+     * @return
      */
-    public static void displayPopulation(Population population) {
+    public static Object displayPopulation(Population population) {
         if (population != null) {
             System.out.println("World Population : " + population.population);
         }
+        return null;
     }
 
 
@@ -355,10 +358,10 @@ public class Population {
         for (Population population : populations) {
             if (population == null)
                 continue;
-            String DistrictsString =
+            String districtsString =
                     String.format("%s %s ", population.district, population.population);
 
-            System.out.println(DistrictsString);
+            System.out.println(districtsString);
         }
 
     }

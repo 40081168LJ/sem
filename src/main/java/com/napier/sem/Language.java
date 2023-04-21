@@ -65,7 +65,7 @@ public class Language {
             ResultSet rset = stmt.executeQuery(strSelect);
 
             // Extract Language information
-            ArrayList<Language> Languages1 = new ArrayList<>();
+            ArrayList<Language> languages = new ArrayList<>();
 
             //Return new language if valid.
             //Check one is returned
@@ -75,9 +75,9 @@ public class Language {
                 countryLanguage1.language = rset.getString("Language");
                 countryLanguage1.isOfficial = rset.getString("IsOfficial");
                 countryLanguage1.percentage = rset.getInt("Percentage");
-                Languages1.add(countryLanguage1);
+                languages.add(countryLanguage1);
             }
-            return Languages1;
+            return languages;
 
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
@@ -86,28 +86,32 @@ public class Language {
         }
     }
 //--------------------------------------------------------------------------------------------------------------------//
-    /**Display Country Language where Language = 'Chinese','English','Hindi','Spanish','Arabic'
-     *@param Languages1
+    /**
+     * Display Country Language where Language = 'Chinese','English','Hindi','Spanish','Arabic'
+     *
+     * @param languages
+     * @return
      */
-    public static void displayCountryLanguage(ArrayList<Language> Languages1) {
-        if (Languages1 == null)
+    public static Object displayCountryLanguage(ArrayList<Language> languages) {
+        if (languages == null)
         {
             System.out.println("No Countries with the Languages " +
                     "('Chinese','English','Hindi','Spanish','Arabic') can be found.");
-            return;
+            return null;
         }
         //Print header
         System.out.printf("\n %s %s %s %s%n", "Country Code", "Language", "Is Official", "Percentage");
 
-        for (Language countryLanguage1 : Languages1)
+        for (Language countrylanguages : languages)
         {
-            if (countryLanguage1 == null)
+            if (countrylanguages == null)
                 continue;
-            String language1_string =
-                    String.format("%s %s %s %s", countryLanguage1.countryCode, countryLanguage1.language,
-                            countryLanguage1.isOfficial, countryLanguage1.percentage);
-            System.out.println(language1_string);
+            String languagesString =
+                    String.format("%s %s %s %s", countrylanguages.countryCode, countrylanguages.language,
+                            countrylanguages.isOfficial, countrylanguages.percentage);
+            System.out.println(languagesString);
         }
+        return null;
     }
 }
 //--------------------------------------------------------------------------------------------------------------------//

@@ -298,17 +298,20 @@ public class Country {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
-    /** Print table of countries extracted
+    /**
+     * Print table of countries extracted
      * Author - AOB
+     *
      * @param countries list of countries to display
+     * @return
      */
     //Print list of countries in the world
-    public static void printCountries(ArrayList<Country> countries)
+    public static Object printCountries(ArrayList<Country> countries)
     {
         if (countries == null)
         {
             System.out.println("No countries");
-            return;
+            return null;
         }
         //Print header
         System.out.printf("\n %s %s %s %s %s %s%n", "Code", "Name", "Continent",
@@ -318,10 +321,11 @@ public class Country {
         {
             if (country == null)
                 continue;
-            String country_string =
+            String countryString =
                     String.format("%s %s %s %s %s %s", country.code, country.name, country.continent,
                             country.region, country.population, country.capital);
-            System.out.println(country_string);
+            System.out.println(countryString);
         }
+        return null;
     }
 }
