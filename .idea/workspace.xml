@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - #148 - CodeCov Coverage4 for Language.java &amp; City.java.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - CodeCov Test 7." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -348,13 +346,6 @@
       <workItem from="1676360482399" duration="1826000" />
       <workItem from="1676382680779" duration="521000" />
     </task>
-    <task id="LOCAL-00029" summary="AOB - git Action changes">
-      <created>1679407604619</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1679407604619</updated>
-    </task>
     <task id="LOCAL-00030" summary="AOB - file name changes">
       <created>1679408210346</created>
       <option name="number" value="00030" />
@@ -691,7 +682,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681940464106</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="LJ - CodeCov Test 7.">
+      <created>1682095676051</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1682095676051</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -709,7 +707,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LJ - CodeCov, attempt1." />
     <MESSAGE value="LJ - CodeCov, attempt2." />
     <MESSAGE value="LJ - Merged all reports and checked layout." />
     <MESSAGE value="LJ - CodeCov Test - Report 1" />
@@ -734,7 +731,8 @@
     <MESSAGE value="LJ - #135 - Removed unused Imports." />
     <MESSAGE value="LJ - #132 - Renaming Parameters." />
     <MESSAGE value="LJ - #148 - CodeCov Coverage4 for Language.java &amp; City.java." />
-    <option name="LAST_COMMIT_MESSAGE" value="LJ - #148 - CodeCov Coverage4 for Language.java &amp; City.java." />
+    <MESSAGE value="LJ - CodeCov Test 7." />
+    <option name="LAST_COMMIT_MESSAGE" value="LJ - CodeCov Test 7." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

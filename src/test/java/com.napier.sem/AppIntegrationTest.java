@@ -600,6 +600,78 @@ public class AppIntegrationTest {
     void printCountriesTestNull() {
         Country.printCountries(null);
     }
+    /**
+     * Unit test for print extracted list of countries if empty
+     * Reports - 1, 2, 3, 4, 5, 6
+     * Author - AOB
+     */
+    @Test
+    void printCountriesTestEmpty() {
+        ArrayList<Country> countries = new ArrayList<>();
+        Country.printCountries(countries);
+    }
+    /**
+     * Unit test for print extracted list of countries if array item is null
+     * Reports - 1, 2, 3, 4, 5, 6
+     * Author - AOB
+     */
+    @Test
+    void printCountriesTestContainsNull() {
+        ArrayList<Country> countries = new ArrayList<>();
+        countries.add(null);
+        Country.printCountries(countries);
+    }
+    /**
+     * Unit test for extract list of countries with country object variables present
+     * Reports - 1, 2, 3, 4, 5, 6
+     * Author - AOB
+     */
+    @Test
+    void printCountries() {
+        ArrayList<Country> countries = new ArrayList<>();
+        Country country = new Country();
+        country.code = "FRA";
+        country.name = "France";
+        country.continent = "Europe";
+        country.region = "Western Europe";
+        country.population = 55000;
+        country.capital = "Paris";
+        countries.add(country);
+        Country.printCountries(countries);
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Test to check System prints out lines as expected
+     * PrintLn Test
+     * Author - LJ
+     */
+    @Test
+    void SystemOutPrintln(){
+        String output = "TEST OUTPUT";
+        System.out.println(output);
+    }
+    /**
+     * Test to check System prints out lines as expected
+     * PrintLn Test 2 - Line294 - Population.Java
+     * Author - LJ
+     */
+    @Test
+    void SystemOutPrintln2(){
+        String countriesString = "TEST OUTPUT";
+        System.out.println(countriesString);
+    }
+
+    /**
+     * Test to check System prints out lines as expected
+     * PrintLn Test 2 - Line294 - Population.Java
+     * Author - LJ
+     */
+    @Test
+    void SystemOutPrintf(){
+        String countriesString = "TEST OUTPUT";
+        System.out.printf(countriesString);
+    }
 
 //--------------------------------------------------------------------------------------------------------------------//
 
