@@ -318,10 +318,10 @@ public class Country {
         {
             if (country == null)
                 continue;
-            String country_string =
+            String countryString =
                     String.format("%s %s %s %s %s %s", country.code, country.name, country.continent,
                             country.region, country.population, country.capital);
-            System.out.println(country_string);
+            System.out.println(countryString);
         }
     }
 }

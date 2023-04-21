@@ -24,7 +24,7 @@ public class Language {
     /** This is for Report Languages 1, Finally, the organisation has asked if it is possible to provide the number
      * of people who speak the following languages from the greatest number to smallest,
      * including the percentage of the world population for: 'Chinese','English','Hindi','Spanish','Arabic'
-     * @param con
+     * @param con connection to database
      * @return Returns the above
      */
     public static ArrayList<Language> getLanguages1(Connection con) {
@@ -65,7 +65,7 @@ public class Language {
             ResultSet rset = stmt.executeQuery(strSelect);
 
             // Extract Language information
-            ArrayList<Language> Languages1 = new ArrayList<>();
+            ArrayList<Language> languages = new ArrayList<>();
 
             //Return new language if valid.
             //Check one is returned
@@ -75,9 +75,9 @@ public class Language {
                 countryLanguage1.language = rset.getString("Language");
                 countryLanguage1.isOfficial = rset.getString("IsOfficial");
                 countryLanguage1.percentage = rset.getInt("Percentage");
-                Languages1.add(countryLanguage1);
+                languages.add(countryLanguage1);
             }
-            return Languages1;
+            return languages;
 
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
@@ -87,10 +87,10 @@ public class Language {
     }
 //--------------------------------------------------------------------------------------------------------------------//
     /**Display Country Language where Language = 'Chinese','English','Hindi','Spanish','Arabic'
-     *@param Languages1
+     *@param languages list of languages
      */
-    public static void displayCountryLanguage(ArrayList<Language> Languages1) {
-        if (Languages1 == null)
+    public static void displayCountryLanguage(ArrayList<Language> languages) {
+        if (languages == null)
         {
             System.out.println("No Countries with the Languages " +
                     "('Chinese','English','Hindi','Spanish','Arabic') can be found.");
@@ -99,14 +99,14 @@ public class Language {
         //Print header
         System.out.printf("\n %s %s %s %s%n", "Country Code", "Language", "Is Official", "Percentage");
 
-        for (Language countryLanguage1 : Languages1)
+        for (Language countryLanguage1 : languages)
         {
             if (countryLanguage1 == null)
                 continue;
-            String language1_string =
+            String languageString =
                     String.format("%s %s %s %s", countryLanguage1.countryCode, countryLanguage1.language,
                             countryLanguage1.isOfficial, countryLanguage1.percentage);
-            System.out.println(language1_string);
+            System.out.println(languageString);
         }
     }
 }

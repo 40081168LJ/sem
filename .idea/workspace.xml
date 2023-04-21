@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="fixed formatting issues and added test coverage for try catch">
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="fixed broken test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Country.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Language.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Language.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/napier/sem/Population.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/napier/sem/Population.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.napier.sem/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +56,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/country_test_coverage" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -123,14 +128,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AppIntegrationTest.testGetLanguagesBadConnection">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="seMethods" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.AppIntegrationTest.testGetContinentCountries">
     <configuration name="AppIntegrationTest" type="JUnit" factoryName="JUnit">
       <module name="seMethods" />
       <option name="PACKAGE_NAME" value="com.napier.sem" />
@@ -141,7 +139,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppIntegrationTest.testGetCityPopulationBadConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppIntegrationTest.testGetContinentCountries" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seMethods" />
       <extension name="coverage">
         <pattern>
@@ -151,7 +149,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.napier.sem" />
       <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppIntegrationTest" />
-      <option name="METHOD_NAME" value="testGetCityPopulationBadConnection" />
+      <option name="METHOD_NAME" value="testGetContinentCountries" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppIntegrationTest.testGetContinentCountriesBadConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seMethods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.napier.sem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.napier.sem" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppIntegrationTest" />
+      <option name="METHOD_NAME" value="testGetContinentCountriesBadConnection" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -313,12 +327,12 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.Report123Tests" />
       <item itemvalue="JUnit.UnitTests" />
       <item itemvalue="JUnit.IntegrationTests" />
       <item itemvalue="JUnit.AppIntegrationTest" />
-      <item itemvalue="JUnit.AppIntegrationTest.testGetCityPopulationBadConnection" />
+      <item itemvalue="JUnit.AppIntegrationTest.testGetContinentCountries" />
+      <item itemvalue="JUnit.AppIntegrationTest.testGetContinentCountriesBadConnection" />
       <item itemvalue="JUnit.AppIntegrationTest.testGetLanguagesBadConnection" />
       <item itemvalue="JUnit.AppIntegrationTest.testGetLanguages1" />
       <item itemvalue="JUnit.AppTest.displayCountryLanguageIfNull" />
@@ -326,11 +340,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AppIntegrationTest.testGetLanguagesBadConnection" />
-        <item itemvalue="JUnit.AppIntegrationTest.testGetCityPopulationBadConnection" />
-        <item itemvalue="JUnit.AppIntegrationTest.testGetLanguages1" />
+        <item itemvalue="JUnit.AppIntegrationTest.testGetContinentCountries" />
+        <item itemvalue="JUnit.AppIntegrationTest.testGetContinentCountriesBadConnection" />
         <item itemvalue="JUnit.AppTest.displayCountryLanguageIfNull" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.AppIntegrationTest.testGetLanguages1" />
+        <item itemvalue="JUnit.AppIntegrationTest.testGetLanguagesBadConnection" />
       </list>
     </recent_temporary>
   </component>
@@ -736,17 +750,6 @@
     <MESSAGE value="LJ - #135 - Removed unused Imports." />
     <MESSAGE value="LJ - #132 - Renaming Parameters." />
     <option name="LAST_COMMIT_MESSAGE" value="LJ - #132 - Renaming Parameters." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/napier/sem/Language.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

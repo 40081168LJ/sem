@@ -355,10 +355,10 @@ public class Population {
         for (Population population : populations) {
             if (population == null)
                 continue;
-            String DistrictsString =
+            String districtsString =
                     String.format("%s %s ", population.district, population.population);
 
-            System.out.println(DistrictsString);
+            System.out.println(districtsString);
         }
 
     }
