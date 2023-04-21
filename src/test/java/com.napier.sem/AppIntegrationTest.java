@@ -674,6 +674,38 @@ public class AppIntegrationTest {
     }
 
 //--------------------------------------------------------------------------------------------------------------------//
+    /**
+     * Test to display expected population of the highest populated city in the world
+     * Reports - 32 - If Language1 is passed Null
+     * Author - LJ
+     */
+    @Test
+    void displayCountryLanguageIfNull(){
+        Language.displayCountryLanguage(null);
+
+    }
+    @Test
+    void displayCountryLanguageIfNullPrntLn(){
+        String output = "TEST OUTPUT";
+        System.out.println(output);
+        ArrayList<Language> LanguageReport1 = new ArrayList<>();
+        LanguageReport1.add(null);
+        Language.displayCountryLanguage(LanguageReport1);
+    }
+    /**
+     * Test to display expected population of the highest populated city in the world
+     * Reports - 32 - Null Value
+     * Author - LJ
+     */
+    @Test
+    void displayCountryLanguageNull(){
+        ArrayList<Language> LanguageReport1 = new ArrayList<>();
+        LanguageReport1.add(null);
+        Language.displayCountryLanguage(LanguageReport1);
+
+    }
+
+//--------------------------------------------------------------------------------------------------------------------//
 
 }
 
