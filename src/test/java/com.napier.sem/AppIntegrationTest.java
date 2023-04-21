@@ -591,6 +591,16 @@ public class AppIntegrationTest {
 
 //--------------------------------------------------------------------------------------------------------------------//
 
+    /**
+     * Unit test for print extracted list of countries if null
+     * Reports - 1, 2, 3, 4, 5, 6
+     * Author - AOB
+     */
+    @Test
+    void printCountriesTestNull() {
+        Country.printCountries(null);
+    }
+
 //--------------------------------------------------------------------------------------------------------------------//
 
 }
