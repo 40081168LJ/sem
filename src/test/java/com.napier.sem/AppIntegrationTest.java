@@ -26,6 +26,9 @@ public class AppIntegrationTest {
         app.connect("localhost:33060", 30000);
     }
 
+    /**
+     * cleanup method executes after report is ran
+     */
     @AfterAll
     public static void cleanUp(){
         app.disconnect();
@@ -582,6 +585,10 @@ public class AppIntegrationTest {
         ArrayList<Language> languages = Language.getLanguages1(null);
         assertNull(languages);
     }
+
+    /**
+     * Additional test
+     */
 
     @Test
     public void testGetCityPopulationBadConnection() {

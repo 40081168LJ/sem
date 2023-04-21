@@ -11,7 +11,9 @@ import java.util.*;
  */
 public class Main {
 
-    // setting quit for menu loop below
+    /**
+     * setting quit tp false for menu loop below
+     */
     static boolean quit = false;
 
 //--------------------------------------------------------------------------------------------------------------------//
@@ -619,6 +621,10 @@ public class Main {
     }
 
     //--------------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Class creation to store user inputs
+     */
     static class Keyin {
         /**
          *SupportMethods
