@@ -6,10 +6,7 @@
 
 ![workflow](https://github.com/40346200Aidan/sem/actions/workflows/main.yml/badge.svg)
 
-
-![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/<40081168LJ>/<sem>/<A workflow for sem>/<develop>?style=flat-square)
-
-![GitHub Workflow Status (develop)](https://img.shields.io/github/workflow/status/40346200Aidan/sem/Workflow1/develop?style=flat-square)
+![GitHub Workflow Status (develop)](https://img.shields.io/github/actions/workflow/status/40081168LJ/sem/main.yml?branch=develop)
 
 32 requirements out of 32 have been implemented, which is 100%.
 
