@@ -12,7 +12,7 @@
 
 | ID  | Name                                                                                                                                                                                               | Met  | Screenshot |
 |:----|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----|:-----------|
-| 1   | All the countries in the world organised by largest population to smallest.                                                                                                                        | Yes  | [Screenshot](https://github.com/40081168LJ/sem/blob/feature/ReadMe/ReportScreenshots/Report1_Screenshot.png) |
+| 1   | All the countries in the world organised by largest population to smallest.                                                                                                                        | Yes  | [Screenshot] |
 | 2   | All the countries in a continent organised by largest population to smallest.                                                                                                                      | Yes  |
 | 3   | All the countries in a region organised by largest population to smallest.                                                                                                                         | Yes  |
 | 4   | The top N populated countries in the world where N is provided by the user.                                                                                                                        | Yes  |
@@ -43,4 +43,4 @@
 | 29  | The population of a country.                                                                                                                                                                       | Yes  |
 | 30  | The population of a district.                                                                                                                                                                      | Yes  |
 | 31  | The population of a city.                                                                                                                                                                          | Yes  |
-| 32  | The number of people who speak the following the following languages from greatest number to smallest, including the percentage of the world population: Chinese, English, Hindi, Spanish, Arabic. | Yes  |
+| 32  | The number of people who speak the following languages from greatest number to smallest, including the percentage of the world population: Chinese, English, Hindi, Spanish, Arabic. | Yes  |
