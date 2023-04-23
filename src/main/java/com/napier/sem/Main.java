@@ -109,7 +109,7 @@ public class Main {
                     System.out.println("<|************************************************************************************|>");
                     // Extract country by region information
                     ArrayList<Country> countries2 = Country.getRegionCountries(region1, con.con);
-                    //Print table of All the countries in a region organised by largest population to smallest.
+                    // Print table of All the countries in a region organised by largest population to smallest.
                     Country.printCountries(countries2);
                     System.out.println("<|************************************************************************************|>");
                     System.out.println("Report 3 Finished, Returning to Main Menu...");
