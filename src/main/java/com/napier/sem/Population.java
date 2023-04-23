@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 //--------------------------------------------------------------------------------------------------------------------//
 /**
- * Class to calculate world population
+ * Class for world population reports
  */
 public class Population {
 
