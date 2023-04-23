@@ -24,6 +24,8 @@ public class Language {
     /** Percentage of speakers of a language in the country */
     public double percentage;
 
+    public int population;
+
 //--------------------------------------------------------------------------------------------------------------------//
     /** This is for Report Languages 1, Finally, the organisation has asked if it is possible to provide the number
      * of people who speak the following languages from the greatest number to smallest,
@@ -39,7 +41,7 @@ public class Language {
 
             // Create string for SQL statement
             // Group By doesn't work with this MySQL table without making changes to the DB, Union used instead
-            String strSelect =
+            String strSelect2 =
                     "(SELECT CountryCode, Language, IsOfficial, Percentage"
                             + " FROM countrylanguage"
                             + " WHERE Language IN ('Chinese')"
@@ -65,6 +67,15 @@ public class Language {
                             + " WHERE Language IN ('Arabic')"
                             + " ORDER BY Percentage DESC)";
 
+            String strSelect =
+                    "(SELECT Language AS `Spoken Language`,"
+                            + " (SELECT SUM(country.Population) WHERE country.Code = countrylanguage.CountryCode) AS `Population`,"
+                            + " (((SELECT SUM(country.Population) WHERE country.Code = countrylanguage.CountryCode)"
+                            + " AND countrylanguage.Language = 'Chinese')/(SELECT SUM(Population) FROM country)) AS `Percentage`"
+                            + " FROM countrylanguage, country"
+                            + " WHERE Language IN ('Chinese')"
+                            + " GROUP BY countrylanguage.Language)";
+
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
 
@@ -75,10 +86,9 @@ public class Language {
             //Check one is returned
             while (rset.next()) {
                 Language countryLanguage1 = new Language();
-                countryLanguage1.countryCode = rset.getString("CountryCode");
-                countryLanguage1.language = rset.getString("Language");
-                countryLanguage1.isOfficial = rset.getString("IsOfficial");
-                countryLanguage1.percentage = rset.getInt("Percentage");
+                countryLanguage1.language = rset.getString("Spoken Language");
+                countryLanguage1.population = rset.getInt("Population");
+                countryLanguage1.percentage = rset.getDouble("Percentage");
                 languages.add(countryLanguage1);
             }
             return languages;
@@ -101,15 +111,14 @@ public class Language {
             return;
         }
         //Print header
-        System.out.printf("\n %s %s %s %s%n", "Country Code", "Language", "Is Official", "Percentage");
+        System.out.printf("\n %s %s %s%n", "Spoken Language", "Population", "Percentage");
 
         for (Language countryLanguage1 : languages)
         {
             if (countryLanguage1 == null)
                 continue;
             String languageString =
-                    String.format("%s %s %s %s", countryLanguage1.countryCode, countryLanguage1.language,
-                            countryLanguage1.isOfficial, countryLanguage1.percentage);
+                    String.format("%s %s %s", countryLanguage1.language, countryLanguage1.population, countryLanguage1.percentage);
             System.out.println(languageString);
         }
     }
