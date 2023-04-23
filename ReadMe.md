@@ -1,6 +1,6 @@
 # sem
 
-|:----|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----|:-----------|
+|:----|:-----------------------------------------------------------------------------------------------------------------------------------------|:-----|:-----------|
 
 ![LICENSE](https://img.shields.io/github/license/40346200Aidan/sem.svg?style=flat-square)
 
@@ -16,12 +16,12 @@
  <img src="https://codecov.io/gh/40081168LJ/sem/branch/master/graph/badge.svg?token=CZ5MIG4KAZ"/> 
  </a>
  
- |:----|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----|:-----------|
+ |:----|:-----------------------------------------------------------------------------------------------------------------------------------------|:-----|:-----------|
  
  32 requirements out of 32 have been implemented, which is 100%.
 
 | ID  | Name                                                                                                                                                                                               | Met  | Screenshot |
-|:----|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----|:-----------|
+|:----|:-----------------------------------------------------------------------------------------------------------------------------------------|:-----|:-----------|
 | 1   | All the countries in the world organised by largest population to smallest.                                                                                                                        | Yes  | [Screenshot](https://github.com/40081168LJ/sem/blob/feature/ReadMe/ReportScreenshots/Report1_Screenshot.png) |
 | 2   | All the countries in a continent organised by largest population to smallest.                                                                                                                      | Yes  | [Screenshot](https://github.com/40081168LJ/sem/blob/feature/ReadMe/ReportScreenshots/Report2_Screenshot.png) |
 | 3   | All the countries in a region organised by largest population to smallest.                                                                                                                         | Yes  | [Screenshot](https://github.com/40081168LJ/sem/blob/feature/ReadMe/ReportScreenshots/Report3_Screenshot.png) |
