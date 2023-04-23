@@ -50,6 +50,11 @@ public class App {
 
     //--------------------------------------------------------------------------------------------------------------------//
 
+    /**
+     * Connects to the database
+     * @param location
+     * @param delay
+     */
     public void connect(String location, int delay) {
         try {
             // Load Database driver

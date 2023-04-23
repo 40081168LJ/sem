@@ -7,6 +7,10 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 //--------------------------------------------------------------------------------------------------------------------//
+
+/**
+ * Class creation for language reports
+ */
 public class Language {
     /** Code of the Country */
     public String countryCode;
@@ -24,7 +28,7 @@ public class Language {
     /** This is for Report Languages 1, Finally, the organisation has asked if it is possible to provide the number
      * of people who speak the following languages from the greatest number to smallest,
      * including the percentage of the world population for: 'Chinese','English','Hindi','Spanish','Arabic'
-     * @param con connection to database
+     * @param con connection to the database
      * @return Returns the above
      */
     public static ArrayList<Language> getLanguages1(Connection con) {

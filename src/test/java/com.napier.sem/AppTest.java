@@ -9,8 +9,13 @@ import java.util.ArrayList;
 //--------------------------------------------------------------------------------------------------------------------//
 /** Unit tests for reports
  * Author - AOB
+ * Class created to store unit tests
  */
 public class AppTest {
+
+    /**
+     * Sets app to static
+     */
     static App app;
 
 //--------------------------------------------------------------------------------------------------------------------//
