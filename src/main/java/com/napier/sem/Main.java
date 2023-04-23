@@ -12,7 +12,7 @@ import java.util.*;
 public class Main {
 
     /**
-     * setting quit tp false for menu loop below
+     * setting quit to false for menu loop below
      */
     static boolean quit = false;
 
