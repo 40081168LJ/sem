@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - CodeCov Badges Added.">
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - CodeCov Badges Added, attempt 2.">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -349,13 +349,6 @@
       <workItem from="1676360482399" duration="1826000" />
       <workItem from="1676382680779" duration="521000" />
     </task>
-    <task id="LOCAL-00030" summary="AOB - file name changes">
-      <created>1679408210346</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1679408210346</updated>
-    </task>
     <task id="LOCAL-00031" summary="AOB - integration tests update">
       <created>1679409244192</created>
       <option name="number" value="00031" />
@@ -692,7 +685,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682281431523</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="LJ - CodeCov Badges Added.">
+      <created>1682281649749</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1682281649749</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -710,7 +710,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LJ - Merged all reports and checked layout." />
     <MESSAGE value="LJ - CodeCov Test - Report 1" />
     <MESSAGE value="LJ - CodeCov Test - Report 7" />
     <MESSAGE value="LJ - CodeCov Test - Report 10" />
@@ -735,7 +734,8 @@
     <MESSAGE value="fixed broken test" />
     <MESSAGE value="pmd recommendations" />
     <MESSAGE value="LJ - CodeCov Badges Added." />
-    <option name="LAST_COMMIT_MESSAGE" value="LJ - CodeCov Badges Added." />
+    <MESSAGE value="LJ - CodeCov Badges Added, attempt 2." />
+    <option name="LAST_COMMIT_MESSAGE" value="LJ - CodeCov Badges Added, attempt 2." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
