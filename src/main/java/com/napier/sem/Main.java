@@ -614,7 +614,7 @@ public class Main {
             }
         } while (!quit);
         con.disconnect();
-        System.out.println("Goodbye...");
+        System.out.println("Goodbye User...");
     }
 
     //--------------------------------------------------------------------------------------------------------------------//

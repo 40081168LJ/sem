@@ -13,6 +13,3 @@
 <a href="https://codecov.io/gh/40081168LJ/sem" > 
  <img src="https://codecov.io/gh/40081168LJ/sem/branch/master/graph/badge.svg?token=CZ5MIG4KAZ"/> 
  </a>
-
-.. image:: https://codecov.io/gh/40081168LJ/sem/branch/master/graph/badge.svg?token=CZ5MIG4KAZ
-:target: https://codecov.io/gh/40081168LJ/sem
