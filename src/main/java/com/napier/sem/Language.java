@@ -67,7 +67,7 @@ public class Language {
                             + " WHERE Language IN ('Arabic')"
                             + " ORDER BY Percentage DESC)";
 
-            String strSelect =
+            String strSelect3 =
                     "(SELECT Language AS `Spoken Language`,"
                             + " (SELECT SUM(country.Population) WHERE country.Code = countrylanguage.CountryCode) AS `Population`,"
                             + " (((SELECT SUM(country.Population) WHERE country.Code = countrylanguage.CountryCode)"
@@ -75,6 +75,65 @@ public class Language {
                             + " FROM countrylanguage, country"
                             + " WHERE Language IN ('Chinese')"
                             + " GROUP BY countrylanguage.Language)";
+
+            String strSelect =
+            "SELECT (SELECT countrylanguage.Language WHERE countrylanguage.Language = 'Chinese' GROUP BY Language) AS `language`, "
+                    + "(SELECT SUM(country.population) FROM country "
+                    + "JOIN countrylanguage ON country.Code=countrylanguage.CountryCode "
+                    + "WHERE countrylanguage.Language = 'Chinese' "
+                    + "GROUP BY Language) as `population`, "
+                    + "(SELECT SUM(country.population) FROM country "
+                    + "JOIN countrylanguage ON country.Code=countrylanguage.CountryCode "
+                    + "WHERE countrylanguage.Language = 'Chinese' "
+                    + "GROUP BY Language)/(SELECT SUM(population) FROM country)*100 AS `percentage` "
+                    + "FROM countrylanguage "
+                    + "UNION "
+                    +"SELECT (SELECT countrylanguage.Language WHERE countrylanguage.Language = 'English' GROUP BY Language) AS `language`, "
+                    + "(SELECT SUM(country.population) FROM country "
+                    + "JOIN countrylanguage ON country.Code=countrylanguage.CountryCode "
+                    + "WHERE countrylanguage.Language = 'English' "
+                    + "GROUP BY Language) as `population`, "
+                    + "(SELECT SUM(country.population) FROM country "
+                    + "JOIN countrylanguage ON country.Code=countrylanguage.CountryCode "
+                    + "WHERE countrylanguage.Language = 'English' "
+                    + "GROUP BY Language)/(SELECT SUM(population) FROM country)*100 AS `percentage` "
+                    + "FROM countrylanguage "
+                    + "UNION "
+                    +"SELECT (SELECT countrylanguage.Language WHERE countrylanguage.Language = 'Hindi' GROUP BY Language) AS `language`, "
+                    + "(SELECT SUM(country.population) FROM country "
+                    + "JOIN countrylanguage ON country.Code=countrylanguage.CountryCode "
+                    + "WHERE countrylanguage.Language = 'Hindi' "
+                    + "GROUP BY Language) as `population`, "
+                    + "(SELECT SUM(country.population) FROM country "
+                    + "JOIN countrylanguage ON country.Code=countrylanguage.CountryCode "
+                    + "WHERE countrylanguage.Language = 'Hindi' "
+                    + "GROUP BY Language)/(SELECT SUM(population) FROM country)*100 AS `percentage` "
+                    + "FROM countrylanguage "
+                    + "UNION "
+                    +"SELECT (SELECT countrylanguage.Language WHERE countrylanguage.Language = 'Spanish' GROUP BY Language) AS `language`, "
+                    + "(SELECT SUM(country.population) FROM country "
+                    + "JOIN countrylanguage ON country.Code=countrylanguage.CountryCode "
+                    + "WHERE countrylanguage.Language = 'Spanish' "
+                    + "GROUP BY Language) as `population`, "
+                    + "(SELECT SUM(country.population) FROM country "
+                    + "JOIN countrylanguage ON country.Code=countrylanguage.CountryCode "
+                    + "WHERE countrylanguage.Language = 'Spanish' "
+                    + "GROUP BY Language)/(SELECT SUM(population) FROM country)*100 AS `percentage` "
+                    + "FROM countrylanguage "
+                    + "UNION "
+                    +"SELECT (SELECT countrylanguage.Language WHERE countrylanguage.Language = 'Arabic' GROUP BY Language) AS `language`, "
+                    + "(SELECT SUM(country.population) FROM country "
+                    + "JOIN countrylanguage ON country.Code=countrylanguage.CountryCode "
+                    + "WHERE countrylanguage.Language = 'Arabic' "
+                    + "GROUP BY Language) as `population`, "
+                    + "(SELECT SUM(country.population) FROM country "
+                    + "JOIN countrylanguage ON country.Code=countrylanguage.CountryCode "
+                    + "WHERE countrylanguage.Language = 'Arabic' "
+                    + "GROUP BY Language)/(SELECT SUM(population) FROM country)*100 AS `percentage` "
+                    + "FROM countrylanguage "
+                    + "WHERE countrylanguage.Language IN ('Chinese','English','Hindi','Spanish','Arabic') "
+                    + "GROUP BY countrylanguage.Language "
+                    + "ORDER BY `population` DESC";
 
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
@@ -86,9 +145,9 @@ public class Language {
             //Check one is returned
             while (rset.next()) {
                 Language countryLanguage1 = new Language();
-                countryLanguage1.language = rset.getString("Spoken Language");
-                countryLanguage1.population = rset.getInt("Population");
-                countryLanguage1.percentage = rset.getDouble("Percentage");
+                countryLanguage1.language = rset.getString("language");
+                countryLanguage1.population = rset.getInt("population");
+                countryLanguage1.percentage = rset.getDouble("percentage");
                 languages.add(countryLanguage1);
             }
             return languages;
@@ -111,14 +170,15 @@ public class Language {
             return;
         }
         //Print header
-        System.out.printf("\n %s %s %s%n", "Spoken Language", "Population", "Percentage");
+        System.out.printf("\n %s %s %s%n", "Language", "Population", "Percentage");
 
         for (Language countryLanguage1 : languages)
         {
             if (countryLanguage1 == null)
                 continue;
             String languageString =
-                    String.format("%s %s %s", countryLanguage1.language, countryLanguage1.population, countryLanguage1.percentage);
+                    String.format("%s %s %s",countryLanguage1.language, countryLanguage1.population,
+                            countryLanguage1.percentage);
             System.out.println(languageString);
         }
     }
