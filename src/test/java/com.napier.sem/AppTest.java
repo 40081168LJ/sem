@@ -401,9 +401,8 @@ public class AppTest {
     void displayCountryLanguage(){
         ArrayList<Language> languageReports = new ArrayList<>();
         Language languageReport = new Language();
-        languageReport.countryCode = "CoutnryCodeTest";
+        languageReport.population = 69696969;
         languageReport.language = "LanguageTest";
-        languageReport.isOfficial = "OfficialTest";
         languageReport.percentage = 69;
         languageReports.add(languageReport);
         Language.displayCountryLanguage(languageReports);

@@ -52,7 +52,7 @@ public class Language {
                             + ")/(SELECT SUM(population) FROM country)*100) AS `percentage` "
                             + "FROM countrylanguage "
                             + "WHERE countrylanguage.Language IN ('Chinese'))"
-                    + "UNION "
+                            + "UNION "
                             + "(SELECT DISTINCT (SELECT countrylanguage.Language WHERE countrylanguage.Language IN ('English') GROUP BY Language) AS `language`, "
                             + "(SELECT SUM(country.population) FROM country "
                             + "JOIN countrylanguage ON country.Code=countrylanguage.CountryCode "

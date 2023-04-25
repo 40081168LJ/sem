@@ -547,9 +547,10 @@ public class AppIntegrationTest {
     public void getLanguages1(){
         ArrayList<Language> languageReport = Language.getLanguages1(app.con);
         assertNotNull(languageReport);
-        assertNotNull(languageReport.get(0).countryCode);
         assertNotNull(languageReport.get(0).language);
-        assertNotNull(languageReport.get(0).isOfficial);
+        //assertNotNull(languageReport.get(0).population);
+        //assertNotNull(languageReport.get(0).percentage);
+
         //assertNotNull(LanguageReport1.get(0).percentage);
         Language.displayCountryLanguage(languageReport);
 
@@ -571,9 +572,9 @@ public class AppIntegrationTest {
 
         // Check that each language object in the list has all of its fields set
         for (Language language : languages) {
-            assertNotNull(language.countryCode);
             assertNotNull(language.language);
-            assertNotNull(language.isOfficial);
+            //assertNotNull(language.population);
+            //assertNotNull(language.percentage);
         }
     }
     /**
