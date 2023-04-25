@@ -12,7 +12,7 @@
 
 [![codecov](https://codecov.io/gh/40081168LJ/sem/branch/master/graph/badge.svg?token=CZ5MIG4KAZ)](https://codecov.io/gh/40081168LJ/sem/tree/develop/src/main/java/com/napier/sem)
 
-<a href="https://codecov.io/gh/40081168LJ/sem" > 
+<a href="https://codecov.io/gh/40081168LJ/sem/tree/develop" > 
  <img src="https://codecov.io/gh/40081168LJ/sem/branch/master/graph/badge.svg?token=CZ5MIG4KAZ"/> 
  </a>
  
