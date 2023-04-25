@@ -545,7 +545,7 @@ public class AppIntegrationTest {
      */
     @Test
     public void getLanguages1(){
-        ArrayList<Language> languageReport = Language.getLanguages1(app.con);
+        ArrayList<Language> languageReport = Language.getLanguages(app.con);
         assertNotNull(languageReport);
         assertNotNull(languageReport.get(0).language);
         //assertNotNull(languageReport.get(0).population);
@@ -562,7 +562,7 @@ public class AppIntegrationTest {
     @Test
     public void testGetLanguages1() {
         // Call the method to be tested
-        ArrayList<Language> languages = Language.getLanguages1(app.con);
+        ArrayList<Language> languages = Language.getLanguages(app.con);
 
         // Check that the returned list is not null
         assertNotNull(languages);
@@ -583,7 +583,7 @@ public class AppIntegrationTest {
      */
     @Test
     public void testGetLanguagesBadConnection() {
-        ArrayList<Language> languages = Language.getLanguages1(null);
+        ArrayList<Language> languages = Language.getLanguages(null);
         assertNull(languages);
     }
 

@@ -596,7 +596,7 @@ public class Main {
                     System.out.println("Report Languages 1 Selected, Displaying Countries with Languages... ");
                     System.out.println("<|************************************************************************************|>");
                     // Show all conuntry by language, greatest to smallest who speak it (Percentage)
-                    ArrayList<Language> languageReport = Language.getLanguages1(con.con);
+                    ArrayList<Language> languageReport = Language.getLanguages(con.con);
                     // Print out countries languages
                     Language.displayCountryLanguage(languageReport);
                     System.out.println("<|************************************************************************************|>");

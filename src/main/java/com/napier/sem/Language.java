@@ -33,7 +33,7 @@ public class Language {
      * @param con connection to the database
      * @return Returns the above
      */
-    public static ArrayList<Language> getLanguages1(Connection con) {
+    public static ArrayList<Language> getLanguages(Connection con) {
 
         try {
             // Create an SQL statement
