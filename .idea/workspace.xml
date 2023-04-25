@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="AOB - jacoco plugin removed">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="086ff42f-832d-4ebd-9080-fca6aac47b0d" name="Changes" comment="LJ - Final Review, adding README.md to gitignore.">
+      <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +21,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="feature/gitActions" />
+    <option name="BRANCH" value="feature/country_test_coverage" />
   </component>
   <component name="Git.Settings">
     <favorite-branches>
@@ -51,25 +50,34 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="feature/AOB_PMD" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$USER_HOME$/.jdks/openjdk-19.0.2/lib/src.zip!/java.base/sun/nio/ch/Net.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.9.2/junit-jupiter-api-5.9.2.jar!/org/junit/jupiter/api/Assertions.class" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/napier/sem/App.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/napier/sem/Main.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2KmO256pZRXN5u5tAHVsrV1GrMW" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -114,16 +122,10 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml.db: Compose Deployment">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.napier.sem.App" />
+  <component name="RunManager" selected="JUnit.AppIntegrationTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="seMethods" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value=".*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -138,6 +140,70 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AppIntegrationTest.displayCountryLanguageNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seMethods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.napier.sem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.napier.sem" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppIntegrationTest" />
+      <option name="METHOD_NAME" value="displayCountryLanguageNull" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppIntegrationTest.testGetContinentCountries" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seMethods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.napier.sem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.napier.sem" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppIntegrationTest" />
+      <option name="METHOD_NAME" value="testGetContinentCountries" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppIntegrationTest.testGetContinentCountriesBadConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seMethods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.napier.sem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.napier.sem" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppIntegrationTest" />
+      <option name="METHOD_NAME" value="testGetContinentCountriesBadConnection" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.displayCountryLanguageIfNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seMethods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.napier.sem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.napier.sem" />
+      <option name="MAIN_CLASS_NAME" value="com.napier.sem.AppTest" />
+      <option name="METHOD_NAME" value="displayCountryLanguageIfNull" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="IntegrationTests" type="JUnit" factoryName="JUnit">
       <module name="seMethods" />
       <shortenClasspath name="NONE" />
@@ -145,16 +211,6 @@
       <option name="MAIN_CLASS_NAME" value="IntegrationTests" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IntegrationTests.GetWorldPopulation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="seMethods" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="IntegrationTests" />
-      <option name="METHOD_NAME" value="GetWorldPopulation" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -237,31 +293,6 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration name="seMethods [package]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="package" />
-              </list>
-            </option>
-            <option name="pomFileName" value="pom.xml" />
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
@@ -280,47 +311,25 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="db/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="containerName" value="" />
-          <option name="sourceFilePath" value="db/Dockerfile" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="docker-compose.yml.db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="db" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Application.App" />
-      <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
-      <item itemvalue="Docker.db/Dockerfile" />
+      <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.Report123Tests" />
       <item itemvalue="JUnit.UnitTests" />
       <item itemvalue="JUnit.IntegrationTests" />
       <item itemvalue="JUnit.AppIntegrationTest" />
-      <item itemvalue="JUnit.IntegrationTests.GetWorldPopulation" />
+      <item itemvalue="JUnit.AppIntegrationTest.displayCountryLanguageNull" />
+      <item itemvalue="JUnit.AppIntegrationTest.testGetContinentCountries" />
+      <item itemvalue="JUnit.AppIntegrationTest.testGetContinentCountriesBadConnection" />
+      <item itemvalue="JUnit.AppTest.displayCountryLanguageIfNull" />
       <item itemvalue="Maven.seMethods [install]" />
-      <item itemvalue="Maven.seMethods [package]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
-        <item itemvalue="Docker.db/Dockerfile" />
-        <item itemvalue="Application.App" />
-        <item itemvalue="JUnit.IntegrationTests.GetWorldPopulation" />
-        <item itemvalue="Maven.seMethods [package]" />
+        <item itemvalue="JUnit.AppIntegrationTest.displayCountryLanguageNull" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.AppIntegrationTest.testGetContinentCountries" />
+        <item itemvalue="JUnit.AppIntegrationTest.testGetContinentCountriesBadConnection" />
+        <item itemvalue="JUnit.AppTest.displayCountryLanguageIfNull" />
       </list>
     </recent_temporary>
   </component>
@@ -338,223 +347,6 @@
       <workItem from="1675180857391" duration="3618000" />
       <workItem from="1676360482399" duration="1826000" />
       <workItem from="1676382680779" duration="521000" />
-    </task>
-    <task id="LOCAL-00001" summary="LJ - First Commit, project creation and gitignore file.">
-      <created>1674576784290</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1674576784290</updated>
-    </task>
-    <task id="LOCAL-00002" summary="LJ - Dockerfile upload.">
-      <created>1675182820466</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1675182820466</updated>
-    </task>
-    <task id="LOCAL-00003" summary="SL - Added MongoDB support">
-      <created>1675451724610</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1675451724610</updated>
-    </task>
-    <task id="LOCAL-00004" summary="SL - fixed issues with mongodb support">
-      <created>1675774733594</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1675774733594</updated>
-    </task>
-    <task id="LOCAL-00005" summary="SL - got mongodb working">
-      <created>1675775881613</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1675775881613</updated>
-    </task>
-    <task id="LOCAL-00006" summary="SL - updating github actions">
-      <created>1675776021350</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1675776021350</updated>
-    </task>
-    <task id="LOCAL-00007" summary="SL - sql integration">
-      <created>1676385054064</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1676385054065</updated>
-    </task>
-    <task id="LOCAL-00008" summary="SL - added docker-compose file">
-      <created>1676386488222</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1676386488222</updated>
-    </task>
-    <task id="LOCAL-00009" summary="SL - added disconnect and connect methods">
-      <created>1677091606814</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1677091606814</updated>
-    </task>
-    <task id="LOCAL-00010" summary="SL - added employee class with related employee methods">
-      <created>1677255219345</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1677255219345</updated>
-    </task>
-    <task id="LOCAL-00011" summary="AG - Added Get all Salaries method">
-      <created>1677418545203</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1677418545203</updated>
-    </task>
-    <task id="LOCAL-00012" summary="AOB - add use cases feature branch">
-      <created>1677444559449</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1677444559449</updated>
-    </task>
-    <task id="LOCAL-00013" summary="AOB - use case 1 added">
-      <created>1677447335456</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1677447335456</updated>
-    </task>
-    <task id="LOCAL-00014" summary="AOB - use case 1 amended, use case 2 added">
-      <created>1677447941531</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1677447941531</updated>
-    </task>
-    <task id="LOCAL-00015" summary="AOB - use case 2 amended, use case 3 added">
-      <created>1677448255919</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1677448255919</updated>
-    </task>
-    <task id="LOCAL-00016" summary="AOB - use case 2 amended, use case 4 added">
-      <created>1677448665743</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1677448665743</updated>
-    </task>
-    <task id="LOCAL-00017" summary="AOB - use case 5 added">
-      <created>1677448827335</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1677448827335</updated>
-    </task>
-    <task id="LOCAL-00018" summary="AOB - use case 6 added">
-      <created>1677449013608</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1677449013608</updated>
-    </task>
-    <task id="LOCAL-00019" summary="AOB - use case 7 added">
-      <created>1677449258101</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1677449258101</updated>
-    </task>
-    <task id="LOCAL-00020" summary="AOB - use case 7 amended, use case 8 added">
-      <created>1677449541338</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1677449541338</updated>
-    </task>
-    <task id="LOCAL-00021" summary="LJ - Basic Menu implementation in &quot;Main&quot;">
-      <created>1678028522701</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1678028522701</updated>
-    </task>
-    <task id="LOCAL-00022" summary="LJ - Updates to Java Menu, condensed view.">
-      <created>1678196109115</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1678196109115</updated>
-    </task>
-    <task id="LOCAL-00023" summary="LJ - JavaMenu abandoned. SAmple SQL in place instead.">
-      <created>1678659473325</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1678659473325</updated>
-    </task>
-    <task id="LOCAL-00024" summary="AOB - report 1,2,3 tests">
-      <created>1679404238081</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1679404238081</updated>
-    </task>
-    <task id="LOCAL-00025" summary="AOB - added commenting">
-      <created>1679406203117</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1679406203117</updated>
-    </task>
-    <task id="LOCAL-00026" summary="AOB - added commenting">
-      <created>1679406787432</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1679406787432</updated>
-    </task>
-    <task id="LOCAL-00027" summary="AOB - main.yml changes">
-      <created>1679406882662</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1679406882662</updated>
-    </task>
-    <task id="LOCAL-00028" summary="AOB - main.yml changes">
-      <created>1679407257805</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1679407257805</updated>
-    </task>
-    <task id="LOCAL-00029" summary="AOB - git Action changes">
-      <created>1679407604619</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1679407604619</updated>
-    </task>
-    <task id="LOCAL-00030" summary="AOB - file name changes">
-      <created>1679408210346</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1679408210346</updated>
-    </task>
-    <task id="LOCAL-00031" summary="AOB - integration tests update">
-      <created>1679409244192</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1679409244192</updated>
     </task>
     <task id="LOCAL-00032" summary="AOB - codecov token uncomment">
       <created>1679411844823</created>
@@ -577,7 +369,329 @@
       <option name="project" value="LOCAL" />
       <updated>1679412653218</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="LJ - Updated commenting, layout, edited connection for countries as overwritten.">
+      <created>1679752398819</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1679752398819</updated>
+    </task>
+    <task id="LOCAL-00036" summary="LJ - Updated layout/comments.">
+      <created>1679752461851</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1679752461851</updated>
+    </task>
+    <task id="LOCAL-00037" summary="LJ - Updated Menu, added report 26.">
+      <created>1679753196727</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1679753196727</updated>
+    </task>
+    <task id="LOCAL-00038" summary="LJ - Updated Menu, added report 26.">
+      <created>1679753252978</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1679753252978</updated>
+    </task>
+    <task id="LOCAL-00039" summary="LJ - Updated Menu, added report 26.">
+      <created>1679756763085</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1679756763085</updated>
+    </task>
+    <task id="LOCAL-00040" summary="LJ - Fixed Merge Errors.">
+      <created>1680601360869</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1680601360869</updated>
+    </task>
+    <task id="LOCAL-00041" summary="LJ - Highlighted warning message on TODO list.">
+      <created>1680601426444</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1680601426444</updated>
+    </task>
+    <task id="LOCAL-00042" summary="LJ - Added Report 23.">
+      <created>1680603910769</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1680603910769</updated>
+    </task>
+    <task id="LOCAL-00043" summary="LJ - Updated &amp; Added Report 23.">
+      <created>1680604109598</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1680604109598</updated>
+    </task>
+    <task id="LOCAL-00044" summary="LJ - Updated City.java &amp; Added Report 22 to Main.java.">
+      <created>1680616533564</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1680616533564</updated>
+    </task>
+    <task id="LOCAL-00045" summary="LJ - Updated Report 22 to Main.java to include region selection.">
+      <created>1680617199358</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1680617199358</updated>
+    </task>
+    <task id="LOCAL-00046" summary="LJ - Updated grammar and layout of comments.">
+      <created>1680617772405</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1680617772405</updated>
+    </task>
+    <task id="LOCAL-00047" summary="LJ - Updated comments and layout. (after merge Report 20)">
+      <created>1681245805566</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1681245805566</updated>
+    </task>
+    <task id="LOCAL-00048" summary="LJ - Updated .xml and .yml files as per Lab08.">
+      <created>1681246923085</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1681246923085</updated>
+    </task>
+    <task id="LOCAL-00049" summary="LJ - Updated .xml and .yml files as per Lab08.">
+      <created>1681247554307</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1681247554307</updated>
+    </task>
+    <task id="LOCAL-00050" summary="LJ - Updated .xml and .yml files as per Lab08.">
+      <created>1681247575602</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1681247575602</updated>
+    </task>
+    <task id="LOCAL-00051" summary="LJ - CodeCov, attempt1.">
+      <created>1681247848867</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1681247848867</updated>
+    </task>
+    <task id="LOCAL-00052" summary="LJ - CodeCov, attempt2.">
+      <created>1681248314439</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1681248314439</updated>
+    </task>
+    <task id="LOCAL-00053" summary="LJ - Merged all reports and checked layout.">
+      <created>1681334754155</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1681334754155</updated>
+    </task>
+    <task id="LOCAL-00054" summary="LJ - CodeCov Test - Report 1">
+      <created>1681334870282</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1681334870282</updated>
+    </task>
+    <task id="LOCAL-00055" summary="LJ - CodeCov Test - Report 7">
+      <created>1681335074786</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1681335074786</updated>
+    </task>
+    <task id="LOCAL-00056" summary="LJ - CodeCov Test - Report 10">
+      <created>1681335251599</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1681335251599</updated>
+    </task>
+    <task id="LOCAL-00057" summary="LJ - CodeCov Test - Report 18 + 2&#10;(From line 79 Up to line 109)">
+      <created>1681335425936</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1681335425936</updated>
+    </task>
+    <task id="LOCAL-00058" summary="LJ - CodeCov Test - Report 3 + 4 + 5 + 6&#10;(From line 110 Up to line 190)">
+      <created>1681335598208</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1681335598208</updated>
+    </task>
+    <task id="LOCAL-00059" summary="LJ - CodeCov Test - Report 3 + 4 + 5 + 6&#10;(From line 110 Up to line 190)">
+      <created>1681335706136</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1681335706136</updated>
+    </task>
+    <task id="LOCAL-00060" summary="LJ - CodeCov Test - Report 9 + 11 + AI1&#10;(From line 191 Up to line 229)">
+      <created>1681335897377</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1681335897377</updated>
+    </task>
+    <task id="LOCAL-00061" summary="LJ - CodeCov Test - Report 13 + 12 + 8 + AI4 + 6 + AI2&#10;(From line 230 Up to line 311)">
+      <created>1681336104101</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1681336104101</updated>
+    </task>
+    <task id="LOCAL-00062" summary="LJ - CodeCov Test - Report 20 + AI3 + AI5 + 15 + n/a&#10;(From line 312 Up to line 379)">
+      <created>1681336386310</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1681336386310</updated>
+    </task>
+    <task id="LOCAL-00063" summary="LJ - CodeCov Test - Report 20 + AI3 + AI5 + 15 + n/a&#10;(From line 312 Up to line 379)&#10;Checking n/a">
+      <created>1681336549004</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1681336549004</updated>
+    </task>
+    <task id="LOCAL-00064" summary="LJ - CodeCov Test - Report 20 + AI3 + AI5 + 15 + n/a&#10;(From line 312 Up to line 379)&#10;Checking n/a - Still failing&#10;Checking A15">
+      <created>1681336721269</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1681336721269</updated>
+    </task>
+    <task id="LOCAL-00065" summary="LJ - CodeCov Test - Report 20 + AI3 + AI5 + 15 + n/a&#10;(From line 312 Up to line 379)&#10;Checking n/a - Still Failing&#10;Checking A15 - Still Failing&#10;Checking AI3">
+      <created>1681336870025</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1681336870025</updated>
+    </task>
+    <task id="LOCAL-00066" summary="LJ - CodeCov Test - Report 20 + AI3 + AI5 + 15 + n/a&#10;(From line 312 Up to line 379)&#10;Checking n/a - Still Failing&#10;Checking A15 - Still Failing&#10;Checking AI3 - Still Failing&#10;Checking 20">
+      <created>1681337037382</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1681337037382</updated>
+    </task>
+    <task id="LOCAL-00067" summary="LJ - CodeCov Test - Report 20 + AI3 + AI5 + 15 + n/a&#10;(From line 312 Up to line 379)&#10;Checking n/a - &#10;Checking A15 - &#10;Checking AI3 - &#10;Checking 20 - Worked - Fix Report 20 Test">
+      <created>1681337233026</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1681337233026</updated>
+    </task>
+    <task id="LOCAL-00068" summary="LJ - CodeCov Test - Report 20 + AI3 + AI5 + 15 + n/a&#10;(From line 312 Up to line 379)&#10;Checking n/a - &#10;Checking A15 - &#10;Checking AI3 - &#10;Checking 20 - Worked - Fix Report 20 Test&#10;Checking 15 -">
+      <created>1681337450793</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1681337450793</updated>
+    </task>
+    <task id="LOCAL-00069" summary="LJ - CodeCov Test - Report 20 + AI3 + AI5 + 15 + n/a&#10;(From line 312 Up to line 379)&#10;Checking n/a - &#10;Checking A15 - x&#10;Checking AI3 - x&#10;Checking 20 - ISSUE - Fix Report 20 Test&#10;Checking 15 -">
+      <created>1681337633047</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1681337633047</updated>
+    </task>
+    <task id="LOCAL-00070" summary="LJ - CodeCov Test - Report 20 + AI3 + AI5 + 15 + n/a + 18&#10;(From line 312 Up to line 379)&#10;Checking n/a - &#10;Checking A15 - ISSUE - Fix Report Additional Info 5 Test&#10;Checking AI3 - ISSUE - Fix Additional Info 3 Test&#10;Checking 20 - ISSUE - Fix Report 20 Test&#10;Checking 15 -&#10;Checking 18 -">
+      <created>1681337827515</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1681337827515</updated>
+    </task>
+    <task id="LOCAL-00071" summary="LJ - CodeCov Test - Report 17 + 25 + 16 &#10;(From line 382 Up to line 423)&#10;Checking 17 - &#10;Checking 16 - &#10;Checking 25 -">
+      <created>1681338182347</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1681338182347</updated>
+    </task>
+    <task id="LOCAL-00072" summary="LJ - AppTest Comment Review.">
+      <created>1681818883836</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1681818883837</updated>
+    </task>
+    <task id="LOCAL-00073" summary="LJ - AppTest Comment Review2.">
+      <created>1681818902113</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1681818902113</updated>
+    </task>
+    <task id="LOCAL-00074" summary="LJ - #135 - Removed unused Imports.">
+      <created>1681928138088</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1681928138089</updated>
+    </task>
+    <task id="LOCAL-00075" summary="LJ - #135 - Removed unused Imports.">
+      <created>1681928832667</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1681928832668</updated>
+    </task>
+    <task id="LOCAL-00076" summary="LJ - #132 - Renaming Parameters.">
+      <created>1681929108811</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1681929108811</updated>
+    </task>
+    <task id="LOCAL-00077" summary="pmd recommendations">
+      <created>1682098446432</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1682098446432</updated>
+    </task>
+    <task id="LOCAL-00078" summary="LJ - CodeCov Badges Added.">
+      <created>1682281431523</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1682281431523</updated>
+    </task>
+    <task id="LOCAL-00079" summary="LJ - CodeCov Badges Added.">
+      <created>1682281649749</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1682281649749</updated>
+    </task>
+    <task id="LOCAL-00080" summary="LJ - Final Review, adding README.md to gitignore.">
+      <created>1682419070554</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1682419070554</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -595,32 +709,32 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="SL - added docker-compose file" />
-    <MESSAGE value="SL - added disconnect and connect methods" />
-    <MESSAGE value="SL - added employee class with related employee methods" />
-    <MESSAGE value="AG - Added Get all Salaries method" />
-    <MESSAGE value="AOB - add use cases feature branch" />
-    <MESSAGE value="AOB - use case 1 added" />
-    <MESSAGE value="AOB - use case 1 amended, use case 2 added" />
-    <MESSAGE value="AOB - use case 2 amended, use case 3 added" />
-    <MESSAGE value="AOB - use case 2 amended, use case 4 added" />
-    <MESSAGE value="AOB - use case 5 added" />
-    <MESSAGE value="AOB - use case 6 added" />
-    <MESSAGE value="AOB - use case 7 added" />
-    <MESSAGE value="AOB - use case 7 amended, use case 8 added" />
-    <MESSAGE value="LJ - Basic Menu implementation in &quot;Main&quot;" />
-    <MESSAGE value="LJ - Updates to Java Menu, condensed view." />
-    <MESSAGE value="LJ - JavaMenu abandoned. SAmple SQL in place instead." />
-    <MESSAGE value="SL - fixed test file structure&#10;fixed getWorldPopulation methods and added testing" />
-    <MESSAGE value="AOB - report 1,2,3 tests" />
-    <MESSAGE value="AOB - added commenting" />
-    <MESSAGE value="AOB - main.yml changes" />
-    <MESSAGE value="AOB - git Action changes" />
-    <MESSAGE value="AOB - file name changes" />
-    <MESSAGE value="AOB - integration tests update" />
-    <MESSAGE value="AOB - codecov token uncomment" />
-    <MESSAGE value="AOB - main.yml branches added" />
-    <option name="LAST_COMMIT_MESSAGE" value="AOB - main.yml branches added" />
+    <MESSAGE value="LJ - CodeCov Test - Report 7" />
+    <MESSAGE value="LJ - CodeCov Test - Report 10" />
+    <MESSAGE value="LJ - CodeCov Test - Report 18 + 2&#10;(From line 79 Up to line 109)" />
+    <MESSAGE value="LJ - CodeCov Test - Report 3 + 4 + 5 + 6&#10;(From line 110 Up to line 190)" />
+    <MESSAGE value="LJ - CodeCov Test - Report 9 + 11 + AI1&#10;(From line 191 Up to line 229)" />
+    <MESSAGE value="LJ - CodeCov Test - Report 13 + 12 + 8 + AI4 + 6 + AI2&#10;(From line 230 Up to line 311)" />
+    <MESSAGE value="LJ - CodeCov Test - Report 20 + AI3 + AI5 + 15 + n/a&#10;(From line 312 Up to line 379)" />
+    <MESSAGE value="LJ - CodeCov Test - Report 20 + AI3 + AI5 + 15 + n/a&#10;(From line 312 Up to line 379)&#10;Checking n/a" />
+    <MESSAGE value="LJ - CodeCov Test - Report 20 + AI3 + AI5 + 15 + n/a&#10;(From line 312 Up to line 379)&#10;Checking n/a - Still failing&#10;Checking A15" />
+    <MESSAGE value="LJ - CodeCov Test - Report 20 + AI3 + AI5 + 15 + n/a&#10;(From line 312 Up to line 379)&#10;Checking n/a - Still Failing&#10;Checking A15 - Still Failing&#10;Checking AI3" />
+    <MESSAGE value="LJ - CodeCov Test - Report 20 + AI3 + AI5 + 15 + n/a&#10;(From line 312 Up to line 379)&#10;Checking n/a - Still Failing&#10;Checking A15 - Still Failing&#10;Checking AI3 - Still Failing&#10;Checking 20" />
+    <MESSAGE value="LJ - CodeCov Test - Report 20 + AI3 + AI5 + 15 + n/a&#10;(From line 312 Up to line 379)&#10;Checking n/a - &#10;Checking A15 - &#10;Checking AI3 - &#10;Checking 20 - Worked - Fix Report 20 Test" />
+    <MESSAGE value="LJ - CodeCov Test - Report 20 + AI3 + AI5 + 15 + n/a&#10;(From line 312 Up to line 379)&#10;Checking n/a - &#10;Checking A15 - &#10;Checking AI3 - &#10;Checking 20 - Worked - Fix Report 20 Test&#10;Checking 15 -" />
+    <MESSAGE value="LJ - CodeCov Test - Report 20 + AI3 + AI5 + 15 + n/a&#10;(From line 312 Up to line 379)&#10;Checking n/a - &#10;Checking A15 - x&#10;Checking AI3 - x&#10;Checking 20 - ISSUE - Fix Report 20 Test&#10;Checking 15 -" />
+    <MESSAGE value="LJ - CodeCov Test - Report 20 + AI3 + AI5 + 15 + n/a + 18&#10;(From line 312 Up to line 379)&#10;Checking n/a - &#10;Checking A15 - ISSUE - Fix Report Additional Info 5 Test&#10;Checking AI3 - ISSUE - Fix Additional Info 3 Test&#10;Checking 20 - ISSUE - Fix Report 20 Test&#10;Checking 15 -&#10;Checking 18 -" />
+    <MESSAGE value="LJ - CodeCov Test - Report 17 + 25 + 16 &#10;(From line 382 Up to line 423)&#10;Checking 17 - &#10;Checking 16 - &#10;Checking 25 -" />
+    <MESSAGE value="LJ - AppTest Comment Review." />
+    <MESSAGE value="LJ - AppTest Comment Review2." />
+    <MESSAGE value="LJ - #135 - Removed unused Imports." />
+    <MESSAGE value="LJ - #132 - Renaming Parameters." />
+    <MESSAGE value="fixed broken test" />
+    <MESSAGE value="pmd recommendations" />
+    <MESSAGE value="LJ - CodeCov Badges Added." />
+    <MESSAGE value="LJ - CodeCov Badges Added, attempt 2." />
+    <MESSAGE value="LJ - Final Review, adding README.md to gitignore." />
+    <option name="LAST_COMMIT_MESSAGE" value="LJ - Final Review, adding README.md to gitignore." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,4 +1,4 @@
-name: A workflow for my Hello World App
+name: A workflow for sem
 on:
   push:
     branches:
@@ -37,18 +37,31 @@ jobs:
       - name: Integration Tests and CodeCov
         run: |
           docker build -t database ./db 
-          docker run --name world -dp 33060:3306 database
-          mvn -Dtest=com.napier.sem.AppIntegrationTest test          
-          docker stop world
-          docker rm world
+          docker run --name world-db -dp 33060:3306 database
+          mvn -Dtest=com.napier.sem.AppIntegrationTest test   
+          mvn -Dtest=com.napier.sem.AppTest test 
+          docker stop world-db
+          docker rm world-db
           docker image rm database
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v3
+#      - name: Upload coverage reports to Codecov
+#        uses: codecov/codecov-action@v3
+      - name: CodeCov
+        uses: codecov/codecov-action@v2
         with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+          #token: ${{ secrets.CODECOV_TOKEN }}
           directory: ./target/site/jacoco
           flags: Integration Tests # optional
           verbose: true # optional (default = false)
+          # LJ - Trying to connect with CodeCov
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+            token: ${{ secrets.CODECOV_TOKEN }}
+            directory: ./target/site/jacoco
+            fail_ci_if_error: true # optional
+            flags: unittests # optional
+            name: codecov-umbrella # optional (default = false)
+            verbose: true # optional (default = false)
   build:
     name: Build and Start Using docker-compose
     runs-on: ubuntu-20.04
