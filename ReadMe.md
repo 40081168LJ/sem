@@ -8,9 +8,9 @@
 
 ![GitHub Workflow Status (develop)](https://img.shields.io/github/workflow/status/40346200Aidan/sem/Workflow1/development?style=flat-square)
 
-[![codecov](https://codecov.io/gh/40081168LJ/sem/branch/master/graph/badge.svg?token=CZ5MIG4KAZ)](https://codecov.io/gh/40081168LJ/sem)
+[![codecov](https://codecov.io/gh/40081168LJ/sem/branch/master/graph/badge.svg?token=CZ5MIG4KAZ)](https://codecov.io/gh/40081168LJ/sem/tree/develop/src/main/java/com/napier/sem)
 
-<a href="https://codecov.io/gh/40081168LJ/sem" > 
+<a href="https://codecov.io/gh/40081168LJ/sem/tree/develop" > 
  <img src="https://codecov.io/gh/40081168LJ/sem/branch/master/graph/badge.svg?token=CZ5MIG4KAZ"/> 
  </a>
  
@@ -51,4 +51,4 @@
 | 29  | The population of a country.                                                                                                                                                                       | Yes  | [Screenshot](https://github.com/40081168LJ/sem/blob/feature/ReadMe/ReportScreenshots/Report29_Screenshot.png) |
 | 30  | The population of a district.                                                                                                                                                                      | Yes  | [Screenshot](https://github.com/40081168LJ/sem/blob/feature/ReadMe/ReportScreenshots/Report30_Screenshot.png) |
 | 31  | The population of a city.                                                                                                                                                                          | Yes  | [Screenshot](https://github.com/40081168LJ/sem/blob/feature/ReadMe/ReportScreenshots/Report31_Screenshot.png) |
-| 32  | The number of people who speak the following languages from greatest number to smallest, including the percentage of the world population: Chinese, English, Hindi, Spanish, Arabic. | Yes  | [Screenshot](
+| 32  | The number of people who speak the following languages from greatest number to smallest, including the percentage of the world population: Chinese, English, Hindi, Spanish, Arabic. | Yes  | [Screenshot](https://github.com/40081168LJ/sem/blob/feature/ReadMe/ReportScreenshots/Report32_Screenshot.png)
