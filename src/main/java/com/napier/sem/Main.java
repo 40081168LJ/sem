@@ -271,7 +271,7 @@ public class Main {
                  */
                 case 13:{
                     System.out.println("Report 13 Selected");
-                    //get continent and number of rows to select
+                    // Get continent and number of rows to select
                     System.out.println("please select the the continent to select from");
                     String continent = scanner.nextLine();
                     System.out.println("please select the number of rows to display top populated cities");
@@ -311,7 +311,7 @@ public class Main {
                  */
                 case 15:{
                     System.out.println("Report 15 Selected");
-                    //get country and number of rows to select
+                    // Get country and number of rows to select
                     System.out.println("please select the country to select from");
                     String country = scanner.nextLine();
                     System.out.println("please select the number of rows to display top populated cities");
@@ -331,7 +331,7 @@ public class Main {
                  */
                 case 16:{
                     System.out.println("Report 16 Selected");
-                    //get country and number of rows to select
+                    // Get country and number of rows to select
                     System.out.println("please select the district to select from");
                     String district16 = scanner.nextLine();
                     System.out.println("please select the number of rows to display top populated cities");
@@ -616,7 +616,7 @@ public class Main {
             }
         } while (!quit);
         con.disconnect();
-        System.out.println("Goodbye...");
+        System.out.println("Goodbye User...");
     }
 
     //--------------------------------------------------------------------------------------------------------------------//
